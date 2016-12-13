@@ -296,12 +296,10 @@ Predicate
 Lookup  ::= '?' KeySpecifier
 UnaryLookup ::= '?' KeySpecifier
 KeySpecifier ::= NCName | IntegerLiteral | ParenthesizedExpr | '*'
-
 ArrowFunctionSpecifier
          ::= EQName
            | VarRef
            | ParenthesizedExpr
-
 Literal  ::= NumericLiteral
            | StringLiteral
 NumericLiteral
