@@ -296,10 +296,12 @@ Predicate
 Lookup  ::= '?' KeySpecifier
 UnaryLookup ::= '?' KeySpecifier
 KeySpecifier ::= NCName | IntegerLiteral | ParenthesizedExpr | '*'
+
 ArrowFunctionSpecifier
          ::= EQName
            | VarRef
            | ParenthesizedExpr
+
 Literal  ::= NumericLiteral
            | StringLiteral
 NumericLiteral
@@ -1028,31 +1030,19 @@ PrimaryExpr
            | BlockExpr
            | ObjectConstructor
            | ArrayConstructor
-           | StringConstructor
            | UnaryLookup
            | JSONSimpleObjectUnion
 
 JSONSimpleObjectUnion
          ::= '{|' Expr? '|}'
 
-ObjectConstructor 
-        ::=  "{" PairConstructorList? "}"
+ObjectConstructor ::=  "{" PairConstructorList? "}"
 
-PairConstructorList
-         ::= PairConstructor ("," PairConstructor)*
+PairConstructorList ::= PairConstructor ("," PairConstructor)*
 
-PairConstructor
-          ::=  ExprSingle ":" ExprSingle
+PairConstructor ::=  ExprSingle ":" ExprSingle
 
 ArrayConstructor ::=  "[" Expr? "]"
-
-StringConstructor ::=  "``[" StringConstructorContent "]``"  /* ws: explicit */
-
-StringConstructorContent   ::=  StringConstructorChars (StringConstructorInterpolation StringConstructorChars)*   /* ws: explicit */
-
-StringConstructorChars    ::= (Char* - (Char* ('`{' | ']``') Char*))  /* ws: explicit */
-
-StringConstructorInterpolation   ::=  "`{" Expr? "}`"
 
 BlockExpr
          ::= '{' StatementsAndOptionalExpr '}'
