@@ -1050,7 +1050,6 @@ StringConstructor ::=  "``[" StringConstructorContent "]``"  /* ws: explicit */
 
 StringConstructorContent   ::=  StringConstructorChars (StringConstructorInterpolation StringConstructorChars)*   /* ws: explicit */
 
-StringConstructorChars    ::= (Char* - (Char* ('`{' | ']``') Char*))  /* ws: explicit */
 
 StringConstructorInterpolation   ::=  "`{" Expr? "}`"
 
@@ -1127,6 +1126,9 @@ UnprefixedName
 Prefix   ::= NCName
 LocalPart
          ::= NCName
+StringConstructorChars
+         ::= ( Char* - ( Char* ( '`{' | ']``' ) Char* ) ) &( '`{' | ']`' )
+          /* ws: explicit */         
 S        ::= [#x0009#x000A#x000D#x0020]+
 CharRef  ::= '&#' [0-9]+ ';'
            | '&#x' [0-9A-Fa-f]+ ';'
