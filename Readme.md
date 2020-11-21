@@ -1,4 +1,17 @@
 #XQLint
+
+wcandillon/xqlint https://github.com/wcandillon/xqlint
+
+##Generate parsers
+
+`grunt parsers`
+
+Command generates:
+
+ *   lib/lexers/XQueryTokenizer.ebnf -> XQueryTokenizer.js
+ *   lib/parsers/XQueryParser.ebnf -> XQueryParser.js
+    
+# Upstream readme
 [![Build Status](http://img.shields.io/travis/wcandillon/xqlint/master.svg?style=flat)](https://travis-ci.org/wcandillon/xqlint) [![NPM version](http://img.shields.io/npm/v/xqlint.svg?style=flat)](http://badge.fury.io/js/xqlint) [![Code Climate](http://img.shields.io/codeclimate/github/wcandillon/xqlint.svg?style=flat)](https://codeclimate.com/github/wcandillon/xqlint)
 
 ## JSONiq & XQuery Code Quality Tool

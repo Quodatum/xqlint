@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             form.append('command', parser.command, { knownLength: new Buffer(parser.command).length, contentType: 'text/plain' });
             form.append('input', grammar, { knownLength : new Buffer(grammar).length, contentType: 'text/plain', filename: path.basename(parser.source) });
             var length = form.getLengthSync();
-            var r = request.post('http://www.bottlecaps.de/rex/', function(err, res, body) {
+            var r = request.post('https://www.bottlecaps.de/rex/', function(err, res, body) {
                 if(err) {
                     deferred.reject(err);
                 } else {
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             parsers: {
                 grammars: [
 					{
-						source: 'lib/parsers/XQueryParser.ebnf',
+						source: 'lib/parsers/BaseX.ebnf',
 						destination: 'lib/parsers/XQueryParser.js',
 						command: '-ll 2 -backtrack -tree -javascript -a xqlint',
 						tz: '-60',
