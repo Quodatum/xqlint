@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             parsers: {
                 grammars: [
 					{
-						source: 'lib/parsers/BaseX.ebnf',
+						source: 'lib/parsers/XQueryParser.ebnf',
 						destination: 'lib/parsers/XQueryParser.js',
 						command: '-ll 2 -backtrack -tree -javascript -a xqlint',
 						tz: '-60',
