@@ -1,4 +1,4 @@
-#XQLint
+# XQLint
 
 wcandillon/xqlint https://github.com/wcandillon/xqlint
 
