@@ -16,9 +16,9 @@ module.exports = function(grunt) {
             var deferred = Q.defer();
             var grammar = fs.readFileSync(parser.source);
             var form = new FormData();
-            form.append('tz', parser.tz, { knownLength: new Buffer(parser.tz).length, contentType: 'text/plain'  });
-            form.append('command', parser.command, { knownLength: new Buffer(parser.command).length, contentType: 'text/plain' });
-            form.append('input', grammar, { knownLength : new Buffer(grammar).length, contentType: 'text/plain', filename: path.basename(parser.source) });
+            form.append('tz', parser.tz, { knownLength:  Buffer.from(parser.tz).length, contentType: 'text/plain'  });
+            form.append('command', parser.command, { knownLength:  Buffer.from(parser.command).length, contentType: 'text/plain' });
+            form.append('input', grammar, { knownLength :  Buffer.from(grammar).length, contentType: 'text/plain', filename: path.basename(parser.source) });
             var length = form.getLengthSync();
             var r = request.post('https://www.bottlecaps.de/rex/', function(err, res, body) {
                 if(err) {
