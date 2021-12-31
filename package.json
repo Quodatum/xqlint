@@ -6,7 +6,7 @@
   },
   "name": "xqlint",
   "description": "XQuery & JSONiq Quality Checker",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "keywords": [
     "jsoniq",
     "xquery",
@@ -24,22 +24,22 @@
     "xqlint": "./bin/xqlint"
   },
   "dependencies": {
-    "colors": "~0.6.2",
+    "colors": "1.4.0",
     "commander": "~2.3.0",
     "final-fs": "~1.6.0",
-    "lodash": "^3.2.0",
+    "lodash": "^4.17.21",
     "q": "~1.0.0",
-    "update-notifier": "~0.2.0"
+    "update-notifier": "5.1.0"
   },
   "devDependencies": {
-    "browserify": "~4.2.0",
-    "form-data": "~0.1.2",
-    "grunt": "~0.4.2",
-    "grunt-browserify": "~2.1.1",
+    "browserify": "16.5.2",
+    "form-data": "4.0.0",
+    "grunt": "1.4.1",
+    "grunt-browserify": "6.0.0",
     "grunt-contrib-jshint": "1.1.0",
     "grunt-vows": "~0.4.1",
-    "matchdep": "~0.3.0",
-    "request": "~2.33.0",
+    "matchdep": "~2.0.0",
+    "axios": "0.24.0",
     "time-grunt": "1.4.0",
     "vows": "0.8.3"
   },
@@ -61,10 +61,5 @@
     "test": "./test",
     "bin": "./bin"
   },
-  "licenses": [
-    {
-      "type": "Apache 2",
-      "url": "https://github.com/wcandillon/xqlint/blob/master/LICENSE"
-    }
-  ]
+  "license": "Apache-2.0"
 }

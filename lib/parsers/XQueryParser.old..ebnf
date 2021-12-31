@@ -211,7 +211,9 @@ TreatExpr
          ::= CastableExpr ( 'treat' 'as' SequenceType )?
 CastableExpr
          ::= CastExpr ( 'castable' 'as' SingleType )?
-CastExpr ::= UnaryExpr ( 'cast' 'as' SingleType )?
+CastExpr ::= ArrowExpr ( 'cast' 'as' SingleType )?
+ArrowExpr
+         ::= UnaryExpr ( '=>' ArrowFunctionSpecifier ArgumentList )*
 UnaryExpr
          ::= ( '-' | '+' )* ValueExpr
 ValueExpr
@@ -283,13 +285,21 @@ NodeTest ::= KindTest
 NameTest ::= EQName
            | Wildcard
 PostfixExpr
-         ::= PrimaryExpr ( Predicate | ArgumentList )*
+         ::= PrimaryExpr ( Predicate | ArgumentList | Lookup )*
 ArgumentList
          ::= '(' ( Argument ( ',' Argument )* )? ')'
 PredicateList
          ::= Predicate*
+         
 Predicate
          ::= '[' Expr ']'
+Lookup  ::= '?' KeySpecifier
+UnaryLookup ::= '?' KeySpecifier
+KeySpecifier ::= NCName | IntegerLiteral | ParenthesizedExpr | '*'
+ArrowFunctionSpecifier
+         ::= EQName
+           | VarRef
+           | ParenthesizedExpr
 Literal  ::= NumericLiteral
            | StringLiteral
 NumericLiteral
@@ -386,8 +396,16 @@ ItemType ::= KindTest
            | AtomicOrUnionType
            | ParenthesizedItemType
            | JSONTest
+           | MapType
            | StructuredItemTest
-JSONTest ::= 
+
+MapType ::= 'map' '(' ( '*' | (AtomicOrUnionType ',' SequenceType) ) ')'
+
+MapConstructor ::= 'map' '{' (MapConstructorEntry ("," MapConstructorEntry)*)? '}'
+
+MapConstructorEntry ::= ExprSingle ":" ExprSingle
+
+JSONTest ::=
           JSONItemTest
         | JSONObjectTest
         | JSONArrayTest
@@ -685,6 +703,7 @@ FunctionName
            | 'le'
            | 'let'
            | 'lt'
+           | 'map'
            | 'mod'
            | 'modify'
            | 'module'
@@ -785,6 +804,7 @@ NCName   ::= NCName^Token
            | 'le'
            | 'let'
            | 'lt'
+           | 'map'
            | 'mod'
            | 'modify'
            | 'ne'
@@ -963,17 +983,17 @@ ExprSimple
            | JSONRenameExpr
            | JSONReplaceExpr
            | JSONAppendExpr
-           
+
 JSONDeleteExpr ::= "delete" "json" PostfixExpr
-      
+
 JSONInsertExpr ::=
       "insert" "json" ExprSingle "into" ExprSingle ("at" "position" ExprSingle)?
-    | "insert" "json" PairConstructorList "into" ExprSingle      
+    | "insert" "json" PairConstructorList "into" ExprSingle
 
 JSONRenameExpr ::= "rename" "json" PostfixExpr "as" ExprSingle
-      
+
 JSONReplaceExpr ::= "replace" "value" "of" "json" PostfixExpr  "with" ExprSingle
-      
+
 JSONAppendExpr ::= "append" "json" ExprSingle "into" ExprSingle
 
 CommonContent
@@ -1004,22 +1024,24 @@ PrimaryExpr
            | UnorderedExpr
            | Constructor
            | FunctionItemExpr
+           | MapConstructor
            | BlockExpr
            | ObjectConstructor
            | ArrayConstructor
+           | UnaryLookup
            | JSONSimpleObjectUnion
 
 JSONSimpleObjectUnion
          ::= '{|' Expr? '|}'
- 
+
 ObjectConstructor ::=  "{" PairConstructorList? "}"
 
 PairConstructorList ::= PairConstructor ("," PairConstructor)*
 
 PairConstructor ::=  ExprSingle ":" ExprSingle
-      
+
 ArrayConstructor ::=  "[" Expr? "]"
-      
+
 BlockExpr
          ::= '{' StatementsAndOptionalExpr '}'
 FunctionDecl
@@ -1110,19 +1132,19 @@ DelimitingChar
             | '-'
             | '.'
 DelimitingChar
-           \\ IntegerLiteral DecimalLiteral DoubleLiteral 
+           \\ IntegerLiteral DecimalLiteral DoubleLiteral
 NonNCNameChar
            \\ EQName^Token QName NCName^Token 'NaN' 'after' 'all'
-              'allowing' 'ancestor' 'ancestor-or-self' 'and' 'any' 
-              'as' 'ascending' 'at' 'attribute' 
+              'allowing' 'ancestor' 'ancestor-or-self' 'and' 'any'
+              'as' 'ascending' 'at' 'attribute'
               'base-uri' 'before' 'boundary-space' 'break' 'by' 'case'
-              'cast' 'castable' 'catch' 'check' 'child' 'collation' 
+              'cast' 'castable' 'catch' 'check' 'child' 'collation'
               'collection' 'comment' 'constraint' 'construction'
-              'contains' 'content' 'context' 'continue' 'copy' 
-              'copy-namespaces' 'count' 'decimal-format' 
-              'decimal-separator' 'declare' 'default' 'delete' 
-              'descendant' 'descendant-or-self' 'descending' 
-              'diacritics' 'different' 'digit' 'distance' 'div' 
+              'contains' 'content' 'context' 'continue' 'copy'
+              'copy-namespaces' 'count' 'decimal-format'
+              'decimal-separator' 'declare' 'default' 'delete'
+              'descendant' 'descendant-or-self' 'descending'
+              'diacritics' 'different' 'digit' 'distance' 'div'
               'document' 'document-node' 'element' 'else' 'empty'
               'empty-sequence' 'encoding' 'end' 'entire' 'eq' 'every'
               'exactly' 'except' 'exit' 'external' 'first' 'following'
@@ -1133,7 +1155,7 @@ NonNCNameChar
               'insert' 'instance' 'integrity' 'intersect' 'into' 'is'
               'item' 'key' 'language' 'last' 'lax'
               'le' 'least' 'let' 'levels' 'loop' 'lowercase' 'lt'
-              'minus-sign' 'mod' 'modify' 'module' 'most' 'namespace'
+              'minus-sign' 'mod' 'map' 'modify' 'module' 'most' 'namespace'
               'namespace-node' 'ne' 'next' 'no' 'no-inherit'
               'no-preserve' 'node' 'nodes' 'not' 'occurs'
               'of' 'on' 'only' 'option' 'or' 'order' 'ordered'
@@ -1156,16 +1178,16 @@ NonNCNameChar
 '*'       << Wildcard '*'^OccurrenceIndicator
 EQName^Token
           <<  'NaN' 'after' 'all'
-              'allowing' 'ancestor' 'ancestor-or-self' 'and' 'any' 
-              'as' 'ascending' 'at' 'attribute' 
+              'allowing' 'ancestor' 'ancestor-or-self' 'and' 'any'
+              'as' 'ascending' 'at' 'attribute'
               'base-uri' 'before' 'boundary-space' 'break' 'by' 'case'
-              'cast' 'castable' 'catch' 'check' 'child' 'collation' 
+              'cast' 'castable' 'catch' 'check' 'child' 'collation'
               'collection' 'comment' 'constraint' 'construction'
-              'contains' 'content' 'context' 'continue' 'copy' 
-              'copy-namespaces' 'count' 'decimal-format' 
-              'decimal-separator' 'declare' 'default' 'delete' 
-              'descendant' 'descendant-or-self' 'descending' 
-              'diacritics' 'different' 'digit' 'distance' 'div' 
+              'contains' 'content' 'context' 'continue' 'copy'
+              'copy-namespaces' 'count' 'decimal-format'
+              'decimal-separator' 'declare' 'default' 'delete'
+              'descendant' 'descendant-or-self' 'descending'
+              'diacritics' 'different' 'digit' 'distance' 'div'
               'document' 'document-node' 'element' 'else' 'empty'
               'empty-sequence' 'encoding' 'end' 'entire' 'eq' 'every'
               'exactly' 'except' 'exit' 'external' 'first' 'following'
@@ -1176,7 +1198,7 @@ EQName^Token
               'insert' 'instance' 'integrity' 'intersect' 'into' 'is'
               'item' 'key' 'language' 'last' 'lax'
               'le' 'least' 'let' 'levels' 'loop' 'lowercase' 'lt'
-              'minus-sign' 'mod' 'modify' 'module' 'most' 'namespace'
+              'minus-sign' 'map' 'mod' 'modify' 'module' 'most' 'namespace'
               'namespace-node' 'ne' 'next' 'no' 'no-inherit'
               'no-preserve' 'node' 'nodes' 'not' 'occurs'
               'of' 'on' 'only' 'option' 'or' 'order' 'ordered'
@@ -1198,16 +1220,16 @@ EQName^Token
               'append' 'array' 'json' 'json-item' 'structured-item' 'object'
 NCName^Token
           <<  'NaN' 'after' 'all'
-              'allowing' 'ancestor' 'ancestor-or-self' 'and' 'any' 
-              'as' 'ascending' 'at' 'attribute' 
+              'allowing' 'ancestor' 'ancestor-or-self' 'and' 'any'
+              'as' 'ascending' 'at' 'attribute'
               'base-uri' 'before' 'boundary-space' 'break' 'by' 'case'
-              'cast' 'castable' 'catch' 'check' 'child' 'collation' 
+              'cast' 'castable' 'catch' 'check' 'child' 'collation'
               'collection' 'comment' 'constraint' 'construction'
-              'contains' 'content' 'context' 'continue' 'copy' 
-              'copy-namespaces' 'count' 'decimal-format' 
-              'decimal-separator' 'declare' 'default' 'delete' 
-              'descendant' 'descendant-or-self' 'descending' 
-              'diacritics' 'different' 'digit' 'distance' 'div' 
+              'contains' 'content' 'context' 'continue' 'copy'
+              'copy-namespaces' 'count' 'decimal-format'
+              'decimal-separator' 'declare' 'default' 'delete'
+              'descendant' 'descendant-or-self' 'descending'
+              'diacritics' 'different' 'digit' 'distance' 'div'
               'document' 'document-node' 'element' 'else' 'empty'
               'empty-sequence' 'encoding' 'end' 'entire' 'eq' 'every'
               'exactly' 'except' 'exit' 'external' 'first' 'following'
@@ -1218,7 +1240,7 @@ NCName^Token
               'insert' 'instance' 'integrity' 'intersect' 'into' 'is'
               'item' 'key' 'language' 'last' 'lax'
               'le' 'least' 'let' 'levels' 'loop' 'lowercase' 'lt'
-              'minus-sign' 'mod' 'modify' 'module' 'most' 'namespace'
+              'minus-sign' 'map' 'mod' 'modify' 'module' 'most' 'namespace'
               'namespace-node' 'ne' 'next' 'no' 'no-inherit'
               'no-preserve' 'node' 'nodes' 'not' 'occurs'
               'of' 'on' 'only' 'option' 'or' 'order' 'ordered'

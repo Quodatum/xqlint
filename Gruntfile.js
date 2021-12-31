@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     
     grunt.registerMultiTask('rex', 'Generate Parsers', function(){
         var fs = require('fs');
-        var request = require('request');
+        var axios = require('axios');
         var FormData = require('form-data');
         var path = require('path');
         var Q = require('q');
@@ -19,17 +19,21 @@ module.exports = function(grunt) {
             form.append('tz', parser.tz, { knownLength:  Buffer.from(parser.tz).length, contentType: 'text/plain'  });
             form.append('command', parser.command, { knownLength:  Buffer.from(parser.command).length, contentType: 'text/plain' });
             form.append('input', grammar, { knownLength :  Buffer.from(grammar).length, contentType: 'text/plain', filename: path.basename(parser.source) });
-            var length = form.getLengthSync();
-            var r = request.post('https://www.bottlecaps.de/rex/', function(err, res, body) {
-                if(err) {
-                    deferred.reject(err);
-                } else {
-                    fs.writeFileSync(parser.destination, body);
-                    deferred.resolve();
-                }
-            });
-            r._form = form;
-            r.setHeader('content-length', length);
+
+            // Prepare additional headers for Axios, which include FormData's headers and the Content-Length
+           const headers = {
+                ...form.getHeaders(),
+                "Content-Length": form.getLengthSync()
+            };
+            var r = axios.post('https://www.bottlecaps.de/rex/', form, {headers})
+            .then(function (response) {
+                fs.writeFileSync(parser.destination, response.data);
+                deferred.resolve();
+              })
+              .catch(function (error) {
+                deferred.reject(error);
+              });
+              
             promises.push(deferred.promise);
         });
         Q.all(promises)
@@ -49,13 +53,13 @@ module.exports = function(grunt) {
 						source: 'lib/parsers/XQueryParser.ebnf',
 						destination: 'lib/parsers/XQueryParser.js',
 						command: '-ll 2 -backtrack -tree -javascript -a xqlint',
-						tz: '-60',
+						tz: '0',
 					},
 					{
 						source: 'lib/parsers/JSONiqParser.ebnf',
 						destination: 'lib/parsers/JSONiqParser.js',
 						command: '-ll 2 -backtrack -tree -javascript -a xqlint',
-						tz: '-60',
+						tz: '0',
 					}
                 ]
             },
@@ -65,13 +69,13 @@ module.exports = function(grunt) {
 						source: 'lib/lexers/XQueryTokenizer.ebnf',
                         destination: 'lib/lexers/XQueryTokenizer.js',
                         command: '-ll 2 -backtrack -tree -javascript -a xqlint',
-                        tz: '-60'
+                        tz: '0'
                     },
                     {
 						source: 'lib/lexers/JSONiqTokenizer.ebnf',
                         destination: 'lib/lexers/JSONiqTokenizer.js',
                         command: '-ll 2 -backtrack -tree -javascript -a xqlint',
-                        tz: '-60'
+                        tz: '0'
                     }
 				]
 			}
