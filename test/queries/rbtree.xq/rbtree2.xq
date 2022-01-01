@@ -17,13 +17,13 @@ xquery version "3.0";
  :)
 
 module namespace rbtree = "http://snelson.org.uk/functions/rbtree";
-
+declare default function namespace "http://snelson.org.uk/functions/rbtree";
 declare function create() as function() as item()*
 {
   function() as empty-sequence() { () }
 };
 
-declare %private function create(
+                 declare %private function create(
   $x as item(),
   $a as function() as item()*,
   $b as function() as item()*,

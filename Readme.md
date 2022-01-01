@@ -1,5 +1,7 @@
 # XQLint
 
+
+## Dev
 wcandillon/xqlint https://github.com/wcandillon/xqlint
 
 ##Generate parsers
@@ -34,6 +36,12 @@ $ npm install xqlint -g
 $ xqlint lint <path> [-s, --style-check <yes, no>]
 ```
 ![result](https://dl.dropboxusercontent.com/u/1487285/Screenshot%202014-04-07%2011.06.31.png)
+
+### Format
+
+```bash
+$ xqlint format <path>
+```
 
 ### Print AST as XML
 
