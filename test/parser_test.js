@@ -25,10 +25,11 @@ var getFiles = function(p){
     return files;
 };
 
-var files = getFiles('test/queries/zorba');
-files = files.concat(getFiles('test/queries/zorba_extra'));
+var files = getFiles('test/queries/basex');
+files = files.concat(getFiles('test/queries/basex_update'));
 files.forEach(function(file){
     batch[file] = function(){
+        //@todo processor: '28msec' Does this exist
         var linter = new XQLint(fs.readFileSync(file, 'utf-8'), { styleCheck: false, fileName: file, processor: '28msec' });
         var syntaxError = linter.hasSyntaxError();
         if(syntaxError) {
