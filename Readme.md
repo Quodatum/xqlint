@@ -1,8 +1,9 @@
 # XQLint
 
+This is a fork of the marvelous wcandillon/xqlint https://github.com/wcandillon/xqlint. The goal is to focus on support current versionsof BaseX.
 
 ## Dev
-wcandillon/xqlint https://github.com/wcandillon/xqlint
+
 
 ##Generate parsers
 

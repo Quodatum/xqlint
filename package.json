@@ -5,19 +5,18 @@
     "url": "http://28.io"
   },
   "name": "xqlint",
-  "description": "XQuery & JSONiq Quality Checker",
-  "version": "0.4.1",
+  "description": "XQuery Quality Checker",
+  "version": "0.5.1",
   "keywords": [
-    "jsoniq",
     "xquery",
     "dev",
     "cloud"
   ],
-  "homepage": "https://28.io",
-  "bugs": "https://github.com/wcandillon/xqlint/issues",
+  "homepage": "https://github.com/Quodatum/xqlint",
+  "bugs": "https://github.com/Quodatum/xqlint/issues",
   "repository": {
     "type": "git",
-    "url": "git://github.com/wcandillon/xqlint.git"
+    "url": "https://github.com/Quodatum/xqlint.git"
   },
   "main": "./lib/xqlint.js",
   "xqlint": {
@@ -52,6 +51,10 @@
     {
       "name": "William Candillon",
       "email": "w@28.io"
+    },
+    {
+      "name": "Andy Bunce",
+      "email": "bunce.andy@gmail.com"
     }
   ],
   "scripts": {
