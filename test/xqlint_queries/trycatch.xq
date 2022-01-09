@@ -1,4 +1,3 @@
-declare namespace err="http://www.w3.org/2005/xqt-errors";
 
 (: try-catch with multiple catch clauses showing catch clause precedence :)
 try {

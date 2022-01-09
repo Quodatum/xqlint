@@ -1,11 +1,13 @@
 # XQLint
 
-This is a fork of the marvelous wcandillon/xqlint https://github.com/wcandillon/xqlint. The goal is to focus on support current versionsof BaseX.
+This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). The goal is to support browser hosted XQuery code editing for current versions (9.6) of BaseX.
+
+Two  where this can be used are the [Ace editor](https://github.com/ajaxorg/ace) and VS code extension DotJoshJohnson's [XML tools](https://github.com/DotJoshJohnson/vscode-xml)
 
 ## Dev
 
 
-##Generate parsers
+## Generate parsers
 
 `grunt parsers`
 

@@ -54,12 +54,6 @@ module.exports = function(grunt) {
 						destination: 'lib/parsers/XQueryParser.js',
 						command: '-ll 2 -backtrack -tree -javascript -a xqlint',
 						tz: '0',
-					},
-					{
-						source: 'lib/parsers/JSONiqParser.ebnf',
-						destination: 'lib/parsers/JSONiqParser.js',
-						command: '-ll 2 -backtrack -tree -javascript -a xqlint',
-						tz: '0',
 					}
                 ]
             },
@@ -68,12 +62,6 @@ module.exports = function(grunt) {
                     {
 						source: 'lib/lexers/XQueryTokenizer.ebnf',
                         destination: 'lib/lexers/XQueryTokenizer.js',
-                        command: '-ll 2 -backtrack -tree -javascript -a xqlint',
-                        tz: '0'
-                    },
-                    {
-						source: 'lib/lexers/JSONiqTokenizer.ebnf',
-                        destination: 'lib/lexers/JSONiqTokenizer.js',
                         command: '-ll 2 -backtrack -tree -javascript -a xqlint',
                         tz: '0'
                     }
@@ -107,8 +95,7 @@ module.exports = function(grunt) {
             browser_build: {
                 files: {
                     'build/xqlint.js': ['lib/xqlint.js'],
-                    'build/xquery_lexer.js': ['lib/lexers/xquery_lexer.js'],
-                    'build/jsoniq_lexer.js': ['lib/lexers/jsoniq_lexer.js']
+                    'build/xquery_lexer.js': ['lib/lexers/xquery_lexer.js']
                 },
                 options: {
                     standalone: ''

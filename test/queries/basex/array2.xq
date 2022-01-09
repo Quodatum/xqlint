@@ -7,4 +7,9 @@ let $f:=function($v,$this){
   case   array(*) return "array"  (: <--here-- :)
   default return $v!<_>{.}</_>
 }
-return $f(42,$f)
+(: $varname :)
+declare variable $varname := expr;
+
+
+ 
+
