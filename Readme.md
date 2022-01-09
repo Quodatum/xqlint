@@ -1,6 +1,6 @@
 # XQLint
 
-This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). The goal is to support browser hosted XQuery code editing for current versions (9.6) of BaseX.
+This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). The goal is to support browser hosted XQuery code editing for BaseX currently version 9.6.
 
 Two  where this can be used are the [Ace editor](https://github.com/ajaxorg/ace) and VS code extension DotJoshJohnson's [XML tools](https://github.com/DotJoshJohnson/vscode-xml)
 
@@ -15,7 +15,9 @@ Command generates:
 
  *   lib/lexers/XQueryTokenizer.ebnf -> XQueryTokenizer.js
  *   lib/parsers/XQueryParser.ebnf -> XQueryParser.js
-    
+
+
+
 # Upstream readme
 [![Build Status](http://img.shields.io/travis/wcandillon/xqlint/master.svg?style=flat)](https://travis-ci.org/wcandillon/xqlint) [![NPM version](http://img.shields.io/npm/v/xqlint.svg?style=flat)](http://badge.fury.io/js/xqlint) [![Code Climate](http://img.shields.io/codeclimate/github/wcandillon/xqlint.svg?style=flat)](https://codeclimate.com/github/wcandillon/xqlint)
 
