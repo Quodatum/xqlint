@@ -19,7 +19,22 @@
             "label": "proposals",
             "type": "shell",
             "command": "node",
-            "args": ["${workspaceFolder}/test/scripts/show.js"],
+            "args": [
+                "${workspaceFolder}/scripts/show.js"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "tokens",
+            "type": "shell",
+            "command": "node",
+            "args": [
+                "${workspaceFolder}/scripts/tokens.js"
+            ],
             "problemMatcher": [],
             "group": {
                 "kind": "build",

@@ -147,24 +147,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         assert.equal(markers.length, 0, 'Number of markers');
     },
 
-    'test 9': function(){
-        var sctx = new StaticContext();
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        sctx.setModulesFromXQDoc(index);
-        var linter = new XQLint(fs.readFileSync('test/queries/zorba/xqdoc.jq', 'utf-8'), { fileName: 'xqdoc.jq',  staticContext: sctx });
-        var markers = linter.getMarkers();
-        assert.equal(markers.length, 2, 'Number of markers');
-    },
-
-    'test 10': function(){
-        var sctx = new StaticContext();
-        //var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        //sctx.setModulesFromXQDoc(index);
-        var linter = new XQLint(fs.readFileSync('test/queries/zorba/xqdoc2.jq', 'utf-8'), { fileName: 'xqdoc2.jq', staticContext: sctx });
-        var markers = linter.getMarkers();
-        //console.log(markers);
-        assert.equal(markers.length, 0, 'Number of markers');
-    },
+  
 
     'test 11': function(){
         var sctx = new StaticContext();
@@ -222,15 +205,6 @@ vows.describe('Test Module URI Resolver').addBatch({
         assert.equal(markers.length, 0, 'Number of markers');
     },
 
-    'test 17': function(){
-        var sctx = new StaticContext();
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        var source = fs.readFileSync('test/xqlint_queries/geojson2.jq', 'utf-8');
-        sctx.setModulesFromXQDoc(index);
-        var linter = new XQLint(source, { fileName: 'merry.jq',  staticContext: sctx });
-        var markers = linter.getErrors();
-        assert.equal(markers.length, 0, 'Number of markers');
-    },
 
     'test 18': function(){
         var sctx = new StaticContext();

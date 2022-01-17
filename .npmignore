@@ -1,4 +1,5 @@
 .git*
 test/
+scripts/
 .DS_Store
 *.swp

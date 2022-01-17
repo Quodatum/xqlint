@@ -1,0 +1,2315 @@
+  <XQuery>
+   <Module>
+    <VersionDecl>
+     <TOKEN>xquery</TOKEN>
+     <WS> </WS>
+     <TOKEN>version</TOKEN>
+     <WS> </WS>
+     <StringLiteral>"3.1"</StringLiteral>
+     <Separator>
+      <TOKEN>;</TOKEN>
+     </Separator>
+    </VersionDecl>
+    <WS>
+(:~
+ : BaseX archive module functions
+ :
+ : @see http://docs.basex.org/wiki/Archive_Module
+ :)
+</WS>
+    <LibraryModule>
+     <ModuleDecl>
+      <TOKEN>module</TOKEN>
+      <WS> </WS>
+      <TOKEN>namespace</TOKEN>
+      <WS> </WS>
+      <NCName>
+       <NCName>archive</NCName>
+      </NCName>
+      <WS> </WS>
+      <TOKEN>=</TOKEN>
+      <WS> </WS>
+      <URILiteral>
+       <StringLiteral>"http://basex.org/modules/archive#"</StringLiteral>
+      </URILiteral>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+     </ModuleDecl>
+     <WS>
+
+</WS>
+     <Prolog>
+      <NamespaceDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <TOKEN>namespace</TOKEN>
+       <WS> </WS>
+       <NCName>
+        <NCName>a</NCName>
+       </NCName>
+       <WS> </WS>
+       <TOKEN>=</TOKEN>
+       <WS> </WS>
+       <URILiteral>
+        <StringLiteral>"http://reecedunn.co.uk/xquery/annotations"</StringLiteral>
+       </URILiteral>
+      </NamespaceDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <NamespaceDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <TOKEN>namespace</TOKEN>
+       <WS> </WS>
+       <NCName>
+        <NCName>o</NCName>
+       </NCName>
+       <WS> </WS>
+       <TOKEN>=</TOKEN>
+       <WS> </WS>
+       <URILiteral>
+        <StringLiteral>"http://reecedunn.co.uk/xquery/options"</StringLiteral>
+       </URILiteral>
+      </NamespaceDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+
+</WS>
+      <OptionDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <TOKEN>option</TOKEN>
+       <WS> </WS>
+       <EQName>
+        <QName>
+         <FunctionName>
+          <QName>o:requires</QName>
+         </FunctionName>
+        </QName>
+       </EQName>
+       <WS> </WS>
+       <StringLiteral>"basex/7.3"</StringLiteral>
+      </OptionDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:create</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>contents</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:create</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>contents</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>options</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <MapType>
+              <TOKEN>map</TOKEN>
+              <TOKEN>(</TOKEN>
+              <TOKEN>*</TOKEN>
+              <TOKEN>)</TOKEN>
+             </MapType>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>?</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:create-from</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:create-from</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>options</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <MapType>
+              <TOKEN>map</TOKEN>
+              <TOKEN>(</TOKEN>
+              <TOKEN>*</TOKEN>
+              <TOKEN>)</TOKEN>
+             </MapType>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>?</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:create-from</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>options</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <MapType>
+              <TOKEN>map</TOKEN>
+              <TOKEN>(</TOKEN>
+              <TOKEN>*</TOKEN>
+              <TOKEN>)</TOKEN>
+             </MapType>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>?</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:entries</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <KindTest>
+           <ElementTest>
+            <TOKEN>element</TOKEN>
+            <TOKEN>(</TOKEN>
+            <ElementNameOrWildcard>
+             <ElementName>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>archive:entry</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </ElementName>
+            </ElementNameOrWildcard>
+            <TOKEN>)</TOKEN>
+           </ElementTest>
+          </KindTest>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:options</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> (: as [7.3]element(archive:options) [8.5]map(*) :) </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-text</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:string</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-text</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:string</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-text</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>encoding</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:string</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-binary</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-binary</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-to</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <TOKEN>empty-sequence</TOKEN>
+         <TOKEN>(</TOKEN>
+         <TOKEN>)</TOKEN>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:extract-to</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <TOKEN>empty-sequence</TOKEN>
+         <TOKEN>(</TOKEN>
+         <TOKEN>)</TOKEN>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:update</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>contents</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.3"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:delete</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:base64Binary</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.7"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:until</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"archive:create-from#2"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"archive:extract-to#1"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:write</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <TOKEN>empty-sequence</TOKEN>
+         <TOKEN>(</TOKEN>
+         <TOKEN>)</TOKEN>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"7.7"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:until</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"basex"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"8.3"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"archive:create-from#3"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"archive:extract-to#2"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>archive:write</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>path</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>archive</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:base64Binary</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>entries</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <TOKEN>empty-sequence</TOKEN>
+         <TOKEN>(</TOKEN>
+         <TOKEN>)</TOKEN>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+     </Prolog>
+    </LibraryModule>
+   </Module>
+   <WS>
+</WS>
+   <EOF>
+   </EOF>
+  </XQuery>
+

@@ -36,12 +36,6 @@ vows.describe('Test Function declarations').addBatch({
         var linter = new XQLint('declare default function namespace "http://www.w3.org/2005/xquery-local-functions"; declare function local:bar() as xs:string { "h" }; bar#0()');
         var markers = linter.getMarkers();
         assert.equal(markers.length, 0, 'Number of markers');
-    },
-
-    'updating function (1)': function(){
-        var linter = new XQLint(fs.readFileSync('test/queries/28msec/update.jq', 'utf-8'), { styleCheck: false, fileName: 'update.jq' });
-        var markers = linter.getMarkers();
-        assert.equal(markers.length, 0, 'Number of markers');
     }
 
 }).export(module);

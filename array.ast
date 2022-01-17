@@ -1,0 +1,176 @@
+  <XQuery>
+   <Module>
+    <VersionDecl>
+     <TOKEN>xquery</TOKEN>
+     <WS> </WS>
+     <TOKEN>version</TOKEN>
+     <WS> </WS>
+     <StringLiteral>"3.1"</StringLiteral>
+     <Separator>
+      <TOKEN>;</TOKEN>
+     </Separator>
+    </VersionDecl>
+    <WS>
+(:~
+ : XPath and XQuery Functions and Operators: Functions that Operate on Arrays
+ :
+ : @see https://www.w3.org/TR/2017/REC-xpath-functions-31-20170321/
+ :
+ : This software includes material copied from or derived from the XPath and
+ : XQuery Functions and Operators 3.1 specifications. Copyright © 2017 W3C®
+ : (MIT, ERCIM, Keio, Beihang).
+ :)
+</WS>
+    <LibraryModule>
+     <ModuleDecl>
+      <TOKEN>module</TOKEN>
+      <WS> </WS>
+      <TOKEN>namespace</TOKEN>
+      <WS> </WS>
+      <NCName>
+       <NCName>array</NCName>
+      </NCName>
+      <WS> </WS>
+      <TOKEN>=</TOKEN>
+      <WS> </WS>
+      <URILiteral>
+       <StringLiteral>"http://www.w3.org/2005/xpath-functions/array#"</StringLiteral>
+      </URILiteral>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+     </ModuleDecl>
+     <WS>
+
+</WS>
+     <Prolog>
+      <NamespaceDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <TOKEN>namespace</TOKEN>
+       <WS> </WS>
+       <NCName>
+        <NCName>a</NCName>
+       </NCName>
+       <WS> </WS>
+       <TOKEN>=</TOKEN>
+       <WS> </WS>
+       <URILiteral>
+        <StringLiteral>"http://reecedunn.co.uk/xquery/annotations"</StringLiteral>
+       </URILiteral>
+      </NamespaceDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <NamespaceDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <TOKEN>namespace</TOKEN>
+       <WS> </WS>
+       <NCName>
+        <NCName>o</NCName>
+       </NCName>
+       <WS> </WS>
+       <TOKEN>=</TOKEN>
+       <WS> </WS>
+       <URILiteral>
+        <StringLiteral>"http://reecedunn.co.uk/xquery/options"</StringLiteral>
+       </URILiteral>
+      </NamespaceDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+
+</WS>
+      <OptionDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <TOKEN>option</TOKEN>
+       <WS> </WS>
+       <EQName>
+        <QName>
+         <FunctionName>
+          <QName>o:requires</QName>
+         </FunctionName>
+        </QName>
+       </EQName>
+       <WS> </WS>
+       <StringLiteral>"xpath-functions/3.1"</StringLiteral>
+      </OptionDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:append</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <TOKEN>array</TOKEN>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+       </FunctionDecl>
+      </AnnotatedDecl>
+     </Prolog>
+    </LibraryModule>
+   </Module>
+  </XQuery>
+

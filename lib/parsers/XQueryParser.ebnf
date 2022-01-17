@@ -9,6 +9,8 @@ XQuery   ::= Module EOF
 Module   ::= VersionDecl? ( LibraryModule | MainModule )
 VersionDecl
          ::= 'xquery' ( 'encoding' StringLiteral | 'version' StringLiteral ( 'encoding' StringLiteral )? ) Separator
+MainModule
+         ::= Prolog QueryBody
 LibraryModule
          ::= ModuleDecl Prolog
 ModuleDecl
@@ -329,7 +331,7 @@ OrderedExpr
 UnorderedExpr
          ::= 'unordered' '{' Expr '}'
 FunctionCall
-         ::= FunctionEQName ArgumentList
+         ::= EQName ArgumentList
 Argument ::= ExprSingle
            | ArgumentPlaceholder
 ArgumentPlaceholder
@@ -426,24 +428,17 @@ TypeDeclaration
 SequenceType
          ::= 'empty-sequence' '(' ')'
            | ItemType ( OccurrenceIndicator / )
+
+ItemType 	::=  	KindTest | ("item" "(" ")") | FunctionTest | MapTest | ArrayTest | AtomicOrUnionType | ParenthesizedItemType
+
 OccurrenceIndicator
          ::= '?'
            | '*'
            | '+'
-ItemType ::= KindTest
-           | 'item' '(' ')'
-           | FunctionTest
-           | AtomicOrUnionType
-           | ParenthesizedItemType
-           | MapType
-
-MapType ::= 'map' '(' ( '*' | (AtomicOrUnionType ',' SequenceType) ) ')'
-
-
-
 
 AtomicOrUnionType
          ::= EQName
+
 KindTest ::= DocumentTest
            | ElementTest
            | AttributeTest
@@ -454,56 +449,39 @@ KindTest ::= DocumentTest
            | TextTest
            | NamespaceNodeTest
            | AnyKindTest
-AnyKindTest
-         ::= 'node' '(' ')'
-DocumentTest
-         ::= 'document-node' '(' ( ElementTest | SchemaElementTest )? ')'
-TextTest ::= 'text' '(' ')'
-CommentTest
-         ::= 'comment' '(' ')'
-NamespaceNodeTest
-         ::= 'namespace-node' '(' ')'
-PITest   ::= 'processing-instruction' '(' ( NCName | StringLiteral )? ')'
-AttributeTest
-         ::= 'attribute' '(' ( AttribNameOrWildcard ( ',' TypeName )? )? ')'
-AttribNameOrWildcard
-         ::= AttributeName
-           | '*'
-SchemaAttributeTest
-         ::= 'schema-attribute' '(' AttributeDeclaration ')'
-AttributeDeclaration
-         ::= AttributeName
-ElementTest
-         ::= 'element' '(' ( ElementNameOrWildcard ( ',' TypeName '?'? )? )? ')'
-ElementNameOrWildcard
-         ::= ElementName
-           | '*'
-SchemaElementTest
-         ::= 'schema-element' '(' ElementDeclaration ')'
-ElementDeclaration
-         ::= ElementName
-AttributeName
-         ::= EQName
-ElementName
-         ::= EQName
-SimpleTypeName
-         ::= TypeName
-TypeName ::= EQName
-FunctionTest
-         ::= Annotation* ( AnyFunctionTest | TypedFunctionTest )
-AnyFunctionTest
-         ::= 'function' '(' '*' ')'
-TypedFunctionTest
-         ::= 'function' '(' ( SequenceType ( ',' SequenceType )* )? ')' 'as' SequenceType
-ParenthesizedItemType
-         ::= '(' ItemType ')'
-URILiteral
-         ::= StringLiteral
-EQName   ::= QName
-           | URIQualifiedName
-FunctionEQName
-         ::= FunctionName
-           | URIQualifiedName           
+AnyKindTest 	   ::= "node" "(" ")" 	
+DocumentTest 	   ::=    	"document-node" "(" (ElementTest | SchemaElementTest)? ")"
+TextTest 	   ::= "text" "(" ")"
+CommentTest 	   ::= "comment" "(" ")" 	
+NamespaceNodeTest 	   ::= "namespace-node" "(" ")" 	
+PITest 	   ::= "processing-instruction" "(" (NCName | StringLiteral)? ")" 	
+AttributeTest 	   ::=    	"attribute" "(" (AttribNameOrWildcard ("," TypeName)?)? ")"
+AttribNameOrWildcard 	   ::= AttributeName | "*" 	
+SchemaAttributeTest 	   ::=    	"schema-attribute" "(" AttributeDeclaration ")" 
+AttributeDeclaration 	   ::=    	AttributeName 	
+ElementTest 	   ::=    	"element" "(" (ElementNameOrWildcard ("," TypeName "?"?)?)? ")"
+ElementNameOrWildcard 	   ::=    	ElementName | "*" 
+SchemaElementTest 	   ::=    	"schema-element" "(" ElementDeclaration ")"
+ElementDeclaration 	   ::=    	ElementName
+AttributeName 	   ::= EQName
+ElementName 	   ::=    	EQName
+SimpleTypeName::= TypeName
+TypeName 	   ::= EQName
+FunctionTest 	   ::= Annotation* (AnyFunctionTest
+                   | TypedFunctionTest) 	
+AnyFunctionTest 	   ::= "function" "(" "*" ")"
+TypedFunctionTest 	   ::= "function" "(" (SequenceType ("," SequenceType)*)? ")" "as" SequenceType 	
+MapTest 	   ::=    	AnyMapTest | TypedMapTest 	
+AnyMapTest 	   ::=    	"map" "(" "*" ")" 	
+TypedMapTest 	   ::=    	"map" "(" AtomicOrUnionType "," SequenceType ")" 	
+ArrayTest 	   ::=    	AnyArrayTest | TypedArrayTest 	
+AnyArrayTest 	   ::=    	"array" "(" "*" ")" 	
+TypedArrayTest 	   ::=    	"array" "(" SequenceType ")"
+ParenthesizedItemType 	   ::= "(" ItemType ")" 	
+URILiteral ::= StringLiteral
+EQName   ::= QName | URIQualifiedName
+
+/* ======  */          
 QName    ::= FunctionName
            | 'array'
            | 'attribute'
@@ -770,8 +748,7 @@ NCName   ::= NCName^Token
            | 'treat'
            | 'union'
            | 'where'
-MainModule
-         ::= Prolog QueryBody
+
 QueryBody
          ::= Expr
 Expr     ::= ExprSingle ( ',' ExprSingle )*         

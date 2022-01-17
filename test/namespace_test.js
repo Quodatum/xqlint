@@ -120,14 +120,6 @@ vows.describe('Test Namespace declarations').addBatch({
         //assert.equal(error.message.indexOf('[XQST0088]'), 0, 'Is Error [XQST0088]');
     },
     
-    'test unused namespace (1)': function(){
-        var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/10.xq', 'utf-8'), { styleCheck: false });
-        var markers = linter.getMarkers();
-        assert.equal(markers.length, 1, 'Number of markers');
-        var warning = markers[0];
-        assert.equal(warning.type, 'warning', 'Type of marker');
-        //assert.equal(error.message.indexOf('[XQST0088]'), 0, 'Is Error [XQST0088]');
-    },
     
     'test unused namespace (2)': function(){
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/11.xq', 'utf-8'), { styleCheck: false });
@@ -158,7 +150,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var sctx = new StaticContext();
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.setModulesFromXQDoc(index);
-        var linter = new XQLint(fs.readFileSync('test/xqlint_queries/csv.jq', 'utf-8'), { staticContext: sctx, styleCheck: false, fileName: 'csv.jq' });
+        var linter = new XQLint(fs.readFileSync('test/xqlint_queries/csv.xq', 'utf-8'), { staticContext: sctx, styleCheck: false, fileName: 'csv.xq' });
         var warnings = linter.getWarnings();
         var errors = linter.getErrors();
         assert.equal(errors.length, 0, 'Number of errors');

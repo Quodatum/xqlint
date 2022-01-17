@@ -89,7 +89,23 @@ module.exports = function(grunt) {
                 // determining which files to include.
                 // This option is grunt's "full" file format.
                 src: ['test/*.js', 'spec/*']
-            }
+            },
+            one: {
+                options: {
+                   
+                    colors: true,
+                    coverage: 'json'
+                },
+                // String or array of strings
+                // determining which files to include.
+                // This option is grunt's "full" file format.
+                //src: ['test/formatting_test.js']
+                //src: ['test/function_test.js']
+                //src: ['test/variable_test.js']
+                //src: ['test/namespace_test.js'] //3 fail
+                src: ['test/module_resolver.js'] //26 fail
+                //src: ['test/completion.js'] //26 fail
+            },
         },
         browserify: {
             browser_build: {

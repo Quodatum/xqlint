@@ -1,3 +1,83 @@
+# xqlint
+Syntax `new XQLint(source, opts)` where
+opts is
+* styleCheck: false
+* staticContext
+## module.js
+Exports Basex, W3, Expath
+
+## test/module_resolver_test.js
+## test/index.js
+```xquery
+{namespace1:{ns:namespace1, description:, 
+             functions:[], variables:[]
+             }
+}
+```
+## 2022-01-13 thurs
+looking at `module_resolver_test.js` 8 errors
+
+ `sctx.setModulesFromXQDoc(index);`
+   ✗ test 11 
+      TypeError: Cannot read property 'variables' of undefined 
+      
+## 2022-01-11
+remove functionname "normalization"
+focus on vows:one functions
+`vows/test/module_resolver_test.js`
+···✗✗·✗✗·✗✗✗·····✗✗✗✗·✗✗  
+   
+   
+     
+      ✗ test var (4) 
+        » Number of proposals // /config/workspace/xqlint/node_modules/vows/lib/assert/macros.js:14 
+   
+      ✗ test expr (1) 
+        »        
+        actual expected 
+```javascript
+var linter = new XQLint('declare function local:foo() as xs:string { local:bar() }; declare function local:bar() as xs:string { "h" };   local:foo()');
+var markers = linter.getMarkers();
+assert.equal(markers.length, 0, 'Number of markers');
+```
+```
+✗··✗✗  
+  
+      ✗ functions (1) 
+        » Number of markers // /config/workspace/xqlint/node_modules/vows/lib/assert/macros.js:14 
+   
+      ✗ functions (4) 
+        » Number of markers // /config/workspace/xqlint/node_modules/vows/lib/assert/macros.js:14 
+   
+      ✗ functions (5) 
+        » Number of markers // /config/workspace/xqlint/node_modules/vows/lib/assert/macros.js:14 
+  ✗ Broken » 2 honored ∙ 3 broken (82.317s) 
+``` 
+## more
+* `test/xqlint_queries/variables/4.xq` missing VarName
+`let $bar := 1 return $bar`
+goes wrong at **FunctionName**
+```
+startNonterminal RelativePathExpr 21
+startNonterminal StepExpr 21
+startNonterminal PostfixExpr 21
+startNonterminal PrimaryExpr 21
+startNonterminal VarRef 21
+TERMINAL: TOKEN $
+startNonterminal VarName 22
+startNonterminal EQName 22
+startNonterminal QName 22
+startNonterminal FunctionName 22
+TERMINAL: QName bar
+endNonterminal FunctionName
+POP:  FunctionName
+endNonterminal QName
+POP:  QName
+endNonterminal EQName
+POP:  EQName
+endNonterminal VarName
+```
+# translator
  ```
  translator.js
 
@@ -8,177 +88,4 @@
 declare function local:test($hello){
      $hello
 };
-```
-
-TOKEN : declare
-WS :  
-TOKEN : function
-WS :  
-EQName : local:test
-FunctionName : undefined
-EQName : undefined
-TOKEN : (
-TOKEN : $
-EQName : hello
-FunctionName : undefined
-EQName : undefined
-Param : undefined
-ParamList : undefined
-TOKEN : )
-TOKEN : {
-WS : 
-     
-Statements : undefined
-TOKEN : $
-EQName : hello
-FunctionName : undefined
-EQName : undefined
-VarName : undefined
-VarRef : undefined
-PrimaryExpr : undefined
-PostfixExpr : undefined
-StepExpr : undefined
-RelativePathExpr : undefined
-PathExpr : undefined
-SimpleMapExpr : undefined
-ValueExpr : undefined
-UnaryExpr : undefined
-ArrowExpr : undefined
-CastExpr : undefined
-CastableExpr : undefined
-TreatExpr : undefined
-InstanceofExpr : undefined
-IntersectExceptExpr : undefined
-UnionExpr : undefined
-MultiplicativeExpr : undefined
-AdditiveExpr : undefined
-RangeExpr : undefined
-StringConcatExpr : undefined
-FTContainsExpr : undefined
-ComparisonExpr : undefined
-AndExpr : undefined
-OrExpr : undefined
-ExprSimple : undefined
-ExprSingle : undefined
-Expr : undefined
-StatementsAndOptionalExpr : undefined
-WS : 
-
-TOKEN : }
-FunctionDecl : undefined
-AnnotatedDecl : undefined
-TOKEN : ;
-Separator : undefined
-Prolog : undefined
-WS : 
-
-
-Statements : undefined
-StatementsAndOptionalExpr : undefined
-Program : undefined
-MainModule : undefined
-Module : undefined
-EOF : 
-XQuery : undefined
-
-```xml
-  <XQuery>
-    <Module>
-      <MainModule>
-        <Prolog>
-          <AnnotatedDecl>
-            <TOKEN>declare</TOKEN>
-            <TOKEN>
-            </TOKEN>
-            <WS> </WS>
-            <WS>
-            </WS>
-            <FunctionDecl>
-              <TOKEN>function</TOKEN>
-              <TOKEN>
-              </TOKEN>
-              <WS> </WS>
-              <WS>
-              </WS>
-              <EQName>local:test</EQName>
-              <EQName>
-              </EQName>
-              <TOKEN>(</TOKEN>
-              <TOKEN>
-              </TOKEN>
-              <ParamList>
-                <Param>
-                  <TOKEN>$</TOKEN>
-                  <TOKEN>
-                  </TOKEN>
-                  <EQName>hello</EQName>
-                  <EQName>
-                  </EQName>
-                </Param>
-              </ParamList>
-              <TOKEN>)</TOKEN>
-              <TOKEN>
-              </TOKEN>
-              <TOKEN>{</TOKEN>
-              <TOKEN>
-              </TOKEN>
-              <WS>
-     </WS>
-              <WS>
-              </WS>
-              <StatementsAndOptionalExpr>
-                <Statements>
-                </Statements>
-                <Expr>
-                  <ExprSingle>
-                    <ExprSimple>
-                      <ArrowExpr>
-                        <PrimaryExpr>
-                          <VarRef>
-                            <TOKEN>$</TOKEN>
-                            <TOKEN>
-                            </TOKEN>
-                            <VarName>
-                              <EQName>hello</EQName>
-                              <EQName>
-                              </EQName>
-                            </VarName>
-                          </VarRef>
-                        </PrimaryExpr>
-                      </ArrowExpr>
-                    </ExprSimple>
-                  </ExprSingle>
-                </Expr>
-              </StatementsAndOptionalExpr>
-              <WS>
-</WS>
-              <WS>
-              </WS>
-              <TOKEN>}</TOKEN>
-              <TOKEN>
-              </TOKEN>
-            </FunctionDecl>
-          </AnnotatedDecl>
-          <Separator>
-            <TOKEN>;</TOKEN>
-            <TOKEN>
-            </TOKEN>
-          </Separator>
-        </Prolog>
-        <WS>
-
-</WS>
-        <WS>
-        </WS>
-        <Program>
-          <StatementsAndOptionalExpr>
-            <Statements>
-            </Statements>
-          </StatementsAndOptionalExpr>
-        </Program>
-      </MainModule>
-    </Module>
-    <EOF>
-    </EOF>
-  </XQuery>
 ```
