@@ -155,10 +155,1042 @@
            <WS> </WS>
            <SequenceType>
             <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>appendage</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:filter</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>function</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <FunctionTest>
+              <TypedFunctionTest>
+               <TOKEN>function</TOKEN>
+               <TOKEN>(</TOKEN>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>)</TOKEN>
+               <WS> </WS>
+               <TOKEN>as</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <AtomicOrUnionType>
+                  <EQName>
+                   <QName>
+                    <FunctionName>
+                     <QName>xs:boolean</QName>
+                    </FunctionName>
+                   </QName>
+                  </EQName>
+                 </AtomicOrUnionType>
+                </ItemType>
+               </SequenceType>
+              </TypedFunctionTest>
+             </FunctionTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:flatten</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>input</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <TOKEN>item</TOKEN>
+          <TOKEN>(</TOKEN>
+          <TOKEN>)</TOKEN>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:fold-left</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>zero</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>function</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <FunctionTest>
+              <TypedFunctionTest>
+               <TOKEN>function</TOKEN>
+               <TOKEN>(</TOKEN>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>,</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>)</TOKEN>
+               <WS> </WS>
+               <TOKEN>as</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+              </TypedFunctionTest>
+             </FunctionTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <TOKEN>item</TOKEN>
+          <TOKEN>(</TOKEN>
+          <TOKEN>)</TOKEN>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:fold-right</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>zero</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>function</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <FunctionTest>
+              <TypedFunctionTest>
+               <TOKEN>function</TOKEN>
+               <TOKEN>(</TOKEN>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>,</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>)</TOKEN>
+               <WS> </WS>
+               <TOKEN>as</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+              </TypedFunctionTest>
+             </FunctionTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <TOKEN>item</TOKEN>
+          <TOKEN>(</TOKEN>
+          <TOKEN>)</TOKEN>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:for-each</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>action</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <FunctionTest>
+              <TypedFunctionTest>
+               <TOKEN>function</TOKEN>
+               <TOKEN>(</TOKEN>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>)</TOKEN>
+               <WS> </WS>
+               <TOKEN>as</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+              </TypedFunctionTest>
+             </FunctionTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:for-each-pair</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>array1</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>array2</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>function</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <FunctionTest>
+              <TypedFunctionTest>
+               <TOKEN>function</TOKEN>
+               <TOKEN>(</TOKEN>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>,</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>)</TOKEN>
+               <WS> </WS>
+               <TOKEN>as</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+              </TypedFunctionTest>
+             </FunctionTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:get</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>position</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
              <AtomicOrUnionType>
               <EQName>
                <QName>
-                <TOKEN>array</TOKEN>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
                </QName>
               </EQName>
              </AtomicOrUnionType>
@@ -167,10 +1199,1528 @@
           </TypeDeclaration>
          </Param>
         </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <TOKEN>item</TOKEN>
+          <TOKEN>(</TOKEN>
+          <TOKEN>)</TOKEN>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
        </FunctionDecl>
       </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:head</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <TOKEN>item</TOKEN>
+          <TOKEN>(</TOKEN>
+          <TOKEN>)</TOKEN>
+         </ItemType>
+         <OccurrenceIndicator>
+          <TOKEN>*</TOKEN>
+         </OccurrenceIndicator>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:insert-before</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>position</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>member</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:join</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>arrays</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:put</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>position</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>member</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <TOKEN>item</TOKEN>
+             <TOKEN>(</TOKEN>
+             <TOKEN>)</TOKEN>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:remove</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>positions</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>*</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:reverse</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:size</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <AtomicOrUnionType>
+           <EQName>
+            <QName>
+             <FunctionName>
+              <QName>xs:integer</QName>
+             </FunctionName>
+            </QName>
+           </EQName>
+          </AtomicOrUnionType>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:sort</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:sort</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <TOKEN>collation</TOKEN>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>?</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:sort</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <TOKEN>collation</TOKEN>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:string</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+            <OccurrenceIndicator>
+             <TOKEN>?</TOKEN>
+            </OccurrenceIndicator>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>key</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <FunctionTest>
+              <TypedFunctionTest>
+               <TOKEN>function</TOKEN>
+               <TOKEN>(</TOKEN>
+               <SequenceType>
+                <ItemType>
+                 <TOKEN>item</TOKEN>
+                 <TOKEN>(</TOKEN>
+                 <TOKEN>)</TOKEN>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+               <TOKEN>)</TOKEN>
+               <WS> </WS>
+               <TOKEN>as</TOKEN>
+               <WS> </WS>
+               <SequenceType>
+                <ItemType>
+                 <AtomicOrUnionType>
+                  <EQName>
+                   <QName>
+                    <FunctionName>
+                     <QName>xs:anyAtomicType</QName>
+                    </FunctionName>
+                   </QName>
+                  </EQName>
+                 </AtomicOrUnionType>
+                </ItemType>
+                <OccurrenceIndicator>
+                 <TOKEN>*</TOKEN>
+                </OccurrenceIndicator>
+               </SequenceType>
+              </TypedFunctionTest>
+             </FunctionTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:subarray</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <TOKEN>start</TOKEN>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:subarray</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <TOKEN>start</TOKEN>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+         <TOKEN>,</TOKEN>
+         <WS> </WS>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <FunctionName>
+             <QName>length</QName>
+            </FunctionName>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <AtomicOrUnionType>
+              <EQName>
+               <QName>
+                <FunctionName>
+                 <QName>xs:integer</QName>
+                </FunctionName>
+               </QName>
+              </EQName>
+             </AtomicOrUnionType>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
+      <WS>
+</WS>
+      <AnnotatedDecl>
+       <TOKEN>declare</TOKEN>
+       <WS> </WS>
+       <Annotation>
+        <TOKEN>%</TOKEN>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>a:since</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <Literal>
+         <StringLiteral>"xpath-functions"</StringLiteral>
+        </Literal>
+        <TOKEN>,</TOKEN>
+        <WS> </WS>
+        <Literal>
+         <StringLiteral>"3.1-20170321"</StringLiteral>
+        </Literal>
+        <TOKEN>)</TOKEN>
+       </Annotation>
+       <WS> </WS>
+       <FunctionDecl>
+        <TOKEN>function</TOKEN>
+        <WS> </WS>
+        <EQName>
+         <QName>
+          <FunctionName>
+           <QName>array:tail</QName>
+          </FunctionName>
+         </QName>
+        </EQName>
+        <TOKEN>(</TOKEN>
+        <ParamList>
+         <Param>
+          <TOKEN>$</TOKEN>
+          <EQName>
+           <QName>
+            <TOKEN>array</TOKEN>
+           </QName>
+          </EQName>
+          <WS> </WS>
+          <TypeDeclaration>
+           <TOKEN>as</TOKEN>
+           <WS> </WS>
+           <SequenceType>
+            <ItemType>
+             <ArrayTest>
+              <AnyArrayTest>
+               <TOKEN>array</TOKEN>
+               <TOKEN>(</TOKEN>
+               <TOKEN>*</TOKEN>
+               <TOKEN>)</TOKEN>
+              </AnyArrayTest>
+             </ArrayTest>
+            </ItemType>
+           </SequenceType>
+          </TypeDeclaration>
+         </Param>
+        </ParamList>
+        <TOKEN>)</TOKEN>
+        <WS> </WS>
+        <TOKEN>as</TOKEN>
+        <WS> </WS>
+        <SequenceType>
+         <ItemType>
+          <ArrayTest>
+           <AnyArrayTest>
+            <TOKEN>array</TOKEN>
+            <TOKEN>(</TOKEN>
+            <TOKEN>*</TOKEN>
+            <TOKEN>)</TOKEN>
+           </AnyArrayTest>
+          </ArrayTest>
+         </ItemType>
+        </SequenceType>
+        <WS> </WS>
+        <TOKEN>external</TOKEN>
+       </FunctionDecl>
+      </AnnotatedDecl>
+      <Separator>
+       <TOKEN>;</TOKEN>
+      </Separator>
      </Prolog>
     </LibraryModule>
    </Module>
+   <WS>
+</WS>
+   <EOF>
+   </EOF>
   </XQuery>
 
