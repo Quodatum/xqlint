@@ -1,16 +1,17 @@
 {
   "author": {
-    "name": "William Candillon",
-    "email": "w@28.io",
-    "url": "http://28.io"
+    "name": "Andy Bunce",
+    "email": "bunce.andy@gmail.com",
+    "url": "https://github.com/apb2006"
   },
   "name": "xqlint",
   "description": "XQuery Quality Checker",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "keywords": [
     "xquery",
     "dev",
-    "cloud"
+    "cloud",
+    "basex"
   ],
   "homepage": "https://github.com/Quodatum/xqlint",
   "bugs": "https://github.com/Quodatum/xqlint/issues",

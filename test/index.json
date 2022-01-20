@@ -1302,7 +1302,16 @@
     } ], 
     "variables" : [  ]
   },
-  
+  "http://www.w3.org/2005/xpath-functions/array": {
+    "ns": "http://www.w3.org/2005/xpath-functions/array",
+    "functions" : [],
+    "variables" : []
+  },
+  "http://www.w3.org/2005/xpath-functions/map": {
+    "ns": "http://www.w3.org/2005/xpath-functions/map",
+    "functions" : [],
+    "variables" : []
+  },
   "http://www.w3.org/2005/xpath-functions" : {
     "ns" : "http://www.w3.org/2005/xpath-functions", 
     "description" : " This module contains all the functions specified in the\n W3C XPath and XQuery Functions and Operators 3.0.\n", 

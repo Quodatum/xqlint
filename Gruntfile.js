@@ -103,7 +103,7 @@ module.exports = function(grunt) {
                 //src: ['test/function_test.js']
                 //src: ['test/variable_test.js']
                 //src: ['test/namespace_test.js'] //3 fail
-                src: ['test/module_resolver.js'] //26 fail
+                src: ['test/module_resolver_test.js'] //26 fail
                 //src: ['test/completion.js'] //26 fail
             },
         },
