@@ -77,7 +77,9 @@ DefaultNamespaceDecl
 FTOptionDecl
          ::= 'declare' 'ft-option' FTMatchOptions
 AnnotatedDecl
-         ::= 'declare' Annotation* ( VarDecl | FunctionDecl )
+         ::= 'declare'  (CompatibilityAnnotation | Annotation)* ( VarDecl | FunctionDecl )
+CompatibilityAnnotation 	   
+         ::=  "updating"         
 Annotation
          ::= '%' EQName ( '(' Literal ( ',' Literal )* ')' )?
 VarDecl  ::= 'variable' '$' VarName TypeDeclaration? ( ':=' VarValue | 'external' ( ':=' VarDefaultValue )? )
@@ -600,9 +602,10 @@ NewNameExpr
 UpdatingFunctionCall
          ::= 'invoke' 'updating' PrimaryExpr '(' ( ExprSingle ( ',' ExprSingle )* )? ')'
 CopyModifyExpr
-         ::= 'copy' '$' VarName ':=' ExprSingle ( ',' '$' VarName ':=' ExprSingle )* 'modify' ExprSingle 'return' ExprSingle
+         ::= 'copy' CopyModifySpec ( ',' CopyModifySpec )* 'modify' ExprSingle 'return' ExprSingle
          
-
+CopyModifySpec
+         ::= '$' VarName ':=' ExprSingle
 
 FTSelection
          ::= FTOr FTPosFilter*

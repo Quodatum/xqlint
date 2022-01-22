@@ -218,7 +218,7 @@ vows.describe('Test Module URI Resolver').addBatch({
 
     'test 19': function(){
 
-        var linter = new XQLint(source, { fileName: 'merry.xq',  staticContext: sctx });
+        var linter = new XQLint(source, { fileName: 'test/queries/zorba/merry.xq',  staticContext: sctx });
         var markers = linter.getErrors();
         assert.equal(markers.length, 0, 'Number of markers');
     },
