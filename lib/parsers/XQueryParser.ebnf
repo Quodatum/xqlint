@@ -333,7 +333,7 @@ OrderedExpr
 UnorderedExpr
          ::= 'unordered' '{' Expr '}'
 FunctionCall
-         ::= EQName ArgumentList
+         ::= FunctionEQName ArgumentList
 Argument ::= ExprSingle
            | ArgumentPlaceholder
 ArgumentPlaceholder
@@ -481,8 +481,11 @@ AnyArrayTest 	   ::=    	"array" "(" "*" ")"
 TypedArrayTest 	   ::=    	"array" "(" SequenceType ")"
 ParenthesizedItemType 	   ::= "(" ItemType ")" 	
 URILiteral ::= StringLiteral
-EQName   ::= QName | URIQualifiedName
-
+EQName   ::= QName 
+           | URIQualifiedName
+FunctionEQName
+         ::= FunctionName
+           | URIQualifiedName
 /* ======  */          
 QName    ::= FunctionName
            | 'array'
