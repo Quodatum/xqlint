@@ -1,8 +1,36 @@
 # XQLint
 
-This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). The goal is to support browser hosted XQuery code editing for BaseX currently version 9.6.
+This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). XQLint analyses XQuery source code. The goal of this fork is to support browser hosted XQuery code editing for current BaseX versions (9.6+)
 
-Two  where this can be used are the [Ace editor](https://github.com/ajaxorg/ace) and VS code extension DotJoshJohnson's [XML tools](https://github.com/DotJoshJohnson/vscode-xml)
+This fork has been used as a drop-in update for `wcandillon/xqlint` in the following projects:
+* the [Ace editor](https://github.com/ajaxorg/ace) 
+* the VS code extension DotJoshJohnson's [XML tools](https://github.com/DotJoshJohnson/vscode-xml)
+
+## Command line usage
+### Lint
+
+```bash
+$ xqlint lint <path> [-s, --style-check <yes, no>]
+```
+![result](https://dl.dropboxusercontent.com/u/1487285/Screenshot%202014-04-07%2011.06.31.png)
+
+### Format
+
+```bash
+$ xqlint format <path>
+```
+
+### Print AST as XML
+
+```bash
+$ xqlint ast <path>
+```
+
+### Syntax Highlighting
+
+```bash
+$ xqlint highlight <path>
+```
 
 ## Dev
 
@@ -33,32 +61,9 @@ Install Node.js and NPM for your system (Mac, Windows or Linux). And install the
 ```bash
 $ npm install xqlint -g
 ```
-## Usage
 
-### Lint
 
-```bash
-$ xqlint lint <path> [-s, --style-check <yes, no>]
-```
-![result](https://dl.dropboxusercontent.com/u/1487285/Screenshot%202014-04-07%2011.06.31.png)
 
-### Format
-
-```bash
-$ xqlint format <path>
-```
-
-### Print AST as XML
-
-```bash
-$ xqlint ast <path>
-```
-
-### Syntax Highlighting
-
-```bash
-$ xqlint highlight <path>
-```
 
 ## Development
 
