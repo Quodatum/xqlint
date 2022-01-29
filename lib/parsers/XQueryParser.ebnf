@@ -4,7 +4,7 @@ var XQueryParser = exports.XQueryParser = function XQueryParser(string, parsingE
   init(string, parsingEventHandler);
 ?>
 
-/* source  apb, fulltext and update 04/01/2021 */
+/* XQuery 3.1 with fulltext and update version: 2022-01-24 */
 XQuery   ::= Module EOF
 Module   ::= VersionDecl? ( LibraryModule | MainModule )
 VersionDecl
@@ -488,23 +488,17 @@ FunctionEQName
            | URIQualifiedName
 /* ======  */          
 QName    ::= FunctionName
-           | 'array'
            | 'attribute'
            | 'comment'
-           | 'delete'
            | 'document-node'
            | 'element'
            | 'empty-sequence'
            | 'function'
            | 'if'
-           | 'insert'
            | 'item'
-           | 'map'
            | 'namespace-node'
            | 'node'
            | 'processing-instruction'
-           | 'rename'
-           | 'replace'
            | 'schema-attribute'
            | 'schema-element'
            | 'switch'
@@ -527,6 +521,7 @@ FunctionName
            | 'count'
            | 'declare'
            | 'default'
+           | 'delete'
            | 'descendant'
            | 'descendant-or-self'
            | 'descending'
@@ -546,6 +541,7 @@ FunctionName
            | 'gt'
            | 'idiv'
            | 'import'
+           | 'insert'
            | 'instance'
            | 'intersect'
            | 'invoke'
@@ -565,6 +561,8 @@ FunctionName
            | 'parent'
            | 'preceding'
            | 'preceding-sibling'
+           | 'rename'
+           | 'replace'
            | 'return'
            | 'satisfies'
            | 'self'

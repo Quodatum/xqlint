@@ -4,7 +4,7 @@ xquery version "3.0";
  :
  : @see http://docs.basex.org/wiki/Admin_Module
  :)
-module namespace admin = "http://basex.org/modules/admin#";
+module namespace admin = "http://basex.org/modules/admin";
 
 declare namespace a = "http://reecedunn.co.uk/xquery/annotations";
 declare namespace o = "http://reecedunn.co.uk/xquery/options";

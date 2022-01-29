@@ -1,0 +1,69 @@
+{
+  "moduleNamespace": "http://basex.org/modules/sessions",
+  "variables": [],
+  "functions": [
+    {
+      "name": "ids",
+      "uri": "http://basex.org/modules/sessions",
+      "params": []
+    },
+    {
+      "name": "created",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$id as xs:string"
+      ]
+    },
+    {
+      "name": "accessed",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$id as xs:string"
+      ]
+    },
+    {
+      "name": "names",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$id as xs:string"
+      ]
+    },
+    {
+      "name": "get",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$id as xs:string",
+        "$name as xs:string"
+      ]
+    },
+    {
+      "name": "get",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$id as xs:string",
+        "$name as xs:string",
+        "$default as item()*"
+      ]
+    },
+    {
+      "name": "set",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$name as xs:string",
+        "$value as item()*"
+      ]
+    },
+    {
+      "name": "delete",
+      "uri": "http://basex.org/modules/sessions",
+      "params": [
+        "$name as xs:string"
+      ]
+    },
+    {
+      "name": "close",
+      "uri": "http://basex.org/modules/sessions",
+      "params": []
+    }
+  ]
+}
