@@ -1,12 +1,8 @@
 {
-  "author": {
-    "name": "Andy Bunce",
-    "email": "bunce.andy@gmail.com",
-    "url": "https://github.com/apb2006"
-  },
-  "name": "xqlint",
+  "author": "Andy Bunce <bunce.andy@gmail.com> (https://github.com/apb2006)",
+  "name": "@quodatum/xqlint",
   "description": "XQuery Quality Checker",
-  "version": "0.5.5",
+  "version": "0.0.2",
   "keywords": [
     "xquery",
     "dev",
@@ -14,10 +10,12 @@
     "basex"
   ],
   "homepage": "https://github.com/Quodatum/xqlint",
-  "bugs": "https://github.com/Quodatum/xqlint/issues",
+  "bugs": {
+    "url": "https://github.com/Quodatum/xqlint/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Quodatum/xqlint.git"
+    "url": "git+https://github.com/Quodatum/xqlint.git"
   },
   "main": "./lib/xqlint.js",
   "xqlint": {
@@ -49,21 +47,18 @@
     "npm": ">=6.1.0"
   },
   "contributors": [
-    {
-      "name": "William Candillon",
-      "email": "w@28.io"
-    },
-    {
-      "name": "Andy Bunce",
-      "email": "bunce.andy@gmail.com"
-    }
+    "William Candillon <w@28.io>",
+    "Andy Bunce <bunce.andy@gmail.com>"
   ],
   "scripts": {
     "test": "grunt"
   },
   "directories": {
-    "test": "./test",
-    "bin": "./bin"
+    "lib": "lib",
+    "test": "test"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "bin": {
+    "xqlint": "bin/xqlint"
+  }
 }

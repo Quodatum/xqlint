@@ -1,6 +1,7 @@
-# XQLint
+# @Quodatum/XQLint [npm](https://www.npmjs.com/package/@quodatum/xqlint)
 
-This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). XQLint analyses XQuery source code. The goal of this fork is to support browser hosted XQuery code editing for current BaseX versions (9.6+)
+This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). XQLint analyses XQuery source code. The goal of this fork is to support browser hosted XQuery code editing for current BaseX versions (9.6+).
+This is an Alpha - errors and changes expected.
 
 This fork has been used as a drop-in update for `wcandillon/xqlint` in the following projects:
 * the [Ace editor](https://github.com/ajaxorg/ace) 
@@ -12,7 +13,7 @@ This fork has been used as a drop-in update for `wcandillon/xqlint` in the follo
 ```bash
 $ xqlint lint <path> [-s, --style-check <yes, no>]
 ```
-![result](https://dl.dropboxusercontent.com/u/1487285/Screenshot%202014-04-07%2011.06.31.png)
+
 
 ### Format
 
@@ -35,7 +36,7 @@ $ xqlint highlight <path>
 ## Dev
 
 
-## Generate parsers
+### Generate parsers
 
 `grunt parsers`
 
@@ -70,9 +71,10 @@ $ npm install xqlint -g
 If you'd like to hack on xqlint itself:
 
 ```bash
-git clone git@github.com:wcandillon/xqlint.git
+git clone https://github.com/Quodatum/xqlint
 cd xqlint
 npm install
+sudo npm install grunt@1.4.1 -g
 grunt
 ```
 
@@ -88,7 +90,7 @@ grunt vows
 grunt parsers
 ```
 
-##Who is using this project?
+## Who is using this project?
 * [28.io cli tool](https://github.com/28msec/28)
 * [Atom Editor](https://atom.io/packages/language-jsoniq)
 * [ACE, aka the Cloud9 editor](https://github.com/ajaxorg/ace), [view demo](http://try.zorba.io).

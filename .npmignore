@@ -3,3 +3,6 @@ test/
 scripts/
 .DS_Store
 *.swp
+notes.md
+*.ebnf
+.vscode

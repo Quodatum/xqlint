@@ -26,7 +26,7 @@ var getFiles = function(p){
 };
 
 var files = getFiles('test/queries/basex');
-files = files.concat(getFiles('test/queries/basex_update'));
+files = files.concat(getFiles('test/queries/update'));
 files.forEach(function(file){
     batch[file] = function(){
         //@todo processor: '28msec' Does this exist
