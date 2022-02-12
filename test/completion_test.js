@@ -41,7 +41,7 @@ vows.describe('Test Code Completion').addBatch({
         var source = 'let $varname := 1\nlet $foo := $varname\nreturn $varname + $';
         var linter = new XQLint(source);
         var lines = source.split('\n');
-        var pos = { line: lines.length - 1, col: lines[lines.length - 1].length };
+        var pos = { line: lines.length - 1, col: lines[lines.length - 1].length +1 };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
     },
@@ -66,7 +66,7 @@ vows.describe('Test Code Completion').addBatch({
     
     'test expr (3)': function(){
         var source = '';
-        var linter = new XQLint(source, { processor: '28msec' });
+        var linter = new XQLint(source, { processor: 'basex' });
         var pos = { line: 0, col: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 6, 'Number of proposals');

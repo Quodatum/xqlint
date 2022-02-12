@@ -1,6 +1,3 @@
-(1 to 3)=>sum()
-try { 
-    expr 
-} catch * { 
-        expr 
-}
+let $v1 := 1
+let $foo := $v1
+return $v1 + $foo

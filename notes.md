@@ -2,7 +2,8 @@
 Syntax `new XQLint(source, opts)` where
 opts is
 * styleCheck: false
-* staticContext
+* staticContext:
+
 ## definitions
 * AST Abstract syntax tree
 
