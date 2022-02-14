@@ -78,7 +78,7 @@ vows.describe('Test Code Completion').addBatch({
         var sctx = new StaticContext();
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
-        var linter = new XQLint(p1 + p2, { staticContext: sctx });
+        var linter = new XQLint(p1 , { staticContext: sctx });
         var pos = { line: 0, col: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
@@ -91,7 +91,7 @@ vows.describe('Test Code Completion').addBatch({
         var sctx = new StaticContext();
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
-        var linter = new XQLint(p1 + p2, { staticContext: sctx });
+        var linter = new XQLint(p1 , { staticContext: sctx });
         var pos = { line: 0, col: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 0, 'Number of proposals');
@@ -103,7 +103,7 @@ vows.describe('Test Code Completion').addBatch({
         var sctx = new StaticContext();
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
-        var linter = new XQLint(p1 + p2, { staticContext: sctx });
+        var linter = new XQLint(p1 , { staticContext: sctx });
         var pos = { line: 0, col: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
@@ -116,7 +116,7 @@ vows.describe('Test Code Completion').addBatch({
         var sctx = new StaticContext();
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.availableModuleNamespaces = Object.keys(index);
-        var linter = new XQLint(p1 + p2, { staticContext: sctx });
+        var linter = new XQLint(p1 , { staticContext: sctx });
         var pos = { line: 0, col: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 10, true, 'Number of proposals');
@@ -124,7 +124,7 @@ vows.describe('Test Code Completion').addBatch({
 
     'test prefixes (1)': function(){
         var source = 'import module namespace ns="http://www.28msec.com/modules/http-response";';
-        var sctx = new StaticContext(undefined, undefined, '28msec');
+        var sctx = new StaticContext(undefined, undefined, 'basex');
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
