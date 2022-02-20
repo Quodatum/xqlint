@@ -1,4 +1,4 @@
-ebnf parked here ,temp
+ebnf parked here ,temp some
 # simple 1---
 test/xqlint_queries/3.xq
 let $v:=42

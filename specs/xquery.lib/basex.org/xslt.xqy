@@ -11,8 +11,10 @@ declare namespace o = "http://reecedunn.co.uk/xquery/options";
 
 declare option o:requires "basex/7.0"; (: NOTE: 7.0 is the earliest version definitions are available for. :)
 
+(:~ 
 declare %a:since("basex", "7.0") %a:until("basex", "7.3", "xslt:processor#0") variable $xslt:processor external;
-declare %a:since("basex", "7.0") %a:until("basex", "7.3", "xslt:version#0") variable $xslt:version external;
+declare %a:since("basex", "7.0") %a:until("basex", "7.3", "xslt:version#0") variable $xslt:version external; 
+~:)
 
 declare %a:since("basex", "7.3") function xslt:processor() as xs:string external;
 declare %a:since("basex", "7.3") function xslt:version() as xs:string external;

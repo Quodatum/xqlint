@@ -10,11 +10,11 @@ var fs = require('fs');
 //  var proposals = linter.getCompletions(pos);
 //  console.log( proposals);
 //
-var source = fs.readFileSync('xquery.lib/www.w3.org/2005/xpath-functions/array.xqy', 'utf-8')
-// var source = 'let $v1 := 1 let $v2 := $v1 return $v1 + $';
+//var source = fs.readFileSync('test/xquery.lib/www.w3.org/2005/xpath-functions/array.xqy', 'utf-8')
+var source = 'let $v1 := 1 let $v2 := $v1 return $v1 + $';
         var linter = new XQLint(source);
-//        var lines = source.split('\n');
-//        var pos = { line: lines.length - 1, col: lines[lines.length - 1].length };
-//        var proposals = linter.getCompletions(pos);
-//        console.log( proposals);
+        var lines = source.split('\n');
+       var pos = { line: lines.length - 1, col: lines[lines.length - 1].length };
+        var proposals = linter.getCompletions(pos);
+       console.log( proposals);
 

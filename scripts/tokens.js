@@ -1,5 +1,8 @@
 var fs = require('fs');
+var StaticContext = require('../lib/compiler/static_context').StaticContext;
 var XQueryLexer = require('../lib/lexers/xquery_lexer').XQueryLexer;
+console.log(XQueryLexer);
+
 var code = 'let $bar := 1 return $bar, let $foo := 1 return $';
 var lines = code.split('\n');
 var lexer = new XQueryLexer();

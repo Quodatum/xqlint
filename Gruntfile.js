@@ -1,3 +1,5 @@
+const { XQLint } = require('./lib/xqlint');
+
 module.exports = function(grunt) {
 	'use strict';
 
@@ -44,7 +46,19 @@ module.exports = function(grunt) {
             grunt.fail.fatal(error);
 	    });
     });
- 
+    grunt.registerMultiTask('index', 'Generate index xqdoc', function(){
+        var fs = require('fs');
+        grunt.file.expand(this.data.src).forEach(function(filename){
+            var source=fs.readFileSync(filename, 'utf8');
+            console.log(filename);
+            var linter = new XQLint(source, { fileName: filename, styleCheck: false });
+            var xqdoc = linter.getXQDoc();
+                // Display the file content
+                console.log(xqdoc);
+            });
+
+       //console.log(this.target,this.data) 
+    });
     grunt.initConfig({
         rex: {
             parsers: {
@@ -116,6 +130,12 @@ module.exports = function(grunt) {
                 options: {
                     standalone: ''
                 }
+            }
+        },
+        index: {
+            main:{
+                src: ['specs/xquery.lib/basex.org/*.xq?'],
+                dest: 'apb/index.js',
             }
         }
     });

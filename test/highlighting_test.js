@@ -2,7 +2,6 @@
 
 var vows = require('vows');
 var assert = require('assert');
-var fs = require('fs');
 
 var XQueryLexer = require('../lib/lexers/xquery_lexer').XQueryLexer;
 

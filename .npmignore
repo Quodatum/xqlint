@@ -1,8 +1,11 @@
 .git*
 test/
 scripts/
+specs/
 .DS_Store
 *.swp
 notes.md
 *.ebnf
 .vscode
+*.tgz
+Gruntfile.js
