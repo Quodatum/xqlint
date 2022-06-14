@@ -77,7 +77,7 @@ If you'd like to hack on xqlint itself:
 git clone https://github.com/Quodatum/xqlint
 cd xqlint
 npm install
-sudo npm install grunt@1.4.1 -g
+sudo npm install grunt@1.5.3 -g
 grunt
 ```
 
