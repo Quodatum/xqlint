@@ -11,7 +11,7 @@ declare namespace o = "http://reecedunn.co.uk/xquery/options";
 
 declare option o:requires "basex/7.7.2";
 
-declare type csv-string = (
+declare variable csv-string = (
     %a:since("basex", "7.7.2") %a:until("basex", "9.1") for xs:string |
     %a:since("basex", "9.1") for xs:string?
 );

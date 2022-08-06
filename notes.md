@@ -121,3 +121,4 @@ declare function local:test($hello){
      $hello
 };
 ```
+<foo @aa="14"></foo>

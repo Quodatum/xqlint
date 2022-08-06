@@ -1,10 +1,17 @@
 (:~
  : This script creates xqdoc files from the module documentation of the BaseX Wiki.
  : @author Christian Gruen, BaseX Team
+ : @author Andy Bunce
  :)
-declare variable $BASE := 'https://docs.basex.org';
-declare variable $ROOT-DIR := file:base-dir() || 'xqdoc/';
 
+declare variable $SOURCES:={
+  'basex-10.0': 'https://docs.basex.org',
+  'basex-9.7' : 'http://web.archive.org/web/20220623230943/https://docs.basex.org',
+  'basex-8.7': 'http://web.archive.org/web/20160801170020/http://docs.basex.org'
+};
+declare variable $KEY := "basex-10.0";
+declare variable $BASE := $SOURCES($KEY)';
+declare variable $ROOT-DIR := file:base-dir() || 'xqdoc/' || $KEY || "/";
 (:~
  : Serializes the specified nodes. Normalizes links and newlines.
  : @param  $nodes  nodes to be serialized
@@ -152,7 +159,7 @@ let $xml := html:parse(fetch:binary($BASE || '/wiki/Module_Library'))
 
 for $url in $xml//td/a[@title]/@href
 return (
-  local:create($url=>trace("DD")),
+  local:create($url=>trace("fetching: ")),
   prof:sleep(50)
 )
 

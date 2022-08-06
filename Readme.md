@@ -36,6 +36,8 @@ $ xqlint ast <path>
 ```bash
 $ xqlint highlight <path>
 ```
+The output is for terminal display
+
 ## Code
 The following functions are exported:
  
