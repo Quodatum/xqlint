@@ -1,16 +1,17 @@
 (:~
  : This script creates xqdoc files from the module documentation of the BaseX Wiki.
  : @author Christian Gruen, BaseX Team
+ : Updated for https,wayback compatablity
  : @author Andy Bunce
  :)
 
-declare variable $SOURCES:={
+declare variable $SOURCES:=map{
   'basex-10.0': 'https://docs.basex.org',
-  'basex-9.7' : 'http://web.archive.org/web/20220623230943/https://docs.basex.org',
-  'basex-8.7': 'http://web.archive.org/web/20160801170020/http://docs.basex.org'
+  'basex-9.7': 'https://web.archive.org/web/20220623230943/https://docs.basex.org',
+  'basex-8.7': 'https://web.archive.org/web/20160801170020/http://docs.basex.org'
 };
 declare variable $KEY := "basex-10.0";
-declare variable $BASE := $SOURCES($KEY)';
+declare variable $BASE := $SOURCES($KEY);
 declare variable $ROOT-DIR := file:base-dir() || 'xqdoc/' || $KEY || "/";
 (:~
  : Serializes the specified nodes. Normalizes links and newlines.
@@ -26,7 +27,7 @@ declare %private function local:serialize(
     $nodes update {
       descendant-or-self::a/@href ! (
         if(starts-with(., '/')) then replace value of node . with $BASE || . else
-        if(starts-with(., '#')) then replace value of node . with $url || .
+        if(starts-with(., '#')) then replace value of node . with $url || . else ()
       ),
       delete node descendant-or-self::a/@*[name() != 'href'],
       delete node descendant-or-self::br/@*
@@ -147,7 +148,8 @@ declare %private function local:page(
 declare %private function local:create(
   $url  as xs:string
 ) as empty-sequence() {
-  let $xml := html:parse(fetch:binary($BASE || $url))
+  let $uri:= resolve-uri($url,$BASE)=>trace("Create: ")
+  let $xml := html:parse(fetch:binary( $uri))
   let $prefix := ($xml//code[starts-with(following-sibling::text()[1], ' prefix.')]/text())[1]
   let $xqdoc := local:page($xml, $url)
   return file:write-text($ROOT-DIR || $prefix || '.xqm', $xqdoc)
@@ -159,7 +161,7 @@ let $xml := html:parse(fetch:binary($BASE || '/wiki/Module_Library'))
 
 for $url in $xml//td/a[@title]/@href
 return (
-  local:create($url=>trace("fetching: ")),
+  local:create($url),
   prof:sleep(50)
 )
 
