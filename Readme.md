@@ -1,15 +1,15 @@
 # @Quodatum/XQLint [npm](https://www.npmjs.com/package/@quodatum/xqlint)
 
- The goal of this project is to support  XQuery development, particlarly for current BaseX versions (9.7+).
+ The goal of this project is to support XQuery development tools, particularly for BaseX versions (9.7+).
+
+XQLint parses XQuery  files and returns errors and warnings based on static code analysis.
+
+![example](http://i.imgur.com/86jU7C1.png)
 
 This is an Alpha state - errors and changes expected.
 
-This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). 
-XQLint parses XQuery  files and returns errors and warnings based on static code analysis.
-![example](http://i.imgur.com/86jU7C1.png)
+This began as a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). `quodatum/xqlint` has been used as a drop-in replacement for `wcandillon/xqlint` in the following projects:
 
-
-This fork has been used as a drop-in update for `wcandillon/xqlint` in the following projects:
 * the [Ace editor](https://github.com/ajaxorg/ace) 
 * the VS code extension DotJoshJohnson's [XML tools](https://github.com/DotJoshJohnson/vscode-xml)
 
