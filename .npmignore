@@ -1,6 +1,9 @@
 .git*
+.settings/
 test/
 scripts/
+docs/
+cases/
 specs/
 .DS_Store
 *.swp

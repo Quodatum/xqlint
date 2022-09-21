@@ -19,7 +19,10 @@ This began as a fork of the marvelous [wcandillon/xqlint](https://github.com/wca
 ```bash
 $ xqlint lint <path> [-s, --style-check <yes, no>]
 ```
-
+windows..
+```
+node bin\xqlint --no-color lint C:\Users\andy\git\bloomsbury\XML-CMS\data_server\eBloomsbury\  >report.txt
+```
 
 ### Format
 

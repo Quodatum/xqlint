@@ -4,22 +4,48 @@ opts is
 * styleCheck: false
 * staticContext:
 
-## warnings
-### staticContext.js
-```
+
+## staticContext.js
+### namespaces
+
+### availableModuleNamespaces
+ used only for completion?
+
+### other
+```javascript
 StaticWarning('W01', 'Avoid this type of import. Use import module namespace instead', pos);
 StaticWarning('W02', '"' + uri + '" already bound to the "' + namespace.prefixes.join(', ') + '" prefix', pos);
 ```
 ### translator.js
+In xqlint
+```javascript
+var translator = new Translator(sctx, ast); 
+...
+this.visit(ast);
+
 ```
+messages..
+```javascript
   addWarning('W03', 'Unused variable "' + rootStcx.variables[key].qname.name + '"', rootStcx.variables[key].pos);
   addWarning('W04', 'Unused module "' + uri + '"', namespace.pos);
   addWarning('W05', 'Untyped return value', name.pos);
   ```
+#### Vistor  
+```
+ InsertExpr
+         ::= 'insert' ( 'node' | 'nodes' ) SourceExpr InsertExprTargetChoice TargetExpr
+DeleteExpr
+         ::= 'delete' ( 'node' | 'nodes' ) TargetExpr
+ReplaceExpr
+         ::= 'replace' ( 'value' 'of' )? 'node' TargetExpr 'with' ExprSingle
+RenameExpr
+         ::= 'rename' 'node' TargetExpr 'as' NewNameExpr
+``` 
 ### handlers.js
 ```
 StaticWarning('W06', 'Avoid default element namespace declarations.', node.pos); 
 ```
+
 ## definitions
 * AST Abstract syntax tree
 
