@@ -43,7 +43,7 @@ declare %a:since("xpath-functions", "3.1-20170321") function fn:collation-key($k
 declare %a:since("xpath-functions", "3.1-20170321") function fn:collation-key($key as xs:string, $collation as xs:string) as xs:base64Binary external;
 declare %a:since("xpath-functions", "1.0-20070123") function fn:compare($comparand1 as xs:string?, $comparand2 as xs:string?) as xs:integer? external;
 declare %a:since("xpath-functions", "1.0-20070123") function fn:compare($comparand1 as xs:string?, $comparand2 as xs:string?, $collation as xs:string) as xs:integer? external;
-declare %a:since("xpath-functions", "1.0-20070123") function fn:concat($arg1 as xs:anyAtomicType?, $arg2 as xs:anyAtomicType?, $args as xs:anyAtomicType?...) as xs:string external;
+declare %a:since("xpath-functions", "1.0-20070123") function fn:concat($arg1 as xs:anyAtomicType?, $arg2 as xs:anyAtomicType?, $args as xs:anyAtomicType?) as xs:string external;
 declare %a:since("xpath-functions", "1.0-20070123") function fn:contains($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean external;
 declare %a:since("xpath-functions", "1.0-20070123") function fn:contains($arg1 as xs:string?, $arg2 as xs:string?, $collation as xs:string) as xs:boolean external;
 declare %a:since("xpath-functions", "3.1-20170321") function fn:contains-token($input as xs:string*, $token as xs:string) as xs:boolean external;

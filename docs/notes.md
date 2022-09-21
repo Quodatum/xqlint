@@ -23,32 +23,7 @@ StaticWarning('W06', 'Avoid default element namespace declarations.', node.pos);
 ## definitions
 * AST Abstract syntax tree
 
-### xqdoc
-```json
-{
-      "isDocumented" : true, 
-      "arity" : 1, 
-      "name" : "abs", 
-      "qname" : "fn:abs", 
-      "signature" : "($arg as numeric?) as numeric? external", 
-      "description" : "..", 
-      "summary" : "<p>  Returns the absolute value of  $arg .</p>", 
-      "annotation_str" : "", 
-      "annotations" : [  ], 
-      "updating" : false, 
-      "parameters" : [ {
-        "name" : "arg", 
-        "type" : "numeric", 
-        "occurrence" : "?", 
-        "description" : ""
-      } ], 
-      "returns" : {
-        "type" : "numeric?", 
-        "description" : ""
-      }, 
-      "errors" : [  ]
-}
-```
+
 ## module.js
 Exports Basex, W3, Expath
 

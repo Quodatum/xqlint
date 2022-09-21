@@ -1,13 +1,15 @@
-# @Quodatum/XQLint [npm](https://www.npmjs.com/package/@quodatum/xqlint)
+# @Quodatum/XQLint 
+[npm](https://www.npmjs.com/package/@quodatum/xqlint)
 
-This is a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis.
-![example](http://i.imgur.com/86jU7C1.png)
 
- The goal of this fork is to support browser hosted XQuery code editing for current BaseX versions (9.6+).
-This is an Alpha - errors and changes expected.
+ The goal of this project is to support XQuery development tools, particularly for [BaseX](https:basex.org) (9.7+).
 
-This fork has been used as a drop-in update for `wcandillon/xqlint` in the following projects:
+![example](https://i.imgur.com/NZFnzZ5.png)
+This project is in an Alpha state - errors and changes expected.
+
+This began as a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint). `quodatum/xqlint` has been used as a drop-in replacement for `wcandillon/xqlint` in the following projects:
+
 * the [Ace editor](https://github.com/ajaxorg/ace) 
 * the VS code extension DotJoshJohnson's [XML tools](https://github.com/DotJoshJohnson/vscode-xml)
 
@@ -36,6 +38,8 @@ $ xqlint ast <path>
 ```bash
 $ xqlint highlight <path>
 ```
+The output is for terminal display
+
 ## Code
 The following functions are exported:
  

@@ -1,0 +1,301 @@
+{
+  "moduleNamespace": "http://www.w3.org/2005/xpath-functions/array",
+  "description": "This <a href=\"http://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for manipulating arrays, which has been introduced with <a href=\"http://docs.basex.org/wiki/XQuery_3.1#Arrays\">XQuery 3.1</a>.  @author BaseX Team @see /wiki/Array_Module",
+  "variables": [],
+  "functions": [
+    {
+      "name": "size",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$input as array(*)"
+      ],
+      "pos": {
+        "sl": 14,
+        "sc": 17,
+        "el": 14,
+        "ec": 27
+      }
+    },
+    {
+      "name": "get",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$position as xs:integer"
+      ],
+      "pos": {
+        "sl": 24,
+        "sc": 17,
+        "el": 24,
+        "ec": 26
+      }
+    },
+    {
+      "name": "append",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$member as item()*"
+      ],
+      "pos": {
+        "sl": 33,
+        "sc": 17,
+        "el": 33,
+        "ec": 29
+      }
+    },
+    {
+      "name": "subarray",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$position as xs:integer"
+      ],
+      "pos": {
+        "sl": 44,
+        "sc": 17,
+        "el": 44,
+        "ec": 31
+      }
+    },
+    {
+      "name": "subarray",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$position as xs:integer",
+        "$length as xs:integer"
+      ],
+      "pos": {
+        "sl": 56,
+        "sc": 17,
+        "el": 56,
+        "ec": 31
+      }
+    },
+    {
+      "name": "put",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$position as xs:integer",
+        "$member as item()*"
+      ],
+      "pos": {
+        "sl": 67,
+        "sc": 17,
+        "el": 67,
+        "ec": 26
+      }
+    },
+    {
+      "name": "remove",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$positions as xs:integer*"
+      ],
+      "pos": {
+        "sl": 77,
+        "sc": 17,
+        "el": 77,
+        "ec": 29
+      }
+    },
+    {
+      "name": "insert-before",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$position as xs:integer",
+        "$member as item()*"
+      ],
+      "pos": {
+        "sl": 88,
+        "sc": 17,
+        "el": 88,
+        "ec": 36
+      }
+    },
+    {
+      "name": "head",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)"
+      ],
+      "pos": {
+        "sl": 97,
+        "sc": 17,
+        "el": 97,
+        "ec": 27
+      }
+    },
+    {
+      "name": "tail",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)"
+      ],
+      "pos": {
+        "sl": 106,
+        "sc": 17,
+        "el": 106,
+        "ec": 27
+      }
+    },
+    {
+      "name": "reverse",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)"
+      ],
+      "pos": {
+        "sl": 114,
+        "sc": 17,
+        "el": 114,
+        "ec": 30
+      }
+    },
+    {
+      "name": "join",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$arrays as array(*)*"
+      ],
+      "pos": {
+        "sl": 122,
+        "sc": 17,
+        "el": 122,
+        "ec": 27
+      }
+    },
+    {
+      "name": "flatten",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$items as item()*"
+      ],
+      "pos": {
+        "sl": 130,
+        "sc": 17,
+        "el": 130,
+        "ec": 30
+      }
+    },
+    {
+      "name": "for-each",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$function as function(item()*) as item()*"
+      ],
+      "pos": {
+        "sl": 139,
+        "sc": 17,
+        "el": 139,
+        "ec": 31
+      }
+    },
+    {
+      "name": "filter",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$function as function(item()*) as xs:boolean"
+      ],
+      "pos": {
+        "sl": 148,
+        "sc": 17,
+        "el": 148,
+        "ec": 29
+      }
+    },
+    {
+      "name": "fold-left",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$zero as item()*",
+        "$function as function(item()*, item()*) as item()*"
+      ],
+      "pos": {
+        "sl": 159,
+        "sc": 17,
+        "el": 159,
+        "ec": 32
+      }
+    },
+    {
+      "name": "fold-right",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$zero as item()*",
+        "$function as function(item()*, item()*) as item()*"
+      ],
+      "pos": {
+        "sl": 170,
+        "sc": 17,
+        "el": 170,
+        "ec": 33
+      }
+    },
+    {
+      "name": "for-each-pair",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array1 as array(*)",
+        "$array2 as array(*)",
+        "$function as function(item()*) as item()*"
+      ],
+      "pos": {
+        "sl": 180,
+        "sc": 17,
+        "el": 180,
+        "ec": 36
+      }
+    },
+    {
+      "name": "sort",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)"
+      ],
+      "pos": {
+        "sl": 188,
+        "sc": 17,
+        "el": 188,
+        "ec": 27
+      }
+    },
+    {
+      "name": "sort",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$collation as xs:string?"
+      ],
+      "pos": {
+        "sl": 197,
+        "sc": 17,
+        "el": 197,
+        "ec": 27
+      }
+    },
+    {
+      "name": "sort",
+      "uri": "http://www.w3.org/2005/xpath-functions/array",
+      "params": [
+        "$array as array(*)",
+        "$collation as xs:string?",
+        "$key as function(item()*) as xs:anyAtomicType*"
+      ],
+      "pos": {
+        "sl": 207,
+        "sc": 17,
+        "el": 207,
+        "ec": 27
+      }
+    }
+  ]
+}
