@@ -15,3 +15,4 @@ visit node children unless function returns true
 
 # static_context@resolveQName
 calls getNamespaceByPrefix
+# xqdoc
