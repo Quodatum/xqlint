@@ -6259,5 +6259,38 @@
       "errors" : [  ]
     } ], 
     "variables" : [  ]
+  },
+  "http://basex.org/modules/util" :{
+    "ns" : "http://basex.org/modules/util", 
+    "description" : " This XQuery Module contains various utility and helper functions. \n", 
+    "sees" : [  ], 
+    "authors" : [ "<xqdoc:author xmlns:xqdoc=\"http://www.xqdoc.org/1.0\">BaseX</xqdoc:author>" ], 
+    "version" : null, 
+    "encoding" : "utf-8", 
+    "namespaces" : [  ], 
+    "functions" : [ {
+      "isDocumented" : true, 
+      "arity" : 1, 
+      "name" : "chars", 
+      "qname" : "util:chars", 
+      "signature" : "($string as xs:string?) as xs:string* external", 
+      "description" : " <div xmlns:xqdoc=\"http://www.xqdoc.org/1.0\"><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\">Returns the arc cosine of the argument, the result being in the range zero to\n                +<var>œÄ</var> radians.</p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\"><example role=\"signature\"><proto name=\"acos\" return-type=\"xs:double?\" isOp=\"no\" prefix=\"math\" returnEmptyOk=\"no\" returnSeq=\"no\" returnVaries=\"no\" isSchema=\"no\" isDatatype=\"no\" isSpecial=\"no\"><arg name=\"arg\" type=\"xs:double?\"/></proto></example></p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\">This function is <termref def=\"dt-deterministic\">deterministic</termref>, <termref def=\"dt-context-independent\">context-independent</termref>,  and <termref def=\"dt-focus-independent\">focus-independent</termref>. </p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\">If <code>$arg</code> is the empty sequence, the function returns the empty sequence.</p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\" diff=\"chg\" at=\"G\">Otherwise the result is the arc cosine of <code>$</code><var>Œ∏</var>,\n             treated as an angle in radians, as defined in the <bibref ref=\"ieee754-2008\"/>\n             specification of the <code>acos</code> function applied to 64-bit binary floating point\n             values.</p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\">The treatment of the <code>invalidOperation</code> exception is defined in <specref ref=\"op.numeric\"/>. </p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\">If <code>$arg</code> is <code>NaN</code>, or if its absolute value is greater than one,\n             then the result is <code>NaN</code>.</p><p xmlns:e=\"http://www.w3.org/1999/XSL/Spec/ElementSyntax\">In other cases the result is an <code>xs:double</code> value representing an angle\n                <var>Œ∏</var> in radians in the range <code>0 &lt;= $</code><var>Œ∏</var><code> &lt;=\n                +</code><var>œÄ</var>. </p></div>\n", 
+      "summary" : "<p>  string chars\n.</p>", 
+      "annotation_str" : "", 
+      "annotations" : [  ], 
+      "updating" : false, 
+      "parameters" : [ {
+        "name" : "string", 
+        "type" : "xs:string", 
+        "occurrence" : "?", 
+        "description" : ""
+      } ], 
+      "returns" : {
+        "type" : "xs:string*", 
+        "description" : ""
+      }, 
+      "errors" : [  ]
+    } ], 
+    "variables" : [  ]
   }
 }

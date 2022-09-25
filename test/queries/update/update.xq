@@ -1,1 +1,1 @@
-<root/> update  insert node <child/> into .
+<root/> update { insert node <child/> into . }
