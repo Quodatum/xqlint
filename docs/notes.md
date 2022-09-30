@@ -11,11 +11,6 @@ opts is
 ### availableModuleNamespaces
  used only for completion?
 
-### other
-```javascript
-StaticWarning('W01', 'Avoid this type of import. Use import module namespace instead', pos);
-StaticWarning('W02', '"' + uri + '" already bound to the "' + namespace.prefixes.join(', ') + '" prefix', pos);
-```
 ### translator.js
 In xqlint
 ```javascript
@@ -26,6 +21,9 @@ this.visit(ast);
 ```
 messages..
 ```javascript
+StaticWarning('W01', 'Avoid this type of import. Use import module namespace instead', pos);
+StaticWarning('W02', '"' + uri + '" already bound to the "' + namespace.prefixes.join(', ') + '" prefix', pos);
+
   addWarning('W03', 'Unused variable "' + rootStcx.variables[key].qname.name + '"', rootStcx.variables[key].pos);
   addWarning('W04', 'Unused module "' + uri + '"', namespace.pos);
   addWarning('W05', 'Untyped return value', name.pos);

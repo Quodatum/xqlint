@@ -40,9 +40,9 @@ vows.describe('Test Namespace declarations').addBatch({
     'test XQST0047 (4)': function(){
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/5.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 2, 'Number of markers');
+        assert.equal(markers.length, 1, 'Number of markers');
         assert.equal(markers[0].type, 'warning', 'Type of marker');
-        assert.equal(markers[1].type, 'warning', 'Type of marker');
+        // assert.equal(markers[1].type, 'warning', 'Type of marker');
     },
     
     'test XQST0049 (4)': function(){
@@ -57,7 +57,7 @@ vows.describe('Test Namespace declarations').addBatch({
     'test XQST0033  (1)': function(){
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/3.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 1, 'Number of markers');
+        assert.equal(markers.length, 2, 'Number of markers');
         var error = markers[0];
         assert.equal(error.type, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0033]'), 0, 'Is Error [XQST0033]');
@@ -121,13 +121,13 @@ vows.describe('Test Namespace declarations').addBatch({
     },
     
     
-    'test unused namespace (2)': function(){
+    'test XQST0009 (1)': function(){
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/11.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var warning = markers[0];
         assert.equal(warning.type, 'warning', 'Type of marker');
-        //assert.equal(error.message.indexOf('[XQST0088]'), 0, 'Is Error [XQST0088]');
+        assert.equal(warning.message.indexOf('[XQST0009]'), 0, 'Is warning [XQST0009]');
     },
     
     'test unused namespace (3)': function(){
@@ -153,8 +153,8 @@ vows.describe('Test Namespace declarations').addBatch({
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/csv.xq', 'utf-8'), { staticContext: sctx, styleCheck: false, fileName: 'csv.xq' });
         var warnings = linter.getWarnings();
         var errors = linter.getErrors();
-        assert.equal(errors.length, 0, 'Number of errors');
-        assert.equal(warnings.length, 2, 'Number of warnings');
+        assert.equal(errors.length, 1, 'readtext#1 undeclared');
+        assert.equal(warnings.length, 0, 'Number of warnings');
     },
 
     'test resolution': function(){
