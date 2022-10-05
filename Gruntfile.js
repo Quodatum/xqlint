@@ -46,6 +46,7 @@ module.exports = function(grunt) {
             grunt.fail.fatal(error);
 	    });
     });
+    
     grunt.registerMultiTask('index', 'Generate index xqdoc', function(){
         var fs = require('fs');
         grunt.file.expand(this.data.src).forEach(function(filename){

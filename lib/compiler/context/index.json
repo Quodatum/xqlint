@@ -1,7 +1,5 @@
 {
-
-
-  "http://expath.org/ns/error" : {
+ "http://expath.org/ns/error" : {
     "ns" : "http://expath.org/ns/error", 
     "description" : " This module defines all errors for the http-client module.\n", 
     "sees" : [  ], 

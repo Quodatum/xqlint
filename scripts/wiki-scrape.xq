@@ -1,5 +1,6 @@
 (:~
- : This script creates xqdoc files from the module documentation of the BaseX Wiki.
+ : This script creates xqdoc files by reading the online module documentation 
+ : from the BaseX Wiki or an archive of it.
  : @author Christian Gruen, BaseX Team
  : Updated for https,wayback compatablity
  : @author Andy Bunce
@@ -47,7 +48,7 @@ declare %private function local:header(
 ) as xs:string {
   '(:~ ' || out:nl() ||
   ' : ' || local:serialize(
-    $xml//div[@id = 'bodyContent']/p[not(preceding-sibling::h1)]/node(), $url
+    $xml//div[@id = 'mw-content-text']/div/p[1]/node(), $url
   ) || out:nl() ||
   ' :' || out:nl() ||
   ' : @author BaseX Team' || out:nl() ||
@@ -96,7 +97,8 @@ declare %private function local:functions(
 
     for $error in $table/tbody/tr[td[1]/b = 'Errors']/td[2]/code
       [not(preceding-sibling::node()[1] instance of text())]
-    let $code := $error/b ! (contains(., ':') ?? . !! ($prefix || ':' || .))
+    (:~ let $code := $error/b ! (contains(., ':') ?? . !! ($prefix || ':' || .)) ~:)
+     let $code := $error/b ! util:if(contains(., ':') , . ,$prefix || ':' || .)
     let $message := (
       let $fs := $error/following-sibling::node()
       let $br := ($fs/self::br)[1]
@@ -151,8 +153,9 @@ declare %private function local:create(
   let $uri:= resolve-uri($url,$BASE)=>trace("Create: ")
   let $xml := html:parse(fetch:binary( $uri))
   let $prefix := ($xml//code[starts-with(following-sibling::text()[1], ' prefix.')]/text())[1]
-  let $xqdoc := local:page($xml, $url)
-  return file:write-text($ROOT-DIR || $prefix || '.xqm', $xqdoc)
+  let $xqdoc := local:page($xml, $uri)
+  let $dest:= $ROOT-DIR || $prefix || '.xqm'
+  return file:write-text($dest=>trace("Write: "), $xqdoc)
 };
 
 file:create-dir($ROOT-DIR),

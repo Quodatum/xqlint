@@ -1,0 +1,1 @@
+XQLint.getCompletions(pos)

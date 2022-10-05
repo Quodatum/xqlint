@@ -47,12 +47,12 @@ vows.describe('Test Code Completion').addBatch({
     },
     
     'test expr (1)': function(){
-        var source = 'declare function local:test($hello){ $hello }; l';
+        var source = 'declare function local:test($hello){ $hello }; lo';
         var linter = new XQLint(source);
         var pos = { line: 0, col: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
-        assert.equal(proposals[1].name, 'local:', 'Prefix');
+        assert.equal(proposals[0].name, 'local:', 'Prefix');
     },
     
     'test expr (2)': function(){
