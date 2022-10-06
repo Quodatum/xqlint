@@ -7,7 +7,6 @@ cases/
 specs/
 .DS_Store
 *.swp
-notes.md
 *.ebnf
 .vscode
 *.tgz

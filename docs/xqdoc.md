@@ -1,5 +1,12 @@
 ### xqdoc
 
+```
+XQLint.getXQDoc()
+ - xqdoc.getXQDoc(sctx);
+```
+Need way to get pos and posBody seperate from this call.
+
+
 ```json
  "functions" : {
         "http://xbrl.io/modules/bizql/components#cid#1" : {
