@@ -1,3 +1,4 @@
+## [0.0.18] add getNode (2023-01-28)
 ## [0.0.17] revert attempts to load function library
  
 ## [0.0.16] FIX index.json (2022-10-05)

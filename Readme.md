@@ -1,4 +1,4 @@
-# @Quodatum/XQLint 
+# About @Quodatum/XQLint 
 [npm](https://www.npmjs.com/package/@quodatum/xqlint)
 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis. It provides the following features:
@@ -23,15 +23,15 @@ but many features have been added and some removed.
 * the [Ace editor](https://github.com/ajaxorg/ace) 
 * [XML tools](https://github.com/DotJoshJohnson/vscode-xml) DotJoshJohnson's VS code extension 
 
-## Installation
+# Installation
 
 Install Node.js and NPM for your system (Mac, Windows or Linux). Then install the command line tool using:
 
 ```bash
 $ npm install @quodatum/xqlint -g
 ```
-## Command line usage
-### Lint
+# Command line usage
+## Lint
 
 `style-check` reports trailing whitespace, tab use
 ```bash
@@ -45,13 +45,13 @@ node bin\xqlint --no-color lint C:\Users\andy\git\bloomsbury\XML-CMS\data_server
 node bin\xqlint lint --style-check yes cases\history.xqm 
 ```
 
-### Format
+## Format
 
 ```bash
 $ xqlint format <path>
 ```
 
-### xqdoc JSON object
+## xqdoc JSON object
 
 ```bash
 $ xqlint xqdoc <path>
@@ -120,22 +120,8 @@ The following functions are exported:
 * createStaticContext(processor)
 * CodeFormatter(ast, newLinesEnabled, DEBUG)
 
-## Dev
 
-
-### Generate parsers
-
-`grunt parsers`
-
-Command generates:
-
- *   lib/lexers/XQueryTokenizer.ebnf -> XQueryTokenizer.js
- *   lib/parsers/XQueryParser.ebnf -> XQueryParser.js
-
-
-
-
-## Development
+# Development
 
 If you'd like to hack on xqlint itself:
 
@@ -147,15 +133,26 @@ sudo npm install grunt@1.5.3 -g
 grunt
 ```
 
-### Run tests
+## Run tests
 
 ```bash
 grunt vows
 ```
 
-### Generate Parsers
 
-```bash
-grunt parsers
+## Generate parsers
+
+`grunt parsers`
+
+Command generates:
+
+ *   lib/lexers/XQueryTokenizer.ebnf -> XQueryTokenizer.js
+ *   lib/parsers/XQueryParser.ebnf -> XQueryParser.js
+
+## publish
+
 ```
+npm pack
+npm publish
+``
 
