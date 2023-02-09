@@ -12,7 +12,7 @@ XQLint parses XQuery  files and returns errors and warnings based on static code
 
  The goal of this project is to support XQuery development tools, particularly for [BaseX](https:basex.org) (9.7+).
 
-![example](https://i.imgur.com/NZFnzZ5.png)
+![example](https:doc/lint.png)
 
 This project is in an Alpha state - errors and changes expected.
 
