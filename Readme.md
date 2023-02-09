@@ -8,7 +8,8 @@ XQLint parses XQuery  files and returns errors and warnings based on static code
 * xqdoc: json object with information similar to the xqdoc XML format
 * completion: suggestions for line completion given a source and location. 
 * highlight console source listing using https://www.npmjs.com/package/colors
-* context from position in source
+* context analysis for a position in source
+
  The goal of this project is to support XQuery development tools, particularly for [BaseX](https:basex.org) (9.7+).
 
 ![example](https://i.imgur.com/NZFnzZ5.png)

@@ -1,8 +1,23 @@
 #!/usr/bin/env node
+const PUBID='@quodatum/xqlint'
+
 var path = require('path');
-var fs = require('fs');
+const  { readFile } = require("fs/promises")
+const https = require('node:https')
+const fs = require('node:fs')
+
+https.get('https://registry.npmjs.org/' + PUBID, async response => {
+    let body = ''
+    for await (const chunk of response) body += chunk
+    const json = JSON.parse(body)
+    const latest = json['dist-tags']['latest'].split('-')[0]
+    const pkg = await readFile(`${__dirname}/../package.json`, {encoding: 'utf8'})
+    const pkgJson = JSON.parse(pkg)
+
+    if (latest.localeCompare(pkgJson.version, 'en', {numeric: true}) === 1) {
+        console.info(`A new version is available update to ${latest}, currently running ${latest}`)
+    }
+})
+
 var lib = path.dirname(fs.realpathSync(__filename));
-var updateNotifier = require('update-notifier');
-var packageJson = require('../package.json');
-updateNotifier({pkg: packageJson}).notify();
 require(lib + '/../lib/cli/main.js');
