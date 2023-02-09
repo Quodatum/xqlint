@@ -1,7 +1,15 @@
+## [0.1.2] 2023-02-09
+Update update-notifier
+
+## [0.1.1] 
+Align xqlint pos with vscode Position
+
 ## [0.1.0] 
 `getAST(pos)` and `getSctx(pos)` replace `getNode`
+
 ## [0.0.18] 
 add `getNode` (2023-01-28)
+
 ## [0.0.17] 
 revert attempts to load function library
  

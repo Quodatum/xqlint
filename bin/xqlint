@@ -3,6 +3,6 @@ var path = require('path');
 var fs = require('fs');
 var lib = path.dirname(fs.realpathSync(__filename));
 var updateNotifier = require('update-notifier');
-var pkg = require('../package.json');
-updateNotifier({packageName: pkg.name, packageVersion: pkg.version}).notify();
+var packageJson = require('../package.json');
+updateNotifier({pkg: packageJson}).notify();
 require(lib + '/../lib/cli/main.js');

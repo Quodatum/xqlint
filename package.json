@@ -2,7 +2,7 @@
   "author": "Andy Bunce <bunce.andy@gmail.com> (https://github.com/apb2006)",
   "name": "@quodatum/xqlint",
   "description": "XQuery Quality Checker",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [
     "xquery",
     "dev",
@@ -26,7 +26,7 @@
     "commander": "~2.3.0",
     "final-fs": "~1.6.0",
     "q": "~1.0.0",
-    "update-notifier": "5.1.0"
+    "update-notifier": "~6.0.2"
   },
   "devDependencies": {
     "axios": "0.24.0",
