@@ -1,8 +1,12 @@
+## [0.1.3] 2023-02-16
+completer logging
+
 ## [0.1.2] 2023-02-09
-Update update-notifier
+replace update-notifier
 
 ## [0.1.1] 
-Align xqlint pos with vscode Position
+Align xqlint pos with vscode Position new(line:Int, character:Int)
+https://vshaxe.github.io/vscode-extern/vscode/Position.html
 
 ## [0.1.0] 
 `getAST(pos)` and `getSctx(pos)` replace `getNode`

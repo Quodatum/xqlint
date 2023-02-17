@@ -11,6 +11,11 @@ opts is
 ### availableModuleNamespaces
  used only for completion?
 
+## bugs xqdoc
+moduleNamespace: not set
+description: not set
+defaultfunctionnamespace wrong
+
 ### translator.js
 In xqlint
 ```javascript

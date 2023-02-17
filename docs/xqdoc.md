@@ -1,9 +1,47 @@
-### xqdoc
+# xqdoc
+This refers to a JSON representation of an XQuery source.
+
+## usage
+xqdoc info can be imported into static context with `sctx.setModulesFromXQDoc()`
 
 ```
-XQLint.getXQDoc()
- - xqdoc.getXQDoc(sctx);
+functions[uri + '#' + fn.name + '#' + fn.arity] = {
+                        params: [],
+                        annotations: [],
+                        name: fn.name,
+                        arity: fn.arity,
+                        eqname: { uri: uri, name: fn.name }
+
+                   variables[uri + '#' + name] = { type: 'VarDecl',
+                                                    annotations: [], 
+                                                    eqname: { uri: uri, name: name } };
+                });
+
 ```
+
+See also `sctx.setModules(index)`
+
+
+## XQLint
+```
+  sctx =  createStaticContext(opts.processor);
+  ast = h.getParseTree();
+  xqdoc=new XQDoc(ast);
+  .getXQDoc()
+  - xqdoc.getXQDoc(sctx);
+```
+## xqdoc=new XQDoc(ast)
+```
+this.visit(ast);
+
+```
+1. for each WS node.getParent.comment=parse..
+
+## xqdoc.getXQDoc
+```
+```
+
+## Notes
 Need way to get pos and posBody seperate from this call.
 
 

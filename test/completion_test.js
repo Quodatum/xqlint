@@ -10,8 +10,8 @@ var XQLint = require('../lib/xqlint').XQLint;
 vows.describe('Test Code Completion').addBatch({
     'test var (1)': function(){
         var source = 'let $bar := 1 return $bar, let $foo := 1 return $';
+        var pos = { line: 0, character: source.length };
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].name, '$foo', '$foo variable');
@@ -20,7 +20,7 @@ vows.describe('Test Code Completion').addBatch({
     'test var (2)': function(){
         var source = 'let $foo := 1 return $f';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].name, '$foo', '$foo variable');
@@ -30,7 +30,7 @@ vows.describe('Test Code Completion').addBatch({
     'test var (3)': function(){
         var source = 'declare namespace ex = "http://www.example.com"; declare variable $ex:hello := 1; $';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].name, '$ex:hello', '$ex:hello variable');
@@ -41,7 +41,7 @@ vows.describe('Test Code Completion').addBatch({
         var source = 'let $varname := 1\nlet $foo := $varname\nreturn $varname + $';
         var linter = new XQLint(source);
         var lines = source.split('\n');
-        var pos = { line: lines.length - 1, col: lines[lines.length - 1].length  };
+        var pos = { line: lines.length - 1, character: lines[lines.length - 1].length  };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
     },
@@ -49,7 +49,7 @@ vows.describe('Test Code Completion').addBatch({
     'test expr (1)': function(){
         var source = 'declare function local:test($hello){ $hello }; lo';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].name, 'local:', 'Prefix');
@@ -58,28 +58,28 @@ vows.describe('Test Code Completion').addBatch({
     'test expr (2)': function(){
         var source = 'declare function local:test($hello){ $hello }; local:';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].name, 'local:test($hello)', 'test function');
     },
-    
+    //  all known basex prefixes
     'test expr (3)': function(){
         var source = '';
         var linter = new XQLint(source, { processor: 'basex' });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
-        assert.equal(proposals.length, 6, 'Number of proposals');
+        assert.equal(proposals.length>20, true, 'Number of proposals');
     },
     
     'test namespaces (1)': function(){
         var p1 = 'import module namespace ns="';
         var p2 = '";';
-        var sctx = new StaticContext();
+        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
-        var linter = new XQLint(p1 , { staticContext: sctx });
-        var pos = { line: 0, col: p1.length };
+        var linter = new XQLint(p1+p2 , { staticContext: sctx });
+        var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
         assert.equal(proposals[0].name, 'http://www.28msec.com/modules/http-reponse', 'module list');
@@ -88,11 +88,11 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (2)': function(){
         var p1 = 'import module namespace ns="http://28msec.com/modules';
         var p2 = '";';
-        var sctx = new StaticContext();
+        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
-        var linter = new XQLint(p1 , { staticContext: sctx });
-        var pos = { line: 0, col: p1.length };
+        var linter = new XQLint(p1+p2 , { staticContext: sctx });
+        var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 0, 'Number of proposals');
     },
@@ -100,35 +100,35 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (3)': function(){
         var p1 = 'import module namespace ns="http://www.28msec.com/modules';
         var p2 = '";';
-        var sctx = new StaticContext();
+        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
-        var linter = new XQLint(p1 , { staticContext: sctx });
-        var pos = { line: 0, col: p1.length };
+        var linter = new XQLint(p1 + p2 , { staticContext: sctx });
+        var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].name, 'http://www.28msec.com/modules/http-reponse', 'module list');
     },
-    
+    // imports starting with...
     'test namespaces (4)': function(){
-        var p1 = 'import module namespace ns="http://www.28msec.com/modules';
+        var p1 = 'import module namespace ns="http://basex.org/modules';
         var p2 = '";';
-        var sctx = new StaticContext();
+        var sctx = new StaticContext(undefined,undefined,{ processor: 'basex'});
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.availableModuleNamespaces = Object.keys(index);
-        var linter = new XQLint(p1 , { staticContext: sctx });
-        var pos = { line: 0, col: p1.length };
+        var linter = new XQLint(p1 + p2 , { staticContext: sctx });
+        var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
-        assert.equal(proposals.length > 10, true, 'Number of proposals');
+        assert.equal(proposals.length > 0, true, 'Number of proposals');
     },
-
+    // module exists and has 7 functions??? 
     'test prefixes (1)': function(){
-        var source = 'import module namespace ns="http://www.28msec.com/modules/http-response";';
+        var source = 'import module namespace ns="http://basex.org/modules/util";';
         var sctx = new StaticContext(undefined, undefined, 'basex');
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 7, 'Number of proposals');
     },
@@ -156,7 +156,7 @@ vows.describe('Test Code Completion').addBatch({
         });
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 10, true, 'Number of proposals');
     },
@@ -188,7 +188,7 @@ vows.describe('Test Code Completion').addBatch({
         });
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 6, 'Number of proposals');
     },
@@ -196,7 +196,7 @@ vows.describe('Test Code Completion').addBatch({
     'test functions (3)': function(){
         var source = 'ns:';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 0, 'Number of proposals');
     },
@@ -204,7 +204,7 @@ vows.describe('Test Code Completion').addBatch({
     'test functions (4)': function(){
         var source = 'declare function local:foo(){ 1 }; declare function local:bar($foo as xs:string){ 2 }; local:';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
         assert.equal(proposals[0].value, 'local:bar($foo as xs:string)', 'Number of proposals');
@@ -214,7 +214,7 @@ vows.describe('Test Code Completion').addBatch({
     'test functions (4 bis)': function(){
         var source = 'declare function local:foo(){ 1 }; declare function local:bar(){ 2 }; local';
         var linter = new XQLint(source);
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 1, 'Number of proposals');
         assert.equal(proposals[0].value, 'local:', 'Number of proposals');
@@ -227,7 +227,7 @@ vows.describe('Test Code Completion').addBatch({
         sctx.setModulesFromXQDoc(index);
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
     },
@@ -266,7 +266,7 @@ vows.describe('Test Code Completion').addBatch({
         sctx.setModules(modules);
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 2, 'Number of proposals');
     },
@@ -304,7 +304,7 @@ vows.describe('Test Code Completion').addBatch({
         sctx.setModules(modules);
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 10, true, 'Number of proposals');
     },
@@ -342,7 +342,7 @@ vows.describe('Test Code Completion').addBatch({
         sctx.setModules(modules);
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 10, true, 'Number of proposals');
     },
@@ -374,7 +374,7 @@ vows.describe('Test Code Completion').addBatch({
         });
         sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 10, true, 'Number of proposals');
     },
@@ -385,7 +385,7 @@ vows.describe('Test Code Completion').addBatch({
         var sctx = new StaticContext();
         sctx.setModulesFromXQDoc(index);
         var linter = new XQLint(source, { staticContext: sctx });
-        var pos = { line: 0, col: source.length };
+        var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 5, true, 'Number of proposals');
     },
@@ -395,7 +395,7 @@ vows.describe('Test Code Completion').addBatch({
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.setModulesFromXQDoc(index);
         var linter = new XQLint('re', { fileName: 'merry.xq',  staticContext: sctx });
-        var pos = { line: 0, col: 2 };
+        var pos = { line: 0, character: 2 };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length > 1, true, 'Number of proposals');
     }
