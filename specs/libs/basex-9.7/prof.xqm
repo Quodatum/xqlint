@@ -117,7 +117,7 @@ declare function prof:gc($count as xs:integer) as empty-sequence() external;
  : @param $name of xs:string value of type 
  : @return value of type xs:integer
  :)
-declare function prof:runtime($name of xs:string) as xs:integer external;
+declare function prof:runtime($name as xs:string) as xs:integer external;
 
 (:~ 
  : Swallows all items of the specified <code>$value</code> and returns an empty sequence. This function is helpful if some code needs to be evaluated and if the actual result is irrelevant.

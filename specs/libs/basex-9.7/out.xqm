@@ -38,4 +38,4 @@ declare function out:tab() as xs:string external;
  : @return value of type xs:string
  : @error out:format The specified format is not valid.
  :)
-declare function out:format($format as xs:string, $items as item() ...) as xs:string external;
+declare function out:format($format as xs:string, $items as item() ) as xs:string external;

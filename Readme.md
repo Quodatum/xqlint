@@ -1,17 +1,16 @@
 # About @Quodatum/XQLint 
 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis. It provides the following features:
-* lint: errors and warnings based on static code analysis
-* format:  standardised indentation of source.
-* ast:   Abstract syntax tree as XML
+* Lint: errors and warnings based on static code analysis
+* Format:  standardised indentation of source.
+* AST:   Abstract syntax tree as XML
 * xqdoc: json object with information similar to the xqdoc XML format
-* completion: suggestions for line completion given a source and location. 
-* highlight console source listing using https://www.npmjs.com/package/colors
-* context analysis for a position in source
+* Completion: suggestions for line completion given a source and location. 
+* Highlight console source listing using https://www.npmjs.com/package/colors
+* Context analysis for a position in source
 
  The goal of this project is to support XQuery development tools, particularly for [BaseX](https:basex.org) (9.7+).
 
-![example](https:doc/lint.png)
 
 This project is in an Alpha state - errors and changes expected.
 
