@@ -1,9 +1,10 @@
 (:~
- : This script creates xqdoc files by reading the online module documentation 
- : from the BaseX Wiki or an archive of it.
- : @author Christian Gruen, BaseX Team
- : Updated for https,wayback compatablity
- : @author Andy Bunce
+  This script creates xqm files, with xqdoc style comments, for each BaseX module by reading 
+  the online module documentation from the BaseX Wiki or an wayback archive of it.
+  
+  @author Christian Gruen, BaseX Team
+  Updated for https,wayback compatablity
+  @author Andy Bunce
  :)
 
 declare variable $SOURCES:=map{
@@ -13,7 +14,7 @@ declare variable $SOURCES:=map{
 };
 declare variable $KEY := "basex-10.0";
 declare variable $BASE := $SOURCES($KEY);
-declare variable $ROOT-DIR := file:base-dir() || 'xqdoc/' || $KEY || "/";
+declare variable $ROOT-DIR := file:base-dir() || '../specs/libs/' || $KEY || "/";
 (:~
  : Serializes the specified nodes. Normalizes links and newlines.
  : @param  $nodes  nodes to be serialized
@@ -162,7 +163,7 @@ file:create-dir($ROOT-DIR),
 
 let $xml := html:parse(fetch:binary($BASE || '/wiki/Module_Library'))
 
-for $url in $xml//td/a[@title]/@href
+for $url in $xml//td/a[@title]/@href[ends-with(.,"_Module")]
 return (
   local:create($url),
   prof:sleep(50)

@@ -1,5 +1,5 @@
 (: From https://www.w3.org/TR/2017/REC-xpath-functions-31-20170321/xpath-functions-31.xml :)
-module namespace fn = 'chttp://www.w3.org/2005/xpath-functions';
+module namespace fn = 'http://www.w3.org/2005/xpath-functions';
 
 (:~
     Calling the fn:error function raises an application-defined error.

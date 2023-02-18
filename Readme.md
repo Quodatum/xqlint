@@ -1,5 +1,4 @@
 # About @Quodatum/XQLint 
-[npm](https://www.npmjs.com/package/@quodatum/xqlint)
 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis. It provides the following features:
 * lint: errors and warnings based on static code analysis
@@ -26,6 +25,7 @@ but many features have been added and some removed.
 
 # Installation
 
+XQlint is published on [npm](https://www.npmjs.com/package/@quodatum/xqlint)
 Install Node.js and NPM for your system (Mac, Windows or Linux). Then install the command line tool using:
 
 ```bash
@@ -138,6 +138,9 @@ grunt
 
 ```bash
 grunt vows
+
+// just one test, hardcoded in `grunt.js`
+grunt vows:test
 ```
 
 
