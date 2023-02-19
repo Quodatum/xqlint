@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var XQLint = require('../../lib/xqlint').XQLint;
 
-var src="C:/Users/andy/git/quodatum/xqdoca/src/main/lib/ast-to-xqdoc.xqm";
+var src="C:/Users/andy/git/quodatum/xqlint/specs/libs/basex-9.7/admin.xqm";
 //src="cases\history.xqm";
 var linter = new XQLint(fs.readFileSync(src, 'utf-8'));
 // .hasSyntaxError()

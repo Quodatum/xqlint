@@ -1,5 +1,5 @@
-## [0.1.3] 2023-02-16
-completer logging
+## [0.2.0] 2023-02-19
+reorg, function library progress.
 
 ## [0.1.2] 2023-02-09
 replace update-notifier
