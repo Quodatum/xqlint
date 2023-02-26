@@ -152,10 +152,10 @@ Command generates:
  *   lib/lexers/XQueryTokenizer.ebnf -> XQueryTokenizer.js
  *   lib/parsers/XQueryParser.ebnf -> XQueryParser.js
 
-## publish
+## publish to npm
 
 ```
 npm pack
 npm publish
-``
+```
 

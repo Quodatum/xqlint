@@ -1,3 +1,6 @@
+## [0.2.1] 2023-02-26
+function library, availablenamespaces progress.
+
 ## [0.2.0] 2023-02-19
 reorg, function library progress.
 

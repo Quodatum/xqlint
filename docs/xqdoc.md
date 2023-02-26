@@ -12,7 +12,7 @@ functions[uri + '#' + fn.name + '#' + fn.arity] = {
                         arity: fn.arity,
                         eqname: { uri: uri, name: fn.name }
 
-                   variables[uri + '#' + name] = { type: 'VarDecl',
+variables[uri + '#' + name] = { type: 'VarDecl',
                                                     annotations: [], 
                                                     eqname: { uri: uri, name: name } };
                 });

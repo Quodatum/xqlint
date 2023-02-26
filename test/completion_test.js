@@ -81,7 +81,7 @@ vows.describe('Test Code Completion').addBatch({
         var linter = new XQLint(p1+p2 , { staticContext: sctx });
         var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
-        assert.equal(proposals.length, 2, 'Number of proposals');
+        assert.equal(proposals.length, 6, 'Number of proposals, 4 are w3');
         assert.equal(proposals[0].name, 'http://www.28msec.com/modules/http-reponse', 'module list');
     },
     
@@ -126,7 +126,7 @@ vows.describe('Test Code Completion').addBatch({
         var source = 'import module namespace ns="http://basex.org/modules/util";';
         var sctx = new StaticContext(undefined, undefined, 'basex');
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        sctx.availableModuleNamespaces = Object.keys(index);
+        //sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
         var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
