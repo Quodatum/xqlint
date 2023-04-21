@@ -6,16 +6,19 @@ xqdoc info can be imported into static context with `sctx.setModulesFromXQDoc()`
 
 ```
 functions[uri + '#' + fn.name + '#' + fn.arity] = {
+                        type: 'FunctionDecl',
                         params: [],
                         annotations: [],
                         name: fn.name,
                         arity: fn.arity,
                         eqname: { uri: uri, name: fn.name }
+                        };
 
-variables[uri + '#' + name] = { type: 'VarDecl',
-                                                    annotations: [], 
-                                                    eqname: { uri: uri, name: name } };
-                });
+variables[uri + '#' + name] = { 
+                        type: 'VarDecl',
+                        annotations: [], 
+                        eqname: { uri: uri, name: name } 
+                        };
 
 ```
 

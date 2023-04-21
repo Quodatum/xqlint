@@ -1,5 +1,8 @@
+## [0.2.2] 2023-04-22
+* [xqdoc] vars and functions have .comments created from xqdoc style comments
+
 ## [0.2.1] 2023-02-26
-function library, availablenamespaces progress.
+function library, available namespaces progress.
 
 ## [0.2.0] 2023-02-19
 reorg, function library progress.

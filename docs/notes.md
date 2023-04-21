@@ -1,4 +1,5 @@
 # xqlint
+
 Syntax `new XQLint(source, opts)` where
 opts is
 * styleCheck: false
@@ -6,6 +7,7 @@ opts is
 
 
 ## staticContext.js
+Models the static context.
 ### namespaces
 
 ### availableModuleNamespaces
@@ -16,14 +18,16 @@ moduleNamespace: not set
 description: not set
 defaultfunctionnamespace wrong
 
-### translator.js
-In xqlint
+## translator.js
+Called in xqlint. Gets markers, also adds to `sctx`
+
 ```javascript
-var translator = new Translator(sctx, ast); 
+ var translator = new Translator(sctx, ast);
+    markers = markers.concat(translator.getMarkers());
 ...
 this.visit(ast);
-
 ```
+
 messages..
 ```javascript
 StaticWarning('W01', 'Avoid this type of import. Use import module namespace instead', pos);
@@ -33,7 +37,7 @@ StaticWarning('W02', '"' + uri + '" already bound to the "' + namespace.prefixes
   addWarning('W04', 'Unused module "' + uri + '"', namespace.pos);
   addWarning('W05', 'Untyped return value', name.pos);
   ```
-#### Vistor  
+#### Visitor  
 ```
  InsertExpr
          ::= 'insert' ( 'node' | 'nodes' ) SourceExpr InsertExprTargetChoice TargetExpr
@@ -45,17 +49,19 @@ RenameExpr
          ::= 'rename' 'node' TargetExpr 'as' NewNameExpr
 ``` 
 ### handlers.js
-```
-StaticWarning('W06', 'Avoid default element namespace declarations.', node.pos); 
-```
 
-## definitions
-* AST Abstract syntax tree
+* 'W06', 'Avoid default element namespace declarations.', node.pos
 
+### formatter/style_check.js
+
+* [SW01] Detected CRLF
+* [SW02] Tabs detected
+* [SW03] Unexpected indentation of ..
+* [SW04] Trailing whitespace
 
 ## module.js
 Exports Basex, W3, Expath
-
+# tests
 ## test/module_resolver_test.js
 ## test/index.js
 ```xquery
@@ -130,19 +136,5 @@ POP:  EQName
 endNonterminal VarName
 ```
 
-# translator
-function(
-  rootStcx: staticcontext 
-  ,ast: ast
-  )
- ```
- translator.js
-
- this.FunctionCall = function(node){
-        this.visitOnly(node, ['ArgumentList']);
-        var name = translator.getFirstChild(node, 'EQName');
-
-declare function local:test($hello){
-     $hello
-};
-```
+# definitions
+* AST Abstract syntax tree
