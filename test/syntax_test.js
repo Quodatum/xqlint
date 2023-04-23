@@ -18,7 +18,7 @@ vows.describe('StringConstructor').addBatch({
         `;
         var linter = new XQLint(src);
         var markers = linter.getErrors();
-        console.log(markers);
+        //console.log(markers);
         assert.equal(markers.length, 0, 'Number of markers:'+markers.length);
     }
 }).export(module);

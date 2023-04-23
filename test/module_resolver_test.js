@@ -173,7 +173,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         sctx.setModulesFromXQDoc(index);
         var linter = new XQLint(fs.readFileSync('test/queries/zorba/merry.xq', 'utf-8'), { fileName: 'merry.xq',  staticContext: sctx });
         var markers = linter.getMarkers();
-        console.log(markers);
+        console.log("TEST12",markers);
         // currently "chars#1": undeclared function'
         assert.equal(markers.length, 0, 'Number of markers');
     },

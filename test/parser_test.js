@@ -36,7 +36,7 @@ files.forEach(function(file){
             assert.equal(syntaxError, false, linter.getMarkers()[0].message);
         } else {
             var errors = linter.getErrors();
-            console.log(errors)
+            //console.log(errors)
             assert.equal(errors.length === 0, true, 'Check for static errors');
         }
     };
