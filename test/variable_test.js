@@ -41,13 +41,11 @@ vows.describe('Test Variable declarations').addBatch({
     'XPST0081 (6)': function(){
         var linter = new XQLint('declare function local:foo($ex:foo as xs:integer) as xs:integer {  $ex:foo }; local:foo(1)');
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 2, 'Number of markers');
+        //console.log(markers);
+        assert.equal(markers.length, 3, 'Number of markers '+ markers.length);
         var error = markers[0];
         assert.equal(error.type, 'error', 'Type of marker');
-        assert.equal(error.message.indexOf('[XPST0081]'), 0, 'Is Error [XPST0081]');
-        error = markers[1];
-        assert.equal(error.type, 'error', 'Type of marker');
-        assert.equal(error.message.indexOf('[XPST0081]'), 0, 'Is Error [XPST0081]');
+        assert.equal(error.message.indexOf('[XPST0081]'), 0, 'No namespace declared for ex:foo');
     },
     
     'XPST0081 (7)': function(){

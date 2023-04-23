@@ -39,6 +39,13 @@ visit(node) will
 if node.name is function it is called 
 visit node children unless function returns true
 
+# set platform
+XQLint: require('./compiler/static_context').StaticContext(undefined,undefined,opts.processor)
+ namespaces = { ...namespaces, ...N.Basex, ...N.Expath }
+ const library = require('./module-library.json');
+ if ('basex' === processor) {
+            s.setModules(library);
+        }
 # response to import module
 
 ...

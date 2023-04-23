@@ -1,13 +1,13 @@
 # @Quodatum/XQLint 
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/quodatum/xqlint/release.yml)
 
-[![Dependency Status](https://deps.rs/repo/github/quodatum/xqlint/status.svg)](https://deps.rs/repo/github/quodatum/xqlint)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/quodatum/xqlint/releases)
-
-[![GitHub Release](https://img.shields.io/github/release/quodatum/xqlint.svg)](https://github.com/quodatum/xqlint/releases/latest)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/quodatum/xqlint?display_name=tag&include_prereleases&sort=semver)
 ![GitHub](https://img.shields.io/github/license/quodatum/xqlint)
 ![GitHub last commit](https://img.shields.io/github/last-commit/quodatum/xqlint)
+
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/quodatum/xqlint/release.yml)
+![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@quodatum/xqlint)
+
 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis. It provides the following features:
 * Lint: errors and warnings based on static code analysis

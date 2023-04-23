@@ -114,12 +114,12 @@ module.exports = function(grunt) {
                 // String or array of strings
                 // determining which files to include.
                 // This option is grunt's "full" file format.
-                //src: ['test/formatting_test.js']
+                src: ['test/syntax_test.js']
                 //src: ['test/function_test.js']
                 //src: ['test/variable_test.js']
                 //src: ['test/namespace_test.js'] //3 fail
                 //src: ['test/parser_test.js'] //26 fail
-                src: ['test/completion_test.js'] //26 fail
+                //src: ['test/completion_test.js'] //26 fail
             },
         },
         browserify: {

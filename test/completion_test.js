@@ -119,18 +119,18 @@ vows.describe('Test Code Completion').addBatch({
         var linter = new XQLint(p1 + p2 , { staticContext: sctx });
         var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
-        assert.equal(proposals.length > 0, true, 'Number of proposals');
+        assert.equal(proposals.length > 0, true, 'Number of proposals >0');
     },
-    // module exists and has 7 functions??? 
+    // fetch module exists and has 9 functions??? 
     'test prefixes (1)': function(){
-        var source = 'import module namespace ns="http://basex.org/modules/util";';
+        var source = 'import module namespace ns="http://basex.org/modules/fetch";ns:';
         var sctx = new StaticContext(undefined, undefined, 'basex');
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         //sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
         var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
-        assert.equal(proposals.length, 7, 'Number of proposals');
+        assert.equal(proposals.length, 9, 'Number of proposals' + proposals.length);
     },
     
     'test functions (1)': function(){
