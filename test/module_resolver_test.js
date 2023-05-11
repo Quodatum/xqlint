@@ -171,7 +171,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         var sctx = new StaticContext();
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         sctx.setModulesFromXQDoc(index);
-        var linter = new XQLint(fs.readFileSync('test/queries/zorba/merry.xq', 'utf-8'), { fileName: 'merry.xq',  staticContext: sctx });
+        var linter = new XQLint(fs.readFileSync('test/queries/merry.xq', 'utf-8'), { fileName: 'merry.xq',  staticContext: sctx });
         var markers = linter.getMarkers();
         console.log("TEST12",markers);
         // currently "chars#1": undeclared function'
@@ -230,7 +230,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         var sctx = new StaticContext();
         var index = JSON.parse(fs.readFileSync('test/exports.json', 'utf-8'));
         sctx.setModules(index);
-        var linter = new XQLint(source, { fileName: 'test/queries/zorba/merry.xq',  staticContext: sctx });
+        var linter = new XQLint(source, { fileName: 'test/queries/merry.xq',  staticContext: sctx });
         var markers = linter.getErrors();
         assert.equal(markers.length, 0, 'Number of markers');
     },
