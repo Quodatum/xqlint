@@ -179,5 +179,10 @@ vows.describe('Test Namespace declarations').addBatch({
         var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/rbtree2.xq', 'utf-8'), { styleCheck: false });
         var errors = linter.getErrors();
         assert.equal(errors.length, 0, 'no errors');
-    }
+    },
+    'test module default function ns #24': function(){
+        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'), { styleCheck: false });
+        var xqdoc = linter.getXQDoc();
+        assert.equal(13, xqdoc.functions.length, "there are some functions");
+    },    
 }).export(module);

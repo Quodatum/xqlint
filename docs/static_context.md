@@ -29,7 +29,10 @@ s.availableModuleNamespaces.push(importable)
 Also `used=true`
 
 # defaultFunctionNamespaces
-?
+```
+defaultFunctionNamespace: string     // initially http://www.w3.org/2005/xpath-functions, override in lib/compiler/handlers.js
+defaultFunctionNamespaces: [string]  // 'http://www.w3.org/2001/XMLSchema' //Built-in type constructors
+```
 # availableModuleNamespaces:[string]
 names of importable modules. Only used for import completion.
 ```
