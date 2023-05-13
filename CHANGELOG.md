@@ -1,3 +1,9 @@
+## [0.2.3] 2023-05-15
+* [mod] update npm dependancies
+* [fix] handling of default function namespace #24 
+* [fix] module level xqdoc comments #25
+* [add] documentLink support
+
 ## [0.2.2] 2023-04-22
 * [xqdoc] vars and functions have .comments created from xqdoc style comments
 

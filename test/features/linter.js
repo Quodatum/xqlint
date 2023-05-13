@@ -2,9 +2,8 @@
 var fs = require('fs');
 
 var XQLint = require('../../lib/xqlint').XQLint;
+var baseUri="C:/Users/andy/git/quodatum/xqlint/";
 
-var src="C:/Users/andy/git/quodatum/xqlint/test/queries/update/fun.xq";
-//src="cases/history.xqm";
-var linter = new XQLint(fs.readFileSync(src, 'utf-8'),{fileName: src});
-var markers = linter.getMarkers()
+var linter = new XQLint(fs.readFileSync(baseUri+'test/xqlint_queries/namespaces/1.xq', 'utf-8'), { styleCheck: false });
+var markers = linter.getMarkers();
 console.log(markers);

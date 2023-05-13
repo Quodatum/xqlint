@@ -1,5 +1,5 @@
 'use strict';
-// generate index.json file from xqm files in dir
+// generate module-library.json file from xqm files in dir
 var dir='specs/libs/basex-9.7';
 var fn='specs/libs/w3c/xpath3.1-fn.xqm';
 var out='lib/compiler/module-library.json';

@@ -2,7 +2,7 @@
   "author": "Andy Bunce <bunce.andy@gmail.com> (https://github.com/apb2006)",
   "name": "@quodatum/xqlint",
   "description": "XQuery Quality Checker",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "keywords": [
     "xquery",
     "dev",
