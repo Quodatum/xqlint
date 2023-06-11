@@ -1,3 +1,7 @@
+## [0.2.4] 2023-06-011
+* [mod] parser generator task now a npm script replacing grunt task.
+* [mod] replace "q" library with native promise. 
+* [mod] fix some eslint reports
 ## [0.2.3] 2023-05-15
 * [mod] update npm dependancies
 * [fix] handling of default function namespace #24 
