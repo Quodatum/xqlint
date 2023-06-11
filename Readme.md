@@ -154,7 +154,7 @@ grunt vows:test
 
 ## Generate parsers
 
-`grunt parsers`
+`npm run-script rex parsers`
 
 Command generates:
 

@@ -1,6 +1,13 @@
 /* generate parsers from EBNF files using REx
-*/ 
-var args = process.argv.slice(2);
+*/
+const opts = ['parsers', 'lexers'];
+const args = process.argv.slice(2);
+var type = args[0];
+type = (typeof type !== 'undefined') ? type : opts[0];
+if (opts.indexOf(type) < 0) {
+    console.log(type, "not found. opts:", opts); return
+};
+console.log("tyt", type);
 const data = {
     parsers: {
         grammars: [
@@ -9,11 +16,11 @@ const data = {
                 destination: 'lib/parsers/XQueryParser.js',
                 command: '-ll 2 -backtrack -tree -javascript -a xqlint'
             },
-          /*   {
-                source: 'lib/parsers/XQueryParser.ebnf',
-                destination: 'lib/parsers/XQueryParser.ts',
-                command: '-ll 2 -backtrack -tree -typescript -a xqlint'
-            } */
+            /*   {
+                  source: 'lib/parsers/XQueryParser.ebnf',
+                  destination: 'lib/parsers/XQueryParser.ts',
+                  command: '-ll 2 -backtrack -tree -typescript -a xqlint'
+              } */
         ]
     },
     lexers: {
@@ -32,12 +39,12 @@ var FormData = require('form-data');
 var path = require('path');
 var promises = [];
 
-data.parsers.grammars.forEach( function (parser) {
-    promises.push( rex(parser)); 
-   // console.log(prom);
+data[type].grammars.forEach(function (parser) {
+    promises.push(rex(parser));
+    // console.log(prom);
 });
-Promise.all(promises).then(function (r){
- console.log("DONE",r);
+Promise.all(promises).then(function (r) {
+    console.log(type + ": ", r);
 });
 
 /* return promise to make REx call and save result to file using parser obj properties */
@@ -53,14 +60,14 @@ function rex(parser) {
         ...form.getHeaders(),
         'Content-Length': form.getLengthSync()
     };
-    return new Promise(function(resolve, reject) {
-    var p = axios.post('https://www.bottlecaps.de/rex/', form, { headers });
-    p.then(function (response) {
-        fs.writeFileSync(parser.destination, response.data)
-        resolve("saved: "+parser.destination);
-      })
-      .catch(function (error) {
-        reject(error);
-      })
+    return new Promise(function (resolve, reject) {
+        var p = axios.post('https://www.bottlecaps.de/rex/', form, { headers });
+        p.then(function (response) {
+            fs.writeFileSync(parser.destination, response.data)
+            resolve("saved: " + parser.destination);
+        })
+            .catch(function (error) {
+                reject(error);
+            })
     });
 }
