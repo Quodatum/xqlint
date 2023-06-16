@@ -14,8 +14,8 @@ vows.describe('Test reported issues').addBatch({
         const formatter = new CodeFormatter(ast);
         const formatted = formatter.format().trim();
         var linter = new XQLint(formatted, { styleCheck: false });
-        var markers = linter.getMarkers();
+        var markers = linter.getErrors();
         console.log(markers);
-        assert.equal(markers.length, 0, 'todo');
+        assert.equal(markers.length, 0);
     }
 }).export(module);
