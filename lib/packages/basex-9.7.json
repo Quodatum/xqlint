@@ -1,0 +1,8006 @@
+{
+ "http://basex.org/modules/admin": {
+  "ns": "http://basex.org/modules/admin",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/admin#logs#0": {
+    "params": [],
+    "annotations": [],
+    "name": "logs",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "logs"
+    }
+   },
+   "http://basex.org/modules/admin#logs#1": {
+    "params": [
+     "$date as xs:string"
+    ],
+    "annotations": [],
+    "name": "logs",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "logs"
+    }
+   },
+   "http://basex.org/modules/admin#logs#2": {
+    "params": [
+     "$date as xs:string",
+     "$merge as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "logs",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "logs"
+    }
+   },
+   "http://basex.org/modules/admin#write-log#1": {
+    "params": [
+     "$text as xs:string"
+    ],
+    "annotations": [],
+    "name": "write-log",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "write-log"
+    }
+   },
+   "http://basex.org/modules/admin#write-log#2": {
+    "params": [
+     "$text as xs:string",
+     "$type as xs:string"
+    ],
+    "annotations": [],
+    "name": "write-log",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "write-log"
+    }
+   },
+   "http://basex.org/modules/admin#delete-logs#1": {
+    "params": [
+     "$date as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete-logs",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "delete-logs"
+    }
+   },
+   "http://basex.org/modules/admin#sessions#0": {
+    "params": [],
+    "annotations": [],
+    "name": "sessions",
+    "eqname": {
+     "uri": "http://basex.org/modules/admin",
+     "name": "sessions"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/archive": {
+  "ns": "http://basex.org/modules/archive",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/archive#create#2": {
+    "params": [
+     "$entries as item()",
+     "$contents as item()*"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/archive#create#3": {
+    "params": [
+     "$entries as item()",
+     "$contents as item()*",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/archive#create-from#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-from",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "create-from"
+    }
+   },
+   "http://basex.org/modules/archive#create-from#2": {
+    "params": [
+     "$path as xs:string",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "create-from",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "create-from"
+    }
+   },
+   "http://basex.org/modules/archive#create-from#3": {
+    "params": [
+     "$path as xs:string",
+     "$options as map(*)?",
+     "$entries as item()*"
+    ],
+    "annotations": [],
+    "name": "create-from",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "create-from"
+    }
+   },
+   "http://basex.org/modules/archive#entries#1": {
+    "params": [
+     "$archive as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "entries",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "entries"
+    }
+   },
+   "http://basex.org/modules/archive#options#1": {
+    "params": [
+     "$archive as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "options",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "options"
+    }
+   },
+   "http://basex.org/modules/archive#extract-text#1": {
+    "params": [
+     "$archive as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "extract-text",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-text"
+    }
+   },
+   "http://basex.org/modules/archive#extract-text#2": {
+    "params": [
+     "$archive as xs:base64Binary",
+     "$entries as item()*"
+    ],
+    "annotations": [],
+    "name": "extract-text",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-text"
+    }
+   },
+   "http://basex.org/modules/archive#extract-text#3": {
+    "params": [
+     "$archive as xs:base64Binary",
+     "$entries as item()*",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "extract-text",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-text"
+    }
+   },
+   "http://basex.org/modules/archive#extract-binary#1": {
+    "params": [
+     "$archive as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "extract-binary",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-binary"
+    }
+   },
+   "http://basex.org/modules/archive#extract-binary#2": {
+    "params": [
+     "$archive as xs:base64Binary",
+     "$entries as item()*"
+    ],
+    "annotations": [],
+    "name": "extract-binary",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-binary"
+    }
+   },
+   "http://basex.org/modules/archive#extract-to#2": {
+    "params": [
+     "$path as xs:string",
+     "$archive as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "extract-to",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-to"
+    }
+   },
+   "http://basex.org/modules/archive#extract-to#3": {
+    "params": [
+     "$path as xs:string",
+     "$archive as xs:base64Binary",
+     "$entries as item()*"
+    ],
+    "annotations": [],
+    "name": "extract-to",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "extract-to"
+    }
+   },
+   "http://basex.org/modules/archive#update#3": {
+    "params": [
+     "$archive as xs:base64Binary",
+     "$entries as item()*",
+     "$contents as item()*"
+    ],
+    "annotations": [],
+    "name": "update",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "update"
+    }
+   },
+   "http://basex.org/modules/archive#delete#2": {
+    "params": [
+     "$archive as xs:base64Binary",
+     "$entries as item()*"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/archive",
+     "name": "delete"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://www.w3.org/2005/xpath-functions/array": {
+  "ns": "http://www.w3.org/2005/xpath-functions/array",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://www.w3.org/2005/xpath-functions/array#size#1": {
+    "params": [
+     "$input as array(*)"
+    ],
+    "annotations": [],
+    "name": "size",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "size"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#get#2": {
+    "params": [
+     "$array as array(*)",
+     "$position as xs:integer"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "get"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#append#2": {
+    "params": [
+     "$array as array(*)",
+     "$member as item()*"
+    ],
+    "annotations": [],
+    "name": "append",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "append"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#subarray#2": {
+    "params": [
+     "$array as array(*)",
+     "$position as xs:integer"
+    ],
+    "annotations": [],
+    "name": "subarray",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "subarray"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#subarray#3": {
+    "params": [
+     "$array as array(*)",
+     "$position as xs:integer",
+     "$length as xs:integer"
+    ],
+    "annotations": [],
+    "name": "subarray",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "subarray"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#put#3": {
+    "params": [
+     "$array as array(*)",
+     "$position as xs:integer",
+     "$member as item()*"
+    ],
+    "annotations": [],
+    "name": "put",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "put"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#remove#2": {
+    "params": [
+     "$array as array(*)",
+     "$positions as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "remove",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "remove"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#insert-before#3": {
+    "params": [
+     "$array as array(*)",
+     "$position as xs:integer",
+     "$member as item()*"
+    ],
+    "annotations": [],
+    "name": "insert-before",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "insert-before"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#head#1": {
+    "params": [
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "head",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "head"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#tail#1": {
+    "params": [
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "tail",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "tail"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#reverse#1": {
+    "params": [
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "reverse",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "reverse"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#join#1": {
+    "params": [
+     "$arrays as array(*)*"
+    ],
+    "annotations": [],
+    "name": "join",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "join"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#flatten#1": {
+    "params": [
+     "$items as item()*"
+    ],
+    "annotations": [],
+    "name": "flatten",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "flatten"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#for-each#2": {
+    "params": [
+     "$array as array(*)",
+     "$function as function(item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "for-each"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#filter#2": {
+    "params": [
+     "$array as array(*)",
+     "$function as function(item()*) as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "filter",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "filter"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#fold-left#3": {
+    "params": [
+     "$array as array(*)",
+     "$zero as item()*",
+     "$function as function(item()*, item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "fold-left",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "fold-left"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#fold-right#3": {
+    "params": [
+     "$array as array(*)",
+     "$zero as item()*",
+     "$function as function(item()*, item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "fold-right",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "fold-right"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#for-each-pair#3": {
+    "params": [
+     "$array1 as array(*)",
+     "$array2 as array(*)",
+     "$function as function(item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each-pair",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "for-each-pair"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#sort#1": {
+    "params": [
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "sort",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "sort"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#sort#2": {
+    "params": [
+     "$array as array(*)",
+     "$collation as xs:string?"
+    ],
+    "annotations": [],
+    "name": "sort",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "sort"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/array#sort#3": {
+    "params": [
+     "$array as array(*)",
+     "$collation as xs:string?",
+     "$key as function(item()*) as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "sort",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/array",
+     "name": "sort"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://expath.org/ns/binary": {
+  "ns": "http://expath.org/ns/binary",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://expath.org/ns/binary#hex#1": {
+    "params": [
+     "$in as xs:string?"
+    ],
+    "annotations": [],
+    "name": "hex",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "hex"
+    }
+   },
+   "http://expath.org/ns/binary#bin#1": {
+    "params": [
+     "$in as xs:string?"
+    ],
+    "annotations": [],
+    "name": "bin",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "bin"
+    }
+   },
+   "http://expath.org/ns/binary#octal#1": {
+    "params": [
+     "$in as xs:string?"
+    ],
+    "annotations": [],
+    "name": "octal",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "octal"
+    }
+   },
+   "http://expath.org/ns/binary#to-octets#1": {
+    "params": [
+     "$in as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "to-octets",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "to-octets"
+    }
+   },
+   "http://expath.org/ns/binary#from-octets#1": {
+    "params": [
+     "$in as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "from-octets",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "from-octets"
+    }
+   },
+   "http://expath.org/ns/binary#length#1": {
+    "params": [
+     "$in as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "length",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "length"
+    }
+   },
+   "http://expath.org/ns/binary#part#2": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "part",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "part"
+    }
+   },
+   "http://expath.org/ns/binary#part#3": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$offset as xs:integer",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "part",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "part"
+    }
+   },
+   "http://expath.org/ns/binary#join#1": {
+    "params": [
+     "$in as xs:base64Binary*"
+    ],
+    "annotations": [],
+    "name": "join",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "join"
+    }
+   },
+   "http://expath.org/ns/binary#insert-before#3": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$offset as xs:integer",
+     "$extra as xs:base64Binary?"
+    ],
+    "annotations": [],
+    "name": "insert-before",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "insert-before"
+    }
+   },
+   "http://expath.org/ns/binary#pad-left#2": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "pad-left",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pad-left"
+    }
+   },
+   "http://expath.org/ns/binary#pad-left#3": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$size as xs:integer",
+     "$octet as xs:integer"
+    ],
+    "annotations": [],
+    "name": "pad-left",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pad-left"
+    }
+   },
+   "http://expath.org/ns/binary#pad-right#2": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "pad-right",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pad-right"
+    }
+   },
+   "http://expath.org/ns/binary#pad-right#3": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$size as xs:integer",
+     "$octet as xs:integer"
+    ],
+    "annotations": [],
+    "name": "pad-right",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pad-right"
+    }
+   },
+   "http://expath.org/ns/binary#find#3": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$offset as xs:integer",
+     "$search as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "find",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "find"
+    }
+   },
+   "http://expath.org/ns/binary#decode-string#2": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "decode-string",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "decode-string"
+    }
+   },
+   "http://expath.org/ns/binary#decode-string#3": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$encoding as xs:string",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "decode-string",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "decode-string"
+    }
+   },
+   "http://expath.org/ns/binary#decode-string#4": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$encoding as xs:string",
+     "$offset as xs:integer",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "decode-string",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "decode-string"
+    }
+   },
+   "http://expath.org/ns/binary#encode-string#2": {
+    "params": [
+     "$in as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "encode-string",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "encode-string"
+    }
+   },
+   "http://expath.org/ns/binary#pack-double#1": {
+    "params": [
+     "$in as xs:double"
+    ],
+    "annotations": [],
+    "name": "pack-double",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pack-double"
+    }
+   },
+   "http://expath.org/ns/binary#pack-double#2": {
+    "params": [
+     "$in as xs:double",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "pack-double",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pack-double"
+    }
+   },
+   "http://expath.org/ns/binary#pack-float#1": {
+    "params": [
+     "$in as xs:float"
+    ],
+    "annotations": [],
+    "name": "pack-float",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pack-float"
+    }
+   },
+   "http://expath.org/ns/binary#pack-float#2": {
+    "params": [
+     "$in as xs:float",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "pack-float",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pack-float"
+    }
+   },
+   "http://expath.org/ns/binary#pack-integer#2": {
+    "params": [
+     "$in as xs:integer",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "pack-integer",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pack-integer"
+    }
+   },
+   "http://expath.org/ns/binary#pack-integer#3": {
+    "params": [
+     "$in as xs:integer",
+     "$size as xs:integer",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "pack-integer",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "pack-integer"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-double#2": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "unpack-double",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-double"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-double#3": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "unpack-double",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-double"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-float#2": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "unpack-float",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-float"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-float#3": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "unpack-float",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-float"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-integer#3": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "unpack-integer",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-integer"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-integer#4": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer",
+     "$size as xs:integer",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "unpack-integer",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-integer"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-unsigned-integer#3": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer",
+     "$size as xs:integer"
+    ],
+    "annotations": [],
+    "name": "unpack-unsigned-integer",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-unsigned-integer"
+    }
+   },
+   "http://expath.org/ns/binary#unpack-unsigned-integer#4": {
+    "params": [
+     "$in as xs:base64Binary",
+     "$offset as xs:integer",
+     "$size as xs:integer",
+     "$octet-order as xs:string"
+    ],
+    "annotations": [],
+    "name": "unpack-unsigned-integer",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "unpack-unsigned-integer"
+    }
+   },
+   "http://expath.org/ns/binary#or#2": {
+    "params": [
+     "$a as xs:base64Binary?",
+     "$b as xs:base64Binary?"
+    ],
+    "annotations": [],
+    "name": "or",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "or"
+    }
+   },
+   "http://expath.org/ns/binary#xor#2": {
+    "params": [
+     "$a as xs:base64Binary?",
+     "$b as xs:base64Binary?"
+    ],
+    "annotations": [],
+    "name": "xor",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "xor"
+    }
+   },
+   "http://expath.org/ns/binary#and#2": {
+    "params": [
+     "$a as xs:base64Binary?",
+     "$b as xs:base64Binary?"
+    ],
+    "annotations": [],
+    "name": "and",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "and"
+    }
+   },
+   "http://expath.org/ns/binary#not#1": {
+    "params": [
+     "$in as xs:base64Binary?"
+    ],
+    "annotations": [],
+    "name": "not",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "not"
+    }
+   },
+   "http://expath.org/ns/binary#shift#2": {
+    "params": [
+     "$in as xs:base64Binary?",
+     "$by as xs:integer"
+    ],
+    "annotations": [],
+    "name": "shift",
+    "eqname": {
+     "uri": "http://expath.org/ns/binary",
+     "name": "shift"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/client": {
+  "ns": "http://basex.org/modules/client",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/client#connect#4": {
+    "params": [
+     "$host as xs:string",
+     "$port as xs:integer",
+     "$user as xs:string",
+     "$password as xs:string"
+    ],
+    "annotations": [],
+    "name": "connect",
+    "eqname": {
+     "uri": "http://basex.org/modules/client",
+     "name": "connect"
+    }
+   },
+   "http://basex.org/modules/client#execute#2": {
+    "params": [
+     "$id as xs:anyURI",
+     "$command as xs:string"
+    ],
+    "annotations": [],
+    "name": "execute",
+    "eqname": {
+     "uri": "http://basex.org/modules/client",
+     "name": "execute"
+    }
+   },
+   "http://basex.org/modules/client#info#1": {
+    "params": [
+     "$id as xs:anyURI"
+    ],
+    "annotations": [],
+    "name": "info",
+    "eqname": {
+     "uri": "http://basex.org/modules/client",
+     "name": "info"
+    }
+   },
+   "http://basex.org/modules/client#query#2": {
+    "params": [
+     "$id as xs:anyURI",
+     "$query as xs:string"
+    ],
+    "annotations": [],
+    "name": "query",
+    "eqname": {
+     "uri": "http://basex.org/modules/client",
+     "name": "query"
+    }
+   },
+   "http://basex.org/modules/client#query#3": {
+    "params": [
+     "$id as xs:anyURI",
+     "$query as xs:string",
+     "$bindings as map(*)?"
+    ],
+    "annotations": [],
+    "name": "query",
+    "eqname": {
+     "uri": "http://basex.org/modules/client",
+     "name": "query"
+    }
+   },
+   "http://basex.org/modules/client#close#1": {
+    "params": [
+     "$id as xs:anyURI"
+    ],
+    "annotations": [],
+    "name": "close",
+    "eqname": {
+     "uri": "http://basex.org/modules/client",
+     "name": "close"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/convert": {
+  "ns": "http://basex.org/modules/convert",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/convert#binary-to-string#1": {
+    "params": [
+     "$bytes as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "binary-to-string",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "binary-to-string"
+    }
+   },
+   "http://basex.org/modules/convert#binary-to-string#2": {
+    "params": [
+     "$bytes as xs:anyAtomicType",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "binary-to-string",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "binary-to-string"
+    }
+   },
+   "http://basex.org/modules/convert#binary-to-string#3": {
+    "params": [
+     "$bytes as xs:anyAtomicType",
+     "$encoding as xs:string",
+     "$fallback as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "binary-to-string",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "binary-to-string"
+    }
+   },
+   "http://basex.org/modules/convert#string-to-base64#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "string-to-base64",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "string-to-base64"
+    }
+   },
+   "http://basex.org/modules/convert#string-to-base64#2": {
+    "params": [
+     "$string as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "string-to-base64",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "string-to-base64"
+    }
+   },
+   "http://basex.org/modules/convert#string-to-hex#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "string-to-hex",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "string-to-hex"
+    }
+   },
+   "http://basex.org/modules/convert#string-to-hex#2": {
+    "params": [
+     "$string as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "string-to-hex",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "string-to-hex"
+    }
+   },
+   "http://basex.org/modules/convert#integers-to-base64#1": {
+    "params": [
+     "$integers as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "integers-to-base64",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "integers-to-base64"
+    }
+   },
+   "http://basex.org/modules/convert#integers-to-hex#1": {
+    "params": [
+     "$integers as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "integers-to-hex",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "integers-to-hex"
+    }
+   },
+   "http://basex.org/modules/convert#binary-to-integers#1": {
+    "params": [
+     "$binary as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "binary-to-integers",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "binary-to-integers"
+    }
+   },
+   "http://basex.org/modules/convert#binary-to-bytes#1": {
+    "params": [
+     "$binary as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "binary-to-bytes",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "binary-to-bytes"
+    }
+   },
+   "http://basex.org/modules/convert#integer-to-base#2": {
+    "params": [
+     "$number as xs:integer",
+     "$base as xs:integer"
+    ],
+    "annotations": [],
+    "name": "integer-to-base",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "integer-to-base"
+    }
+   },
+   "http://basex.org/modules/convert#integer-from-base#2": {
+    "params": [
+     "$string as xs:string",
+     "$base as xs:integer"
+    ],
+    "annotations": [],
+    "name": "integer-from-base",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "integer-from-base"
+    }
+   },
+   "http://basex.org/modules/convert#integer-to-dateTime#1": {
+    "params": [
+     "$milliseconds as xs:integer"
+    ],
+    "annotations": [],
+    "name": "integer-to-dateTime",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "integer-to-dateTime"
+    }
+   },
+   "http://basex.org/modules/convert#dateTime-to-integer#1": {
+    "params": [
+     "$dateTime as xs:dateTime"
+    ],
+    "annotations": [],
+    "name": "dateTime-to-integer",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "dateTime-to-integer"
+    }
+   },
+   "http://basex.org/modules/convert#integer-to-dayTime#1": {
+    "params": [
+     "$milliseconds as xs:integer"
+    ],
+    "annotations": [],
+    "name": "integer-to-dayTime",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "integer-to-dayTime"
+    }
+   },
+   "http://basex.org/modules/convert#dayTime-to-integer#1": {
+    "params": [
+     "$dayTime as xs:dayTimeDuration"
+    ],
+    "annotations": [],
+    "name": "dayTime-to-integer",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "dayTime-to-integer"
+    }
+   },
+   "http://basex.org/modules/convert#encode-key#1": {
+    "params": [
+     "$key as xs:string"
+    ],
+    "annotations": [],
+    "name": "encode-key",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "encode-key"
+    }
+   },
+   "http://basex.org/modules/convert#encode-key#2": {
+    "params": [
+     "$key as xs:string",
+     "$lax as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "encode-key",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "encode-key"
+    }
+   },
+   "http://basex.org/modules/convert#decode-key#1": {
+    "params": [
+     "$key as xs:string"
+    ],
+    "annotations": [],
+    "name": "decode-key",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "decode-key"
+    }
+   },
+   "http://basex.org/modules/convert#decode-key#2": {
+    "params": [
+     "$key as xs:string",
+     "$lax as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "decode-key",
+    "eqname": {
+     "uri": "http://basex.org/modules/convert",
+     "name": "decode-key"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://expath.org/ns/crypto": {
+  "ns": "http://expath.org/ns/crypto",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://expath.org/ns/crypto#hmac#3": {
+    "params": [
+     "$data as xs:anyAtomicType",
+     "$key as xs:anyAtomicType",
+     "$algorithm as xs:string"
+    ],
+    "annotations": [],
+    "name": "hmac",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "hmac"
+    }
+   },
+   "http://expath.org/ns/crypto#hmac#4": {
+    "params": [
+     "$data as xs:anyAtomicType",
+     "$key as xs:anyAtomicType",
+     "$algorithm as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "hmac",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "hmac"
+    }
+   },
+   "http://expath.org/ns/crypto#encrypt#4": {
+    "params": [
+     "$data as xs:anyAtomicType",
+     "$type as xs:string",
+     "$key as xs:anyAtomicType",
+     "$algorithm as xs:string"
+    ],
+    "annotations": [],
+    "name": "encrypt",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "encrypt"
+    }
+   },
+   "http://expath.org/ns/crypto#decrypt#4": {
+    "params": [
+     "$data as xs:anyAtomicType",
+     "$type as xs:string",
+     "$key as xs:anyAtomicType",
+     "$algorithm as xs:string"
+    ],
+    "annotations": [],
+    "name": "decrypt",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "decrypt"
+    }
+   },
+   "http://expath.org/ns/crypto#generate-signature#6": {
+    "params": [
+     "$input as node()",
+     "$canonicalization as xs:string",
+     "$digest as xs:string",
+     "$signature as xs:string",
+     "$prefix as xs:string",
+     "$type as xs:string"
+    ],
+    "annotations": [],
+    "name": "generate-signature",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "generate-signature"
+    }
+   },
+   "http://expath.org/ns/crypto#generate-signature#8": {
+    "params": [
+     "$input as node()",
+     "$canonicalization as xs:string",
+     "$digest as xs:string",
+     "$signature as xs:string",
+     "$prefix as xs:string",
+     "$type as xs:string",
+     "$xpath as xs:string",
+     "$certificate as node()"
+    ],
+    "annotations": [],
+    "name": "generate-signature",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "generate-signature"
+    }
+   },
+   "http://expath.org/ns/crypto#generate-signature#7": {
+    "params": [
+     "$input as node()",
+     "$canonicalization as xs:string",
+     "$digest as xs:string",
+     "$signature as xs:string",
+     "$prefix as xs:string",
+     "$type as xs:string",
+     "$ext as item()"
+    ],
+    "annotations": [],
+    "name": "generate-signature",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "generate-signature"
+    }
+   },
+   "http://expath.org/ns/crypto#validate-signature#1": {
+    "params": [
+     "$input-doc as node()"
+    ],
+    "annotations": [],
+    "name": "validate-signature",
+    "eqname": {
+     "uri": "http://expath.org/ns/crypto",
+     "name": "validate-signature"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/csv": {
+  "ns": "http://basex.org/modules/csv",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/csv#parse#1": {
+    "params": [
+     "$string as xs:string?"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/csv",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/csv#parse#2": {
+    "params": [
+     "$string as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/csv",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/csv#doc#1": {
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://basex.org/modules/csv",
+     "name": "doc"
+    }
+   },
+   "http://basex.org/modules/csv#doc#2": {
+    "params": [
+     "$uri as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://basex.org/modules/csv",
+     "name": "doc"
+    }
+   },
+   "http://basex.org/modules/csv#serialize#1": {
+    "params": [
+     "$input as item()?"
+    ],
+    "annotations": [],
+    "name": "serialize",
+    "eqname": {
+     "uri": "http://basex.org/modules/csv",
+     "name": "serialize"
+    }
+   },
+   "http://basex.org/modules/csv#serialize#2": {
+    "params": [
+     "$input as item()?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "serialize",
+    "eqname": {
+     "uri": "http://basex.org/modules/csv",
+     "name": "serialize"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/db": {
+  "ns": "http://basex.org/modules/db",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/db#system#0": {
+    "params": [],
+    "annotations": [],
+    "name": "system",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "system"
+    }
+   },
+   "http://basex.org/modules/db#option#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "option",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "option"
+    }
+   },
+   "http://basex.org/modules/db#info#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "info",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "info"
+    }
+   },
+   "http://basex.org/modules/db#property#2": {
+    "params": [
+     "$db as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "property",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "property"
+    }
+   },
+   "http://basex.org/modules/db#list#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "list"
+    }
+   },
+   "http://basex.org/modules/db#list#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "list"
+    }
+   },
+   "http://basex.org/modules/db#list#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "list"
+    }
+   },
+   "http://basex.org/modules/db#list-details#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/db#list-details#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/db#list-details#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/db#dir#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "dir",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "dir"
+    }
+   },
+   "http://basex.org/modules/db#open#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "open",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "open"
+    }
+   },
+   "http://basex.org/modules/db#open#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "open",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "open"
+    }
+   },
+   "http://basex.org/modules/db#open-pre#2": {
+    "params": [
+     "$db as xs:string",
+     "$pres as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "open-pre",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "open-pre"
+    }
+   },
+   "http://basex.org/modules/db#open-id#2": {
+    "params": [
+     "$db as xs:string",
+     "$ids as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "open-id",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "open-id"
+    }
+   },
+   "http://basex.org/modules/db#node-pre#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "node-pre",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "node-pre"
+    }
+   },
+   "http://basex.org/modules/db#node-id#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "node-id",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "node-id"
+    }
+   },
+   "http://basex.org/modules/db#retrieve#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "retrieve",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "retrieve"
+    }
+   },
+   "http://basex.org/modules/db#export#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "export",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "export"
+    }
+   },
+   "http://basex.org/modules/db#export#3": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string",
+     "$params as item()"
+    ],
+    "annotations": [],
+    "name": "export",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "export"
+    }
+   },
+   "http://basex.org/modules/db#text#2": {
+    "params": [
+     "$db as xs:string",
+     "$strings as xs:string*"
+    ],
+    "annotations": [],
+    "name": "text",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "text"
+    }
+   },
+   "http://basex.org/modules/db#text-range#3": {
+    "params": [
+     "$db as xs:string",
+     "$min as xs:string",
+     "$max as xs:string"
+    ],
+    "annotations": [],
+    "name": "text-range",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "text-range"
+    }
+   },
+   "http://basex.org/modules/db#attribute#2": {
+    "params": [
+     "$db as xs:string",
+     "$strings as xs:string*"
+    ],
+    "annotations": [],
+    "name": "attribute",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "attribute"
+    }
+   },
+   "http://basex.org/modules/db#attribute#3": {
+    "params": [
+     "$db as xs:string",
+     "$strings as xs:string*",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "attribute",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "attribute"
+    }
+   },
+   "http://basex.org/modules/db#attribute-range#3": {
+    "params": [
+     "$db as xs:string",
+     "$min as xs:string",
+     "$max as xs:string"
+    ],
+    "annotations": [],
+    "name": "attribute-range",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "attribute-range"
+    }
+   },
+   "http://basex.org/modules/db#attribute-range#4": {
+    "params": [
+     "$db as xs:string",
+     "$min as xs:string",
+     "$max as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "attribute-range",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "attribute-range"
+    }
+   },
+   "http://basex.org/modules/db#token#2": {
+    "params": [
+     "$db as xs:string",
+     "$tokens as xs:string*"
+    ],
+    "annotations": [],
+    "name": "token",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "token"
+    }
+   },
+   "http://basex.org/modules/db#token#3": {
+    "params": [
+     "$db as xs:string",
+     "$tokens as xs:string*",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "token",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "token"
+    }
+   },
+   "http://basex.org/modules/db#create#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/db#create#2": {
+    "params": [
+     "$db as xs:string",
+     "$inputs as item()*"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/db#create#3": {
+    "params": [
+     "$db as xs:string",
+     "$inputs as item()*",
+     "$paths as xs:string*"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/db#create#4": {
+    "params": [
+     "$db as xs:string",
+     "$inputs as item()*",
+     "$paths as xs:string*",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/db#drop#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "drop",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "drop"
+    }
+   },
+   "http://basex.org/modules/db#add#2": {
+    "params": [
+     "$db as xs:string",
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "add",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "add"
+    }
+   },
+   "http://basex.org/modules/db#add#3": {
+    "params": [
+     "$db as xs:string",
+     "$input as item()",
+     "$path as xs:string?"
+    ],
+    "annotations": [],
+    "name": "add",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "add"
+    }
+   },
+   "http://basex.org/modules/db#add#4": {
+    "params": [
+     "$db as xs:string",
+     "$input as item()",
+     "$path as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "add",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "add"
+    }
+   },
+   "http://basex.org/modules/db#delete#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "delete"
+    }
+   },
+   "http://basex.org/modules/db#copy#2": {
+    "params": [
+     "$db as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "copy",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "copy"
+    }
+   },
+   "http://basex.org/modules/db#alter#2": {
+    "params": [
+     "$db as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "alter",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "alter"
+    }
+   },
+   "http://basex.org/modules/db#optimize#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "optimize",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "optimize"
+    }
+   },
+   "http://basex.org/modules/db#optimize#2": {
+    "params": [
+     "$db as xs:string",
+     "$all as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "optimize",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "optimize"
+    }
+   },
+   "http://basex.org/modules/db#optimize#3": {
+    "params": [
+     "$db as xs:string",
+     "$all as xs:boolean",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "optimize",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "optimize"
+    }
+   },
+   "http://basex.org/modules/db#rename#3": {
+    "params": [
+     "$db as xs:string",
+     "$source as xs:string",
+     "$target as xs:string"
+    ],
+    "annotations": [],
+    "name": "rename",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "rename"
+    }
+   },
+   "http://basex.org/modules/db#replace#3": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string",
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "replace",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "replace"
+    }
+   },
+   "http://basex.org/modules/db#replace#4": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string",
+     "$input as item()",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "replace",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "replace"
+    }
+   },
+   "http://basex.org/modules/db#store#3": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string",
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "store",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "store"
+    }
+   },
+   "http://basex.org/modules/db#flush#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "flush",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "flush"
+    }
+   },
+   "http://basex.org/modules/db#create-backup#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-backup",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "create-backup"
+    }
+   },
+   "http://basex.org/modules/db#create-backup#2": {
+    "params": [
+     "$db as xs:string",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "create-backup",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "create-backup"
+    }
+   },
+   "http://basex.org/modules/db#drop-backup#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "drop-backup",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "drop-backup"
+    }
+   },
+   "http://basex.org/modules/db#alter-backup#2": {
+    "params": [
+     "$name as xs:string",
+     "$new-name as xs:string"
+    ],
+    "annotations": [],
+    "name": "alter-backup",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "alter-backup"
+    }
+   },
+   "http://basex.org/modules/db#restore#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "restore",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "restore"
+    }
+   },
+   "http://basex.org/modules/db#backups#0": {
+    "params": [],
+    "annotations": [],
+    "name": "backups",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "backups"
+    }
+   },
+   "http://basex.org/modules/db#backups#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "backups",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "backups"
+    }
+   },
+   "http://basex.org/modules/db#name#1": {
+    "params": [
+     "$node as node()"
+    ],
+    "annotations": [],
+    "name": "name",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "name"
+    }
+   },
+   "http://basex.org/modules/db#path#1": {
+    "params": [
+     "$node as node()"
+    ],
+    "annotations": [],
+    "name": "path",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "path"
+    }
+   },
+   "http://basex.org/modules/db#exists#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "exists",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "exists"
+    }
+   },
+   "http://basex.org/modules/db#exists#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "exists",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "exists"
+    }
+   },
+   "http://basex.org/modules/db#is-raw#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "is-raw",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "is-raw"
+    }
+   },
+   "http://basex.org/modules/db#is-xml#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "is-xml",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "is-xml"
+    }
+   },
+   "http://basex.org/modules/db#content-type#2": {
+    "params": [
+     "$db as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "content-type",
+    "eqname": {
+     "uri": "http://basex.org/modules/db",
+     "name": "content-type"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/fetch": {
+  "ns": "http://basex.org/modules/fetch",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/fetch#binary#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "binary",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "binary"
+    }
+   },
+   "http://basex.org/modules/fetch#text#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "text",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "text"
+    }
+   },
+   "http://basex.org/modules/fetch#text#2": {
+    "params": [
+     "$uri as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "text",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "text"
+    }
+   },
+   "http://basex.org/modules/fetch#text#3": {
+    "params": [
+     "$uri as xs:string",
+     "$encoding as xs:string",
+     "$fallback as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "text",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "text"
+    }
+   },
+   "http://basex.org/modules/fetch#xml#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "xml",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "xml"
+    }
+   },
+   "http://basex.org/modules/fetch#xml#2": {
+    "params": [
+     "$uri as xs:string",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "xml",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "xml"
+    }
+   },
+   "http://basex.org/modules/fetch#xml-binary#1": {
+    "params": [
+     "$data as xs:base64Binary"
+    ],
+    "annotations": [],
+    "name": "xml-binary",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "xml-binary"
+    }
+   },
+   "http://basex.org/modules/fetch#xml-binary#2": {
+    "params": [
+     "$data as xs:base64Binary",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "xml-binary",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "xml-binary"
+    }
+   },
+   "http://basex.org/modules/fetch#content-type#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "content-type",
+    "eqname": {
+     "uri": "http://basex.org/modules/fetch",
+     "name": "content-type"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://expath.org/ns/file": {
+  "ns": "http://expath.org/ns/file",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://expath.org/ns/file#list#1": {
+    "params": [
+     "$dir as xs:string"
+    ],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "list"
+    }
+   },
+   "http://expath.org/ns/file#list#2": {
+    "params": [
+     "$dir as xs:string",
+     "$recursive as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "list"
+    }
+   },
+   "http://expath.org/ns/file#list#3": {
+    "params": [
+     "$dir as xs:string",
+     "$recursive as xs:boolean",
+     "$pattern as xs:string"
+    ],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "list"
+    }
+   },
+   "http://expath.org/ns/file#children#1": {
+    "params": [
+     "$dir as xs:string"
+    ],
+    "annotations": [],
+    "name": "children",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "children"
+    }
+   },
+   "http://expath.org/ns/file#descendants#1": {
+    "params": [
+     "$dir as xs:string"
+    ],
+    "annotations": [],
+    "name": "descendants",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "descendants"
+    }
+   },
+   "http://expath.org/ns/file#read-binary#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "read-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-binary"
+    }
+   },
+   "http://expath.org/ns/file#read-binary#2": {
+    "params": [
+     "$path as xs:string",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "read-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-binary"
+    }
+   },
+   "http://expath.org/ns/file#read-binary#3": {
+    "params": [
+     "$path as xs:string",
+     "$offset as xs:integer",
+     "$length as xs:integer"
+    ],
+    "annotations": [],
+    "name": "read-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-binary"
+    }
+   },
+   "http://expath.org/ns/file#read-text#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "read-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text"
+    }
+   },
+   "http://expath.org/ns/file#read-text#2": {
+    "params": [
+     "$path as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "read-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text"
+    }
+   },
+   "http://expath.org/ns/file#read-text#3": {
+    "params": [
+     "$path as xs:string",
+     "$encoding as xs:string",
+     "$fallback as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "read-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text"
+    }
+   },
+   "http://expath.org/ns/file#read-text-lines#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "read-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#read-text-lines#2": {
+    "params": [
+     "$path as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "read-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#read-text-lines#3": {
+    "params": [
+     "$path as xs:string",
+     "$encoding as xs:string",
+     "$fallback as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "read-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#read-text-lines#4": {
+    "params": [
+     "$path as xs:string",
+     "$encoding as xs:string",
+     "$fallback as xs:boolean",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "read-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#read-text-lines#5": {
+    "params": [
+     "$path as xs:string",
+     "$encoding as xs:string",
+     "$fallback as xs:boolean",
+     "$offset as xs:integer",
+     "$length as xs:integer"
+    ],
+    "annotations": [],
+    "name": "read-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "read-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#create-dir#1": {
+    "params": [
+     "$dir as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "create-dir"
+    }
+   },
+   "http://expath.org/ns/file#create-temp-dir#2": {
+    "params": [
+     "$prefix as xs:string",
+     "$suffix as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-temp-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "create-temp-dir"
+    }
+   },
+   "http://expath.org/ns/file#create-temp-dir#3": {
+    "params": [
+     "$prefix as xs:string",
+     "$suffix as xs:string",
+     "$dir as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-temp-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "create-temp-dir"
+    }
+   },
+   "http://expath.org/ns/file#create-temp-file#2": {
+    "params": [
+     "$prefix as xs:string",
+     "$suffix as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-temp-file",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "create-temp-file"
+    }
+   },
+   "http://expath.org/ns/file#create-temp-file#3": {
+    "params": [
+     "$prefix as xs:string",
+     "$suffix as xs:string",
+     "$dir as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-temp-file",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "create-temp-file"
+    }
+   },
+   "http://expath.org/ns/file#delete#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "delete"
+    }
+   },
+   "http://expath.org/ns/file#delete#2": {
+    "params": [
+     "$path as xs:string",
+     "$recursive as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "delete"
+    }
+   },
+   "http://expath.org/ns/file#write#2": {
+    "params": [
+     "$path as xs:string",
+     "$items as item()*"
+    ],
+    "annotations": [],
+    "name": "write",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write"
+    }
+   },
+   "http://expath.org/ns/file#write#3": {
+    "params": [
+     "$path as xs:string",
+     "$items as item()*",
+     "$params as item()"
+    ],
+    "annotations": [],
+    "name": "write",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write"
+    }
+   },
+   "http://expath.org/ns/file#write-binary#2": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "write-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write-binary"
+    }
+   },
+   "http://expath.org/ns/file#write-binary#3": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:anyAtomicType",
+     "$offset as xs:integer"
+    ],
+    "annotations": [],
+    "name": "write-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write-binary"
+    }
+   },
+   "http://expath.org/ns/file#write-text#2": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:string"
+    ],
+    "annotations": [],
+    "name": "write-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write-text"
+    }
+   },
+   "http://expath.org/ns/file#write-text#3": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "write-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write-text"
+    }
+   },
+   "http://expath.org/ns/file#write-text-lines#2": {
+    "params": [
+     "$path as xs:string",
+     "$values as xs:string*"
+    ],
+    "annotations": [],
+    "name": "write-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#write-text-lines#3": {
+    "params": [
+     "$path as xs:string",
+     "$values as xs:string*",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "write-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "write-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#append#2": {
+    "params": [
+     "$path as xs:string",
+     "$items as item()*"
+    ],
+    "annotations": [],
+    "name": "append",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append"
+    }
+   },
+   "http://expath.org/ns/file#append#3": {
+    "params": [
+     "$path as xs:string",
+     "$items as item()*",
+     "$params as item()"
+    ],
+    "annotations": [],
+    "name": "append",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append"
+    }
+   },
+   "http://expath.org/ns/file#append-binary#2": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "append-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append-binary"
+    }
+   },
+   "http://expath.org/ns/file#append-text#2": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:string"
+    ],
+    "annotations": [],
+    "name": "append-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append-text"
+    }
+   },
+   "http://expath.org/ns/file#append-text#3": {
+    "params": [
+     "$path as xs:string",
+     "$value as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "append-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append-text"
+    }
+   },
+   "http://expath.org/ns/file#append-text-lines#2": {
+    "params": [
+     "$path as xs:string",
+     "$values as xs:string*"
+    ],
+    "annotations": [],
+    "name": "append-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#append-text-lines#3": {
+    "params": [
+     "$path as xs:string",
+     "$values as xs:string*",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "append-text-lines",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "append-text-lines"
+    }
+   },
+   "http://expath.org/ns/file#copy#2": {
+    "params": [
+     "$source as xs:string",
+     "$target as xs:string"
+    ],
+    "annotations": [],
+    "name": "copy",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "copy"
+    }
+   },
+   "http://expath.org/ns/file#move#2": {
+    "params": [
+     "$source as xs:string",
+     "$target as xs:string"
+    ],
+    "annotations": [],
+    "name": "move",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "move"
+    }
+   },
+   "http://expath.org/ns/file#exists#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "exists",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "exists"
+    }
+   },
+   "http://expath.org/ns/file#is-dir#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "is-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "is-dir"
+    }
+   },
+   "http://expath.org/ns/file#is-absolute#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "is-absolute",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "is-absolute"
+    }
+   },
+   "http://expath.org/ns/file#is-file#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "is-file",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "is-file"
+    }
+   },
+   "http://expath.org/ns/file#last-modified#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "last-modified",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "last-modified"
+    }
+   },
+   "http://expath.org/ns/file#size#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "size",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "size"
+    }
+   },
+   "http://expath.org/ns/file#name#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "name",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "name"
+    }
+   },
+   "http://expath.org/ns/file#parent#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "parent",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "parent"
+    }
+   },
+   "http://expath.org/ns/file#path-to-native#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "path-to-native",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "path-to-native"
+    }
+   },
+   "http://expath.org/ns/file#resolve-path#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "resolve-path",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "resolve-path"
+    }
+   },
+   "http://expath.org/ns/file#resolve-path#2": {
+    "params": [
+     "$path as xs:string",
+     "$base as xs:string"
+    ],
+    "annotations": [],
+    "name": "resolve-path",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "resolve-path"
+    }
+   },
+   "http://expath.org/ns/file#path-to-uri#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "path-to-uri",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "path-to-uri"
+    }
+   },
+   "http://expath.org/ns/file#dir-separator#0": {
+    "params": [],
+    "annotations": [],
+    "name": "dir-separator",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "dir-separator"
+    }
+   },
+   "http://expath.org/ns/file#path-separator#0": {
+    "params": [],
+    "annotations": [],
+    "name": "path-separator",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "path-separator"
+    }
+   },
+   "http://expath.org/ns/file#line-separator#0": {
+    "params": [],
+    "annotations": [],
+    "name": "line-separator",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "line-separator"
+    }
+   },
+   "http://expath.org/ns/file#temp-dir#0": {
+    "params": [],
+    "annotations": [],
+    "name": "temp-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "temp-dir"
+    }
+   },
+   "http://expath.org/ns/file#current-dir#0": {
+    "params": [],
+    "annotations": [],
+    "name": "current-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "current-dir"
+    }
+   },
+   "http://expath.org/ns/file#base-dir#0": {
+    "params": [],
+    "annotations": [],
+    "name": "base-dir",
+    "eqname": {
+     "uri": "http://expath.org/ns/file",
+     "name": "base-dir"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/ft": {
+  "ns": "http://basex.org/modules/ft",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/ft#search#2": {
+    "params": [
+     "$db as xs:string",
+     "$terms as item()*"
+    ],
+    "annotations": [],
+    "name": "search",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "search"
+    }
+   },
+   "http://basex.org/modules/ft#search#3": {
+    "params": [
+     "$db as xs:string",
+     "$terms as item()*",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "search",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "search"
+    }
+   },
+   "http://basex.org/modules/ft#contains#2": {
+    "params": [
+     "$input as item()*",
+     "$terms as item()*"
+    ],
+    "annotations": [],
+    "name": "contains",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "contains"
+    }
+   },
+   "http://basex.org/modules/ft#contains#3": {
+    "params": [
+     "$input as item()*",
+     "$terms as item()*",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "contains",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "contains"
+    }
+   },
+   "http://basex.org/modules/ft#mark#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "mark",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "mark"
+    }
+   },
+   "http://basex.org/modules/ft#mark#2": {
+    "params": [
+     "$nodes as node()*",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "mark",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "mark"
+    }
+   },
+   "http://basex.org/modules/ft#extract#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "extract",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "extract"
+    }
+   },
+   "http://basex.org/modules/ft#extract#2": {
+    "params": [
+     "$nodes as node()*",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "extract",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "extract"
+    }
+   },
+   "http://basex.org/modules/ft#extract#3": {
+    "params": [
+     "$nodes as node()*",
+     "$name as xs:string",
+     "$length as xs:integer"
+    ],
+    "annotations": [],
+    "name": "extract",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "extract"
+    }
+   },
+   "http://basex.org/modules/ft#count#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "count",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "count"
+    }
+   },
+   "http://basex.org/modules/ft#score#1": {
+    "params": [
+     "$item as item()*"
+    ],
+    "annotations": [],
+    "name": "score",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "score"
+    }
+   },
+   "http://basex.org/modules/ft#tokens#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "tokens",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "tokens"
+    }
+   },
+   "http://basex.org/modules/ft#tokens#2": {
+    "params": [
+     "$db as xs:string",
+     "$prefix as xs:string"
+    ],
+    "annotations": [],
+    "name": "tokens",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "tokens"
+    }
+   },
+   "http://basex.org/modules/ft#tokenize#1": {
+    "params": [
+     "$string as xs:string?"
+    ],
+    "annotations": [],
+    "name": "tokenize",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "tokenize"
+    }
+   },
+   "http://basex.org/modules/ft#tokenize#2": {
+    "params": [
+     "$string as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "tokenize",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "tokenize"
+    }
+   },
+   "http://basex.org/modules/ft#normalize#1": {
+    "params": [
+     "$string as xs:string?"
+    ],
+    "annotations": [],
+    "name": "normalize",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "normalize"
+    }
+   },
+   "http://basex.org/modules/ft#normalize#2": {
+    "params": [
+     "$string as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "normalize",
+    "eqname": {
+     "uri": "http://basex.org/modules/ft",
+     "name": "normalize"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://expath.org/ns/geo": {
+  "ns": "http://expath.org/ns/geo",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://expath.org/ns/geo#dimension#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "dimension",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "dimension"
+    }
+   },
+   "http://expath.org/ns/geo#geometry-type#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "geometry-type",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "geometry-type"
+    }
+   },
+   "http://expath.org/ns/geo#srid#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "srid",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "srid"
+    }
+   },
+   "http://expath.org/ns/geo#envelope#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "envelope",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "envelope"
+    }
+   },
+   "http://expath.org/ns/geo#as-text#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "as-text",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "as-text"
+    }
+   },
+   "http://expath.org/ns/geo#as-binary#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "as-binary",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "as-binary"
+    }
+   },
+   "http://expath.org/ns/geo#is-simple#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "is-simple",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "is-simple"
+    }
+   },
+   "http://expath.org/ns/geo#boundary#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "boundary",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "boundary"
+    }
+   },
+   "http://expath.org/ns/geo#num-geometries#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "num-geometries",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "num-geometries"
+    }
+   },
+   "http://expath.org/ns/geo#geometry-n#2": {
+    "params": [
+     "$geometry as element(*)",
+     "$geoNumber as xs:integer"
+    ],
+    "annotations": [],
+    "name": "geometry-n",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "geometry-n"
+    }
+   },
+   "http://expath.org/ns/geo#length#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "length",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "length"
+    }
+   },
+   "http://expath.org/ns/geo#num-points#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "num-points",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "num-points"
+    }
+   },
+   "http://expath.org/ns/geo#area#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "area",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "area"
+    }
+   },
+   "http://expath.org/ns/geo#centroid#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "centroid",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "centroid"
+    }
+   },
+   "http://expath.org/ns/geo#point-on-surface#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "point-on-surface",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "point-on-surface"
+    }
+   },
+   "http://expath.org/ns/geo#equals#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "equals",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "equals"
+    }
+   },
+   "http://expath.org/ns/geo#disjoint#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "disjoint",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "disjoint"
+    }
+   },
+   "http://expath.org/ns/geo#intersects#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "intersects",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "intersects"
+    }
+   },
+   "http://expath.org/ns/geo#touches#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "touches",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "touches"
+    }
+   },
+   "http://expath.org/ns/geo#crosses#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "crosses",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "crosses"
+    }
+   },
+   "http://expath.org/ns/geo#within#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "within",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "within"
+    }
+   },
+   "http://expath.org/ns/geo#contains#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "contains",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "contains"
+    }
+   },
+   "http://expath.org/ns/geo#overlaps#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "overlaps",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "overlaps"
+    }
+   },
+   "http://expath.org/ns/geo#relate#3": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)",
+     "$intersectionMatrix as xs:string"
+    ],
+    "annotations": [],
+    "name": "relate",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "relate"
+    }
+   },
+   "http://expath.org/ns/geo#distance#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "distance",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "distance"
+    }
+   },
+   "http://expath.org/ns/geo#buffer#2": {
+    "params": [
+     "$geometry as element(*)",
+     "$distance as xs:double"
+    ],
+    "annotations": [],
+    "name": "buffer",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "buffer"
+    }
+   },
+   "http://expath.org/ns/geo#convex-hull#1": {
+    "params": [
+     "$geometry as element(*)"
+    ],
+    "annotations": [],
+    "name": "convex-hull",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "convex-hull"
+    }
+   },
+   "http://expath.org/ns/geo#intersection#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "intersection",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "intersection"
+    }
+   },
+   "http://expath.org/ns/geo#union#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "union",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "union"
+    }
+   },
+   "http://expath.org/ns/geo#difference#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "difference",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "difference"
+    }
+   },
+   "http://expath.org/ns/geo#sym-difference#2": {
+    "params": [
+     "$geometry1 as element(*)",
+     "$geometry2 as element(*)"
+    ],
+    "annotations": [],
+    "name": "sym-difference",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "sym-difference"
+    }
+   },
+   "http://expath.org/ns/geo#x#1": {
+    "params": [
+     "$point as element(*)"
+    ],
+    "annotations": [],
+    "name": "x",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "x"
+    }
+   },
+   "http://expath.org/ns/geo#y#1": {
+    "params": [
+     "$point as element(*)"
+    ],
+    "annotations": [],
+    "name": "y",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "y"
+    }
+   },
+   "http://expath.org/ns/geo#z#1": {
+    "params": [
+     "$point as element(*)"
+    ],
+    "annotations": [],
+    "name": "z",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "z"
+    }
+   },
+   "http://expath.org/ns/geo#start-point#1": {
+    "params": [
+     "$line as element(*)"
+    ],
+    "annotations": [],
+    "name": "start-point",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "start-point"
+    }
+   },
+   "http://expath.org/ns/geo#end-point#1": {
+    "params": [
+     "$line as element(*)"
+    ],
+    "annotations": [],
+    "name": "end-point",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "end-point"
+    }
+   },
+   "http://expath.org/ns/geo#is-closed#1": {
+    "params": [
+     "$line as element(*)"
+    ],
+    "annotations": [],
+    "name": "is-closed",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "is-closed"
+    }
+   },
+   "http://expath.org/ns/geo#is-ring#1": {
+    "params": [
+     "$line as element(*)"
+    ],
+    "annotations": [],
+    "name": "is-ring",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "is-ring"
+    }
+   },
+   "http://expath.org/ns/geo#point-n#1": {
+    "params": [
+     "$line as element(*)"
+    ],
+    "annotations": [],
+    "name": "point-n",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "point-n"
+    }
+   },
+   "http://expath.org/ns/geo#exterior-ring#1": {
+    "params": [
+     "$polygon as element(*)"
+    ],
+    "annotations": [],
+    "name": "exterior-ring",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "exterior-ring"
+    }
+   },
+   "http://expath.org/ns/geo#num-interior-ring#1": {
+    "params": [
+     "$polygon as element(*)"
+    ],
+    "annotations": [],
+    "name": "num-interior-ring",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "num-interior-ring"
+    }
+   },
+   "http://expath.org/ns/geo#interior-ring-n#1": {
+    "params": [
+     "$polygon as element(*)"
+    ],
+    "annotations": [],
+    "name": "interior-ring-n",
+    "eqname": {
+     "uri": "http://expath.org/ns/geo",
+     "name": "interior-ring-n"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/hash": {
+  "ns": "http://basex.org/modules/hash",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/hash#md5#1": {
+    "params": [
+     "$value as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "md5",
+    "eqname": {
+     "uri": "http://basex.org/modules/hash",
+     "name": "md5"
+    }
+   },
+   "http://basex.org/modules/hash#sha1#1": {
+    "params": [
+     "$value as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "sha1",
+    "eqname": {
+     "uri": "http://basex.org/modules/hash",
+     "name": "sha1"
+    }
+   },
+   "http://basex.org/modules/hash#sha256#1": {
+    "params": [
+     "$value as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "sha256",
+    "eqname": {
+     "uri": "http://basex.org/modules/hash",
+     "name": "sha256"
+    }
+   },
+   "http://basex.org/modules/hash#hash#2": {
+    "params": [
+     "$value as xs:anyAtomicType",
+     "$algorithm as xs:string"
+    ],
+    "annotations": [],
+    "name": "hash",
+    "eqname": {
+     "uri": "http://basex.org/modules/hash",
+     "name": "hash"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/hof": {
+  "ns": "http://basex.org/modules/hof",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/hof#fold-left1#2": {
+    "params": [
+     "$seq as item()+",
+     "$f as function(item()*, item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "fold-left1",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "fold-left1"
+    }
+   },
+   "http://basex.org/modules/hof#until#3": {
+    "params": [
+     "$pred as function(item()*) as xs:boolean",
+     "$f as function(item()*) as item()*",
+     "$start as item()*"
+    ],
+    "annotations": [],
+    "name": "until",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "until"
+    }
+   },
+   "http://basex.org/modules/hof#scan-left#3": {
+    "params": [
+     "$seq as item()*",
+     "$start as item()*",
+     "$f as function(item()*, item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "scan-left",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "scan-left"
+    }
+   },
+   "http://basex.org/modules/hof#take-while#2": {
+    "params": [
+     "$seq as item()*",
+     "$pred as function(item()) as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "take-while",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "take-while"
+    }
+   },
+   "http://basex.org/modules/hof#drop-while#2": {
+    "params": [
+     "$seq as item()*",
+     "$pred as function(item()) as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "drop-while",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "drop-while"
+    }
+   },
+   "http://basex.org/modules/hof#top-k-by#3": {
+    "params": [
+     "$seq as item()*",
+     "$sort-key as function(item()) as item()",
+     "$k as xs:integer"
+    ],
+    "annotations": [],
+    "name": "top-k-by",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "top-k-by"
+    }
+   },
+   "http://basex.org/modules/hof#top-k-with#3": {
+    "params": [
+     "$seq as item()*",
+     "$lt as function(item(), item()) as xs:boolean",
+     "$k as xs:integer"
+    ],
+    "annotations": [],
+    "name": "top-k-with",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "top-k-with"
+    }
+   },
+   "http://basex.org/modules/hof#id#1": {
+    "params": [
+     "$expr as item()*"
+    ],
+    "annotations": [],
+    "name": "id",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "id"
+    }
+   },
+   "http://basex.org/modules/hof#const#2": {
+    "params": [
+     "$expr as item()*",
+     "$ignored as item()*"
+    ],
+    "annotations": [],
+    "name": "const",
+    "eqname": {
+     "uri": "http://basex.org/modules/hof",
+     "name": "const"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/html": {
+  "ns": "http://basex.org/modules/html",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/html#parser#0": {
+    "params": [],
+    "annotations": [],
+    "name": "parser",
+    "eqname": {
+     "uri": "http://basex.org/modules/html",
+     "name": "parser"
+    }
+   },
+   "http://basex.org/modules/html#parse#1": {
+    "params": [
+     "$input as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/html",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/html#parse#2": {
+    "params": [
+     "$input as xs:anyAtomicType",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/html",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/html#doc#1": {
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://basex.org/modules/html",
+     "name": "doc"
+    }
+   },
+   "http://basex.org/modules/html#doc#2": {
+    "params": [
+     "$uri as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://basex.org/modules/html",
+     "name": "doc"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://expath.org/ns/http-client": {
+  "ns": "http://expath.org/ns/http-client",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://expath.org/ns/http-client#send-request#1": {
+    "params": [
+     "$request as element(http:request)"
+    ],
+    "annotations": [],
+    "name": "send-request",
+    "eqname": {
+     "uri": "http://expath.org/ns/http-client",
+     "name": "send-request"
+    }
+   },
+   "http://expath.org/ns/http-client#send-request#2": {
+    "params": [
+     "$request as element(http:request)?",
+     "$href as xs:string?"
+    ],
+    "annotations": [],
+    "name": "send-request",
+    "eqname": {
+     "uri": "http://expath.org/ns/http-client",
+     "name": "send-request"
+    }
+   },
+   "http://expath.org/ns/http-client#send-request#3": {
+    "params": [
+     "$request as element(http:request)?",
+     "$href as xs:string?",
+     "$bodies as item()*"
+    ],
+    "annotations": [],
+    "name": "send-request",
+    "eqname": {
+     "uri": "http://expath.org/ns/http-client",
+     "name": "send-request"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/index": {
+  "ns": "http://basex.org/modules/index",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/index#facets#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "facets",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "facets"
+    }
+   },
+   "http://basex.org/modules/index#facets#2": {
+    "params": [
+     "$db as xs:string",
+     "$type as xs:string"
+    ],
+    "annotations": [],
+    "name": "facets",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "facets"
+    }
+   },
+   "http://basex.org/modules/index#texts#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "texts",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "texts"
+    }
+   },
+   "http://basex.org/modules/index#texts#2": {
+    "params": [
+     "$db as xs:string",
+     "$prefix as xs:string"
+    ],
+    "annotations": [],
+    "name": "texts",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "texts"
+    }
+   },
+   "http://basex.org/modules/index#texts#3": {
+    "params": [
+     "$db as xs:string",
+     "$start as xs:string",
+     "$ascending as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "texts",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "texts"
+    }
+   },
+   "http://basex.org/modules/index#attributes#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "attributes",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "attributes"
+    }
+   },
+   "http://basex.org/modules/index#attributes#2": {
+    "params": [
+     "$db as xs:string",
+     "$prefix as xs:string"
+    ],
+    "annotations": [],
+    "name": "attributes",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "attributes"
+    }
+   },
+   "http://basex.org/modules/index#attributes#3": {
+    "params": [
+     "$db as xs:string",
+     "$start as xs:string",
+     "$ascending as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "attributes",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "attributes"
+    }
+   },
+   "http://basex.org/modules/index#tokens#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "tokens",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "tokens"
+    }
+   },
+   "http://basex.org/modules/index#element-names#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "element-names",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "element-names"
+    }
+   },
+   "http://basex.org/modules/index#attribute-names#1": {
+    "params": [
+     "$db as xs:string"
+    ],
+    "annotations": [],
+    "name": "attribute-names",
+    "eqname": {
+     "uri": "http://basex.org/modules/index",
+     "name": "attribute-names"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/inspect": {
+  "ns": "http://basex.org/modules/inspect",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/inspect#functions#0": {
+    "params": [],
+    "annotations": [],
+    "name": "functions",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "functions"
+    }
+   },
+   "http://basex.org/modules/inspect#functions#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "functions",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "functions"
+    }
+   },
+   "http://basex.org/modules/inspect#function-annotations#1": {
+    "params": [
+     "$function as function(*)?"
+    ],
+    "annotations": [],
+    "name": "function-annotations",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "function-annotations"
+    }
+   },
+   "http://basex.org/modules/inspect#static-context#2": {
+    "params": [
+     "$function as function(*)?",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "static-context",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "static-context"
+    }
+   },
+   "http://basex.org/modules/inspect#type#1": {
+    "params": [
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "type",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "type"
+    }
+   },
+   "http://basex.org/modules/inspect#type#2": {
+    "params": [
+     "$value as item()*",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "type",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "type"
+    }
+   },
+   "http://basex.org/modules/inspect#function#1": {
+    "params": [
+     "$function as function(*)"
+    ],
+    "annotations": [],
+    "name": "function",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "function"
+    }
+   },
+   "http://basex.org/modules/inspect#context#0": {
+    "params": [],
+    "annotations": [],
+    "name": "context",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "context"
+    }
+   },
+   "http://basex.org/modules/inspect#module#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "module",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "module"
+    }
+   },
+   "http://basex.org/modules/inspect#xqdoc#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "xqdoc",
+    "eqname": {
+     "uri": "http://basex.org/modules/inspect",
+     "name": "xqdoc"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/jobs": {
+  "ns": "http://basex.org/modules/jobs",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/jobs#eval#1": {
+    "params": [
+     "$query as xs:anyAtomicItem"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/jobs#eval#2": {
+    "params": [
+     "$query as xs:anyAtomicItem",
+     "$bindings as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/jobs#eval#3": {
+    "params": [
+     "$query as xs:anyAtomicItem",
+     "$bindings as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/jobs#result#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "result",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "result"
+    }
+   },
+   "http://basex.org/modules/jobs#stop#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "stop",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "stop"
+    }
+   },
+   "http://basex.org/modules/jobs#wait#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "wait",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "wait"
+    }
+   },
+   "http://basex.org/modules/jobs#current#0": {
+    "params": [],
+    "annotations": [],
+    "name": "current",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "current"
+    }
+   },
+   "http://basex.org/modules/jobs#list#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "list"
+    }
+   },
+   "http://basex.org/modules/jobs#list-details#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/jobs#list-details#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/jobs#bindings#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "bindings",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "bindings"
+    }
+   },
+   "http://basex.org/modules/jobs#finished#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "finished",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "finished"
+    }
+   },
+   "http://basex.org/modules/jobs#services#0": {
+    "params": [],
+    "annotations": [],
+    "name": "services",
+    "eqname": {
+     "uri": "http://basex.org/modules/jobs",
+     "name": "services"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/json": {
+  "ns": "http://basex.org/modules/json",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/json#parse#1": {
+    "params": [
+     "$string as xs:string?"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/json",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/json#parse#2": {
+    "params": [
+     "$string as xs:string?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/json",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/json#doc#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://basex.org/modules/json",
+     "name": "doc"
+    }
+   },
+   "http://basex.org/modules/json#doc#2": {
+    "params": [
+     "$uri as xs:string",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://basex.org/modules/json",
+     "name": "doc"
+    }
+   },
+   "http://basex.org/modules/json#serialize#1": {
+    "params": [
+     "$input as item()?"
+    ],
+    "annotations": [],
+    "name": "serialize",
+    "eqname": {
+     "uri": "http://basex.org/modules/json",
+     "name": "serialize"
+    }
+   },
+   "http://basex.org/modules/json#serialize#2": {
+    "params": [
+     "$input as item()?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "serialize",
+    "eqname": {
+     "uri": "http://basex.org/modules/json",
+     "name": "serialize"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/lazy": {
+  "ns": "http://basex.org/modules/lazy",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/lazy#cache#1": {
+    "params": [
+     "$items as item()*"
+    ],
+    "annotations": [],
+    "name": "cache",
+    "eqname": {
+     "uri": "http://basex.org/modules/lazy",
+     "name": "cache"
+    }
+   },
+   "http://basex.org/modules/lazy#cache#2": {
+    "params": [
+     "$items as item()*",
+     "$lazy as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "cache",
+    "eqname": {
+     "uri": "http://basex.org/modules/lazy",
+     "name": "cache"
+    }
+   },
+   "http://basex.org/modules/lazy#is-lazy#1": {
+    "params": [
+     "$item as item()"
+    ],
+    "annotations": [],
+    "name": "is-lazy",
+    "eqname": {
+     "uri": "http://basex.org/modules/lazy",
+     "name": "is-lazy"
+    }
+   },
+   "http://basex.org/modules/lazy#is-cached#1": {
+    "params": [
+     "$item as item()"
+    ],
+    "annotations": [],
+    "name": "is-cached",
+    "eqname": {
+     "uri": "http://basex.org/modules/lazy",
+     "name": "is-cached"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://www.w3.org/2005/xpath-functions/map": {
+  "ns": "http://www.w3.org/2005/xpath-functions/map",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://www.w3.org/2005/xpath-functions/map#contains#2": {
+    "params": [
+     "$map as map(*)",
+     "$key as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "contains",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "contains"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#entry#2": {
+    "params": [
+     "$key as xs:anyAtomicType",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "entry",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "entry"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#find#2": {
+    "params": [
+     "$input as item()*",
+     "$key as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "find",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "find"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#for-each#2": {
+    "params": [
+     "$map as map(*)",
+     "$function as function(xs:anyAtomicType, item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "for-each"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#get#2": {
+    "params": [
+     "$map as map(*)",
+     "$key as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "get"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#keys#1": {
+    "params": [
+     "$map as map(*)"
+    ],
+    "annotations": [],
+    "name": "keys",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "keys"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#merge#1": {
+    "params": [
+     "$maps as map(*)*"
+    ],
+    "annotations": [],
+    "name": "merge",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "merge"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#merge#2": {
+    "params": [
+     "$maps as map(*)*",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "merge",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "merge"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#put#3": {
+    "params": [
+     "$map as map(*)",
+     "$key as xs:anyAtomicType",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "put",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "put"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#remove#2": {
+    "params": [
+     "$map as map(*)",
+     "$keys as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "remove",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "remove"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/map#size#1": {
+    "params": [
+     "$map as map(*)"
+    ],
+    "annotations": [],
+    "name": "size",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/map",
+     "name": "size"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://www.w3.org/2005/xpath-functions/math": {
+  "ns": "http://www.w3.org/2005/xpath-functions/math",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://www.w3.org/2005/xpath-functions/math#pi#0": {
+    "params": [],
+    "annotations": [],
+    "name": "pi",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "pi"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#sqrt#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "sqrt",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "sqrt"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#sin#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "sin",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "sin"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#cos#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "cos",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "cos"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#tan#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "tan",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "tan"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#asin#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "asin",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "asin"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#acos#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "acos",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "acos"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#atan#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "atan",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "atan"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#atan2#2": {
+    "params": [
+     "$arg1 as xs:double?",
+     "$arg2 as xs:double"
+    ],
+    "annotations": [],
+    "name": "atan2",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "atan2"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#pow#2": {
+    "params": [
+     "$arg1 as xs:double?",
+     "$arg2 as xs:double"
+    ],
+    "annotations": [],
+    "name": "pow",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "pow"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#exp#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "exp",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "exp"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#log#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "log",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "log"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#log10#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "log10",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "log10"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#e#0": {
+    "params": [],
+    "annotations": [],
+    "name": "e",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "e"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#sinh#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "sinh",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "sinh"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#cosh#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "cosh",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "cosh"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#tanh#1": {
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "annotations": [],
+    "name": "tanh",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "tanh"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions/math#crc32#1": {
+    "params": [
+     "$string as xs:string?"
+    ],
+    "annotations": [],
+    "name": "crc32",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions/math",
+     "name": "crc32"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/out": {
+  "ns": "http://basex.org/modules/out",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/out#cr#0": {
+    "params": [],
+    "annotations": [],
+    "name": "cr",
+    "eqname": {
+     "uri": "http://basex.org/modules/out",
+     "name": "cr"
+    }
+   },
+   "http://basex.org/modules/out#nl#0": {
+    "params": [],
+    "annotations": [],
+    "name": "nl",
+    "eqname": {
+     "uri": "http://basex.org/modules/out",
+     "name": "nl"
+    }
+   },
+   "http://basex.org/modules/out#tab#0": {
+    "params": [],
+    "annotations": [],
+    "name": "tab",
+    "eqname": {
+     "uri": "http://basex.org/modules/out",
+     "name": "tab"
+    }
+   },
+   "http://basex.org/modules/out#format#2": {
+    "params": [
+     "$format as xs:string",
+     "$items as item()"
+    ],
+    "annotations": [],
+    "name": "format",
+    "eqname": {
+     "uri": "http://basex.org/modules/out",
+     "name": "format"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/proc": {
+  "ns": "http://basex.org/modules/proc",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/proc#system#1": {
+    "params": [
+     "$cmd as xs:string"
+    ],
+    "annotations": [],
+    "name": "system",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "system"
+    }
+   },
+   "http://basex.org/modules/proc#system#2": {
+    "params": [
+     "$cmd as xs:string",
+     "$args as xs:string*"
+    ],
+    "annotations": [],
+    "name": "system",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "system"
+    }
+   },
+   "http://basex.org/modules/proc#system#3": {
+    "params": [
+     "$cmd as xs:string",
+     "$args as xs:string*",
+     "$options as map(xs:string, xs:string)"
+    ],
+    "annotations": [],
+    "name": "system",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "system"
+    }
+   },
+   "http://basex.org/modules/proc#execute#1": {
+    "params": [
+     "$cmd as xs:string"
+    ],
+    "annotations": [],
+    "name": "execute",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "execute"
+    }
+   },
+   "http://basex.org/modules/proc#execute#2": {
+    "params": [
+     "$cmd as xs:string",
+     "$args as xs:string*"
+    ],
+    "annotations": [],
+    "name": "execute",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "execute"
+    }
+   },
+   "http://basex.org/modules/proc#execute#3": {
+    "params": [
+     "$cmd as xs:string",
+     "$args as xs:string*",
+     "$options as map(xs:string, xs:string)"
+    ],
+    "annotations": [],
+    "name": "execute",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "execute"
+    }
+   },
+   "http://basex.org/modules/proc#fork#1": {
+    "params": [
+     "$cmd as xs:string"
+    ],
+    "annotations": [],
+    "name": "fork",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "fork"
+    }
+   },
+   "http://basex.org/modules/proc#fork#2": {
+    "params": [
+     "$cmd as xs:string",
+     "$args as xs:string*"
+    ],
+    "annotations": [],
+    "name": "fork",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "fork"
+    }
+   },
+   "http://basex.org/modules/proc#fork#3": {
+    "params": [
+     "$cmd as xs:string",
+     "$args as xs:string*",
+     "$options as map(xs:string, xs:string)"
+    ],
+    "annotations": [],
+    "name": "fork",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "fork"
+    }
+   },
+   "http://basex.org/modules/proc#property#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "property",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "property"
+    }
+   },
+   "http://basex.org/modules/proc#property-names#0": {
+    "params": [],
+    "annotations": [],
+    "name": "property-names",
+    "eqname": {
+     "uri": "http://basex.org/modules/proc",
+     "name": "property-names"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/prof": {
+  "ns": "http://basex.org/modules/prof",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/prof#track#1": {
+    "params": [
+     "$expression as item()"
+    ],
+    "annotations": [],
+    "name": "track",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "track"
+    }
+   },
+   "http://basex.org/modules/prof#track#2": {
+    "params": [
+     "$expression as item()",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "track",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "track"
+    }
+   },
+   "http://basex.org/modules/prof#time#1": {
+    "params": [
+     "$expr as item()"
+    ],
+    "annotations": [],
+    "name": "time",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "time"
+    }
+   },
+   "http://basex.org/modules/prof#time#2": {
+    "params": [
+     "$expr as item()",
+     "$label as xs:string"
+    ],
+    "annotations": [],
+    "name": "time",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "time"
+    }
+   },
+   "http://basex.org/modules/prof#memory#1": {
+    "params": [
+     "$expr as item()"
+    ],
+    "annotations": [],
+    "name": "memory",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "memory"
+    }
+   },
+   "http://basex.org/modules/prof#memory#2": {
+    "params": [
+     "$expr as item()",
+     "$label as xs:string"
+    ],
+    "annotations": [],
+    "name": "memory",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "memory"
+    }
+   },
+   "http://basex.org/modules/prof#current-ms#0": {
+    "params": [],
+    "annotations": [],
+    "name": "current-ms",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "current-ms"
+    }
+   },
+   "http://basex.org/modules/prof#current-ns#0": {
+    "params": [],
+    "annotations": [],
+    "name": "current-ns",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "current-ns"
+    }
+   },
+   "http://basex.org/modules/prof#dump#1": {
+    "params": [
+     "$expr as item()*"
+    ],
+    "annotations": [],
+    "name": "dump",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "dump"
+    }
+   },
+   "http://basex.org/modules/prof#dump#2": {
+    "params": [
+     "$expr as item()*",
+     "$label as xs:string"
+    ],
+    "annotations": [],
+    "name": "dump",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "dump"
+    }
+   },
+   "http://basex.org/modules/prof#variables#0": {
+    "params": [],
+    "annotations": [],
+    "name": "variables",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "variables"
+    }
+   },
+   "http://basex.org/modules/prof#type#1": {
+    "params": [
+     "$expr as item()*"
+    ],
+    "annotations": [],
+    "name": "type",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "type"
+    }
+   },
+   "http://basex.org/modules/prof#gc#0": {
+    "params": [],
+    "annotations": [],
+    "name": "gc",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "gc"
+    }
+   },
+   "http://basex.org/modules/prof#gc#1": {
+    "params": [
+     "$count as xs:integer"
+    ],
+    "annotations": [],
+    "name": "gc",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "gc"
+    }
+   },
+   "http://basex.org/modules/prof#runtime#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "runtime",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "runtime"
+    }
+   },
+   "http://basex.org/modules/prof#void#1": {
+    "params": [
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "void",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "void"
+    }
+   },
+   "http://basex.org/modules/prof#sleep#1": {
+    "params": [
+     "$ms as xs:integer"
+    ],
+    "annotations": [],
+    "name": "sleep",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "sleep"
+    }
+   },
+   "http://basex.org/modules/prof#human#1": {
+    "params": [
+     "$number as xs:integer"
+    ],
+    "annotations": [],
+    "name": "human",
+    "eqname": {
+     "uri": "http://basex.org/modules/prof",
+     "name": "human"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/random": {
+  "ns": "http://basex.org/modules/random",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/random#double#0": {
+    "params": [],
+    "annotations": [],
+    "name": "double",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "double"
+    }
+   },
+   "http://basex.org/modules/random#integer#0": {
+    "params": [],
+    "annotations": [],
+    "name": "integer",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "integer"
+    }
+   },
+   "http://basex.org/modules/random#integer#1": {
+    "params": [
+     "$max as xs:integer"
+    ],
+    "annotations": [],
+    "name": "integer",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "integer"
+    }
+   },
+   "http://basex.org/modules/random#seeded-double#2": {
+    "params": [
+     "$seed as xs:integer",
+     "$num as xs:integer"
+    ],
+    "annotations": [],
+    "name": "seeded-double",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "seeded-double"
+    }
+   },
+   "http://basex.org/modules/random#seeded-integer#2": {
+    "params": [
+     "$seed as xs:integer",
+     "$num as xs:integer"
+    ],
+    "annotations": [],
+    "name": "seeded-integer",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "seeded-integer"
+    }
+   },
+   "http://basex.org/modules/random#seeded-integer#3": {
+    "params": [
+     "$seed as xs:integer",
+     "$num as xs:integer",
+     "$max as xs:integer"
+    ],
+    "annotations": [],
+    "name": "seeded-integer",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "seeded-integer"
+    }
+   },
+   "http://basex.org/modules/random#gaussian#1": {
+    "params": [
+     "$num as xs:integer"
+    ],
+    "annotations": [],
+    "name": "gaussian",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "gaussian"
+    }
+   },
+   "http://basex.org/modules/random#seeded-permutation#2": {
+    "params": [
+     "$seed as xs:integer",
+     "$items as item()*"
+    ],
+    "annotations": [],
+    "name": "seeded-permutation",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "seeded-permutation"
+    }
+   },
+   "http://basex.org/modules/random#uuid#0": {
+    "params": [],
+    "annotations": [],
+    "name": "uuid",
+    "eqname": {
+     "uri": "http://basex.org/modules/random",
+     "name": "uuid"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/repo": {
+  "ns": "http://basex.org/modules/repo",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/repo#install#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "install",
+    "eqname": {
+     "uri": "http://basex.org/modules/repo",
+     "name": "install"
+    }
+   },
+   "http://basex.org/modules/repo#delete#1": {
+    "params": [
+     "$pkg as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/repo",
+     "name": "delete"
+    }
+   },
+   "http://basex.org/modules/repo#list#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/repo",
+     "name": "list"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://exquery.org/ns/request": {
+  "ns": "http://exquery.org/ns/request",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://exquery.org/ns/request#method#0": {
+    "params": [],
+    "annotations": [],
+    "name": "method",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "method"
+    }
+   },
+   "http://exquery.org/ns/request#scheme#0": {
+    "params": [],
+    "annotations": [],
+    "name": "scheme",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "scheme"
+    }
+   },
+   "http://exquery.org/ns/request#hostname#0": {
+    "params": [],
+    "annotations": [],
+    "name": "hostname",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "hostname"
+    }
+   },
+   "http://exquery.org/ns/request#port#0": {
+    "params": [],
+    "annotations": [],
+    "name": "port",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "port"
+    }
+   },
+   "http://exquery.org/ns/request#path#0": {
+    "params": [],
+    "annotations": [],
+    "name": "path",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "path"
+    }
+   },
+   "http://exquery.org/ns/request#query#0": {
+    "params": [],
+    "annotations": [],
+    "name": "query",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "query"
+    }
+   },
+   "http://exquery.org/ns/request#uri#0": {
+    "params": [],
+    "annotations": [],
+    "name": "uri",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "uri"
+    }
+   },
+   "http://exquery.org/ns/request#context-path#0": {
+    "params": [],
+    "annotations": [],
+    "name": "context-path",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "context-path"
+    }
+   },
+   "http://exquery.org/ns/request#address#0": {
+    "params": [],
+    "annotations": [],
+    "name": "address",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "address"
+    }
+   },
+   "http://exquery.org/ns/request#remote-hostname#0": {
+    "params": [],
+    "annotations": [],
+    "name": "remote-hostname",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "remote-hostname"
+    }
+   },
+   "http://exquery.org/ns/request#remote-address#0": {
+    "params": [],
+    "annotations": [],
+    "name": "remote-address",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "remote-address"
+    }
+   },
+   "http://exquery.org/ns/request#remote-port#0": {
+    "params": [],
+    "annotations": [],
+    "name": "remote-port",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "remote-port"
+    }
+   },
+   "http://exquery.org/ns/request#parameter-names#0": {
+    "params": [],
+    "annotations": [],
+    "name": "parameter-names",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "parameter-names"
+    }
+   },
+   "http://exquery.org/ns/request#parameter#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "parameter",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "parameter"
+    }
+   },
+   "http://exquery.org/ns/request#parameter#2": {
+    "params": [
+     "$name as xs:string",
+     "$default as xs:string"
+    ],
+    "annotations": [],
+    "name": "parameter",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "parameter"
+    }
+   },
+   "http://exquery.org/ns/request#header-names#0": {
+    "params": [],
+    "annotations": [],
+    "name": "header-names",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "header-names"
+    }
+   },
+   "http://exquery.org/ns/request#header#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "header",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "header"
+    }
+   },
+   "http://exquery.org/ns/request#header#2": {
+    "params": [
+     "$name as xs:string",
+     "$default as xs:string"
+    ],
+    "annotations": [],
+    "name": "header",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "header"
+    }
+   },
+   "http://exquery.org/ns/request#cookie-names#0": {
+    "params": [],
+    "annotations": [],
+    "name": "cookie-names",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "cookie-names"
+    }
+   },
+   "http://exquery.org/ns/request#cookie#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "cookie",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "cookie"
+    }
+   },
+   "http://exquery.org/ns/request#cookie#2": {
+    "params": [
+     "$name as xs:string",
+     "$default as xs:string"
+    ],
+    "annotations": [],
+    "name": "cookie",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "cookie"
+    }
+   },
+   "http://exquery.org/ns/request#attribute-names#0": {
+    "params": [],
+    "annotations": [],
+    "name": "attribute-names",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "attribute-names"
+    }
+   },
+   "http://exquery.org/ns/request#attribute#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "attribute",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "attribute"
+    }
+   },
+   "http://exquery.org/ns/request#attribute#2": {
+    "params": [
+     "$name as xs:string",
+     "$default as item()*"
+    ],
+    "annotations": [],
+    "name": "attribute",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "attribute"
+    }
+   },
+   "http://exquery.org/ns/request#set-attribute#2": {
+    "params": [
+     "$name as xs:string",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "set-attribute",
+    "eqname": {
+     "uri": "http://exquery.org/ns/request",
+     "name": "set-attribute"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://exquery.org/ns/restxq": {
+  "ns": "http://exquery.org/ns/restxq",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://exquery.org/ns/restxq#base-uri#0": {
+    "params": [],
+    "annotations": [],
+    "name": "base-uri",
+    "eqname": {
+     "uri": "http://exquery.org/ns/restxq",
+     "name": "base-uri"
+    }
+   },
+   "http://exquery.org/ns/restxq#uri#0": {
+    "params": [],
+    "annotations": [],
+    "name": "uri",
+    "eqname": {
+     "uri": "http://exquery.org/ns/restxq",
+     "name": "uri"
+    }
+   },
+   "http://exquery.org/ns/restxq#wadl#0": {
+    "params": [],
+    "annotations": [],
+    "name": "wadl",
+    "eqname": {
+     "uri": "http://exquery.org/ns/restxq",
+     "name": "wadl"
+    }
+   },
+   "http://exquery.org/ns/restxq#init#0": {
+    "params": [],
+    "annotations": [],
+    "name": "init",
+    "eqname": {
+     "uri": "http://exquery.org/ns/restxq",
+     "name": "init"
+    }
+   },
+   "http://exquery.org/ns/restxq#init#1": {
+    "params": [
+     "$update as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "init",
+    "eqname": {
+     "uri": "http://exquery.org/ns/restxq",
+     "name": "init"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/session": {
+  "ns": "http://basex.org/modules/session",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/session#id#0": {
+    "params": [],
+    "annotations": [],
+    "name": "id",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "id"
+    }
+   },
+   "http://basex.org/modules/session#created#0": {
+    "params": [],
+    "annotations": [],
+    "name": "created",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "created"
+    }
+   },
+   "http://basex.org/modules/session#accessed#0": {
+    "params": [],
+    "annotations": [],
+    "name": "accessed",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "accessed"
+    }
+   },
+   "http://basex.org/modules/session#names#0": {
+    "params": [],
+    "annotations": [],
+    "name": "names",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "names"
+    }
+   },
+   "http://basex.org/modules/session#get#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/session#get#2": {
+    "params": [
+     "$name as xs:string",
+     "$default as item()*"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/session#set#2": {
+    "params": [
+     "$name as xs:string",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "set",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "set"
+    }
+   },
+   "http://basex.org/modules/session#delete#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "delete"
+    }
+   },
+   "http://basex.org/modules/session#close#0": {
+    "params": [],
+    "annotations": [],
+    "name": "close",
+    "eqname": {
+     "uri": "http://basex.org/modules/session",
+     "name": "close"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/sessions": {
+  "ns": "http://basex.org/modules/sessions",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/sessions#ids#0": {
+    "params": [],
+    "annotations": [],
+    "name": "ids",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "ids"
+    }
+   },
+   "http://basex.org/modules/sessions#created#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "created",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "created"
+    }
+   },
+   "http://basex.org/modules/sessions#accessed#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "accessed",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "accessed"
+    }
+   },
+   "http://basex.org/modules/sessions#names#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "names",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "names"
+    }
+   },
+   "http://basex.org/modules/sessions#get#2": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/sessions#get#3": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string",
+     "$default as item()*"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/sessions#set#3": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "set",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "set"
+    }
+   },
+   "http://basex.org/modules/sessions#delete#2": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "delete"
+    }
+   },
+   "http://basex.org/modules/sessions#close#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "close",
+    "eqname": {
+     "uri": "http://basex.org/modules/sessions",
+     "name": "close"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/sql": {
+  "ns": "http://basex.org/modules/sql",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/sql#init#1": {
+    "params": [
+     "$class as xs:string"
+    ],
+    "annotations": [],
+    "name": "init",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "init"
+    }
+   },
+   "http://basex.org/modules/sql#connect#1": {
+    "params": [
+     "$url as xs:string"
+    ],
+    "annotations": [],
+    "name": "connect",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "connect"
+    }
+   },
+   "http://basex.org/modules/sql#connect#3": {
+    "params": [
+     "$url as xs:string",
+     "$user as xs:string",
+     "$password as xs:string"
+    ],
+    "annotations": [],
+    "name": "connect",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "connect"
+    }
+   },
+   "http://basex.org/modules/sql#connect#4": {
+    "params": [
+     "$url as xs:string",
+     "$user as xs:string",
+     "$password as xs:string",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "connect",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "connect"
+    }
+   },
+   "http://basex.org/modules/sql#execute#2": {
+    "params": [
+     "$id as xs:anyURI",
+     "$statement as xs:string"
+    ],
+    "annotations": [],
+    "name": "execute",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "execute"
+    }
+   },
+   "http://basex.org/modules/sql#execute#3": {
+    "params": [
+     "$id as xs:anyURI",
+     "$statement as xs:string",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "execute",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "execute"
+    }
+   },
+   "http://basex.org/modules/sql#execute-prepared#2": {
+    "params": [
+     "$id as xs:anyURI",
+     "$params as element(sql:parameters)"
+    ],
+    "annotations": [],
+    "name": "execute-prepared",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "execute-prepared"
+    }
+   },
+   "http://basex.org/modules/sql#execute-prepared#3": {
+    "params": [
+     "$id as xs:anyURI",
+     "$params as element(sql:parameters)",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "execute-prepared",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "execute-prepared"
+    }
+   },
+   "http://basex.org/modules/sql#prepare#2": {
+    "params": [
+     "$id as xs:anyURI",
+     "$statement as xs:string"
+    ],
+    "annotations": [],
+    "name": "prepare",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "prepare"
+    }
+   },
+   "http://basex.org/modules/sql#commit#1": {
+    "params": [
+     "$id as xs:anyURI"
+    ],
+    "annotations": [],
+    "name": "commit",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "commit"
+    }
+   },
+   "http://basex.org/modules/sql#rollback#1": {
+    "params": [
+     "$id as xs:anyURI"
+    ],
+    "annotations": [],
+    "name": "rollback",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "rollback"
+    }
+   },
+   "http://basex.org/modules/sql#close#1": {
+    "params": [
+     "$id as xs:anyURI"
+    ],
+    "annotations": [],
+    "name": "close",
+    "eqname": {
+     "uri": "http://basex.org/modules/sql",
+     "name": "close"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/store": {
+  "ns": "http://basex.org/modules/store",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/store#get#1": {
+    "params": [
+     "$key as xs:string"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/store#put#2": {
+    "params": [
+     "$key as xs:string",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "put",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "put"
+    }
+   },
+   "http://basex.org/modules/store#get-or-put#2": {
+    "params": [
+     "$key as xs:string",
+     "$put as function() as item()*"
+    ],
+    "annotations": [],
+    "name": "get-or-put",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "get-or-put"
+    }
+   },
+   "http://basex.org/modules/store#remove#1": {
+    "params": [
+     "$key as xs:string"
+    ],
+    "annotations": [],
+    "name": "remove",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "remove"
+    }
+   },
+   "http://basex.org/modules/store#keys#0": {
+    "params": [],
+    "annotations": [],
+    "name": "keys",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "keys"
+    }
+   },
+   "http://basex.org/modules/store#clear#0": {
+    "params": [],
+    "annotations": [],
+    "name": "clear",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "clear"
+    }
+   },
+   "http://basex.org/modules/store#read#0": {
+    "params": [],
+    "annotations": [],
+    "name": "read",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "read"
+    }
+   },
+   "http://basex.org/modules/store#read#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "read",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "read"
+    }
+   },
+   "http://basex.org/modules/store#write#0": {
+    "params": [],
+    "annotations": [],
+    "name": "write",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "write"
+    }
+   },
+   "http://basex.org/modules/store#write#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "write",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "write"
+    }
+   },
+   "http://basex.org/modules/store#list#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "list"
+    }
+   },
+   "http://basex.org/modules/store#delete#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/store",
+     "name": "delete"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/strings": {
+  "ns": "http://basex.org/modules/strings",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/strings#levenshtein#2": {
+    "params": [
+     "$string1 as xs:string",
+     "$string2 as xs:string"
+    ],
+    "annotations": [],
+    "name": "levenshtein",
+    "eqname": {
+     "uri": "http://basex.org/modules/strings",
+     "name": "levenshtein"
+    }
+   },
+   "http://basex.org/modules/strings#soundex#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "soundex",
+    "eqname": {
+     "uri": "http://basex.org/modules/strings",
+     "name": "soundex"
+    }
+   },
+   "http://basex.org/modules/strings#cologne-phonetic#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "cologne-phonetic",
+    "eqname": {
+     "uri": "http://basex.org/modules/strings",
+     "name": "cologne-phonetic"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/unit": {
+  "ns": "http://basex.org/modules/unit",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/unit#assert#1": {
+    "params": [
+     "$test as item()*"
+    ],
+    "annotations": [],
+    "name": "assert",
+    "eqname": {
+     "uri": "http://basex.org/modules/unit",
+     "name": "assert"
+    }
+   },
+   "http://basex.org/modules/unit#assert#2": {
+    "params": [
+     "$test as item()*",
+     "$info as item()"
+    ],
+    "annotations": [],
+    "name": "assert",
+    "eqname": {
+     "uri": "http://basex.org/modules/unit",
+     "name": "assert"
+    }
+   },
+   "http://basex.org/modules/unit#assert-equals#2": {
+    "params": [
+     "$returned as item()*",
+     "$expected as item()*"
+    ],
+    "annotations": [],
+    "name": "assert-equals",
+    "eqname": {
+     "uri": "http://basex.org/modules/unit",
+     "name": "assert-equals"
+    }
+   },
+   "http://basex.org/modules/unit#assert-equals#3": {
+    "params": [
+     "$returned as item()*",
+     "$expected as item()*",
+     "$info as item()"
+    ],
+    "annotations": [],
+    "name": "assert-equals",
+    "eqname": {
+     "uri": "http://basex.org/modules/unit",
+     "name": "assert-equals"
+    }
+   },
+   "http://basex.org/modules/unit#fail#0": {
+    "params": [],
+    "annotations": [],
+    "name": "fail",
+    "eqname": {
+     "uri": "http://basex.org/modules/unit",
+     "name": "fail"
+    }
+   },
+   "http://basex.org/modules/unit#fail#1": {
+    "params": [
+     "$info as item()"
+    ],
+    "annotations": [],
+    "name": "fail",
+    "eqname": {
+     "uri": "http://basex.org/modules/unit",
+     "name": "fail"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/update": {
+  "ns": "http://basex.org/modules/update",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/update#apply#2": {
+    "params": [
+     "$function as function(*)",
+     "$arguments as array(*)"
+    ],
+    "annotations": [],
+    "name": "apply",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "apply"
+    }
+   },
+   "http://basex.org/modules/update#for-each#2": {
+    "params": [
+     "$seq as item()*",
+     "$function as function(item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "for-each"
+    }
+   },
+   "http://basex.org/modules/update#for-each-pair#2": {
+    "params": [
+     "$seq1 as item()*",
+     "$function as function(item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each-pair",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "for-each-pair"
+    }
+   },
+   "http://basex.org/modules/update#map-for-each#2": {
+    "params": [
+     "$map as map(*)",
+     "$function as function(xs:anyAtomicType, item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "map-for-each",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "map-for-each"
+    }
+   },
+   "http://basex.org/modules/update#output#1": {
+    "params": [
+     "$items as item()*"
+    ],
+    "annotations": [],
+    "name": "output",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "output"
+    }
+   },
+   "http://basex.org/modules/update#cache#0": {
+    "params": [],
+    "annotations": [],
+    "name": "cache",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "cache"
+    }
+   },
+   "http://basex.org/modules/update#cache#1": {
+    "params": [
+     "$reset as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "cache",
+    "eqname": {
+     "uri": "http://basex.org/modules/update",
+     "name": "cache"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/user": {
+  "ns": "http://basex.org/modules/user",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/user#current#0": {
+    "params": [],
+    "annotations": [],
+    "name": "current",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "current"
+    }
+   },
+   "http://basex.org/modules/user#list#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "list"
+    }
+   },
+   "http://basex.org/modules/user#list-details#0": {
+    "params": [],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/user#list-details#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "list-details",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "list-details"
+    }
+   },
+   "http://basex.org/modules/user#exists#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "exists",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "exists"
+    }
+   },
+   "http://basex.org/modules/user#check#2": {
+    "params": [
+     "$name as xs:string",
+     "$password as xs:string"
+    ],
+    "annotations": [],
+    "name": "check",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "check"
+    }
+   },
+   "http://basex.org/modules/user#info#0": {
+    "params": [],
+    "annotations": [],
+    "name": "info",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "info"
+    }
+   },
+   "http://basex.org/modules/user#info#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "info",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "info"
+    }
+   },
+   "http://basex.org/modules/user#create#2": {
+    "params": [
+     "$name as xs:string",
+     "$password as xs:string"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/user#create#3": {
+    "params": [
+     "$name as xs:string",
+     "$password as xs:string",
+     "$permissions as xs:string*"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/user#create#4": {
+    "params": [
+     "$name as xs:string",
+     "$password as xs:string",
+     "$permissions as xs:string*",
+     "$patterns as xs:string*"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/user#create#5": {
+    "params": [
+     "$name as xs:string",
+     "$password as xs:string",
+     "$permissions as xs:string*",
+     "$patterns as xs:string*",
+     "$info as element(info)"
+    ],
+    "annotations": [],
+    "name": "create",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "create"
+    }
+   },
+   "http://basex.org/modules/user#grant#2": {
+    "params": [
+     "$name as xs:string",
+     "$permissions as xs:string*"
+    ],
+    "annotations": [],
+    "name": "grant",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "grant"
+    }
+   },
+   "http://basex.org/modules/user#grant#3": {
+    "params": [
+     "$name as xs:string",
+     "$permissions as xs:string*",
+     "$patterns as xs:string*"
+    ],
+    "annotations": [],
+    "name": "grant",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "grant"
+    }
+   },
+   "http://basex.org/modules/user#drop#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "drop",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "drop"
+    }
+   },
+   "http://basex.org/modules/user#drop#2": {
+    "params": [
+     "$name as xs:string",
+     "$patterns as xs:string*"
+    ],
+    "annotations": [],
+    "name": "drop",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "drop"
+    }
+   },
+   "http://basex.org/modules/user#alter#2": {
+    "params": [
+     "$name as xs:string",
+     "$newname as xs:string"
+    ],
+    "annotations": [],
+    "name": "alter",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "alter"
+    }
+   },
+   "http://basex.org/modules/user#password#2": {
+    "params": [
+     "$name as xs:string",
+     "$password as xs:string"
+    ],
+    "annotations": [],
+    "name": "password",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "password"
+    }
+   },
+   "http://basex.org/modules/user#update-info#1": {
+    "params": [
+     "$info as element(info)"
+    ],
+    "annotations": [],
+    "name": "update-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "update-info"
+    }
+   },
+   "http://basex.org/modules/user#update-info#2": {
+    "params": [
+     "$info as element(info)",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "update-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/user",
+     "name": "update-info"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/util": {
+  "ns": "http://basex.org/modules/util",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/util#if#2": {
+    "params": [
+     "$condition as item()*",
+     "$then as item()*"
+    ],
+    "annotations": [],
+    "name": "if",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "if"
+    }
+   },
+   "http://basex.org/modules/util#if#3": {
+    "params": [
+     "$condition as item()*",
+     "$then as item()*",
+     "$else as item()*"
+    ],
+    "annotations": [],
+    "name": "if",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "if"
+    }
+   },
+   "http://basex.org/modules/util#or#2": {
+    "params": [
+     "$items as item()*",
+     "$default as item()*"
+    ],
+    "annotations": [],
+    "name": "or",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "or"
+    }
+   },
+   "http://basex.org/modules/util#count-within#2": {
+    "params": [
+     "$sequence as item()*",
+     "$min as xs:integer"
+    ],
+    "annotations": [],
+    "name": "count-within",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "count-within"
+    }
+   },
+   "http://basex.org/modules/util#count-within#3": {
+    "params": [
+     "$sequence as item()*",
+     "$min as xs:integer",
+     "$max as xs:integer"
+    ],
+    "annotations": [],
+    "name": "count-within",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "count-within"
+    }
+   },
+   "http://basex.org/modules/util#item#2": {
+    "params": [
+     "$sequence as item()*",
+     "$position as xs:double"
+    ],
+    "annotations": [],
+    "name": "item",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "item"
+    }
+   },
+   "http://basex.org/modules/util#range#3": {
+    "params": [
+     "$sequence as item()*",
+     "$first as xs:double",
+     "$last as xs:double"
+    ],
+    "annotations": [],
+    "name": "range",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "range"
+    }
+   },
+   "http://basex.org/modules/util#last#1": {
+    "params": [
+     "$sequence as item()*"
+    ],
+    "annotations": [],
+    "name": "last",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "last"
+    }
+   },
+   "http://basex.org/modules/util#init#1": {
+    "params": [
+     "$sequence as item()*"
+    ],
+    "annotations": [],
+    "name": "init",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "init"
+    }
+   },
+   "http://basex.org/modules/util#ddo#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "ddo",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "ddo"
+    }
+   },
+   "http://basex.org/modules/util#root#1": {
+    "params": [
+     "$nodes as node()*"
+    ],
+    "annotations": [],
+    "name": "root",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "root"
+    }
+   },
+   "http://basex.org/modules/util#strip-namespaces#1": {
+    "params": [
+     "$node as node()"
+    ],
+    "annotations": [],
+    "name": "strip-namespaces",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "strip-namespaces"
+    }
+   },
+   "http://basex.org/modules/util#strip-namespaces#2": {
+    "params": [
+     "$node as node()",
+     "$prefixes as xs:string*"
+    ],
+    "annotations": [],
+    "name": "strip-namespaces",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "strip-namespaces"
+    }
+   },
+   "http://basex.org/modules/util#array-members#1": {
+    "params": [
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "array-members",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "array-members"
+    }
+   },
+   "http://basex.org/modules/util#array-values#1": {
+    "params": [
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "array-values",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "array-values"
+    }
+   },
+   "http://basex.org/modules/util#map-entries#1": {
+    "params": [
+     "$map as map(*)"
+    ],
+    "annotations": [],
+    "name": "map-entries",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "map-entries"
+    }
+   },
+   "http://basex.org/modules/util#map-values#1": {
+    "params": [
+     "$map as map(*)"
+    ],
+    "annotations": [],
+    "name": "map-values",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "map-values"
+    }
+   },
+   "http://basex.org/modules/util#replicate#2": {
+    "params": [
+     "$input as item()*",
+     "$count as xs:integer"
+    ],
+    "annotations": [],
+    "name": "replicate",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "replicate"
+    }
+   },
+   "http://basex.org/modules/util#replicate#3": {
+    "params": [
+     "$input as item()*",
+     "$count as xs:integer",
+     "$multiple as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "replicate",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "replicate"
+    }
+   },
+   "http://basex.org/modules/util#intersperse#2": {
+    "params": [
+     "$items as item()*",
+     "$separator as item()*"
+    ],
+    "annotations": [],
+    "name": "intersperse",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "intersperse"
+    }
+   },
+   "http://basex.org/modules/util#duplicates#1": {
+    "params": [
+     "$sequence as item()*"
+    ],
+    "annotations": [],
+    "name": "duplicates",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "duplicates"
+    }
+   },
+   "http://basex.org/modules/util#duplicates#2": {
+    "params": [
+     "$sequence as item()*",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "duplicates",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "duplicates"
+    }
+   },
+   "http://basex.org/modules/util#chars#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "chars",
+    "eqname": {
+     "uri": "http://basex.org/modules/util",
+     "name": "chars"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/validate": {
+  "ns": "http://basex.org/modules/validate",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/validate#dtd#1": {
+    "params": [
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "dtd",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "dtd"
+    }
+   },
+   "http://basex.org/modules/validate#dtd#2": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string?"
+    ],
+    "annotations": [],
+    "name": "dtd",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "dtd"
+    }
+   },
+   "http://basex.org/modules/validate#dtd-info#1": {
+    "params": [
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "dtd-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "dtd-info"
+    }
+   },
+   "http://basex.org/modules/validate#dtd-info#2": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string?"
+    ],
+    "annotations": [],
+    "name": "dtd-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "dtd-info"
+    }
+   },
+   "http://basex.org/modules/validate#dtd-report#1": {
+    "params": [
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "dtd-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "dtd-report"
+    }
+   },
+   "http://basex.org/modules/validate#dtd-report#2": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string?"
+    ],
+    "annotations": [],
+    "name": "dtd-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "dtd-report"
+    }
+   },
+   "http://basex.org/modules/validate#xsd#1": {
+    "params": [
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "xsd",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd"
+    }
+   },
+   "http://basex.org/modules/validate#xsd#2": {
+    "params": [
+     "$input as item()",
+     "$schema as item()?"
+    ],
+    "annotations": [],
+    "name": "xsd",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd"
+    }
+   },
+   "http://basex.org/modules/validate#xsd#3": {
+    "params": [
+     "$input as item()",
+     "$schema as item()?",
+     "$features as map(*)"
+    ],
+    "annotations": [],
+    "name": "xsd",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-info#1": {
+    "params": [
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "xsd-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-info"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-info#2": {
+    "params": [
+     "$input as item()",
+     "$schema as item()?"
+    ],
+    "annotations": [],
+    "name": "xsd-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-info"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-info#3": {
+    "params": [
+     "$input as item()",
+     "$schema as item()?",
+     "$features as map(*)"
+    ],
+    "annotations": [],
+    "name": "xsd-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-info"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-report#1": {
+    "params": [
+     "$input as item()"
+    ],
+    "annotations": [],
+    "name": "xsd-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-report"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-report#2": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string?"
+    ],
+    "annotations": [],
+    "name": "xsd-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-report"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-report#3": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string?",
+     "$features as map(*)"
+    ],
+    "annotations": [],
+    "name": "xsd-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-report"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-processor#0": {
+    "params": [],
+    "annotations": [],
+    "name": "xsd-processor",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-processor"
+    }
+   },
+   "http://basex.org/modules/validate#xsd-version#0": {
+    "params": [],
+    "annotations": [],
+    "name": "xsd-version",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "xsd-version"
+    }
+   },
+   "http://basex.org/modules/validate#rng#2": {
+    "params": [
+     "$input as item()",
+     "$schema as item()"
+    ],
+    "annotations": [],
+    "name": "rng",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "rng"
+    }
+   },
+   "http://basex.org/modules/validate#rng#3": {
+    "params": [
+     "$input as item()",
+     "$schema as item()",
+     "$compact as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "rng",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "rng"
+    }
+   },
+   "http://basex.org/modules/validate#rng-info#2": {
+    "params": [
+     "$input as item()",
+     "$schema as item()"
+    ],
+    "annotations": [],
+    "name": "rng-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "rng-info"
+    }
+   },
+   "http://basex.org/modules/validate#rng-info#3": {
+    "params": [
+     "$input as item()",
+     "$schema as item()",
+     "$compact as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "rng-info",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "rng-info"
+    }
+   },
+   "http://basex.org/modules/validate#rng-report#2": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string"
+    ],
+    "annotations": [],
+    "name": "rng-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "rng-report"
+    }
+   },
+   "http://basex.org/modules/validate#rng-report#3": {
+    "params": [
+     "$input as item()",
+     "$schema as xs:string",
+     "$compact as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "rng-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/validate",
+     "name": "rng-report"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/web": {
+  "ns": "http://basex.org/modules/web",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/web#content-type#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "content-type",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "content-type"
+    }
+   },
+   "http://basex.org/modules/web#create-url#2": {
+    "params": [
+     "$url as xs:string",
+     "$parameters as map(*)"
+    ],
+    "annotations": [],
+    "name": "create-url",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "create-url"
+    }
+   },
+   "http://basex.org/modules/web#create-url#3": {
+    "params": [
+     "$url as xs:string",
+     "$parameters as map(*)",
+     "$anchor as xs:string"
+    ],
+    "annotations": [],
+    "name": "create-url",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "create-url"
+    }
+   },
+   "http://basex.org/modules/web#encode-url#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "encode-url",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "encode-url"
+    }
+   },
+   "http://basex.org/modules/web#decode-url#1": {
+    "params": [
+     "$string as xs:string"
+    ],
+    "annotations": [],
+    "name": "decode-url",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "decode-url"
+    }
+   },
+   "http://basex.org/modules/web#forward#1": {
+    "params": [
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "forward",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "forward"
+    }
+   },
+   "http://basex.org/modules/web#forward#2": {
+    "params": [
+     "$path as xs:string",
+     "$parameters as map(*)"
+    ],
+    "annotations": [],
+    "name": "forward",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "forward"
+    }
+   },
+   "http://basex.org/modules/web#redirect#1": {
+    "params": [
+     "$url as xs:string"
+    ],
+    "annotations": [],
+    "name": "redirect",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "redirect"
+    }
+   },
+   "http://basex.org/modules/web#redirect#2": {
+    "params": [
+     "$url as xs:string",
+     "$parameters as map(*)"
+    ],
+    "annotations": [],
+    "name": "redirect",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "redirect"
+    }
+   },
+   "http://basex.org/modules/web#redirect#3": {
+    "params": [
+     "$url as xs:string",
+     "$parameters as map(*)",
+     "$anchor as xs:string"
+    ],
+    "annotations": [],
+    "name": "redirect",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "redirect"
+    }
+   },
+   "http://basex.org/modules/web#response-header#0": {
+    "params": [],
+    "annotations": [],
+    "name": "response-header",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "response-header"
+    }
+   },
+   "http://basex.org/modules/web#response-header#1": {
+    "params": [
+     "$output as map(*)?"
+    ],
+    "annotations": [],
+    "name": "response-header",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "response-header"
+    }
+   },
+   "http://basex.org/modules/web#response-header#2": {
+    "params": [
+     "$output as map(*)?",
+     "$headers as map(*)?"
+    ],
+    "annotations": [],
+    "name": "response-header",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "response-header"
+    }
+   },
+   "http://basex.org/modules/web#response-header#3": {
+    "params": [
+     "$output as map(*)?",
+     "$headers as map(*)?",
+     "$atts as map(*)?"
+    ],
+    "annotations": [],
+    "name": "response-header",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "response-header"
+    }
+   },
+   "http://basex.org/modules/web#error#2": {
+    "params": [
+     "$status as xs:integer",
+     "$message as xs:string"
+    ],
+    "annotations": [],
+    "name": "error",
+    "eqname": {
+     "uri": "http://basex.org/modules/web",
+     "name": "error"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/ws": {
+  "ns": "http://basex.org/modules/ws",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/ws#id#0": {
+    "params": [],
+    "annotations": [],
+    "name": "id",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "id"
+    }
+   },
+   "http://basex.org/modules/ws#ids#0": {
+    "params": [],
+    "annotations": [],
+    "name": "ids",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "ids"
+    }
+   },
+   "http://basex.org/modules/ws#path#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "path",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "path"
+    }
+   },
+   "http://basex.org/modules/ws#close#1": {
+    "params": [
+     "$id as xs:string"
+    ],
+    "annotations": [],
+    "name": "close",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "close"
+    }
+   },
+   "http://basex.org/modules/ws#send#2": {
+    "params": [
+     "$message as item()",
+     "$ids as xs:string*"
+    ],
+    "annotations": [],
+    "name": "send",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "send"
+    }
+   },
+   "http://basex.org/modules/ws#broadcast#1": {
+    "params": [
+     "$message as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "broadcast",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "broadcast"
+    }
+   },
+   "http://basex.org/modules/ws#emit#1": {
+    "params": [
+     "$message as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "emit",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "emit"
+    }
+   },
+   "http://basex.org/modules/ws#eval#1": {
+    "params": [
+     "$query as xs:anyAtomicItem"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/ws#eval#2": {
+    "params": [
+     "$query as xs:anyAtomicItem",
+     "$bindings as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/ws#eval#3": {
+    "params": [
+     "$query as xs:anyAtomicItem",
+     "$bindings as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/ws#get#2": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/ws#get#3": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string",
+     "$default as item()*"
+    ],
+    "annotations": [],
+    "name": "get",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "get"
+    }
+   },
+   "http://basex.org/modules/ws#set#3": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string",
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "set",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "set"
+    }
+   },
+   "http://basex.org/modules/ws#delete#2": {
+    "params": [
+     "$id as xs:string",
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "delete",
+    "eqname": {
+     "uri": "http://basex.org/modules/ws",
+     "name": "delete"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/xquery": {
+  "ns": "http://basex.org/modules/xquery",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/xquery#eval#1": {
+    "params": [
+     "$query as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/xquery#eval#2": {
+    "params": [
+     "$query as xs:anyAtomicType",
+     "$bindings as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/xquery#eval#3": {
+    "params": [
+     "$query as xs:anyAtomicType",
+     "$bindings as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "eval"
+    }
+   },
+   "http://basex.org/modules/xquery#eval-update#1": {
+    "params": [
+     "$query as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "eval-update",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "eval-update"
+    }
+   },
+   "http://basex.org/modules/xquery#eval-update#2": {
+    "params": [
+     "$query as xs:anyAtomicType",
+     "$bindings as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval-update",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "eval-update"
+    }
+   },
+   "http://basex.org/modules/xquery#eval-update#3": {
+    "params": [
+     "$query as xs:anyAtomicType",
+     "$bindings as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "eval-update",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "eval-update"
+    }
+   },
+   "http://basex.org/modules/xquery#parse#1": {
+    "params": [
+     "$query as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/xquery#parse#2": {
+    "params": [
+     "$query as xs:anyAtomicType",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "parse",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "parse"
+    }
+   },
+   "http://basex.org/modules/xquery#fork-join#1": {
+    "params": [
+     "$functions as function(*)*"
+    ],
+    "annotations": [],
+    "name": "fork-join",
+    "eqname": {
+     "uri": "http://basex.org/modules/xquery",
+     "name": "fork-join"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://basex.org/modules/xslt": {
+  "ns": "http://basex.org/modules/xslt",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://basex.org/modules/xslt#processor#0": {
+    "params": [],
+    "annotations": [],
+    "name": "processor",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "processor"
+    }
+   },
+   "http://basex.org/modules/xslt#version#0": {
+    "params": [],
+    "annotations": [],
+    "name": "version",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "version"
+    }
+   },
+   "http://basex.org/modules/xslt#transform#2": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()"
+    ],
+    "annotations": [],
+    "name": "transform",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform"
+    }
+   },
+   "http://basex.org/modules/xslt#transform#3": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()",
+     "$params as map(*)?"
+    ],
+    "annotations": [],
+    "name": "transform",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform"
+    }
+   },
+   "http://basex.org/modules/xslt#transform#4": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()",
+     "$args as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "transform",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform"
+    }
+   },
+   "http://basex.org/modules/xslt#transform-text#2": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()"
+    ],
+    "annotations": [],
+    "name": "transform-text",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform-text"
+    }
+   },
+   "http://basex.org/modules/xslt#transform-text#3": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()",
+     "$params as map(*)?"
+    ],
+    "annotations": [],
+    "name": "transform-text",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform-text"
+    }
+   },
+   "http://basex.org/modules/xslt#transform-text#4": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()",
+     "$params as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "transform-text",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform-text"
+    }
+   },
+   "http://basex.org/modules/xslt#transform-report#2": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()"
+    ],
+    "annotations": [],
+    "name": "transform-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform-report"
+    }
+   },
+   "http://basex.org/modules/xslt#transform-report#3": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()",
+     "$params as map(*)?"
+    ],
+    "annotations": [],
+    "name": "transform-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform-report"
+    }
+   },
+   "http://basex.org/modules/xslt#transform-report#4": {
+    "params": [
+     "$input as item()",
+     "$stylesheet as item()",
+     "$params as map(*)?",
+     "$options as map(*)?"
+    ],
+    "annotations": [],
+    "name": "transform-report",
+    "eqname": {
+     "uri": "http://basex.org/modules/xslt",
+     "name": "transform-report"
+    }
+   }
+  },
+  "variables": {}
+ },
+ "http://expath.org/ns/zip": {
+  "ns": "http://expath.org/ns/zip",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://expath.org/ns/zip#binary-entry#2": {
+    "params": [
+     "$uri as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "binary-entry",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "binary-entry"
+    }
+   },
+   "http://expath.org/ns/zip#text-entry#2": {
+    "params": [
+     "$uri as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "text-entry",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "text-entry"
+    }
+   },
+   "http://expath.org/ns/zip#text-entry#3": {
+    "params": [
+     "$uri as xs:string",
+     "$path as xs:string",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "text-entry",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "text-entry"
+    }
+   },
+   "http://expath.org/ns/zip#xml-entry#2": {
+    "params": [
+     "$uri as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "xml-entry",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "xml-entry"
+    }
+   },
+   "http://expath.org/ns/zip#html-entry#2": {
+    "params": [
+     "$uri as xs:string",
+     "$path as xs:string"
+    ],
+    "annotations": [],
+    "name": "html-entry",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "html-entry"
+    }
+   },
+   "http://expath.org/ns/zip#entries#1": {
+    "params": [
+     "$uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "entries",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "entries"
+    }
+   },
+   "http://expath.org/ns/zip#zip-file#1": {
+    "params": [
+     "$zip as element(zip:file)"
+    ],
+    "annotations": [],
+    "name": "zip-file",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "zip-file"
+    }
+   },
+   "http://expath.org/ns/zip#update-entries#2": {
+    "params": [
+     "$zip as element(zip:file)",
+     "$output as xs:string"
+    ],
+    "annotations": [],
+    "name": "update-entries",
+    "eqname": {
+     "uri": "http://expath.org/ns/zip",
+     "name": "update-entries"
+    }
+   }
+  },
+  "variables": {}
+ }
+}

@@ -1,0 +1,2144 @@
+{
+ "http://www.w3.org/2005/xpath-functions": {
+  "ns": "http://www.w3.org/2005/xpath-functions",
+  "prefixes": [
+   "TODO"
+  ],
+  "functions": {
+   "http://www.w3.org/2005/xpath-functions#error#0": {
+    "params": [],
+    "annotations": [],
+    "name": "error",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "error"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#error#1": {
+    "params": [
+     "$code as xs:QName?"
+    ],
+    "annotations": [],
+    "name": "error",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "error"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#error#2": {
+    "params": [
+     "$code as xs:QName?",
+     "$description as xs:string"
+    ],
+    "annotations": [],
+    "name": "error",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "error"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#error#3": {
+    "params": [
+     "$code as xs:QName?",
+     "$description as xs:string",
+     "$error-object as item()*"
+    ],
+    "annotations": [],
+    "name": "error",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "error"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#trace#1": {
+    "params": [
+     "$value as item()*"
+    ],
+    "annotations": [],
+    "name": "trace",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "trace"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#trace#2": {
+    "params": [
+     "$value as item()*",
+     "$label as xs:string"
+    ],
+    "annotations": [],
+    "name": "trace",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "trace"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#abs#1": {
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "annotations": [],
+    "name": "abs",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "abs"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#ceiling#1": {
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "annotations": [],
+    "name": "ceiling",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "ceiling"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#floor#1": {
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "annotations": [],
+    "name": "floor",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "floor"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#round#1": {
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "annotations": [],
+    "name": "round",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "round"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#round#2": {
+    "params": [
+     "$arg as xs:numeric?",
+     "$precision as xs:integer"
+    ],
+    "annotations": [],
+    "name": "round",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "round"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#round-half-to-even#1": {
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "annotations": [],
+    "name": "round-half-to-even",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "round-half-to-even"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#round-half-to-even#2": {
+    "params": [
+     "$arg as xs:numeric?",
+     "$precision as xs:integer"
+    ],
+    "annotations": [],
+    "name": "round-half-to-even",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "round-half-to-even"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#number#0": {
+    "params": [],
+    "annotations": [],
+    "name": "number",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "number"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#number#1": {
+    "params": [
+     "$arg as xs:anyAtomicType?"
+    ],
+    "annotations": [],
+    "name": "number",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "number"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-integer#2": {
+    "params": [
+     "$value as xs:integer?",
+     "$picture as xs:string"
+    ],
+    "annotations": [],
+    "name": "format-integer",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-integer"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-integer#3": {
+    "params": [
+     "$value as xs:integer?",
+     "$picture as xs:string",
+     "$lang as xs:string?"
+    ],
+    "annotations": [],
+    "name": "format-integer",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-integer"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-number#2": {
+    "params": [
+     "$value as xs:numeric?",
+     "$picture as xs:string"
+    ],
+    "annotations": [],
+    "name": "format-number",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-number"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-number#3": {
+    "params": [
+     "$value as xs:numeric?",
+     "$picture as xs:string",
+     "$decimal-format-name as xs:string?"
+    ],
+    "annotations": [],
+    "name": "format-number",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-number"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#random-number-generator#0": {
+    "params": [],
+    "annotations": [],
+    "name": "random-number-generator",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "random-number-generator"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#random-number-generator#1": {
+    "params": [
+     "$seed as xs:anyAtomicType?"
+    ],
+    "annotations": [],
+    "name": "random-number-generator",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "random-number-generator"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#codepoints-to-string#1": {
+    "params": [
+     "$arg as xs:integer*"
+    ],
+    "annotations": [],
+    "name": "codepoints-to-string",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "codepoints-to-string"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#string-to-codepoints#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "string-to-codepoints",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "string-to-codepoints"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#compare#2": {
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "compare",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "compare"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#compare#3": {
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "compare",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "compare"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#codepoint-equal#2": {
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "codepoint-equal",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "codepoint-equal"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#collation-key#1": {
+    "params": [
+     "$key as xs:string"
+    ],
+    "annotations": [],
+    "name": "collation-key",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "collation-key"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#collation-key#2": {
+    "params": [
+     "$key as xs:string",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "collation-key",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "collation-key"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#contains-token#2": {
+    "params": [
+     "$input as xs:string*",
+     "$token as xs:string"
+    ],
+    "annotations": [],
+    "name": "contains-token",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "contains-token"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#contains-token#3": {
+    "params": [
+     "$input as xs:string*",
+     "$token as xs:string",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "contains-token",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "contains-token"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#concat#2": {
+    "params": [
+     "$arg1 as xs:anyAtomicType?",
+     "$arg2 as xs:anyAtomicType?"
+    ],
+    "annotations": [],
+    "name": "concat",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "concat"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#string-join#1": {
+    "params": [
+     "$arg1 as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "string-join",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "string-join"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#string-join#2": {
+    "params": [
+     "$arg1 as xs:anyAtomicType*",
+     "$arg2 as xs:string"
+    ],
+    "annotations": [],
+    "name": "string-join",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "string-join"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#substring#2": {
+    "params": [
+     "$sourceString as xs:string?",
+     "$start as xs:double"
+    ],
+    "annotations": [],
+    "name": "substring",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "substring"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#substring#3": {
+    "params": [
+     "$sourceString as xs:string?",
+     "$start as xs:double",
+     "$length as xs:double"
+    ],
+    "annotations": [],
+    "name": "substring",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "substring"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#string-length#0": {
+    "params": [],
+    "annotations": [],
+    "name": "string-length",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "string-length"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#string-length#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "string-length",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "string-length"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-space#0": {
+    "params": [],
+    "annotations": [],
+    "name": "normalize-space",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "normalize-space"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-space#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "normalize-space",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "normalize-space"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-unicode#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "normalize-unicode",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "normalize-unicode"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-unicode#2": {
+    "params": [
+     "$arg as xs:string?",
+     "$normalizationForm as xs:string"
+    ],
+    "annotations": [],
+    "name": "normalize-unicode",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "normalize-unicode"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#upper-case#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "upper-case",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "upper-case"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#lower-case#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "lower-case",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "lower-case"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#translate#3": {
+    "params": [
+     "$arg as xs:string?",
+     "$mapString as xs:string",
+     "$transString as xs:string"
+    ],
+    "annotations": [],
+    "name": "translate",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "translate"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#contains#2": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "contains",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "contains"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#contains#3": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "contains",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "contains"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#starts-with#2": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "starts-with",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "starts-with"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#starts-with#3": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "starts-with",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "starts-with"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#ends-with#2": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "ends-with",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "ends-with"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#ends-with#3": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "ends-with",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "ends-with"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-before#2": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "substring-before",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "substring-before"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-before#3": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "substring-before",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "substring-before"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-after#2": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "annotations": [],
+    "name": "substring-after",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "substring-after"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-after#3": {
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "substring-after",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "substring-after"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#matches#2": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "annotations": [],
+    "name": "matches",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "matches"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#matches#3": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "annotations": [],
+    "name": "matches",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "matches"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#replace#3": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$replacement as xs:string"
+    ],
+    "annotations": [],
+    "name": "replace",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "replace"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#replace#4": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$replacement as xs:string",
+     "$flags as xs:string"
+    ],
+    "annotations": [],
+    "name": "replace",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "replace"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#tokenize#1": {
+    "params": [
+     "$input as xs:string?"
+    ],
+    "annotations": [],
+    "name": "tokenize",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "tokenize"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#tokenize#2": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "annotations": [],
+    "name": "tokenize",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "tokenize"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#tokenize#3": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "annotations": [],
+    "name": "tokenize",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "tokenize"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#analyze-string#2": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "annotations": [],
+    "name": "analyze-string",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "analyze-string"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#analyze-string#3": {
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "annotations": [],
+    "name": "analyze-string",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "analyze-string"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#true#0": {
+    "params": [],
+    "annotations": [],
+    "name": "true",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "true"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#false#0": {
+    "params": [],
+    "annotations": [],
+    "name": "false",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "false"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#boolean#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "boolean",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "boolean"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#not#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "not",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "not"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#years-from-duration#1": {
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "annotations": [],
+    "name": "years-from-duration",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "years-from-duration"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#months-from-duration#1": {
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "annotations": [],
+    "name": "months-from-duration",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "months-from-duration"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#days-from-duration#1": {
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "annotations": [],
+    "name": "days-from-duration",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "days-from-duration"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#hours-from-duration#1": {
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "annotations": [],
+    "name": "hours-from-duration",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "hours-from-duration"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#minutes-from-duration#1": {
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "annotations": [],
+    "name": "minutes-from-duration",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "minutes-from-duration"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#seconds-from-duration#1": {
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "annotations": [],
+    "name": "seconds-from-duration",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "seconds-from-duration"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#dateTime#2": {
+    "params": [
+     "$arg1 as xs:date?",
+     "$arg2 as xs:time?"
+    ],
+    "annotations": [],
+    "name": "dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#year-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "year-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "year-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#month-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "month-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "month-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#day-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "day-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "day-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#hours-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "hours-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "hours-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#minutes-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "minutes-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "minutes-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#seconds-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "seconds-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "seconds-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#timezone-from-dateTime#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "timezone-from-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "timezone-from-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#year-from-date#1": {
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "annotations": [],
+    "name": "year-from-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "year-from-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#month-from-date#1": {
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "annotations": [],
+    "name": "month-from-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "month-from-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#day-from-date#1": {
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "annotations": [],
+    "name": "day-from-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "day-from-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#timezone-from-date#1": {
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "annotations": [],
+    "name": "timezone-from-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "timezone-from-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#hours-from-time#1": {
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "annotations": [],
+    "name": "hours-from-time",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "hours-from-time"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#minutes-from-time#1": {
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "annotations": [],
+    "name": "minutes-from-time",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "minutes-from-time"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#seconds-from-time#1": {
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "annotations": [],
+    "name": "seconds-from-time",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "seconds-from-time"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#timezone-from-time#1": {
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "annotations": [],
+    "name": "timezone-from-time",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "timezone-from-time"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-dateTime-to-timezone#1": {
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "annotations": [],
+    "name": "adjust-dateTime-to-timezone",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "adjust-dateTime-to-timezone"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-dateTime-to-timezone#2": {
+    "params": [
+     "$arg as xs:dateTime?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "annotations": [],
+    "name": "adjust-dateTime-to-timezone",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "adjust-dateTime-to-timezone"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-date-to-timezone#1": {
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "annotations": [],
+    "name": "adjust-date-to-timezone",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "adjust-date-to-timezone"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-date-to-timezone#2": {
+    "params": [
+     "$arg as xs:date?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "annotations": [],
+    "name": "adjust-date-to-timezone",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "adjust-date-to-timezone"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-time-to-timezone#1": {
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "annotations": [],
+    "name": "adjust-time-to-timezone",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "adjust-time-to-timezone"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-time-to-timezone#2": {
+    "params": [
+     "$arg as xs:time?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "annotations": [],
+    "name": "adjust-time-to-timezone",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "adjust-time-to-timezone"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-dateTime#2": {
+    "params": [
+     "$value as xs:dateTime?",
+     "$picture as xs:string"
+    ],
+    "annotations": [],
+    "name": "format-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-dateTime#5": {
+    "params": [
+     "$value as xs:dateTime?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "annotations": [],
+    "name": "format-dateTime",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-dateTime"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-date#2": {
+    "params": [
+     "$value as xs:date?",
+     "$picture as xs:string"
+    ],
+    "annotations": [],
+    "name": "format-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-date#5": {
+    "params": [
+     "$value as xs:date?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "annotations": [],
+    "name": "format-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-time#2": {
+    "params": [
+     "$value as xs:time?",
+     "$picture as xs:string"
+    ],
+    "annotations": [],
+    "name": "format-time",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-time"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#format-time#5": {
+    "params": [
+     "$value as xs:time?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "annotations": [],
+    "name": "format-time",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "format-time"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-ietf-date#1": {
+    "params": [
+     "$value as xs:string?"
+    ],
+    "annotations": [],
+    "name": "parse-ietf-date",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "parse-ietf-date"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#resolve-QName#2": {
+    "params": [
+     "$qname as xs:string?",
+     "$element as element()"
+    ],
+    "annotations": [],
+    "name": "resolve-QName",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "resolve-QName"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#QName#2": {
+    "params": [
+     "$paramURI as xs:string?",
+     "$paramQName as xs:string"
+    ],
+    "annotations": [],
+    "name": "QName",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "QName"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#prefix-from-QName#1": {
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "annotations": [],
+    "name": "prefix-from-QName",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "prefix-from-QName"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#local-name-from-QName#1": {
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "annotations": [],
+    "name": "local-name-from-QName",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "local-name-from-QName"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#namespace-uri-from-QName#1": {
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "annotations": [],
+    "name": "namespace-uri-from-QName",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "namespace-uri-from-QName"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#namespace-uri-for-prefix#2": {
+    "params": [
+     "$prefix as xs:string?",
+     "$element as element()"
+    ],
+    "annotations": [],
+    "name": "namespace-uri-for-prefix",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "namespace-uri-for-prefix"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#in-scope-prefixes#1": {
+    "params": [
+     "$element as element()"
+    ],
+    "annotations": [],
+    "name": "in-scope-prefixes",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "in-scope-prefixes"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#empty#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "empty",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "empty"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#exists#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "exists",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "exists"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#head#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "head",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "head"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#tail#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "tail",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "tail"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#insert-before#3": {
+    "params": [
+     "$target as item()*",
+     "$position as xs:integer",
+     "$inserts as item()*"
+    ],
+    "annotations": [],
+    "name": "insert-before",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "insert-before"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#remove#2": {
+    "params": [
+     "$target as item()*",
+     "$position as xs:integer"
+    ],
+    "annotations": [],
+    "name": "remove",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "remove"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#reverse#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "reverse",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "reverse"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#subsequence#2": {
+    "params": [
+     "$sourceSeq as item()*",
+     "$startingLoc as xs:double"
+    ],
+    "annotations": [],
+    "name": "subsequence",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "subsequence"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#subsequence#3": {
+    "params": [
+     "$sourceSeq as item()*",
+     "$startingLoc as xs:double",
+     "$length as xs:double"
+    ],
+    "annotations": [],
+    "name": "subsequence",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "subsequence"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unordered#1": {
+    "params": [
+     "$sourceSeq as item()*"
+    ],
+    "annotations": [],
+    "name": "unordered",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unordered"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#distinct-values#1": {
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "distinct-values",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "distinct-values"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#distinct-values#2": {
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "distinct-values",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "distinct-values"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#index-of#2": {
+    "params": [
+     "$seq as xs:anyAtomicType*",
+     "$search as xs:anyAtomicType"
+    ],
+    "annotations": [],
+    "name": "index-of",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "index-of"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#index-of#3": {
+    "params": [
+     "$seq as xs:anyAtomicType*",
+     "$search as xs:anyAtomicType",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "index-of",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "index-of"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#deep-equal#2": {
+    "params": [
+     "$parameter1 as item()*",
+     "$parameter2 as item()*"
+    ],
+    "annotations": [],
+    "name": "deep-equal",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "deep-equal"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#deep-equal#3": {
+    "params": [
+     "$parameter1 as item()*",
+     "$parameter2 as item()*",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "deep-equal",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "deep-equal"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#zero-or-one#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "zero-or-one",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "zero-or-one"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#one-or-more#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "one-or-more",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "one-or-more"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#exactly-one#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "exactly-one",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "exactly-one"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#count#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "count",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "count"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#avg#1": {
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "avg",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "avg"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#max#1": {
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "max",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "max"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#max#2": {
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "max",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "max"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#min#1": {
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "min",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "min"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#min#2": {
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "annotations": [],
+    "name": "min",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "min"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#sum#1": {
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "sum",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "sum"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#sum#2": {
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$zero as xs:anyAtomicType?"
+    ],
+    "annotations": [],
+    "name": "sum",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "sum"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#id#1": {
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "annotations": [],
+    "name": "id",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "id"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#id#2": {
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "annotations": [],
+    "name": "id",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "id"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#element-with-id#1": {
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "annotations": [],
+    "name": "element-with-id",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "element-with-id"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#element-with-id#2": {
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "annotations": [],
+    "name": "element-with-id",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "element-with-id"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#idref#1": {
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "annotations": [],
+    "name": "idref",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "idref"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#idref#2": {
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "annotations": [],
+    "name": "idref",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "idref"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#generate-id#0": {
+    "params": [],
+    "annotations": [],
+    "name": "generate-id",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "generate-id"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#generate-id#1": {
+    "params": [
+     "$arg as node()?"
+    ],
+    "annotations": [],
+    "name": "generate-id",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "generate-id"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#doc#1": {
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "annotations": [],
+    "name": "doc",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "doc"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#doc-available#1": {
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "annotations": [],
+    "name": "doc-available",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "doc-available"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#collection#0": {
+    "params": [],
+    "annotations": [],
+    "name": "collection",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "collection"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#collection#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "collection",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "collection"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#uri-collection#0": {
+    "params": [],
+    "annotations": [],
+    "name": "uri-collection",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "uri-collection"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#uri-collection#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "uri-collection",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "uri-collection"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text#1": {
+    "params": [
+     "$href as xs:string?"
+    ],
+    "annotations": [],
+    "name": "unparsed-text",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unparsed-text"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text#2": {
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "unparsed-text",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unparsed-text"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-lines#1": {
+    "params": [
+     "$href as xs:string?"
+    ],
+    "annotations": [],
+    "name": "unparsed-text-lines",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unparsed-text-lines"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-lines#2": {
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "unparsed-text-lines",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unparsed-text-lines"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-available#1": {
+    "params": [
+     "$href as xs:string?"
+    ],
+    "annotations": [],
+    "name": "unparsed-text-available",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unparsed-text-available"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-available#2": {
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "annotations": [],
+    "name": "unparsed-text-available",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "unparsed-text-available"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#environment-variable#1": {
+    "params": [
+     "$name as xs:string"
+    ],
+    "annotations": [],
+    "name": "environment-variable",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "environment-variable"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#available-environment-variables#0": {
+    "params": [],
+    "annotations": [],
+    "name": "available-environment-variables",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "available-environment-variables"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-xml#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "parse-xml",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "parse-xml"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-xml-fragment#1": {
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "annotations": [],
+    "name": "parse-xml-fragment",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "parse-xml-fragment"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#serialize#1": {
+    "params": [
+     "$arg as item()*"
+    ],
+    "annotations": [],
+    "name": "serialize",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "serialize"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#serialize#2": {
+    "params": [
+     "$arg as item()*",
+     "$params as item()?"
+    ],
+    "annotations": [],
+    "name": "serialize",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "serialize"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#function-lookup#2": {
+    "params": [
+     "$name as xs:QName",
+     "$arity as xs:integer"
+    ],
+    "annotations": [],
+    "name": "function-lookup",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "function-lookup"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#function-name#1": {
+    "params": [
+     "$func as function(*)"
+    ],
+    "annotations": [],
+    "name": "function-name",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "function-name"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#function-arity#1": {
+    "params": [
+     "$func as function(*)"
+    ],
+    "annotations": [],
+    "name": "function-arity",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "function-arity"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#for-each#2": {
+    "params": [
+     "$seq as item()*",
+     "$action as function(item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "for-each"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#filter#2": {
+    "params": [
+     "$seq as item()*",
+     "$f as function(item()) as xs:boolean"
+    ],
+    "annotations": [],
+    "name": "filter",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "filter"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#fold-left#3": {
+    "params": [
+     "$seq as item()*",
+     "$zero as item()*",
+     "$f as function(item()*, item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "fold-left",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "fold-left"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#fold-right#3": {
+    "params": [
+     "$seq as item()*",
+     "$zero as item()*",
+     "$f as function(item(), item()*) as item()*"
+    ],
+    "annotations": [],
+    "name": "fold-right",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "fold-right"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#for-each-pair#3": {
+    "params": [
+     "$seq1 as item()*",
+     "$seq2 as item()*",
+     "$action as function(item(), item()) as item()*"
+    ],
+    "annotations": [],
+    "name": "for-each-pair",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "for-each-pair"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#sort#1": {
+    "params": [
+     "$input as item()*"
+    ],
+    "annotations": [],
+    "name": "sort",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "sort"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#sort#2": {
+    "params": [
+     "$input as item()*",
+     "$collation as xs:string?"
+    ],
+    "annotations": [],
+    "name": "sort",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "sort"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#sort#3": {
+    "params": [
+     "$input as item()*",
+     "$collation as xs:string?",
+     "$key as function(item()) as xs:anyAtomicType*"
+    ],
+    "annotations": [],
+    "name": "sort",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "sort"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#apply#2": {
+    "params": [
+     "$function as function(*)",
+     "$array as array(*)"
+    ],
+    "annotations": [],
+    "name": "apply",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "apply"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#load-xquery-module#1": {
+    "params": [
+     "$module-uri as xs:string"
+    ],
+    "annotations": [],
+    "name": "load-xquery-module",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "load-xquery-module"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#load-xquery-module#2": {
+    "params": [
+     "$module-uri as xs:string",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "load-xquery-module",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "load-xquery-module"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#transform#1": {
+    "params": [
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "transform",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "transform"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-json#1": {
+    "params": [
+     "$json-text as xs:string?"
+    ],
+    "annotations": [],
+    "name": "parse-json",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "parse-json"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-json#2": {
+    "params": [
+     "$json-text as xs:string?",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "parse-json",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "parse-json"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#json-doc#1": {
+    "params": [
+     "$href as xs:string?"
+    ],
+    "annotations": [],
+    "name": "json-doc",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "json-doc"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#json-doc#2": {
+    "params": [
+     "$href as xs:string?",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "json-doc",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "json-doc"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#json-to-xml#1": {
+    "params": [
+     "$json-text as xs:string?"
+    ],
+    "annotations": [],
+    "name": "json-to-xml",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "json-to-xml"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#json-to-xml#2": {
+    "params": [
+     "$json-text as xs:string?",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "json-to-xml",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "json-to-xml"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#xml-to-json#1": {
+    "params": [
+     "$input as node()?"
+    ],
+    "annotations": [],
+    "name": "xml-to-json",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "xml-to-json"
+    }
+   },
+   "http://www.w3.org/2005/xpath-functions#xml-to-json#2": {
+    "params": [
+     "$input as node()?",
+     "$options as map(*)"
+    ],
+    "annotations": [],
+    "name": "xml-to-json",
+    "eqname": {
+     "uri": "http://www.w3.org/2005/xpath-functions",
+     "name": "xml-to-json"
+    }
+   }
+  },
+  "variables": {}
+ }
+}
