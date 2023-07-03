@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to process binary data, including extracting subparts, searching, basic binary operations and conversion between binary and structured forms.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to process binary data, including extracting subparts, searching, basic binary operations and conversion between binary and structured forms. This module is based on the <a href="http://expath.org/spec/binary">EXPath Binary Module</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Binary_Module
+ : @see /wiki/Binary_Module
  :)
 module namespace bin = "http://expath.org/ns/binary";
 

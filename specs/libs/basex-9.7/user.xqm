@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809112700/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for creating and administering database users. The <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809112700/https://docs.basex.org/wiki/User_Management">User Management</a> article gives more information on database users and permissions.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for creating and administering database users. The <a href="http://docs.basex.org/wiki/User_Management">User Management</a> article gives more information on database users and permissions.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/User_Module
+ : @see /wiki/User_Module
  :)
 module namespace user = "http://basex.org/modules/user";
 
@@ -21,7 +21,7 @@ declare function user:current() as xs:string external;
 declare function user:list() as xs:string* external;
 
 (:~ 
- : Returns an element sequence, containing all registered users that are visible to the current user.<br/>In addition to the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809112700/https://docs.basex.org/wiki/Commands#SHOW_USERS">SHOW USERS</a> command, encoded password strings and database permissions will be output. A user <code>$name</code> can be specified to filter the results in advance.
+ : Returns an element sequence, containing all registered users that are visible to the current user.<br/>In addition to the <a href="http://docs.basex.org/wiki/Commands#SHOW_USERS">SHOW USERS</a> command, encoded password strings and database permissions will be output. A user <code>$name</code> can be specified to filter the results in advance.
  :
  : @return value of type element(user)*
  : @error user:unknown The specified user name is unknown.
@@ -29,7 +29,7 @@ declare function user:list() as xs:string* external;
 declare function user:list-details() as element(user)* external;
 
 (:~ 
- : Returns an element sequence, containing all registered users that are visible to the current user.<br/>In addition to the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809112700/https://docs.basex.org/wiki/Commands#SHOW_USERS">SHOW USERS</a> command, encoded password strings and database permissions will be output. A user <code>$name</code> can be specified to filter the results in advance.
+ : Returns an element sequence, containing all registered users that are visible to the current user.<br/>In addition to the <a href="http://docs.basex.org/wiki/Commands#SHOW_USERS">SHOW USERS</a> command, encoded password strings and database permissions will be output. A user <code>$name</code> can be specified to filter the results in advance.
  :
  : @param $name value of type xs:string
  : @return value of type element(user)*
@@ -58,22 +58,14 @@ declare function user:exists($name as xs:string) as xs:boolean external;
 declare function user:check($name as xs:string, $password as xs:string) as empty-sequence() external;
 
 (:~ 
- : Returns an <code>info</code> element, which may contain application-specific data. If a user <code>$name</code> is supplied, a user-specific element is returned. By default, the returned element has no contents. It can be modified via <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/User_Module#user:update-info">user:update-info</a>.
+ : Returns an <code>info</code> element, which can be used to organize application-specific data. By default, the element has no contents. It can be modified via <a href="/wiki/User_Module#user:update-info">user:update-info</a>.
  :
  : @return value of type element(info)
  :)
 declare function user:info() as element(info) external;
 
 (:~ 
- : Returns an <code>info</code> element, which may contain application-specific data. If a user <code>$name</code> is supplied, a user-specific element is returned. By default, the returned element has no contents. It can be modified via <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/User_Module#user:update-info">user:update-info</a>.
- :
- : @param $name value of type xs:string
- : @return value of type element(info)
- :)
-declare function user:info($name as xs:string) as element(info) external;
-
-(:~ 
- : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>: <ul> <li>Local permissions are granted with non-empty glob <code>$patterns</code>.</li> <li>An <code>$info</code> element with application-specific information can be supplied.</li> <li>The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument.</li> <li>Existing users will be overwritten.</li> </ul>
+ : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>. Local permissions are granted with non-empty glob <code>$patterns</code>. The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument. Existing users will be overwritten.
  :
  : @param $name value of type xs:string
  : @param $password value of type xs:string
@@ -86,7 +78,7 @@ declare function user:info($name as xs:string) as element(info) external;
 declare function user:create($name as xs:string, $password as xs:string) as empty-sequence() external;
 
 (:~ 
- : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>: <ul> <li>Local permissions are granted with non-empty glob <code>$patterns</code>.</li> <li>An <code>$info</code> element with application-specific information can be supplied.</li> <li>The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument.</li> <li>Existing users will be overwritten.</li> </ul>
+ : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>. Local permissions are granted with non-empty glob <code>$patterns</code>. The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument. Existing users will be overwritten.
  :
  : @param $name value of type xs:string
  : @param $password value of type xs:string
@@ -100,7 +92,7 @@ declare function user:create($name as xs:string, $password as xs:string) as empt
 declare function user:create($name as xs:string, $password as xs:string, $permissions as xs:string*) as empty-sequence() external;
 
 (:~ 
- : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>: <ul> <li>Local permissions are granted with non-empty glob <code>$patterns</code>.</li> <li>An <code>$info</code> element with application-specific information can be supplied.</li> <li>The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument.</li> <li>Existing users will be overwritten.</li> </ul>
+ : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>. Local permissions are granted with non-empty glob <code>$patterns</code>. The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument. Existing users will be overwritten.
  :
  : @param $name value of type xs:string
  : @param $password value of type xs:string
@@ -113,22 +105,6 @@ declare function user:create($name as xs:string, $password as xs:string, $permis
  : @error user:update The operation can only be performed once per user or database pattern.
  :)
 declare function user:create($name as xs:string, $password as xs:string, $permissions as xs:string*, $patterns as xs:string*) as empty-sequence() external;
-
-(:~ 
- : Creates a new user with the specified <code>$name</code>, <code>$password</code>, and <code>$permissions</code>: <ul> <li>Local permissions are granted with non-empty glob <code>$patterns</code>.</li> <li>An <code>$info</code> element with application-specific information can be supplied.</li> <li>The default global permission (<i>none</i>) can be overwritten with an empty pattern or by omitting the last argument.</li> <li>Existing users will be overwritten.</li> </ul>
- :
- : @param $name value of type xs:string
- : @param $password value of type xs:string
- : @param $permissions value of type xs:string*
- : @param $patterns value of type xs:string*
- : @param $info value of type element(info)
- : @error user:name The specified user name is invalid.
- : @error user:permission The specified permission is invalid.
- : @error user:admin The "admin" user cannot be modified.
- : @error user:logged-in The specified user is currently logged in.
- : @error user:update The operation can only be performed once per user or database pattern.
- :)
-declare function user:create($name as xs:string, $password as xs:string, $permissions as xs:string*, $patterns as xs:string*, $info as element(info)) as empty-sequence() external;
 
 (:~ 
  : Grants global or local <code>$permissions</code> to a user with the specified <code>$name</code>. Local permissions are granted with non-empty glob <code>$patterns</code>.
@@ -164,7 +140,7 @@ declare function user:grant($name as xs:string, $permissions as xs:string*) as e
 declare function user:grant($name as xs:string, $permissions as xs:string*, $patterns as xs:string*) as empty-sequence() external;
 
 (:~ 
- : Drops a user with the specified <code>$name</code>. If non-empty glob <code>$patterns</code> are specified, only the database patterns will be removed.
+ : Drops a user with the specified <code>$name</code>. If non-empty glob <code>$patterns</code> are specified, only the database patterns will be dropped.
  :
  : @param $name value of type xs:string
  : @error user:unknown The specified user name is unknown.
@@ -178,7 +154,7 @@ declare function user:grant($name as xs:string, $permissions as xs:string*, $pat
 declare function user:drop($name as xs:string) as empty-sequence() external;
 
 (:~ 
- : Drops a user with the specified <code>$name</code>. If non-empty glob <code>$patterns</code> are specified, only the database patterns will be removed.
+ : Drops a user with the specified <code>$name</code>. If non-empty glob <code>$patterns</code> are specified, only the database patterns will be dropped.
  :
  : @param $name value of type xs:string
  : @param $patterns value of type xs:string*
@@ -218,16 +194,8 @@ declare function user:alter($name as xs:string, $newname as xs:string) as empty-
 declare function user:password($name as xs:string, $password as xs:string) as empty-sequence() external;
 
 (:~ 
- : Assigns the specified <code>$info</code> element to the user management or, if <code>$name</code> is supplied, to a specific user. This function can be used to manage application-specific data (groups, enhanced user info, etc.).
+ : Updates the <code>info</code> element with <code>$info</code>. This node can be used to organize application-specific data (groups, enhanced user info, etc.).
  :
  : @param $info value of type element(info)
  :)
 declare function user:update-info($info as element(info)) as empty-sequence() external;
-
-(:~ 
- : Assigns the specified <code>$info</code> element to the user management or, if <code>$name</code> is supplied, to a specific user. This function can be used to manage application-specific data (groups, enhanced user info, etc.).
- :
- : @param $info value of type element(info)
- : @param $name value of type xs:string
- :)
-declare function user:update-info($info as element(info), $name as xs:string) as empty-sequence() external;

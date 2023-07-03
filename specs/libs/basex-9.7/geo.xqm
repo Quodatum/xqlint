@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions that may be applied to geometry data conforming to the Open Geospatial Consortium (OGC) Simple Feature (SF) data model. It is based on the <a href="https://web.archive.org/web/20220623231026/http://expath.org/spec/geo">EXPath Geo Module</a> and uses the <a href="https://web.archive.org/web/20220623231026/https://projects.eclipse.org/projects/locationtech.jts">JTS</a> library.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions that may be applied to geometry data conforming to the Open Geospatial Consortium (OGC) Simple Feature (SF) data model. It is based on the <a href="http://expath.org/spec/geo">EXPath Geo Module</a> and uses the <a href="https://projects.eclipse.org/projects/locationtech.jts">JTS</a> library. Geometries included in GML 2 are: Point, LineString, LinearRing, Polygon, MultiPoint, MultiLineString, MultiPolygon, and MultiGeometry. All nodes queried by BaseX should be a valid geometry. The only geometry type which is not supported by BaseX right now is MultiGeometry. Moreover, the module provides no support for GML 3.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Geo_Module
+ : @see /wiki/Geo_Module
  :)
 module namespace geo = "http://expath.org/ns/geo";
 declare namespace experr = "http://expath.org/ns/error";
@@ -28,7 +28,7 @@ declare function geo:dimension($geometry as element(*)) as xs:integer external;
 declare function geo:geometry-type($geometry as element(*)) as xs:QName external;
 
 (:~ 
- : Returns the ID of the Spatial Reference System used by the given geometry <code>$geometry</code>. Spatial Reference System information is supported in the simple way defined in the SFS. A Spatial Reference System ID (SRID) is present in each Geometry object. Geometry provides basic accessor operations for this field, but no others. The SRID is represented as an integer (based on the <a href="https://web.archive.org/web/20220623231026/https://www.ogc.org/standards/sfs">OpenGIS Simple Features Specifications For SQL</a>).<br/> Here is a difference between the <a href="https://web.archive.org/web/20220623231026/http://expath.org/spec/geo">EXPath Geo Module</a> and the implementation in BaseX, since the specification return the URI.
+ : Returns the ID of the Spatial Reference System used by the given geometry <code>$geometry</code>. Spatial Reference System information is supported in the simple way defined in the SFS. A Spatial Reference System ID (SRID) is present in each Geometry object. Geometry provides basic accessor operations for this field, but no others. The SRID is represented as an integer (based on the <a href="http://www.opengis.org/docs/99-049.pdf">OpenGIS Simple Features Specifications For SQL</a>).<br/> Here is a difference between the <a href="http://expath.org/spec/geo">EXPath Geo Module</a> and the implementation in BaseX, since the specification return the URI.
  :
  : @param $geometry value of type element(*)
  : @return value of type xs:integer

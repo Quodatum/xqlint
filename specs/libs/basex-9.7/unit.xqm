@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains annotations and functions for performing XQUnit tests.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains annotations and functions for performing XQUnit tests.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Unit_Module
+ : @see /wiki/Unit_Module
  :)
 module namespace unit = "http://basex.org/modules/unit";
 
@@ -24,7 +24,7 @@ declare function unit:assert($test as item()*) as empty-sequence() external;
 declare function unit:assert($test as item()*, $info as item()) as empty-sequence() external;
 
 (:~ 
- : Asserts that the specified arguments are equal according to the rules of the <a href="https://web.archive.org/web/20220623231027/https://www.w3.org/TR/xpath-functions-31/#func-deep-equal"> <code>fn:deep-equal</code> function</a>. Otherwise, raises an error.<br/>The default failure message can be overridden with the <code>$info</code> argument.
+ : Asserts that the specified arguments are equal according to the rules of the <a href="http://www.w3.org/TR/xpath-functions-30/#func-deep-equal"> <code>fn:deep-equal</code> function</a>. Otherwise, raises an error.<br/>The default failure message can be overridden with the <code>$info</code> argument.
  :
  : @param $returned value of type item()*
  : @param $expected value of type item()*
@@ -33,7 +33,7 @@ declare function unit:assert($test as item()*, $info as item()) as empty-sequenc
 declare function unit:assert-equals($returned as item()*, $expected as item()*) as empty-sequence() external;
 
 (:~ 
- : Asserts that the specified arguments are equal according to the rules of the <a href="https://web.archive.org/web/20220623231027/https://www.w3.org/TR/xpath-functions-31/#func-deep-equal"> <code>fn:deep-equal</code> function</a>. Otherwise, raises an error.<br/>The default failure message can be overridden with the <code>$info</code> argument.
+ : Asserts that the specified arguments are equal according to the rules of the <a href="http://www.w3.org/TR/xpath-functions-30/#func-deep-equal"> <code>fn:deep-equal</code> function</a>. Otherwise, raises an error.<br/>The default failure message can be overridden with the <code>$info</code> argument.
  :
  : @param $returned value of type item()*
  : @param $expected value of type item()*

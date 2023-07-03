@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for manipulating maps. <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/XQuery_3.1#Maps">Maps</a> have been introduced with <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/XQuery_3.1">XQuery 3.1</a>.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for manipulating maps. Maps have been introduced with XQuery 3.1 and are described in detail in the <a href="https://www.w3.org/TR/xpath-functions-31/#maps-and-arrays">XQuery Functions and Operators 3.1 specification</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Map_Module
+ : @see /wiki/Map_Module
  :)
 module namespace map = "http://www.w3.org/2005/xpath-functions/map";
 
@@ -16,7 +16,7 @@ module namespace map = "http://www.w3.org/2005/xpath-functions/map";
 declare function map:contains($map as map(*), $key as xs:anyAtomicType) as xs:boolean external;
 
 (:~ 
- : Creates a new <i>map</i> containing a single entry. The key of the entry in the new map is <code>$key</code>, and its associated value is <code>$value</code>. <p>The function <code>map:entry</code> is intended primarily for use in conjunction with the function <code> <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Map_Module#map:merge">map:merge</a> </code>. For example, a map containing seven entries may be constructed like this: </p> <div class="mw-highlight mw-content-ltr" dir="ltr"> <pre> <span/> <span class="nf">map:merge</span> <span class="p">((</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Sun"</span> <span class="p">,</span> <span class="s2">"Sunday"</span> <span class="p">),</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Mon"</span> <span class="p">,</span> <span class="s2">"Monday"</span> <span class="p">),</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Tue"</span> <span class="p">,</span> <span class="s2">"Tuesday"</span> <span class="p">),</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Wed"</span> <span class="p">,</span> <span class="s2">"Wednesday"</span> <span class="p">),</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Thu"</span> <span class="p">,</span> <span class="s2">"Thursday"</span> <span class="p">),</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Fri"</span> <span class="p">,</span> <span class="s2">"Friday"</span> <span class="p">),</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="s2">"Sat"</span> <span class="p">,</span> <span class="s2">"Saturday"</span> <span class="p">)</span> <span class="p">))</span> </pre> </div> <p>Unlike the <code>map { ... }</code> expression, this technique can be used to construct a map with a variable number of entries, for example: </p> <div class="mw-highlight mw-content-ltr" dir="ltr"> <pre> <span/> <span class="nf">map:merge</span> <span class="p">(</span> <span class="k">for</span> <span class="nv">$</span> <span class="n">b</span> <span class="ow">in</span> <span class="p">//</span> <span class="nt">book</span> <span class="k">return</span> <span class="nf">map:entry</span> <span class="p">(</span> <span class="nv">$</span> <span class="n">b</span> <span class="p">/</span> <span class="nt">isbn</span> <span class="p">,</span> <span class="nv">$</span> <span class="n">b</span> <span class="p">))</span> </pre> </div>
+ : Creates a new <i>map</i> containing a single entry. The key of the entry in the new map is <code>$key</code>, and its associated value is <code>$value</code>. <p>The function <code>map:entry</code> is intended primarily for use in conjunction with the function <code> <a href="/wiki/Map_Module#map:merge">map:merge</a> </code>. For example, a map containing seven entries may be constructed like this: </p> <pre class="brush:xquery"> map:merge(( map:entry("Sun", "Sunday"), map:entry("Mon", "Monday"), map:entry("Tue", "Tuesday"), map:entry("Wed", "Wednesday"), map:entry("Thu", "Thursday"), map:entry("Fri", "Friday"), map:entry("Sat", "Saturday") )) </pre> <p>Unlike the <code>map { ... }</code> expression, this technique can be used to construct a map with a variable number of entries, for example: </p> <pre class="brush:xquery">map:merge(for $b in //book return map:entry($b/isbn, $b))</pre>
  :
  : @param $key value of type xs:anyAtomicType
  : @param $value value of type item()*
@@ -25,7 +25,7 @@ declare function map:contains($map as map(*), $key as xs:anyAtomicType) as xs:bo
 declare function map:entry($key as xs:anyAtomicType, $value as item()*) as map(*) external;
 
 (:~ 
- : Returns all values of maps in the supplied <code>$input</code> with the specified <code>$key</code>. The found values will be returned in an array. Arbitrary input will be processed recursively as follows: <ul> <li>In a sequence, each item will be processed in order.</li> <li>In an array, all array members will be processed as sequence.</li> <li>In a map, all entries whose keys match the specified key. Moreover, all values of the map will be processed as sequence.</li> </ul>
+ : Returns all values of maps in the supplied <code>$input</code> with the specified <code>$key</code>. The found values will be returned in an array. Arbitrary input will be processed recursively as follows: <ul> <li> In a sequence, each item will be processed in order. </li> <li> In an array, all array members will be processed as sequence. </li> <li> In a map, all entries whose keys match the specified key. Moreover, all values of the map will be processed as sequence. </li> </ul>
  :
  : @param $input value of type item()*
  : @param $key value of type xs:anyAtomicType
@@ -61,7 +61,7 @@ declare function map:get($map as map(*), $key as xs:anyAtomicType) as item()* ex
 declare function map:keys($map as map(*)) as xs:anyAtomicType* external;
 
 (:~ 
- : Constructs and returns a new map. The <i>map</i> is formed by combining the contents of the supplied <code>$maps</code>. The maps are combined as follows: <ol> <li>There is one entry in the new map for each distinct key present in the union of the input maps.</li> <li>The <code>$options</code> argument defines how duplicate keys are handled. Currently, a single option <code>duplicates</code> exists, and its allowed values are <code>use-first</code>, <code>use-last</code>, <code>combine</code> and <code>reject</code> (default: <code>use-first</code>).</li> </ol>
+ : Constructs and returns a new map. The <i>map</i> is formed by combining the contents of the supplied <code>$maps</code>. The maps are combined as follows: <ol> <li> There is one entry in the new map for each distinct key present in the union of the input maps. </li> <li> The <code>$options</code> argument defines how duplicate keys are handled. Currently, a single option <code>duplicates</code> exists, and its allowed values are <code>use-first</code>, <code>use-last</code>, <code>combine</code> and <code>reject</code>. </li> </ol>
  :
  : @param $maps value of type map(*)*
  : @return value of type map(*)
@@ -69,7 +69,7 @@ declare function map:keys($map as map(*)) as xs:anyAtomicType* external;
 declare function map:merge($maps as map(*)*) as map(*) external;
 
 (:~ 
- : Constructs and returns a new map. The <i>map</i> is formed by combining the contents of the supplied <code>$maps</code>. The maps are combined as follows: <ol> <li>There is one entry in the new map for each distinct key present in the union of the input maps.</li> <li>The <code>$options</code> argument defines how duplicate keys are handled. Currently, a single option <code>duplicates</code> exists, and its allowed values are <code>use-first</code>, <code>use-last</code>, <code>combine</code> and <code>reject</code> (default: <code>use-first</code>).</li> </ol>
+ : Constructs and returns a new map. The <i>map</i> is formed by combining the contents of the supplied <code>$maps</code>. The maps are combined as follows: <ol> <li> There is one entry in the new map for each distinct key present in the union of the input maps. </li> <li> The <code>$options</code> argument defines how duplicate keys are handled. Currently, a single option <code>duplicates</code> exists, and its allowed values are <code>use-first</code>, <code>use-last</code>, <code>combine</code> and <code>reject</code>. </li> </ol>
  :
  : @param $maps value of type map(*)*
  : @param $options value of type map(*)

@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for manipulating arrays, which has been introduced with <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/XQuery_3.1#Arrays">XQuery 3.1</a>.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for manipulating arrays, which has been introduced with <a href="http://docs.basex.org/wiki/XQuery_3.1#Arrays">XQuery 3.1</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Array_Module
+ : @see /wiki/Array_Module
  :)
 module namespace array = "http://www.w3.org/2005/xpath-functions/array";
 

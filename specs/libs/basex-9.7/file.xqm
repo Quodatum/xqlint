@@ -1,14 +1,14 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions related to file system operations, such as listing, reading, or writing files.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions related to file system operations, such as listing, reading, or writing files. This module is based on the <a href="http://expath.org/spec/file">EXPath File Module</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/File_Module
+ : @see /wiki/File_Module
  :)
 module namespace file = "http://expath.org/ns/file";
 declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 
 (:~ 
- : Lists all files and directories found in the specified <code>$dir</code>. The returned paths are relative to the provided path.<br/>The optional parameter <code>$recursive</code> specifies whether sub-directories will be traversed, too.<br/>The optional parameter <code>$pattern</code> defines a file name pattern in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Commands#Glob_Syntax">Glob Syntax</a>. If present, only those files and directories are returned that correspond to the pattern. Several patterns can be separated with a comma (<code>,</code>).<br/>
+ : Lists all files and directories found in the specified <code>$dir</code>. The returned paths are relative to the provided path.<br/>The optional parameter <code>$recursive</code> specifies whether sub-directories will be traversed, too.<br/>The optional parameter <code>$pattern</code> defines a file name pattern in the <a href="http://docs.basex.org/wiki/Commands#Glob_Syntax">Glob Syntax</a>. If present, only those files and directories are returned that correspond to the pattern. Several patterns can be separated with a comma (<code>,</code>).<br/>
  :
  : @param $dir value of type xs:string
  : @return value of type xs:string*
@@ -19,7 +19,7 @@ declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
 declare function file:list($dir as xs:string) as xs:string* external;
 
 (:~ 
- : Lists all files and directories found in the specified <code>$dir</code>. The returned paths are relative to the provided path.<br/>The optional parameter <code>$recursive</code> specifies whether sub-directories will be traversed, too.<br/>The optional parameter <code>$pattern</code> defines a file name pattern in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Commands#Glob_Syntax">Glob Syntax</a>. If present, only those files and directories are returned that correspond to the pattern. Several patterns can be separated with a comma (<code>,</code>).<br/>
+ : Lists all files and directories found in the specified <code>$dir</code>. The returned paths are relative to the provided path.<br/>The optional parameter <code>$recursive</code> specifies whether sub-directories will be traversed, too.<br/>The optional parameter <code>$pattern</code> defines a file name pattern in the <a href="http://docs.basex.org/wiki/Commands#Glob_Syntax">Glob Syntax</a>. If present, only those files and directories are returned that correspond to the pattern. Several patterns can be separated with a comma (<code>,</code>).<br/>
  :
  : @param $dir value of type xs:string
  : @param $recursive value of type xs:boolean
@@ -31,7 +31,7 @@ declare function file:list($dir as xs:string) as xs:string* external;
 declare function file:list($dir as xs:string, $recursive as xs:boolean) as xs:string* external;
 
 (:~ 
- : Lists all files and directories found in the specified <code>$dir</code>. The returned paths are relative to the provided path.<br/>The optional parameter <code>$recursive</code> specifies whether sub-directories will be traversed, too.<br/>The optional parameter <code>$pattern</code> defines a file name pattern in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Commands#Glob_Syntax">Glob Syntax</a>. If present, only those files and directories are returned that correspond to the pattern. Several patterns can be separated with a comma (<code>,</code>).<br/>
+ : Lists all files and directories found in the specified <code>$dir</code>. The returned paths are relative to the provided path.<br/>The optional parameter <code>$recursive</code> specifies whether sub-directories will be traversed, too.<br/>The optional parameter <code>$pattern</code> defines a file name pattern in the <a href="http://docs.basex.org/wiki/Commands#Glob_Syntax">Glob Syntax</a>. If present, only those files and directories are returned that correspond to the pattern. Several patterns can be separated with a comma (<code>,</code>).<br/>
  :
  : @param $dir value of type xs:string
  : @param $recursive value of type xs:boolean
@@ -44,7 +44,7 @@ declare function file:list($dir as xs:string, $recursive as xs:boolean) as xs:st
 declare function file:list($dir as xs:string, $recursive as xs:boolean, $pattern as xs:string) as xs:string* external;
 
 (:~ 
- : Returns the full paths to all files and directories found in the specified <code>$dir</code>.<br/>The inverse function is <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/File_Module#file:parent">file:parent</a>. The related function <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/File_Module#file:list">file:list</a> returns relative file paths.
+ : Returns the full paths to all files and directories found in the specified <code>$dir</code>.<br/>The inverse function is <a href="/wiki/File_Module#file:parent">file:parent</a>. The related function <a href="/wiki/File_Module#file:list">file:list</a> returns relative file paths.
  :
  : @param $dir value of type xs:string
  : @return value of type xs:string*
@@ -55,18 +55,7 @@ declare function file:list($dir as xs:string, $recursive as xs:boolean, $pattern
 declare function file:children($dir as xs:string) as xs:string* external;
 
 (:~ 
- : Returns the full paths to all files and directories found in the specified <code>$dir</code> and its sub-directories.<br/>. The related function <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/File_Module#file:list">file:list</a> returns relative file paths.
- :
- : @param $dir value of type xs:string
- : @return value of type xs:string*
- : @error file:not-found the specified file does not exist.
- : @error file:no-dir the specified path does not point to a directory.
- : @error file:io-error the operation fails for some other reason.
- :)
-declare function file:descendants($dir as xs:string) as xs:string* external;
-
-(:~ 
- : Reads the binary content of the file specified by <code>$path</code> and returns it as <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:base64Binary</code> item.<br/>The optional parameters <code>$offset</code> and <code>$length</code> can be used to read chunks of a file.
+ : Reads the binary content of the file specified by <code>$path</code> and returns it as <a href="http://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:base64Binary</code> item.<br/>The optional parameters <code>$offset</code> and <code>$length</code> can be used to read chunks of a file.
  :
  : @param $path value of type xs:string
  : @return value of type xs:base64Binary
@@ -78,7 +67,7 @@ declare function file:descendants($dir as xs:string) as xs:string* external;
 declare function file:read-binary($path as xs:string) as xs:base64Binary external;
 
 (:~ 
- : Reads the binary content of the file specified by <code>$path</code> and returns it as <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:base64Binary</code> item.<br/>The optional parameters <code>$offset</code> and <code>$length</code> can be used to read chunks of a file.
+ : Reads the binary content of the file specified by <code>$path</code> and returns it as <a href="http://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:base64Binary</code> item.<br/>The optional parameters <code>$offset</code> and <code>$length</code> can be used to read chunks of a file.
  :
  : @param $path value of type xs:string
  : @param $offset value of type xs:integer
@@ -91,7 +80,7 @@ declare function file:read-binary($path as xs:string) as xs:base64Binary externa
 declare function file:read-binary($path as xs:string, $offset as xs:integer) as xs:base64Binary external;
 
 (:~ 
- : Reads the binary content of the file specified by <code>$path</code> and returns it as <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:base64Binary</code> item.<br/>The optional parameters <code>$offset</code> and <code>$length</code> can be used to read chunks of a file.
+ : Reads the binary content of the file specified by <code>$path</code> and returns it as <a href="http://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:base64Binary</code> item.<br/>The optional parameters <code>$offset</code> and <code>$length</code> can be used to read chunks of a file.
  :
  : @param $path value of type xs:string
  : @param $offset value of type xs:integer
@@ -105,7 +94,7 @@ declare function file:read-binary($path as xs:string, $offset as xs:integer) as 
 declare function file:read-binary($path as xs:string, $offset as xs:integer, $length as xs:integer) as xs:base64Binary external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:string</code> item: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as <a href="http://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:string</code> item: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul>
  :
  : @param $path value of type xs:string
  : @return value of type xs:string
@@ -117,7 +106,7 @@ declare function file:read-binary($path as xs:string, $offset as xs:integer, $le
 declare function file:read-text($path as xs:string) as xs:string external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:string</code> item: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as <a href="http://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:string</code> item: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul>
  :
  : @param $path value of type xs:string
  : @param $encoding value of type xs:string
@@ -130,7 +119,7 @@ declare function file:read-text($path as xs:string) as xs:string external;
 declare function file:read-text($path as xs:string, $encoding as xs:string) as xs:string external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:string</code> item: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as <a href="http://docs.basex.org/wiki/Lazy_Module">lazy</a> <code>xs:string</code> item: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul>
  :
  : @param $path value of type xs:string
  : @param $encoding value of type xs:string
@@ -144,19 +133,19 @@ declare function file:read-text($path as xs:string, $encoding as xs:string) as x
 declare function file:read-text($path as xs:string, $encoding as xs:string, $fallback as xs:boolean) as xs:string external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
  :
  : @param $path value of type xs:string
- : @return value of type xs:string*
+ : @return value of type xs:string
  : @error file:not-found the specified file does not exist.
  : @error file:is-dir the specified path is a directory.
  : @error file:unknown-encoding the specified encoding is not supported, or unknown.
  : @error file:io-error the operation fails for some other reason.
  :)
-declare function file:read-text-lines($path as xs:string) as xs:string* external;
+declare function file:read-text-lines($path as xs:string) as xs:string external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
  :
  : @param $path value of type xs:string
  : @param $encoding value of type xs:string
@@ -169,7 +158,7 @@ declare function file:read-text-lines($path as xs:string) as xs:string* external
 declare function file:read-text-lines($path as xs:string, $encoding as xs:string) as xs:string* external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
  :
  : @param $path value of type xs:string
  : @param $encoding value of type xs:string
@@ -183,7 +172,7 @@ declare function file:read-text-lines($path as xs:string, $encoding as xs:string
 declare function file:read-text-lines($path as xs:string, $encoding as xs:string, $fallback as xs:boolean) as xs:string* external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
  :
  : @param $path value of type xs:string
  : @param $encoding value of type xs:string
@@ -198,7 +187,7 @@ declare function file:read-text-lines($path as xs:string, $encoding as xs:string
 declare function file:read-text-lines($path as xs:string, $encoding as xs:string, $fallback as xs:boolean, $offset as xs:integer) as xs:string* external;
 
 (:~ 
- : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
+ : Reads the textual contents of the file specified by <code>$path</code> and returns it as a sequence of <code>xs:string</code> items: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul> <p>The lines to be read can be restricted with the optional parameters <code>$offset</code> and <code>$length</code>. </p>
  :
  : @param $path value of type xs:string
  : @param $encoding value of type xs:string
@@ -214,10 +203,10 @@ declare function file:read-text-lines($path as xs:string, $encoding as xs:string
 declare function file:read-text-lines($path as xs:string, $encoding as xs:string, $fallback as xs:boolean, $offset as xs:integer, $length as xs:integer) as xs:string* external;
 
 (:~ 
- : Creates the directory specified by <code>$dir</code> if it does not already exist. Non-existing parent directories will be created as well.<br/>
+ : Creates the directory specified by <code>$dir</code>, including all non-existing parent directories.<br/>
  :
  : @param $dir value of type xs:string
- : @error file:exists the specified target exists, but is no directory.
+ : @error file:exists a file with the same path already exists.
  : @error file:io-error the operation fails for some other reason.
  :)
 declare function file:create-dir($dir as xs:string) as empty-sequence() external;
@@ -288,7 +277,7 @@ declare function file:delete($path as xs:string) as empty-sequence() external;
 declare function file:delete($path as xs:string, $recursive as xs:boolean) as empty-sequence() external;
 
 (:~ 
- : Writes a serialized sequence of items to the specified file. If the file already exists, it will be overwritten.<br/>The <code>$params</code> argument contains <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Serialization">serialization parameters</a>. As with <a href="https://web.archive.org/web/20211227151132/https://www.w3.org/TR/xpath-functions-31/#func-serialize">fn:serialize()</a>, the parameters can be specified<br/> <ul> <li>either as children of an <code>&lt;output:serialization-parameters/&gt;</code> element:</li> </ul> <div class="mw-highlight mw-content-ltr" dir="ltr"> <pre> <span/> <span class="nt">&lt;output:serialization-parameters&gt;</span> <span class="nt">&lt;output:method</span> <span class="na">value=</span> <span class="s">'xml'</span> <span class="nt">/&gt;</span> <span class="nt">&lt;output:cdata-section-elements</span> <span class="na">value=</span> <span class="s">"div"</span> <span class="nt">/&gt;</span> ... <span class="nt">&lt;/output:serialization-parameters&gt;</span> </pre> </div> <ul> <li>or as map, which contains all key/value pairs:</li> </ul> <div class="mw-highlight mw-content-ltr" dir="ltr"> <pre> <span/> <span class="k">map</span> <span class="p">{</span> <span class="s2">"method"</span> <span class="p">:</span> <span class="s2">"xml"</span> <span class="p">,</span> <span class="s2">"cdata-section-elements"</span> <span class="p">:</span> <span class="s2">"div"</span> <span class="p">,</span> <span class="p">..</span> <span class="o">.</span> <span class="p">}</span> </pre> </div>
+ : Writes a serialized sequence of items to the specified file. If the file already exists, it will be overwritten.<br/>The <code>$params</code> argument contains serialization parameters (see <a href="http://docs.basex.org/wiki/Serialization">Serialization</a> for more details), which can either be specified<br/> <ul> <li> as children of an <code>&lt;output:serialization-parameters/&gt;</code> element, as defined for the <a href="http://www.w3.org/TR/xpath-functions-30/#func-serialize">fn:serialize()</a> function; e.g.: </li> </ul> <pre class="brush:xml"> &lt;output:serialization-parameters&gt; &lt;output:method value='xml'/&gt; &lt;output:cdata-section-elements value="div"/&gt; ... &lt;/output:serialization-parameters&gt; </pre> <ul> <li> as map, which contains all key/value pairs: </li> </ul> <pre class="brush:xml"> map { "method": "xml", "cdata-section-elements": "div", ... } </pre>
  :
  : @param $path value of type xs:string
  : @param $items value of type item()*
@@ -299,7 +288,7 @@ declare function file:delete($path as xs:string, $recursive as xs:boolean) as em
 declare function file:write($path as xs:string, $items as item()*) as empty-sequence() external;
 
 (:~ 
- : Writes a serialized sequence of items to the specified file. If the file already exists, it will be overwritten.<br/>The <code>$params</code> argument contains <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20211227151132/https://docs.basex.org/wiki/Serialization">serialization parameters</a>. As with <a href="https://web.archive.org/web/20211227151132/https://www.w3.org/TR/xpath-functions-31/#func-serialize">fn:serialize()</a>, the parameters can be specified<br/> <ul> <li>either as children of an <code>&lt;output:serialization-parameters/&gt;</code> element:</li> </ul> <div class="mw-highlight mw-content-ltr" dir="ltr"> <pre> <span/> <span class="nt">&lt;output:serialization-parameters&gt;</span> <span class="nt">&lt;output:method</span> <span class="na">value=</span> <span class="s">'xml'</span> <span class="nt">/&gt;</span> <span class="nt">&lt;output:cdata-section-elements</span> <span class="na">value=</span> <span class="s">"div"</span> <span class="nt">/&gt;</span> ... <span class="nt">&lt;/output:serialization-parameters&gt;</span> </pre> </div> <ul> <li>or as map, which contains all key/value pairs:</li> </ul> <div class="mw-highlight mw-content-ltr" dir="ltr"> <pre> <span/> <span class="k">map</span> <span class="p">{</span> <span class="s2">"method"</span> <span class="p">:</span> <span class="s2">"xml"</span> <span class="p">,</span> <span class="s2">"cdata-section-elements"</span> <span class="p">:</span> <span class="s2">"div"</span> <span class="p">,</span> <span class="p">..</span> <span class="o">.</span> <span class="p">}</span> </pre> </div>
+ : Writes a serialized sequence of items to the specified file. If the file already exists, it will be overwritten.<br/>The <code>$params</code> argument contains serialization parameters (see <a href="http://docs.basex.org/wiki/Serialization">Serialization</a> for more details), which can either be specified<br/> <ul> <li> as children of an <code>&lt;output:serialization-parameters/&gt;</code> element, as defined for the <a href="http://www.w3.org/TR/xpath-functions-30/#func-serialize">fn:serialize()</a> function; e.g.: </li> </ul> <pre class="brush:xml"> &lt;output:serialization-parameters&gt; &lt;output:method value='xml'/&gt; &lt;output:cdata-section-elements value="div"/&gt; ... &lt;/output:serialization-parameters&gt; </pre> <ul> <li> as map, which contains all key/value pairs: </li> </ul> <pre class="brush:xml"> map { "method": "xml", "cdata-section-elements": "div", ... } </pre>
  :
  : @param $path value of type xs:string
  : @param $items value of type item()*
@@ -537,11 +526,11 @@ declare function file:last-modified($path as xs:string) as xs:dateTime external;
 (:~ 
  : Returns the size, in bytes, of the file specified by <code>$path</code>, or <code>0</code> for directories.<br/>
  :
- : @param $path value of type xs:string
+ : @param $file value of type xs:string
  : @return value of type xs:integer
  : @error file:not-found the specified file does not exist.
  :)
-declare function file:size($path as xs:string) as xs:integer external;
+declare function file:size($file as xs:string) as xs:integer external;
 
 (:~ 
  : Returns the name of a file or directory specified by <code>$path</code>. An empty string is returned if the path points to the root directory.
@@ -552,7 +541,7 @@ declare function file:size($path as xs:string) as xs:integer external;
 declare function file:name($path as xs:string) as xs:string external;
 
 (:~ 
- : Returns the absolute path to the parent directory of a file or directory specified by <code>$path</code>. An empty sequence is returned if the path points to a root directory.<br/>The inverse function is <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/File_Module#file:children">file:children</a>.<br/>
+ : Returns the absolute path to the parent directory of a file or directory specified by <code>$path</code>. An empty sequence is returned if the path points to a root directory.<br/>The inverse function is <a href="/wiki/File_Module#file:children">file:children</a>.<br/>
  :
  : @param $path value of type xs:string
  : @return value of type xs:string?

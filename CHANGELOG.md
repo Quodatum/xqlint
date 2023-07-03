@@ -1,4 +1,5 @@
-## [0.2.4] 2023-06-20
+## [0.2.4] 2023-07-03
+* [fix] wiki scraping for basex v10
 * [add] `processors.json` 
 * [add] getProcessors() on XQLint. 
 * [mod] parser generator task now a npm script, replacing grunt task.

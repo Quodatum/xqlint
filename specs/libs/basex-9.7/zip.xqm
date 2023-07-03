@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809114918/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to handle ZIP archives. The contents of ZIP files can be extracted and listed, and new archives can be created. The module is based on the <a href="https://web.archive.org/web/20200809114918/http://expath.org/spec/zip">EXPath ZIP Module</a>. Please note that the ZIP module is not being actively maintained but is still distributed for compatibility with older applications. We recommend you use the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809114918/https://docs.basex.org/wiki/Archive_Module">Archive Module</a> wherever possible.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to handle ZIP archives. The contents of ZIP files can be extracted and listed, and new archives can be created. The module is based on the <a href="http://expath.org/spec/zip">EXPath ZIP Module</a>. Please note that the ZIP module is not being actively maintained but is still distributed for compatibility with older applications. We recommend you use the <a href="http://docs.basex.org/wiki/Archive_Module">Archive Module</a> wherever possible.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/ZIP_Module
+ : @see /wiki/ZIP_Module
  :)
 module namespace zip = "http://expath.org/ns/zip";
 declare namespace experr = "http://expath.org/ns/error";
@@ -53,7 +53,7 @@ declare function zip:text-entry($uri as xs:string, $path as xs:string, $encoding
 declare function zip:xml-entry($uri as xs:string, $path as xs:string) as document-node() external;
 
 (:~ 
- : Extracts the HTML file at <code>$path</code> within the ZIP file located at <code>$uri</code> and returns it as a document node. The file is converted to XML first if <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20200809114918/https://docs.basex.org/wiki/Parsers#HTML_Parser">Tagsoup</a> is found in the classpath.
+ : Extracts the HTML file at <code>$path</code> within the ZIP file located at <code>$uri</code> and returns it as a document node. The file is converted to XML first if <a href="http://docs.basex.org/wiki/Parsers#HTML_Parser">Tagsoup</a> is found in the classpath.
  :
  : @param $uri value of type xs:string
  : @param $path value of type xs:string
@@ -64,7 +64,7 @@ declare function zip:xml-entry($uri as xs:string, $path as xs:string) as documen
 declare function zip:html-entry($uri as xs:string, $path as xs:string) as document-node() external;
 
 (:~ 
- : Generates an <a href="https://web.archive.org/web/20200809114918/http://expath.org/spec/zip#spec-file-handling-elements-sect">ZIP XML Representation</a> of the hierarchical structure of the ZIP file located at <code>$uri</code> and returns it as an element node. The file contents are not returned by this function.
+ : Generates an <a href="http://expath.org/spec/zip#spec-file-handling-elements-sect">ZIP XML Representation</a> of the hierarchical structure of the ZIP file located at <code>$uri</code> and returns it as an element node. The file contents are not returned by this function.
  :
  : @param $uri value of type xs:string
  : @return value of type element(zip:file)
@@ -74,7 +74,7 @@ declare function zip:html-entry($uri as xs:string, $path as xs:string) as docume
 declare function zip:entries($uri as xs:string) as element(zip:file) external;
 
 (:~ 
- : Creates a new ZIP archive with the characteristics described by <code>$zip</code>, the <a href="https://web.archive.org/web/20200809114918/http://expath.org/spec/zip#spec-file-handling-elements-sect">ZIP XML Representation</a>.
+ : Creates a new ZIP archive with the characteristics described by <code>$zip</code>, the <a href="http://expath.org/spec/zip#spec-file-handling-elements-sect">ZIP XML Representation</a>.
  :
  : @param $zip value of type element(zip:file)
  : @error experr:ZIP0001 an addressed file does not exist.
@@ -84,7 +84,7 @@ declare function zip:entries($uri as xs:string) as element(zip:file) external;
 declare function zip:zip-file($zip as element(zip:file)) as empty-sequence() external;
 
 (:~ 
- : Updates an existing ZIP archive or creates a modifed copy, based on the characteristics described by <code>$zip</code>, the <a href="https://web.archive.org/web/20200809114918/http://expath.org/spec/zip#spec-file-handling-elements-sect">ZIP XML Representation</a>. The <code>$output</code> argument is the URI where the modified ZIP file is copied to.
+ : Updates an existing ZIP archive or creates a modifed copy, based on the characteristics described by <code>$zip</code>, the <a href="http://expath.org/spec/zip#spec-file-handling-elements-sect">ZIP XML Representation</a>. The <code>$output</code> argument is the URI where the modified ZIP file is copied to.
  :
  : @param $zip value of type element(zip:file)
  : @param $output value of type xs:string

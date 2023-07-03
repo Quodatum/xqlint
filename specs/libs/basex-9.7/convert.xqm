@@ -1,13 +1,13 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to convert data between different formats.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to convert data between different formats.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Conversion_Module
+ : @see /wiki/Conversion_Module
  :)
 module namespace convert = "http://basex.org/modules/convert";
 
 (:~ 
- : Converts the specifed <code>$bytes</code> (<code>xs:base64Binary</code>, <code>xs:hexBinary</code>) to a string: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul>
+ : Converts the specifed <code>$bytes</code> (<code>xs:base64Binary</code>, <code>xs:hexBinary</code>) to a string: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul>
  :
  : @param $bytes value of type xs:anyAtomicType
  : @return value of type xs:string
@@ -17,7 +17,7 @@ module namespace convert = "http://basex.org/modules/convert";
 declare function convert:binary-to-string($bytes as xs:anyAtomicType) as xs:string external;
 
 (:~ 
- : Converts the specifed <code>$bytes</code> (<code>xs:base64Binary</code>, <code>xs:hexBinary</code>) to a string: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul>
+ : Converts the specifed <code>$bytes</code> (<code>xs:base64Binary</code>, <code>xs:hexBinary</code>) to a string: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul>
  :
  : @param $bytes value of type xs:anyAtomicType
  : @param $encoding value of type xs:string
@@ -28,7 +28,7 @@ declare function convert:binary-to-string($bytes as xs:anyAtomicType) as xs:stri
 declare function convert:binary-to-string($bytes as xs:anyAtomicType, $encoding as xs:string) as xs:string external;
 
 (:~ 
- : Converts the specifed <code>$bytes</code> (<code>xs:base64Binary</code>, <code>xs:hexBinary</code>) to a string: <ul> <li>The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument.</li> <li>By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�).</li> </ul>
+ : Converts the specifed <code>$bytes</code> (<code>xs:base64Binary</code>, <code>xs:hexBinary</code>) to a string: <ul> <li> The UTF-8 default encoding can be overwritten with the optional <code>$encoding</code> argument. </li> <li> By default, invalid characters will be rejected. If <code>$fallback</code> is set to true, these characters will be replaced with the Unicode replacement character <code>FFFD</code> (�). </li> </ul>
  :
  : @param $bytes value of type xs:anyAtomicType
  : @param $encoding value of type xs:string
@@ -82,7 +82,7 @@ declare function convert:string-to-hex($string as xs:string) as xs:hexBinary ext
 declare function convert:string-to-hex($string as xs:string, $encoding as xs:string) as xs:hexBinary external;
 
 (:~ 
- : Converts the specified <code>$integers</code> to an item of type <code>xs:base64Binary</code>: <ul> <li>Only the first 8 bits of the supplied integers will be considered.</li> <li>Conversion of byte sequences is very efficient, as items of binary type are internally represented as byte arrays.</li> </ul>
+ : Converts the specified <code>$integers</code> to an item of type <code>xs:base64Binary</code>: <ul> <li> Only the first 8 bits of the supplied integers will be considered. </li> <li> Conversion of byte sequences is particularly cheap, as items of binary type are internally represented as byte arrays. </li> </ul>
  :
  : @param $integers value of type xs:integer*
  : @return value of type xs:base64Binary
@@ -90,7 +90,7 @@ declare function convert:string-to-hex($string as xs:string, $encoding as xs:str
 declare function convert:integers-to-base64($integers as xs:integer*) as xs:base64Binary external;
 
 (:~ 
- : Converts the specified <code>$integers</code> to an item of type <code>xs:hexBinary</code>: <ul> <li>Only the first 8 bits of the supplied integers will be considered.</li> <li>Conversion of byte sequences is very efficient, as items of binary type are internally represented as byte arrays.</li> </ul>
+ : Converts the specified <code>$integers</code> to an item of type <code>xs:hexBinary</code>: <ul> <li> Only the first 8 bits of the supplied integers will be considered. </li> <li> Conversion of byte sequences is particularly cheap, as items of binary type are internally represented as byte arrays. </li> </ul>
  :
  : @param $integers value of type xs:integer*
  : @return value of type xs:hexBinary
@@ -165,39 +165,3 @@ declare function convert:integer-to-dayTime($milliseconds as xs:integer) as xs:d
  : @return value of type xs:integer
  :)
 declare function convert:dayTime-to-integer($dayTime as xs:dayTimeDuration) as xs:integer external;
-
-(:~ 
- : Encodes the specified <code>$key</code> (with the optional <code>$lax</code> conversion method) to a valid NCName representation, which can be used to create an element node: <ul> <li>An empty string is converted to a single underscore (<code>_</code>).</li> <li>Existing underscores are rewritten to two underscores (<code>__</code>).</li> <li>Characters that are no valid NCName characters are rewritten to an underscore and the character’s four-digit Unicode. For example, the exclamation mark <code>?</code> is transformed to <code>_003f</code>.</li> <li>If lax conversion is chosen, invalid characters are replaced with underscores or (when invalid as first character of an element name) prefixed with an underscore. The resulting string may be better readable, but it cannot necessarily be converted back to the original form.</li> </ul> <p>This encoding is employed by the <code>direct</code> conversion format in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/JSON_Module">JSON Module</a> and the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/CSV_Module">CSV Module</a>. </p>
- :
- : @param $key value of type xs:string
- : @return value of type xs:string
- :)
-declare function convert:encode-key($key as xs:string) as xs:string external;
-
-(:~ 
- : Encodes the specified <code>$key</code> (with the optional <code>$lax</code> conversion method) to a valid NCName representation, which can be used to create an element node: <ul> <li>An empty string is converted to a single underscore (<code>_</code>).</li> <li>Existing underscores are rewritten to two underscores (<code>__</code>).</li> <li>Characters that are no valid NCName characters are rewritten to an underscore and the character’s four-digit Unicode. For example, the exclamation mark <code>?</code> is transformed to <code>_003f</code>.</li> <li>If lax conversion is chosen, invalid characters are replaced with underscores or (when invalid as first character of an element name) prefixed with an underscore. The resulting string may be better readable, but it cannot necessarily be converted back to the original form.</li> </ul> <p>This encoding is employed by the <code>direct</code> conversion format in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/JSON_Module">JSON Module</a> and the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/CSV_Module">CSV Module</a>. </p>
- :
- : @param $key value of type xs:string
- : @param $lax value of type xs:boolean
- : @return value of type xs:string
- :)
-declare function convert:encode-key($key as xs:string, $lax as xs:boolean) as xs:string external;
-
-(:~ 
- : Decodes the specified <code>$key</code> (with the optional <code>$lax</code> conversion method) to the original string representation.<br/>Keys supplied to this function are usually element names from documents that have been created with the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/JSON_Module">JSON Module</a> or <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/CSV_Module">CSV Module</a>.
- :
- : @param $key value of type xs:string
- : @return value of type xs:string
- : @error convert:key The specified key cannot be decoded to its original representation.
- :)
-declare function convert:decode-key($key as xs:string) as xs:string external;
-
-(:~ 
- : Decodes the specified <code>$key</code> (with the optional <code>$lax</code> conversion method) to the original string representation.<br/>Keys supplied to this function are usually element names from documents that have been created with the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/JSON_Module">JSON Module</a> or <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/CSV_Module">CSV Module</a>.
- :
- : @param $key value of type xs:string
- : @param $lax value of type xs:boolean
- : @return value of type xs:string
- : @error convert:key The specified key cannot be decoded to its original representation.
- :)
-declare function convert:decode-key($key as xs:string, $lax as xs:boolean) as xs:string external;

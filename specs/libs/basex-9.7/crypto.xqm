@@ -1,62 +1,42 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231031/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to perform cryptographic operations in XQuery. The cryptographic module is based on an early draft of the <a href="https://web.archive.org/web/20220623231031/http://expath.org/spec/crypto/20110810">EXPath Cryptographic Module</a> and provides the following functionality: creation of message authentication codes (HMAC), encryption and decryption, and creation and validation of XML Digital Signatures.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to perform cryptographic operations in XQuery. The cryptographic module is based on an early draft of the <a href="http://expath.org/spec/crypto">EXPath Cryptographic Module</a> and provides the following functionality: creation of message authentication codes (HMAC), encryption and decryption, and creation and validation of XML Digital Signatures.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Cryptographic_Module
+ : @see /wiki/Cryptographic_Module
  :)
 module namespace crypto = "http://expath.org/ns/crypto";
 declare namespace experr = "http://expath.org/ns/error";
 
 (:~ 
- : Creates an authentication code for the specified <code>$data</code> via a cryptographic hash function: <ul> <li> <code>$key</code> must not be empty.</li> <li> <code>$algorithm</code> describes the hash algorithm which is used for encryption. Currently supported are <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code>. Default is <code>md5</code>.</li> <li> <code>$encoding</code> must either be <code>hex</code> or <code>base64</code>; it specifies the encoding of the returned authentication code. Default is <code>base64</code>.</li> </ul>
+ : Creates a message authentication code via a cryptographic hash function and a secret <code>$key</code>. <br/> <p> <code>$encoding</code> must either be <code>hex</code>, <code>base64</code> or the empty string and specifies the encoding of the returned authentication code. <b>Default is <code>base64</code> </b>.<br/> <code>$algorithm</code> describes the hash algorithm which is used for encryption. Currently supported are <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code>. <b>Default is <code>md5</code> </b>. </p>
  :
- : @param $data value of type xs:anyAtomicType
+ : @param $message value of type xs:string
  : @param $key value of type xs:anyAtomicType
- : @param $algorithm value of type xs:string
  : @return value of type xs:string
  : @error experr:CX0013 the specified hashing algorithm is not supported.
  : @error experr:CX0014 the specified encoding method is not supported.
  : @error experr:CX0019 the specified secret key is invalid.
  :)
-declare function crypto:hmac($data as xs:anyAtomicType, $key as xs:anyAtomicType, $algorithm as xs:string) as xs:string external;
+declare function crypto:hmac($message as xs:string, $key as xs:anyAtomicType, $algorithm as xs:string) as xs:base64Binary external;
 
 (:~ 
- : Creates an authentication code for the specified <code>$data</code> via a cryptographic hash function: <ul> <li> <code>$key</code> must not be empty.</li> <li> <code>$algorithm</code> describes the hash algorithm which is used for encryption. Currently supported are <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code>. Default is <code>md5</code>.</li> <li> <code>$encoding</code> must either be <code>hex</code> or <code>base64</code>; it specifies the encoding of the returned authentication code. Default is <code>base64</code>.</li> </ul>
+ : Creates a message authentication code via a cryptographic hash function and a secret <code>$key</code>. <br/> <p> <code>$encoding</code> must either be <code>hex</code>, <code>base64</code> or the empty string and specifies the encoding of the returned authentication code. <b>Default is <code>base64</code> </b>.<br/> <code>$algorithm</code> describes the hash algorithm which is used for encryption. Currently supported are <code>md5</code>, <code>sha1</code>, <code>sha256</code>, <code>sha384</code>, <code>sha512</code>. <b>Default is <code>md5</code> </b>. </p>
  :
- : @param $data value of type xs:anyAtomicType
+ : @param $message value of type xs:string
  : @param $key value of type xs:anyAtomicType
- : @param $algorithm value of type xs:string
- : @param $encoding value of type xs:string
  : @return value of type xs:string
  : @error experr:CX0013 the specified hashing algorithm is not supported.
  : @error experr:CX0014 the specified encoding method is not supported.
  : @error experr:CX0019 the specified secret key is invalid.
  :)
-declare function crypto:hmac($data as xs:anyAtomicType, $key as xs:anyAtomicType, $algorithm as xs:string, $encoding as xs:string) as xs:string external;
+declare function crypto:hmac($message as xs:string, $key as xs:anyAtomicType, $algorithm as xs:string, $encoding as xs:string ) as xs:base64Binary external;
 
 (:~ 
- : Encrypts data with the specified key: <ul> <li> <code>$data</code> must be a string or binary item.</li> <li> <code>$type</code> must be <code>symmetric</code>.</li> <li> <code>$key</code> is the secret key which is used for both encryption and decryption of input data. It must be a string or binary item. Its length is fixed and depends on the chosen algorithm: 8 bytes for <code>DES</code>, 16 bytes for <code>AES</code>.</li> <li> <code>$algorithm</code> must either be <code>DES</code> or <code>AES</code>. Default is <code>DES</code>.</li> </ul>
+ : Encrypts the given input string.<br/> <p> <code>$encryption</code> must be <code>symmetric</code>, as asymmetric encryption is not supported so far. <b>Default is <code>symmetric</code> </b>.<br/> <code>$key</code> is the secret key which is used for both encryption and decryption of input data. Its length is fixed and depends on the chosen algorithm: <code>8 bytes for DES</code>, <code>16 bytes for AES</code>.<br/> <code>$algorithm</code> must either be <code>DES</code> or <code>AES</code>. Other algorithms are not supported so far, but, of course, can be added on demand. <b>Default is <code>DES</code> </b>. </p>
  :
- : @param $data value of type xs:anyAtomicType
- : @param $type value of type xs:string
- : @param $key value of type xs:anyAtomicType
- : @param $algorithm value of type xs:string
- : @return value of type xs:base64Binary
- : @error experr:CX0016 padding problems arise.
- : @error experr:CX0017 padding is incorrect.
- : @error experr:CX0018 the encryption type is not supported.
- : @error experr:CX0019 the secret key is invalid.
- : @error experr:CX0020 the block size is incorrect.
- : @error experr:CX0021 the specified encryption algorithm is not supported.
- :)
-declare function crypto:encrypt($data as xs:anyAtomicType, $type as xs:string, $key as xs:anyAtomicType, $algorithm as xs:string) as xs:base64Binary external;
-
-(:~ 
- : Encrypts data with the specified key: <ul> <li> <code>$data</code> must be a string or binary item.</li> <li> <code>$type</code> must be <code>symmetric</code>.</li> <li> <code>$key</code> is the secret key which is used for both encryption and decryption of input data. It must be a string or binary item. Its length is fixed and depends on the chosen algorithm: 8 bytes for <code>DES</code>, 16 bytes for <code>AES</code>.</li> <li> <code>$algorithm</code> must either be <code>DES</code> or <code>AES</code>. Default is <code>DES</code>.</li> </ul>
- :
- : @param $data value of type xs:anyAtomicType
- : @param $type value of type xs:string
- : @param $key value of type xs:anyAtomicType
+ : @param $input value of type xs:string
+ : @param $encryption value of type xs:string
+ : @param $key value of type xs:string
  : @param $algorithm value of type xs:string
  : @return value of type xs:string
  : @error experr:CX0016 padding problems arise.
@@ -66,7 +46,24 @@ declare function crypto:encrypt($data as xs:anyAtomicType, $type as xs:string, $
  : @error experr:CX0020 the block size is incorrect.
  : @error experr:CX0021 the specified encryption algorithm is not supported.
  :)
-declare function crypto:decrypt($data as xs:anyAtomicType, $type as xs:string, $key as xs:anyAtomicType, $algorithm as xs:string) as xs:string external;
+declare function crypto:encrypt($input as xs:string, $encryption as xs:string, $key as xs:string, $algorithm as xs:string) as xs:string external;
+
+(:~ 
+ : Decrypts the encrypted <code>$input</code>.<br/> <p> <code>$type</code> must be <code>symmetric</code>. An option for asymmetric encryption will most likely be added with another version of BaseX. <b>Default is <code>symmetric</code> </b>.<br/> <code>$key</code> is the secret key which is used for both encryption and decryption of input data. Its length is fixed and depends on the chosen algorithm: <code>8 bytes for DES</code>, <code>16 bytes for AES</code>.<br/> <code>$algorithm</code> must either be <code>DES</code> or <code>AES</code>. Other algorithms are not supported so far, but, of course, can be added on demand. <b>Default is <code>DES</code> </b>. </p>
+ :
+ : @param $input value of type xs:string
+ : @param $type value of type xs:string
+ : @param $key value of type xs:string
+ : @param $algorithm value of type xs:string
+ : @return value of type xs:string
+ : @error experr:CX0016 padding problems arise.
+ : @error experr:CX0017 padding is incorrect.
+ : @error experr:CX0018 the encryption type is not supported.
+ : @error experr:CX0019 the secret key is invalid.
+ : @error experr:CX0020 the block size is incorrect.
+ : @error experr:CX0021 the specified encryption algorithm is not supported.
+ :)
+declare function crypto:decrypt($input as xs:string, $type as xs:string, $key as xs:string, $algorithm as xs:string) as xs:string external;
 
 (:~ 
  : <code>$canonicalization</code> must either be <code>inclusive-with-comments</code>, <code>inclusive</code>, <code>exclusive-with-comments</code> or <code>exclusive</code>. <b>Default is <code>inclusive-with-comments</code> </b>.<br/> <p> <code>$digest</code> must be one of the following: <code>SHA1</code>, <code>SHA256</code> or <code>SHA512</code>. <b>Default is <code>SHA1</code> </b>.<br/> <code>$signature</code> must either be <code>RSA_SHA1</code> or <code>DSA_SHA1</code>. <b>Default is <code>RSA_SHA1</code> </b>.<br/> <code>$prefix</code> may be empty and prefixes the <code>Signature</code> element accordingly.<br/> <code>$type</code> is the signature type. It must either be <code>enveloped</code> or <code>enveloping</code> (detached signatures are not supported so far). <b>Default is <code>enveloped</code> </b>.<br/> <code>$xpath</code> is an arbitrary XPath expression which specifies a subset of the document that is to be signed.<br/> <code>$certificate</code> is the digitial certificate used to sign the input document.<br/> <code>$ext</code> may either be an <code>$xpath</code> expression or a <code>$certificate</code>.<br/> </p>

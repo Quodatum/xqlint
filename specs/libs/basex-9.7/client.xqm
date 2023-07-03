@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231028/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to access BaseX server instances from XQuery. With this module, you can execute database commands and evaluate XQuery expressions.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions to access BaseX server instances from XQuery. With this module, you can execute database commands and evaluate XQuery expressions. Please note that the client module should always be used to address independent BaseX server instances. You can create deadlocks if you evaluate a query with a server instance, and if you are addressing the same server instance in your query. See the following example: The read-only query cannot be processed, because the <code>conflict</code> database is currently write-locked by the main query. See <a href="http://docs.basex.org/wiki/Transaction_Management">Transaction Management</a> for more background information.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Client_Module
+ : @see /wiki/Client_Module
  :)
 module namespace client = "http://basex.org/modules/client";
 
@@ -19,7 +19,7 @@ module namespace client = "http://basex.org/modules/client";
 declare function client:connect($host as xs:string, $port as xs:integer, $user as xs:string, $password as xs:string) as xs:anyURI external;
 
 (:~ 
- : This function executes a <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231028/https://docs.basex.org/wiki/Commands">command</a> and returns the result as string. The parameter <code>$id</code> contains the session id returned by <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231028/https://docs.basex.org/wiki/Client_Module#client:connect">client:connect</a>. The <code>$command</code> argument represents a single command, which will be executed by the server.
+ : This function executes a <a href="http://docs.basex.org/wiki/Commands">command</a> and returns the result as string. The parameter <code>$id</code> contains the session id returned by <a href="http://docs.basex.org/wiki/Client_Module#client:connect">client:connect</a>. The <code>$command</code> argument represents a single command, which will be executed by the server.
  :
  : @param $id value of type xs:anyURI
  : @param $command value of type xs:string
@@ -30,7 +30,7 @@ declare function client:connect($host as xs:string, $port as xs:integer, $user a
 declare function client:execute($id as xs:anyURI, $command as xs:string) as xs:string external;
 
 (:~ 
- : This function returns an information string, created by the last call of <a href="https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Client_Module#client:execute">client:execute</a>. <code>$id</code> specifies the session id.
+ : This function returns an information string, created by the last call of <a href="/wiki/Client_Module#client:execute">client:execute</a>. <code>$id</code> specifies the session id.
  :
  : @param $id value of type xs:anyURI
  : @return value of type xs:string
@@ -38,7 +38,7 @@ declare function client:execute($id as xs:anyURI, $command as xs:string) as xs:s
 declare function client:info($id as xs:anyURI) as xs:string external;
 
 (:~ 
- : Evaluates a query and returns the result as sequence. The parameter <code>$id</code> contains the session id returned by <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231028/https://docs.basex.org/wiki/Client_Module#client:connect">client:connect</a>, and <code>$query</code> represents the query string, which will be evaluated by the server.<br/>Variables and the context item can be declared via <code>$bindings</code>. The specified keys must be QNames or strings: <ul> <li>If a key is a QName, it will be directly adopted as variable name.</li> <li>If a key is a string, it may be prefixed with a dollar sign. A namespace can be specified using the <a href="https://web.archive.org/web/20220623231028/http://www.jclark.com/xml/xmlns.htm">Clark Notation</a>. If the specified string is empty, the value will be bound to the context item.</li> </ul>
+ : Evaluates a query and returns the result as sequence. The parameter <code>$id</code> contains the session id returned by <a href="http://docs.basex.org/wiki/Client_Module#client:connect">client:connect</a>, and <code>$query</code> represents the query string, which will be evaluated by the server.<br/>Variables and the context item can be declared via <code>$bindings</code>. The specified keys must be QNames or strings: <ul> <li> If a key is a QName, it will be directly adopted as variable name. </li> <li> If a key is a string, it may be prefixed with a dollar sign. A namespace can be specified using the <a href="http://www.jclark.com/xml/xmlns.htm">Clark Notation</a>. If the specified string is empty, the value will be bound to the context item. </li> </ul>
  :
  : @param $id value of type xs:anyURI
  : @param $query value of type xs:string
@@ -50,7 +50,7 @@ declare function client:info($id as xs:anyURI) as xs:string external;
 declare function client:query($id as xs:anyURI, $query as xs:string) as item()* external;
 
 (:~ 
- : Evaluates a query and returns the result as sequence. The parameter <code>$id</code> contains the session id returned by <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231028/https://docs.basex.org/wiki/Client_Module#client:connect">client:connect</a>, and <code>$query</code> represents the query string, which will be evaluated by the server.<br/>Variables and the context item can be declared via <code>$bindings</code>. The specified keys must be QNames or strings: <ul> <li>If a key is a QName, it will be directly adopted as variable name.</li> <li>If a key is a string, it may be prefixed with a dollar sign. A namespace can be specified using the <a href="https://web.archive.org/web/20220623231028/http://www.jclark.com/xml/xmlns.htm">Clark Notation</a>. If the specified string is empty, the value will be bound to the context item.</li> </ul>
+ : Evaluates a query and returns the result as sequence. The parameter <code>$id</code> contains the session id returned by <a href="http://docs.basex.org/wiki/Client_Module#client:connect">client:connect</a>, and <code>$query</code> represents the query string, which will be evaluated by the server.<br/>Variables and the context item can be declared via <code>$bindings</code>. The specified keys must be QNames or strings: <ul> <li> If a key is a QName, it will be directly adopted as variable name. </li> <li> If a key is a string, it may be prefixed with a dollar sign. A namespace can be specified using the <a href="http://www.jclark.com/xml/xmlns.htm">Clark Notation</a>. If the specified string is empty, the value will be bound to the context item. </li> </ul>
  :
  : @param $id value of type xs:anyURI
  : @param $query value of type xs:string

@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623230955/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for installing, listing and deleting modules contained in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623230955/https://docs.basex.org/wiki/Repository">Repository</a>.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for installing, listing and deleting modules contained in the <a href="http://docs.basex.org/wiki/Repository">Repository</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Repository_Module
+ : @see /wiki/Repository_Module
  :)
 module namespace repo = "http://basex.org/modules/repo";
 

@@ -1,8 +1,8 @@
 (:~ 
- : 
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains functions for accessing and modifying server-side session information. This module is mainly useful in the context of <a href="http://docs.basex.org/wiki/Web_Application">Web Applications</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Session_Module
+ : @see /wiki/Session_Module
  :)
 module namespace session = "http://basex.org/modules/session";
 
@@ -10,7 +10,6 @@ module namespace session = "http://basex.org/modules/session";
  : Returns the session ID of a servlet request.
  :
  : @return value of type xs:string
- : @error session:not-found No session is available for the current client.
  :)
 declare function session:id() as xs:string external;
 
@@ -18,7 +17,6 @@ declare function session:id() as xs:string external;
  : Returns the creation time of a session.
  :
  : @return value of type xs:dateTime
- : @error session:not-found No session is available for the current client.
  :)
 declare function session:created() as xs:dateTime external;
 
@@ -26,12 +24,11 @@ declare function session:created() as xs:dateTime external;
  : Returns the last access time of a session.
  :
  : @return value of type xs:dateTime
- : @error session:not-found No session is available for the current client.
  :)
 declare function session:accessed() as xs:dateTime external;
 
 (:~ 
- : Returns the names of all attributes bound to the current session.
+ : Returns the names of all variables bound to the current session.
  :
  : @return value of type xs:string*
  :)
@@ -42,6 +39,7 @@ declare function session:names() as xs:string* external;
  :
  : @param $name value of type xs:string
  : @return value of type item()*
+ : @error session:get the value of an attribute could not be retrieved.
  :)
 declare function session:get($name as xs:string) as item()* external;
 
@@ -51,6 +49,7 @@ declare function session:get($name as xs:string) as item()* external;
  : @param $name value of type xs:string
  : @param $default value of type item()*
  : @return value of type item()*
+ : @error session:get the value of an attribute could not be retrieved.
  :)
 declare function session:get($name as xs:string, $default as item()*) as item()* external;
 
@@ -59,7 +58,7 @@ declare function session:get($name as xs:string, $default as item()*) as item()*
  :
  : @param $name value of type xs:string
  : @param $value value of type item()*
- : @error session:not-found No session is available for the current client.
+ : @error session:set The supplied value cannot be materialized.
  :)
 declare function session:set($name as xs:string, $value as item()*) as empty-sequence() external;
 

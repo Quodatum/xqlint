@@ -1,8 +1,8 @@
 (:~ 
- : The math <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231028/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href="https://web.archive.org/web/20220623231028/https://www.w3.org/TR/xpath-functions-31/">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module.
+ : The math <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href="http://www.w3.org/TR/xpath-functions-30/">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Math_Module
+ : @see /wiki/Math_Module
  :)
 module namespace math = "http://www.w3.org/2005/xpath-functions/math";
 

@@ -1,8 +1,8 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> can only be called from users with <i>Admin</i> permissions. It contains functions for accessing and modifying all registered server-side sessions. This module is mainly useful in the context of <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231027/https://docs.basex.org/wiki/Web_Application">Web Applications</a>.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> can only be called from users with <i>Admin</i> permissions. It contains functions for accessing and modifying all registered server-side sessions. This module is mainly useful in the context of <a href="http://docs.basex.org/wiki/Web_Application">Web Applications</a>.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Sessions_Module
+ : @see /wiki/Sessions_Module
  :)
 module namespace sessions = "http://basex.org/modules/sessions";
 
@@ -30,7 +30,7 @@ declare function sessions:created($id as xs:string) as xs:dateTime external;
 declare function sessions:accessed($id as xs:string) as xs:dateTime external;
 
 (:~ 
- : Returns the names of all attributes bound to the session specified by <code>$id</code>.
+ : Returns the names of all variables bound to the session specified by <code>$id</code>.
  :
  : @param $id value of type xs:string
  : @return value of type xs:string*
@@ -43,6 +43,7 @@ declare function sessions:names($id as xs:string) as xs:string* external;
  : @param $id value of type xs:string
  : @param $name value of type xs:string
  : @return value of type item()*
+ : @error sessions:get the value of an attribute could not be retrieved.
  :)
 declare function sessions:get($id as xs:string, $name as xs:string) as item()* external;
 
@@ -53,6 +54,7 @@ declare function sessions:get($id as xs:string, $name as xs:string) as item()* e
  : @param $name value of type xs:string
  : @param $default value of type item()*
  : @return value of type item()*
+ : @error sessions:get the value of an attribute could not be retrieved.
  :)
 declare function sessions:get($id as xs:string, $name as xs:string, $default as item()*) as item()* external;
 
@@ -62,6 +64,7 @@ declare function sessions:get($id as xs:string, $name as xs:string, $default as 
  : @param $id value of type xs:string
  : @param $name value of type xs:string
  : @param $value value of type item()*
+ : @error sessions:set The supplied value cannot be materialized.
  :)
 declare function sessions:set($id as xs:string, $name as xs:string, $value as item()*) as empty-sequence() external;
 

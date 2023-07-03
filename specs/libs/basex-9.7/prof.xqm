@@ -1,13 +1,13 @@
 (:~ 
- : This <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains various functions to test and profile code, and to dump information to standard output.
+ : This <a href="http://docs.basex.org/wiki/Module_Library">XQuery Module</a> contains various functions to test and profile code, and to dump information to standard output.
  :
  : @author BaseX Team
- : @see https://web.archive.org/web/20220623231014/https://docs.basex.org/wiki/Profiling_Module
+ : @see /wiki/Profiling_Module
  :)
 module namespace prof = "http://basex.org/modules/prof";
 
 (:~ 
- : Measures the execution time and memory consumption required for evaluating the specified <code>$expression</code> and returns a map with the results. The following <code>$options</code> are available: <ul> <li> <code>time</code>: Include execution time in result as <code>xs:decimal</code> (unit: milliseconds; default: true).</li> <li> <code>memory</code>: Include memory consumption in result as <code>xs:integer</code> (unit: bytes; default: false).</li> <li> <code>value</code>: Include value in result (default: true).</li> </ul> <p>Helpful notes: </p> <ul> <li>If you are not interested in some of the returned results, you should disable them to save time and memory.</li> <li>Profiling might change the execution behavior of your code: An expression that might be executed iteratively will be cached by the profiling function.</li> <li>If a value has a compact internal representation, memory consumption will be very low, even if the serialized result may consume much more memory.</li> <li>Please note that memory profiling is only approximative, so it can be quite misleading. If the memory option is enabled, main-memory will be garbage-collected before and after evaluation to improve the quality of the measurement.</li> </ul>
+ : Measures the execution time and memory consumption required for evaluating the specified <code>$expression</code> and returns a map with the results. The following <code>$options</code> are available: <ul> <li> <code>memory</code>: Include memory consumption in result (unit: bytes; default: true). </li> <li> <code>time</code>: Include execution time in result (unit: milliseconds; default: true). </li> <li> <code>value</code>: Include value in result (default: true). </li> </ul> <p>Helpful notes: </p> <ul> <li> If you are not interested in some of the returned results, you should disable them to save time and memory. </li> <li> Profiling might change the execution behavior of your code: An expression that might be executed iteratively will be cached by the profiling function. </li> <li> If a value has a compact internal representation, memory consumption will be very low, even if the serialized result may consume much more memory. </li> <li> Please note that memory profiling is only approximative, so it can be quite misleading. If the memory option is enabled, main-memory will be garbage-collected before and after evaluation to improve the quality of the measurement. </li> </ul>
  :
  : @param $expression value of type item()
  : @return value of type item()*
@@ -15,7 +15,7 @@ module namespace prof = "http://basex.org/modules/prof";
 declare function prof:track($expression as item()) as item()* external;
 
 (:~ 
- : Measures the execution time and memory consumption required for evaluating the specified <code>$expression</code> and returns a map with the results. The following <code>$options</code> are available: <ul> <li> <code>time</code>: Include execution time in result as <code>xs:decimal</code> (unit: milliseconds; default: true).</li> <li> <code>memory</code>: Include memory consumption in result as <code>xs:integer</code> (unit: bytes; default: false).</li> <li> <code>value</code>: Include value in result (default: true).</li> </ul> <p>Helpful notes: </p> <ul> <li>If you are not interested in some of the returned results, you should disable them to save time and memory.</li> <li>Profiling might change the execution behavior of your code: An expression that might be executed iteratively will be cached by the profiling function.</li> <li>If a value has a compact internal representation, memory consumption will be very low, even if the serialized result may consume much more memory.</li> <li>Please note that memory profiling is only approximative, so it can be quite misleading. If the memory option is enabled, main-memory will be garbage-collected before and after evaluation to improve the quality of the measurement.</li> </ul>
+ : Measures the execution time and memory consumption required for evaluating the specified <code>$expression</code> and returns a map with the results. The following <code>$options</code> are available: <ul> <li> <code>memory</code>: Include memory consumption in result (unit: bytes; default: true). </li> <li> <code>time</code>: Include execution time in result (unit: milliseconds; default: true). </li> <li> <code>value</code>: Include value in result (default: true). </li> </ul> <p>Helpful notes: </p> <ul> <li> If you are not interested in some of the returned results, you should disable them to save time and memory. </li> <li> Profiling might change the execution behavior of your code: An expression that might be executed iteratively will be cached by the profiling function. </li> <li> If a value has a compact internal representation, memory consumption will be very low, even if the serialized result may consume much more memory. </li> <li> Please note that memory profiling is only approximative, so it can be quite misleading. If the memory option is enabled, main-memory will be garbage-collected before and after evaluation to improve the quality of the measurement. </li> </ul>
  :
  : @param $expression value of type item()
  : @param $options value of type map(*)?
@@ -24,7 +24,7 @@ declare function prof:track($expression as item()) as item()* external;
 declare function prof:track($expression as item(), $options as map(*)?) as item()* external;
 
 (:~ 
- : Measures the time needed to evaluate <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
+ : Measures the time needed to evaluate <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="http://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
  :
  : @param $expr value of type item()
  : @return value of type item()*
@@ -32,7 +32,7 @@ declare function prof:track($expression as item(), $options as map(*)?) as item(
 declare function prof:time($expr as item()) as item()* external;
 
 (:~ 
- : Measures the time needed to evaluate <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
+ : Measures the time needed to evaluate <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="http://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
  :
  : @param $expr value of type item()
  : @param $label value of type xs:string
@@ -41,7 +41,7 @@ declare function prof:time($expr as item()) as item()* external;
 declare function prof:time($expr as item(), $label as xs:string) as item()* external;
 
 (:~ 
- : Measures the memory allocated by evaluating <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
+ : Measures the memory allocated by evaluating <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="http://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
  :
  : @param $expr value of type item()
  : @return value of type item()*
@@ -49,7 +49,7 @@ declare function prof:time($expr as item(), $label as xs:string) as item()* exte
 declare function prof:memory($expr as item()) as item()* external;
 
 (:~ 
- : Measures the memory allocated by evaluating <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
+ : Measures the memory allocated by evaluating <code>$expr</code> and outputs a string to standard error or, if the GUI is used, to the Info View. An optional <code>$label</code> may be specified to tag the profiling result. See <a href="http://docs.basex.org/wiki/Profiling_Module#prof:track">prof:track</a> for further notes.
  :
  : @param $expr value of type item()
  : @param $label value of type xs:string
@@ -72,22 +72,22 @@ declare function prof:current-ms() as xs:integer external;
 declare function prof:current-ns() as xs:integer external;
 
 (:~ 
- : Dumps a serialized representation of <code>$expr</code> to <code>STDERR</code>, optionally prefixed with <code>$label</code>, and returns an empty sequence. If the GUI is used, the dumped result is shown in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Graphical_User_Interface#Visualizations">Info View</a>.
+ : Dumps a serialized representation of <code>$expr</code> to <code>STDERR</code>, optionally prefixed with <code>$label</code>, and returns an empty sequence. If the GUI is used, the dumped result is shown in the <a href="http://docs.basex.org/wiki/Graphical_User_Interface#Visualizations">Info View</a>.
  :
- : @param $expr value of type item()*
+ : @param $expr value of type item()
  :)
-declare function prof:dump($expr as item()*) as empty-sequence() external;
+declare function prof:dump($expr as item()) as empty-sequence() external;
 
 (:~ 
- : Dumps a serialized representation of <code>$expr</code> to <code>STDERR</code>, optionally prefixed with <code>$label</code>, and returns an empty sequence. If the GUI is used, the dumped result is shown in the <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Graphical_User_Interface#Visualizations">Info View</a>.
+ : Dumps a serialized representation of <code>$expr</code> to <code>STDERR</code>, optionally prefixed with <code>$label</code>, and returns an empty sequence. If the GUI is used, the dumped result is shown in the <a href="http://docs.basex.org/wiki/Graphical_User_Interface#Visualizations">Info View</a>.
  :
- : @param $expr value of type item()*
+ : @param $expr value of type item()
  : @param $label value of type xs:string
  :)
-declare function prof:dump($expr as item()*, $label as xs:string) as empty-sequence() external;
+declare function prof:dump($expr as item(), $label as xs:string) as empty-sequence() external;
 
 (:~ 
- : Prints a list of all current local and global variable assignments to standard error or, if the GUI is used, to the Info View.<br/>As every query is optimized before being evaluated, not all of the original variables may be visible in the output. Moreover, many variables of function calls will disappear because functions are inlined. Function inlining can be turned off by setting <code> <a href="https://web.archive.org/web/20220623230943/https://docs.basex.org/web/20220623231026/https://docs.basex.org/wiki/Options#INLINELIMIT">INLINELIMIT</a> </code> to <code>0</code>.
+ : Prints a list of all current local and global variable assignments to standard error or, if the GUI is used, to the Info View.<br/>As every query is optimized before being evaluated, not all of the original variables may be visible in the output. Moreover, many variables of function calls will disappear because functions are inlined. Function inlining can be turned off by setting the <a href="http://docs.basex.org/wiki/Options#INLINELIMIT">INLINELIMIT</a> option to <code>0</code>.
  :)
 declare function prof:variables() as empty-sequence() external;
 
@@ -98,26 +98,6 @@ declare function prof:variables() as empty-sequence() external;
  : @return value of type item()*
  :)
 declare function prof:type($expr as item()*) as item()* external;
-
-(:~ 
- : Enforces Java garbage collection. If no <code>$count</code> is supplied, garbage will be collected once. Please note that this function should only be used for debugging purposes; in productive code, it is best to trust the garbage collecting strategies of Java.
- :)
-declare function prof:gc() as empty-sequence() external;
-
-(:~ 
- : Enforces Java garbage collection. If no <code>$count</code> is supplied, garbage will be collected once. Please note that this function should only be used for debugging purposes; in productive code, it is best to trust the garbage collecting strategies of Java.
- :
- : @param $count value of type xs:integer
- :)
-declare function prof:gc($count as xs:integer) as empty-sequence() external;
-
-(:~ 
- : Returns the value of the specified runtime <code>$option</code>. The following options exist: <ul> <li> <code>max</code>: Maximum memory that the Java virtual machine will attempt to use.</li> <li> <code>total</code>: Total memory in the Java virtual machine (varies over time).</li> <li> <code>used</code>: Currently used memory (varies over time, will shrink after garbage collection).</li> <li> <code>processors</code>: number of processors available to the Java virtual machine.</li> </ul>
- :
- : @param $name of xs:string value of type 
- : @return value of type xs:integer
- :)
-declare function prof:runtime($name as xs:string) as xs:integer external;
 
 (:~ 
  : Swallows all items of the specified <code>$value</code> and returns an empty sequence. This function is helpful if some code needs to be evaluated and if the actual result is irrelevant.
