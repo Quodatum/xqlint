@@ -1,11 +1,12 @@
 'use strict';
 // generate  packages json file for each processor from xqm files in dir
 var processors = {
-    'basex-9.7': { 'src': 'specs/libs/basex-9.7' },
-    'basex-10.6': { 'src': 'specs/libs/basex-10.0' },
-    'xpath-3.1': { 'src': 'specs/libs/w3c/xpath3.1-fn.xqm' }
-}
-var out = 'lib/packages/';
+    'basex-9.7': { 'src': 'packages.src/basex-9.7' },
+    'basex-10.6': { 'src': 'packages.src/basex-10.0' },
+    'xpath-3.1': { 'src': 'packages.src/xpath-3.1' }
+};
+
+var out = 'packages/';
 
 var path = require('path');
 var fs = require('fs');
@@ -39,34 +40,11 @@ function importMods(files) {
         if (syntaxError) {
             console.log("ERR: ", linter.getMarkers()[0].message);
         } else {
-            var xqdoc = linter.getXQDoc(false);
-            // var module = {
-            //     ns: xqdoc.moduleNamespace,
-            //     prefixes:["TODO"],
-            //     functions: {},
-            //     variables: {}
-            // };
-            // xqdoc.variables.forEach(function (v) {
-            //     const key = v.uri + '#' + v.name;
-            //     module.variables[key] = {
-            //         annotations: [],
-            //         name: v.name,
-            //         eqname: { uri: v.uri, name: v.name }
-            //     }
-            // });
-            // xqdoc.functions.forEach(function (fn) {
-            //     const arity = fn.params.length;
-            //     const key = fn.uri + '#' + fn.name + '#' + arity;
-            //     module.functions[key] = {
-            //         params: fn.params,
-            //         annotations: [],
-            //         name: fn.name,
-            //         arity: fn.arity,
-            //         eqname: { uri: fn.uri, name: fn.name }
-            //     };
-            // });
+            var xqdoc = linter.getXQDoc(true);
+          
             result[xqdoc.moduleNamespace] = xqdoc;
             console.log(xqdoc.moduleNamespace);
+           // console.log(xqdoc);
         }
     });
     return result;
@@ -74,7 +52,7 @@ function importMods(files) {
 Object.keys(processors).forEach(function (proc) {
     const src = processors[proc].src;
     var files = getFiles(src)
-    var xx = importMods(files)
+    var xx = structuredClone(importMods(files));
     console.log(Object.keys(xx));
     fs.writeFileSync(out + proc + ".json", JSON.stringify(xx, undefined, 1));
 

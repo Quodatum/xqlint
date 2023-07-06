@@ -1,0 +1,6464 @@
+{
+ "http://www.w3.org/2005/xpath-functions/math": {
+  "moduleNamespace": "http://www.w3.org/2005/xpath-functions/math",
+  "prefixes": [
+   "math"
+  ],
+  "namespaces": [],
+  "variables": [],
+  "functions": [
+   {
+    "name": "pi",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [],
+    "comments": {
+     "description": " Returns the <code>xs:double</code> value of the mathematical constant π whose lexical representation is 3.141592653589793.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double",
+     "pos": {
+      "sl": 6,
+      "sc": 70,
+      "el": 13,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 13,
+     "sc": 17,
+     "el": 13,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 13,
+     "sc": 17,
+     "el": 13,
+     "ec": 24
+    }
+   },
+   {
+    "name": "sqrt",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the square root of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the <code>xs:double</code> value of the mathematical square root of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 13,
+      "sc": 49,
+      "el": 21,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 21,
+     "sc": 17,
+     "el": 21,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 21,
+     "sc": 17,
+     "el": 21,
+     "ec": 26
+    }
+   },
+   {
+    "name": "sin",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the sine of the <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the sine of <code>$arg</code>, treated as an angle in radians.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 21,
+      "sc": 70,
+      "el": 29,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 29,
+     "sc": 17,
+     "el": 29,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 29,
+     "sc": 17,
+     "el": 29,
+     "ec": 25
+    }
+   },
+   {
+    "name": "cos",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the cosine of <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the cosine of <code>$arg</code>, treated as an angle in radians.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 29,
+      "sc": 69,
+      "el": 37,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 37,
+     "sc": 17,
+     "el": 37,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 37,
+     "sc": 17,
+     "el": 37,
+     "ec": 25
+    }
+   },
+   {
+    "name": "tan",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the tangent of <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the tangent of <code>$arg</code>, treated as an angle in radians.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 37,
+      "sc": 69,
+      "el": 45,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 45,
+     "sc": 17,
+     "el": 45,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 45,
+     "sc": 17,
+     "el": 45,
+     "ec": 25
+    }
+   },
+   {
+    "name": "asin",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the arc sine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc sine of <code>$arg</code>, returned as an angle in radians in the range -π/2 to +π/2.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 45,
+      "sc": 69,
+      "el": 53,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 53,
+     "sc": 17,
+     "el": 53,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 53,
+     "sc": 17,
+     "el": 53,
+     "ec": 26
+    }
+   },
+   {
+    "name": "acos",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the arc cosine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc cosine of <code>$arg</code>, returned as an angle in radians in the range 0 to +π.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 53,
+      "sc": 70,
+      "el": 61,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 61,
+     "sc": 17,
+     "el": 61,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 61,
+     "sc": 17,
+     "el": 61,
+     "ec": 26
+    }
+   },
+   {
+    "name": "atan",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the arc tangent of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc tangent of <code>$arg</code>, returned as an angle in radians in the range -π/2 to +π/2.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 61,
+      "sc": 70,
+      "el": 69,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 69,
+     "sc": 17,
+     "el": 69,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 69,
+     "sc": 17,
+     "el": 69,
+     "ec": 26
+    }
+   },
+   {
+    "name": "atan2",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg1 as xs:double?",
+     "$arg2 as xs:double"
+    ],
+    "comments": {
+     "description": " Returns the arc tangent of <code>$arg1</code> divided by <code>$arg2</code>, the result being in the range -π/2 to +π/2 radians.<br/>If <code>$arg1</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc tangent of <code>$arg1</code> divided by <code>$arg2</code>, returned as an angle in radians in the range -π to +π.",
+     "params": {
+      "$arg1": "value of type xs:double?",
+      "$arg2": "value of type xs:double"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 69,
+      "sc": 70,
+      "el": 78,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 78,
+     "sc": 17,
+     "el": 78,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 78,
+     "sc": 17,
+     "el": 78,
+     "ec": 27
+    }
+   },
+   {
+    "name": "pow",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg1 as xs:double?",
+     "$arg2 as xs:double"
+    ],
+    "comments": {
+     "description": " Returns <code>$arg1</code> raised to the power of <code>$arg2</code>.<br/>If <code>$arg1</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the <code>$arg1</code> raised to the power of <code>$arg2</code>.",
+     "params": {
+      "$arg1": "value of type xs:double?",
+      "$arg2": "value of type xs:double"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 78,
+      "sc": 92,
+      "el": 87,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 87,
+     "sc": 17,
+     "el": 87,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 87,
+     "sc": 17,
+     "el": 87,
+     "ec": 25
+    }
+   },
+   {
+    "name": "exp",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns <i>e</i> raised to the power of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the value of <i>e</i> raised to the power of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 87,
+      "sc": 90,
+      "el": 95,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 95,
+     "sc": 17,
+     "el": 95,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 95,
+     "sc": 17,
+     "el": 95,
+     "ec": 25
+    }
+   },
+   {
+    "name": "log",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the natural logarithm of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the natural logarithm (base <i>e</i>) of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 95,
+      "sc": 69,
+      "el": 103,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 103,
+     "sc": 17,
+     "el": 103,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 103,
+     "sc": 17,
+     "el": 103,
+     "ec": 25
+    }
+   },
+   {
+    "name": "log10",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the base 10 logarithm of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the base 10 logarithm of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 103,
+      "sc": 69,
+      "el": 111,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 111,
+     "sc": 17,
+     "el": 111,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 111,
+     "sc": 17,
+     "el": 111,
+     "ec": 27
+    }
+   },
+   {
+    "name": "e",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [],
+    "comments": {
+     "description": " Returns the <code>xs:double</code> value of the mathematical constant <i>e</i> whose lexical representation is 2.718281828459045.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double",
+     "pos": {
+      "sl": 111,
+      "sc": 71,
+      "el": 118,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 118,
+     "sc": 17,
+     "el": 118,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 118,
+     "sc": 17,
+     "el": 118,
+     "ec": 23
+    }
+   },
+   {
+    "name": "sinh",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the hyperbolic sine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic sine of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 118,
+      "sc": 48,
+      "el": 126,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 126,
+     "sc": 17,
+     "el": 126,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 126,
+     "sc": 17,
+     "el": 126,
+     "ec": 26
+    }
+   },
+   {
+    "name": "cosh",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the hyperbolic cosine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic cosine of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 126,
+      "sc": 70,
+      "el": 134,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 134,
+     "sc": 17,
+     "el": 134,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 134,
+     "sc": 17,
+     "el": 134,
+     "ec": 26
+    }
+   },
+   {
+    "name": "tanh",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "comments": {
+     "description": " Returns the hyperbolic tangent of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic tangent of <code>$arg</code>.",
+     "params": {
+      "$arg": "value of type xs:double?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:double?",
+     "pos": {
+      "sl": 134,
+      "sc": 70,
+      "el": 142,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 142,
+     "sc": 17,
+     "el": 142,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 142,
+     "sc": 17,
+     "el": 142,
+     "ec": 26
+    }
+   },
+   {
+    "name": "crc32",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "params": [
+     "$string as xs:string?"
+    ],
+    "comments": {
+     "description": " Calculates the CRC32 check sum of the given <code>$string</code>.<br/>If an empty sequence is supplied, the empty sequence is returned.",
+     "params": {
+      "$string": "value of type xs:string?"
+     },
+     "errors": [],
+     "others": [],
+     "return": "value of type xs:hexBinary?",
+     "pos": {
+      "sl": 142,
+      "sc": 70,
+      "el": 150,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 150,
+     "sc": 17,
+     "el": 150,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 150,
+     "sc": 17,
+     "el": 150,
+     "ec": 27
+    }
+   }
+  ],
+  "description": " The math <a href=\"http://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"http://www.w3.org/TR/xpath-functions-30/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module."
+ },
+ "http://www.w3.org/2005/xpath-functions": {
+  "moduleNamespace": "http://www.w3.org/2005/xpath-functions",
+  "prefixes": [
+   "fn"
+  ],
+  "namespaces": [],
+  "variables": [],
+  "functions": [
+   {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Calling the fn:error function raises an application-defined error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1,
+      "sc": 63,
+      "el": 6,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 6,
+     "sc": 17,
+     "el": 6,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 6,
+     "sc": 17,
+     "el": 6,
+     "ec": 25
+    }
+   },
+   {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$code as xs:QName?"
+    ],
+    "comments": {
+     "description": " Calling the fn:error function raises an application-defined error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 6,
+      "sc": 37,
+      "el": 11,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 11,
+     "sc": 17,
+     "el": 11,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 11,
+     "sc": 17,
+     "el": 11,
+     "ec": 25
+    }
+   },
+   {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$code as xs:QName?",
+     "$description as xs:string"
+    ],
+    "comments": {
+     "description": " Calling the fn:error function raises an application-defined error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 11,
+      "sc": 55,
+      "el": 16,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 16,
+     "sc": 17,
+     "el": 16,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 16,
+     "sc": 17,
+     "el": 16,
+     "ec": 25
+    }
+   },
+   {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$code as xs:QName?",
+     "$description as xs:string",
+     "$error-object as item()*"
+    ],
+    "comments": {
+     "description": " Calling the fn:error function raises an application-defined error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 16,
+      "sc": 81,
+      "el": 21,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 21,
+     "sc": 17,
+     "el": 21,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 21,
+     "sc": 17,
+     "el": 21,
+     "ec": 25
+    }
+   },
+   {
+    "name": "trace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as item()*"
+    ],
+    "comments": {
+     "description": " Provides an execution trace intended to be used in debugging queries.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 21,
+      "sc": 106,
+      "el": 26,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 26,
+     "sc": 17,
+     "el": 26,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 26,
+     "sc": 17,
+     "el": 26,
+     "ec": 25
+    }
+   },
+   {
+    "name": "trace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as item()*",
+     "$label as xs:string"
+    ],
+    "comments": {
+     "description": " Provides an execution trace intended to be used in debugging queries.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 26,
+      "sc": 65,
+      "el": 31,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 31,
+     "sc": 17,
+     "el": 31,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 31,
+     "sc": 17,
+     "el": 31,
+     "ec": 25
+    }
+   },
+   {
+    "name": "abs",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "comments": {
+     "description": " Returns the absolute value of $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 31,
+      "sc": 85,
+      "el": 36,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 36,
+     "sc": 17,
+     "el": 36,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 36,
+     "sc": 17,
+     "el": 36,
+     "ec": 23
+    }
+   },
+   {
+    "name": "ceiling",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "comments": {
+     "description": " Rounds $arg upwards to a whole number.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 36,
+      "sc": 69,
+      "el": 41,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 41,
+     "sc": 17,
+     "el": 41,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 41,
+     "sc": 17,
+     "el": 41,
+     "ec": 27
+    }
+   },
+   {
+    "name": "floor",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "comments": {
+     "description": " Rounds $arg downwards to a whole number.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 41,
+      "sc": 73,
+      "el": 46,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 46,
+     "sc": 17,
+     "el": 46,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 46,
+     "sc": 17,
+     "el": 46,
+     "ec": 25
+    }
+   },
+   {
+    "name": "round",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "comments": {
+     "description": " Rounds a value to a specified number of decimal places, rounding upwards if two such values are equally near.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 46,
+      "sc": 71,
+      "el": 52,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 52,
+     "sc": 17,
+     "el": 52,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 52,
+     "sc": 17,
+     "el": 52,
+     "ec": 25
+    }
+   },
+   {
+    "name": "round",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?",
+     "$precision as xs:integer"
+    ],
+    "comments": {
+     "description": " Rounds a value to a specified number of decimal places, rounding upwards if two such values are equally near.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 52,
+      "sc": 71,
+      "el": 58,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 58,
+     "sc": 17,
+     "el": 58,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 58,
+     "sc": 17,
+     "el": 58,
+     "ec": 25
+    }
+   },
+   {
+    "name": "round-half-to-even",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "comments": {
+     "description": " Rounds a value to a specified number of decimal places, rounding to make the last digit even if two such values are equally near.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 58,
+      "sc": 96,
+      "el": 64,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 64,
+     "sc": 17,
+     "el": 64,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 64,
+     "sc": 17,
+     "el": 64,
+     "ec": 38
+    }
+   },
+   {
+    "name": "round-half-to-even",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:numeric?",
+     "$precision as xs:integer"
+    ],
+    "comments": {
+     "description": " Rounds a value to a specified number of decimal places, rounding to make the last digit even if two such values are equally near.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 64,
+      "sc": 84,
+      "el": 70,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 70,
+     "sc": 17,
+     "el": 70,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 70,
+     "sc": 17,
+     "el": 70,
+     "ec": 38
+    }
+   },
+   {
+    "name": "number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns the value indicated by $arg or, if $arg is not specified, the context item after atomization, converted to an xs:double.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 70,
+      "sc": 109,
+      "el": 77,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 77,
+     "sc": 17,
+     "el": 77,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 77,
+     "sc": 17,
+     "el": 77,
+     "ec": 26
+    }
+   },
+   {
+    "name": "number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType?"
+    ],
+    "comments": {
+     "description": " Returns the value indicated by $arg or, if $arg is not specified, the context item after atomization, converted to an xs:double.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 77,
+      "sc": 51,
+      "el": 84,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 84,
+     "sc": 17,
+     "el": 84,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 84,
+     "sc": 17,
+     "el": 84,
+     "ec": 26
+    }
+   },
+   {
+    "name": "format-integer",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:integer?",
+     "$picture as xs:string"
+    ],
+    "comments": {
+     "description": " Formats an integer according to a given picture string, using the conventions of a given natural language if specified.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 84,
+      "sc": 76,
+      "el": 90,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 90,
+     "sc": 17,
+     "el": 90,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 90,
+     "sc": 17,
+     "el": 90,
+     "ec": 34
+    }
+   },
+   {
+    "name": "format-integer",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:integer?",
+     "$picture as xs:string",
+     "$lang as xs:string?"
+    ],
+    "comments": {
+     "description": " Formats an integer according to a given picture string, using the conventions of a given natural language if specified.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 90,
+      "sc": 102,
+      "el": 96,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 96,
+     "sc": 17,
+     "el": 96,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 96,
+     "sc": 17,
+     "el": 96,
+     "ec": 34
+    }
+   },
+   {
+    "name": "format-number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:numeric?",
+     "$picture as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string containing a number formatted according to a given picture string, taking account of decimal formats specified in the static context.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 96,
+      "sc": 122,
+      "el": 102,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 102,
+     "sc": 17,
+     "el": 102,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 102,
+     "sc": 17,
+     "el": 102,
+     "ec": 33
+    }
+   },
+   {
+    "name": "format-number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:numeric?",
+     "$picture as xs:string",
+     "$decimal-format-name as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a string containing a number formatted according to a given picture string, taking account of decimal formats specified in the static context.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 102,
+      "sc": 101,
+      "el": 108,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 108,
+     "sc": 17,
+     "el": 108,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 108,
+     "sc": 17,
+     "el": 108,
+     "ec": 33
+    }
+   },
+   {
+    "name": "random-number-generator",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns a random number generator, which can be used to generate sequences of random numbers.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 108,
+      "sc": 136,
+      "el": 113,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 113,
+     "sc": 17,
+     "el": 113,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 113,
+     "sc": 17,
+     "el": 113,
+     "ec": 43
+    }
+   },
+   {
+    "name": "random-number-generator",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seed as xs:anyAtomicType?"
+    ],
+    "comments": {
+     "description": " Returns a random number generator, which can be used to generate sequences of random numbers.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 113,
+      "sc": 81,
+      "el": 118,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 118,
+     "sc": 17,
+     "el": 118,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 118,
+     "sc": 17,
+     "el": 118,
+     "ec": 43
+    }
+   },
+   {
+    "name": "codepoints-to-string",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:integer*"
+    ],
+    "comments": {
+     "description": " Returns an xs:string whose characters have supplied codepoints.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 118,
+      "sc": 107,
+      "el": 123,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 123,
+     "sc": 17,
+     "el": 123,
+     "ec": 40
+    },
+    "posAll": {
+     "sl": 123,
+     "sc": 17,
+     "el": 123,
+     "ec": 40
+    }
+   },
+   {
+    "name": "string-to-codepoints",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns the sequence of codepoints that constitute an xs:string value.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 123,
+      "sc": 84,
+      "el": 129,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 129,
+     "sc": 17,
+     "el": 129,
+     "ec": 40
+    },
+    "posAll": {
+     "sl": 129,
+     "sc": 17,
+     "el": 129,
+     "ec": 40
+    }
+   },
+   {
+    "name": "compare",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns -1, 0, or 1, depending on whether $comparand1 collates before, equal to, or after $comparand2 according to the rules of a selected collation.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 129,
+      "sc": 85,
+      "el": 136,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 136,
+     "sc": 17,
+     "el": 136,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 136,
+     "sc": 17,
+     "el": 136,
+     "ec": 27
+    }
+   },
+   {
+    "name": "compare",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns -1, 0, or 1, depending on whether $comparand1 collates before, equal to, or after $comparand2 according to the rules of a selected collation.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 136,
+      "sc": 105,
+      "el": 143,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 143,
+     "sc": 17,
+     "el": 143,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 143,
+     "sc": 17,
+     "el": 143,
+     "ec": 27
+    }
+   },
+   {
+    "name": "codepoint-equal",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns true if two strings are equal, considered codepoint-by-codepoint.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 143,
+      "sc": 129,
+      "el": 148,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 148,
+     "sc": 17,
+     "el": 148,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 148,
+     "sc": 17,
+     "el": 148,
+     "ec": 35
+    }
+   },
+   {
+    "name": "collation-key",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$key as xs:string"
+    ],
+    "comments": {
+     "description": " Given a string value and a collation, generates an internal value called a collation key, with the property that the matching and ordering of collation keys reflects the matching and ordering of strings under the specified collation.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 148,
+      "sc": 113,
+      "el": 154,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 154,
+     "sc": 17,
+     "el": 154,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 154,
+     "sc": 17,
+     "el": 154,
+     "ec": 33
+    }
+   },
+   {
+    "name": "collation-key",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$key as xs:string",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Given a string value and a collation, generates an internal value called a collation key, with the property that the matching and ordering of collation keys reflects the matching and ordering of strings under the specified collation.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 154,
+      "sc": 81,
+      "el": 160,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 160,
+     "sc": 17,
+     "el": 160,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 160,
+     "sc": 17,
+     "el": 160,
+     "ec": 33
+    }
+   },
+   {
+    "name": "contains-token",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string*",
+     "$token as xs:string"
+    ],
+    "comments": {
+     "description": " Determines whether or not any of the supplied strings, when tokenized at whitespace boundaries, contains the supplied token, under the rules of the supplied collation.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 160,
+      "sc": 105,
+      "el": 166,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 166,
+     "sc": 17,
+     "el": 166,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 166,
+     "sc": 17,
+     "el": 166,
+     "ec": 34
+    }
+   },
+   {
+    "name": "contains-token",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string*",
+     "$token as xs:string",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Determines whether or not any of the supplied strings, when tokenized at whitespace boundaries, contains the supplied token, under the rules of the supplied collation.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 166,
+      "sc": 100,
+      "el": 172,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 172,
+     "sc": 17,
+     "el": 172,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 172,
+     "sc": 17,
+     "el": 172,
+     "ec": 34
+    }
+   },
+   {
+    "name": "concat",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:anyAtomicType?",
+     "$arg2 as xs:anyAtomicType?"
+    ],
+    "comments": {
+     "description": " Returns the concatenation of the string values of the arguments.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 172,
+      "sc": 124,
+      "el": 177,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 177,
+     "sc": 17,
+     "el": 177,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 177,
+     "sc": 17,
+     "el": 177,
+     "ec": 26
+    }
+   },
+   {
+    "name": "string-join",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Returns a string created by concatenating the items in a sequence, with a defined separator between adjacent items.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 177,
+      "sc": 104,
+      "el": 183,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 183,
+     "sc": 17,
+     "el": 183,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 183,
+     "sc": 17,
+     "el": 183,
+     "ec": 31
+    }
+   },
+   {
+    "name": "string-join",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:anyAtomicType*",
+     "$arg2 as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string created by concatenating the items in a sequence, with a defined separator between adjacent items.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 183,
+      "sc": 82,
+      "el": 189,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 189,
+     "sc": 17,
+     "el": 189,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 189,
+     "sc": 17,
+     "el": 189,
+     "ec": 31
+    }
+   },
+   {
+    "name": "substring",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$sourceString as xs:string?",
+     "$start as xs:double"
+    ],
+    "comments": {
+     "description": " Returns the portion of the value of $sourceString beginning at the position indicated by the value of $start and continuing for the number of characters indicated by the value of $length.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 189,
+      "sc": 101,
+      "el": 196,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 196,
+     "sc": 17,
+     "el": 196,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 196,
+     "sc": 17,
+     "el": 196,
+     "ec": 29
+    }
+   },
+   {
+    "name": "substring",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$sourceString as xs:string?",
+     "$start as xs:double",
+     "$length as xs:double"
+    ],
+    "comments": {
+     "description": " Returns the portion of the value of $sourceString beginning at the position indicated by the value of $start and continuing for the number of characters indicated by the value of $length.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 196,
+      "sc": 101,
+      "el": 203,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 203,
+     "sc": 17,
+     "el": 203,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 203,
+     "sc": 17,
+     "el": 203,
+     "ec": 29
+    }
+   },
+   {
+    "name": "string-length",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns the number of characters in a string.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 203,
+      "sc": 122,
+      "el": 208,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 208,
+     "sc": 17,
+     "el": 208,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 208,
+     "sc": 17,
+     "el": 208,
+     "ec": 33
+    }
+   },
+   {
+    "name": "string-length",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns the number of characters in a string.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 208,
+      "sc": 59,
+      "el": 213,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 213,
+     "sc": 17,
+     "el": 213,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 213,
+     "sc": 17,
+     "el": 213,
+     "ec": 33
+    }
+   },
+   {
+    "name": "normalize-space",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns the value of $arg with leading and trailing whitespace removed, and sequences of internal whitespace reduced to a single space character.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 213,
+      "sc": 77,
+      "el": 219,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 219,
+     "sc": 17,
+     "el": 219,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 219,
+     "sc": 17,
+     "el": 219,
+     "ec": 35
+    }
+   },
+   {
+    "name": "normalize-space",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns the value of $arg with leading and trailing whitespace removed, and sequences of internal whitespace reduced to a single space character.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 219,
+      "sc": 60,
+      "el": 225,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 225,
+     "sc": 17,
+     "el": 225,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 225,
+     "sc": 17,
+     "el": 225,
+     "ec": 35
+    }
+   },
+   {
+    "name": "normalize-unicode",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns the value of $arg after applying Unicode normalization.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 225,
+      "sc": 78,
+      "el": 230,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 230,
+     "sc": 17,
+     "el": 230,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 230,
+     "sc": 17,
+     "el": 230,
+     "ec": 37
+    }
+   },
+   {
+    "name": "normalize-unicode",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?",
+     "$normalizationForm as xs:string"
+    ],
+    "comments": {
+     "description": " Returns the value of $arg after applying Unicode normalization.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 230,
+      "sc": 80,
+      "el": 235,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 235,
+     "sc": 17,
+     "el": 235,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 235,
+     "sc": 17,
+     "el": 235,
+     "ec": 37
+    }
+   },
+   {
+    "name": "upper-case",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Converts a string to upper case.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 235,
+      "sc": 112,
+      "el": 240,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 240,
+     "sc": 17,
+     "el": 240,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 240,
+     "sc": 17,
+     "el": 240,
+     "ec": 30
+    }
+   },
+   {
+    "name": "lower-case",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Converts a string to lower case.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 240,
+      "sc": 73,
+      "el": 245,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 245,
+     "sc": 17,
+     "el": 245,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 245,
+     "sc": 17,
+     "el": 245,
+     "ec": 30
+    }
+   },
+   {
+    "name": "translate",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?",
+     "$mapString as xs:string",
+     "$transString as xs:string"
+    ],
+    "comments": {
+     "description": " Returns the value of $arg modified by replacing or removing individual characters.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 245,
+      "sc": 73,
+      "el": 251,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 251,
+     "sc": 17,
+     "el": 251,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 251,
+     "sc": 17,
+     "el": 251,
+     "ec": 29
+    }
+   },
+   {
+    "name": "contains",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns true if the string $arg1 contains $arg2 as a substring, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 251,
+      "sc": 122,
+      "el": 257,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 257,
+     "sc": 17,
+     "el": 257,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 257,
+     "sc": 17,
+     "el": 257,
+     "ec": 28
+    }
+   },
+   {
+    "name": "contains",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns true if the string $arg1 contains $arg2 as a substring, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 257,
+      "sc": 93,
+      "el": 263,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 263,
+     "sc": 17,
+     "el": 263,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 263,
+     "sc": 17,
+     "el": 263,
+     "ec": 28
+    }
+   },
+   {
+    "name": "starts-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns true if the string $arg1 contains $arg2 as a leading substring, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 263,
+      "sc": 117,
+      "el": 269,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 269,
+     "sc": 17,
+     "el": 269,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 269,
+     "sc": 17,
+     "el": 269,
+     "ec": 31
+    }
+   },
+   {
+    "name": "starts-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns true if the string $arg1 contains $arg2 as a leading substring, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 269,
+      "sc": 96,
+      "el": 275,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 275,
+     "sc": 17,
+     "el": 275,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 275,
+     "sc": 17,
+     "el": 275,
+     "ec": 31
+    }
+   },
+   {
+    "name": "ends-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns true if the string $arg1 contains $arg2 as a trailing substring, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 275,
+      "sc": 120,
+      "el": 281,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 281,
+     "sc": 17,
+     "el": 281,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 281,
+     "sc": 17,
+     "el": 281,
+     "ec": 29
+    }
+   },
+   {
+    "name": "ends-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns true if the string $arg1 contains $arg2 as a trailing substring, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 281,
+      "sc": 94,
+      "el": 287,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 287,
+     "sc": 17,
+     "el": 287,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 287,
+     "sc": 17,
+     "el": 287,
+     "ec": 29
+    }
+   },
+   {
+    "name": "substring-before",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns the part of $arg1 that precedes the first occurrence of $arg2, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 287,
+      "sc": 118,
+      "el": 293,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 293,
+     "sc": 17,
+     "el": 293,
+     "ec": 36
+    },
+    "posAll": {
+     "sl": 293,
+     "sc": 17,
+     "el": 293,
+     "ec": 36
+    }
+   },
+   {
+    "name": "substring-before",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns the part of $arg1 that precedes the first occurrence of $arg2, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 293,
+      "sc": 100,
+      "el": 299,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 299,
+     "sc": 17,
+     "el": 299,
+     "ec": 36
+    },
+    "posAll": {
+     "sl": 299,
+     "sc": 17,
+     "el": 299,
+     "ec": 36
+    }
+   },
+   {
+    "name": "substring-after",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns the part of $arg1 that follows the first occurrence of $arg2, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 299,
+      "sc": 124,
+      "el": 305,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 305,
+     "sc": 17,
+     "el": 305,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 305,
+     "sc": 17,
+     "el": 305,
+     "ec": 35
+    }
+   },
+   {
+    "name": "substring-after",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns the part of $arg1 that follows the first occurrence of $arg2, taking collations into account.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 305,
+      "sc": 99,
+      "el": 311,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 311,
+     "sc": 17,
+     "el": 311,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 311,
+     "sc": 17,
+     "el": 311,
+     "ec": 35
+    }
+   },
+   {
+    "name": "matches",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "comments": {
+     "description": " Returns true if the supplied string matches a given regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 311,
+      "sc": 123,
+      "el": 316,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 316,
+     "sc": 17,
+     "el": 316,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 316,
+     "sc": 17,
+     "el": 316,
+     "ec": 27
+    }
+   },
+   {
+    "name": "matches",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "comments": {
+     "description": " Returns true if the supplied string matches a given regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 316,
+      "sc": 95,
+      "el": 321,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 321,
+     "sc": 17,
+     "el": 321,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 321,
+     "sc": 17,
+     "el": 321,
+     "ec": 27
+    }
+   },
+   {
+    "name": "replace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$replacement as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string produced from the input string by replacing any substrings that match a given regular expression with a supplied replacement string.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 321,
+      "sc": 115,
+      "el": 327,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 327,
+     "sc": 17,
+     "el": 327,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 327,
+     "sc": 17,
+     "el": 327,
+     "ec": 27
+    }
+   },
+   {
+    "name": "replace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$replacement as xs:string",
+     "$flags as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string produced from the input string by replacing any substrings that match a given regular expression with a supplied replacement string.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 327,
+      "sc": 120,
+      "el": 333,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 333,
+     "sc": 17,
+     "el": 333,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 333,
+     "sc": 17,
+     "el": 333,
+     "ec": 27
+    }
+   },
+   {
+    "name": "tokenize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 333,
+      "sc": 140,
+      "el": 339,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 339,
+     "sc": 17,
+     "el": 339,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 339,
+     "sc": 17,
+     "el": 339,
+     "ec": 28
+    }
+   },
+   {
+    "name": "tokenize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 339,
+      "sc": 74,
+      "el": 345,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 345,
+     "sc": 17,
+     "el": 345,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 345,
+     "sc": 17,
+     "el": 345,
+     "ec": 28
+    }
+   },
+   {
+    "name": "tokenize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 345,
+      "sc": 96,
+      "el": 351,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 351,
+     "sc": 17,
+     "el": 351,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 351,
+     "sc": 17,
+     "el": 351,
+     "ec": 28
+    }
+   },
+   {
+    "name": "analyze-string",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "comments": {
+     "description": " Analyzes a string using a regular expression, returning an XML structure that identifies which parts of the input string matched or failed to match the regular expression, and in the case of matched substrings, which substrings matched each capturing group in the regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 351,
+      "sc": 116,
+      "el": 359,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 359,
+     "sc": 17,
+     "el": 359,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 359,
+     "sc": 17,
+     "el": 359,
+     "ec": 34
+    }
+   },
+   {
+    "name": "analyze-string",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "comments": {
+     "description": " Analyzes a string using a regular expression, returning an XML structure that identifies which parts of the input string matched or failed to match the regular expression, and in the case of matched substrings, which substrings matched each capturing group in the regular expression.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 359,
+      "sc": 125,
+      "el": 367,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 367,
+     "sc": 17,
+     "el": 367,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 367,
+     "sc": 17,
+     "el": 367,
+     "ec": 34
+    }
+   },
+   {
+    "name": "true",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns the xs:boolean value true.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 367,
+      "sc": 145,
+      "el": 372,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 372,
+     "sc": 17,
+     "el": 372,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 372,
+     "sc": 17,
+     "el": 372,
+     "ec": 24
+    }
+   },
+   {
+    "name": "false",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns the xs:boolean value false.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 372,
+      "sc": 50,
+      "el": 377,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 377,
+     "sc": 17,
+     "el": 377,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 377,
+     "sc": 17,
+     "el": 377,
+     "ec": 25
+    }
+   },
+   {
+    "name": "boolean",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Computes the effective boolean value of the sequence $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 377,
+      "sc": 51,
+      "el": 382,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 382,
+     "sc": 17,
+     "el": 382,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 382,
+     "sc": 17,
+     "el": 382,
+     "ec": 27
+    }
+   },
+   {
+    "name": "not",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns true if the effective boolean value of $arg is false, or false if it is true.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 382,
+      "sc": 68,
+      "el": 388,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 388,
+     "sc": 17,
+     "el": 388,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 388,
+     "sc": 17,
+     "el": 388,
+     "ec": 23
+    }
+   },
+   {
+    "name": "years-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "comments": {
+     "description": " Returns the number of years in a duration.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 388,
+      "sc": 64,
+      "el": 393,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 393,
+     "sc": 17,
+     "el": 393,
+     "ec": 39
+    },
+    "posAll": {
+     "sl": 393,
+     "sc": 17,
+     "el": 393,
+     "ec": 39
+    }
+   },
+   {
+    "name": "months-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "comments": {
+     "description": " Returns the number of months in a duration.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 393,
+      "sc": 86,
+      "el": 398,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 398,
+     "sc": 17,
+     "el": 398,
+     "ec": 40
+    },
+    "posAll": {
+     "sl": 398,
+     "sc": 17,
+     "el": 398,
+     "ec": 40
+    }
+   },
+   {
+    "name": "days-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "comments": {
+     "description": " Returns the number of days in a duration.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 398,
+      "sc": 87,
+      "el": 403,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 403,
+     "sc": 17,
+     "el": 403,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 403,
+     "sc": 17,
+     "el": 403,
+     "ec": 38
+    }
+   },
+   {
+    "name": "hours-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "comments": {
+     "description": " Returns the number of hours in a duration.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 403,
+      "sc": 85,
+      "el": 408,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 408,
+     "sc": 17,
+     "el": 408,
+     "ec": 39
+    },
+    "posAll": {
+     "sl": 408,
+     "sc": 17,
+     "el": 408,
+     "ec": 39
+    }
+   },
+   {
+    "name": "minutes-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "comments": {
+     "description": " Returns the number of minutes in a duration.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 408,
+      "sc": 86,
+      "el": 413,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 413,
+     "sc": 17,
+     "el": 413,
+     "ec": 41
+    },
+    "posAll": {
+     "sl": 413,
+     "sc": 17,
+     "el": 413,
+     "ec": 41
+    }
+   },
+   {
+    "name": "seconds-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "comments": {
+     "description": " Returns the number of seconds in a duration.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 413,
+      "sc": 88,
+      "el": 418,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 418,
+     "sc": 17,
+     "el": 418,
+     "ec": 41
+    },
+    "posAll": {
+     "sl": 418,
+     "sc": 17,
+     "el": 418,
+     "ec": 41
+    }
+   },
+   {
+    "name": "dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg1 as xs:date?",
+     "$arg2 as xs:time?"
+    ],
+    "comments": {
+     "description": " Returns an xs:dateTime value created by combining an xs:date and an xs:time.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 418,
+      "sc": 88,
+      "el": 424,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 424,
+     "sc": 17,
+     "el": 424,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 424,
+     "sc": 17,
+     "el": 424,
+     "ec": 28
+    }
+   },
+   {
+    "name": "year-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the year component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 424,
+      "sc": 91,
+      "el": 429,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 429,
+     "sc": 17,
+     "el": 429,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 429,
+     "sc": 17,
+     "el": 429,
+     "ec": 38
+    }
+   },
+   {
+    "name": "month-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the month component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 429,
+      "sc": 85,
+      "el": 434,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 434,
+     "sc": 17,
+     "el": 434,
+     "ec": 39
+    },
+    "posAll": {
+     "sl": 434,
+     "sc": 17,
+     "el": 434,
+     "ec": 39
+    }
+   },
+   {
+    "name": "day-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the day component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 434,
+      "sc": 86,
+      "el": 439,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 439,
+     "sc": 17,
+     "el": 439,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 439,
+     "sc": 17,
+     "el": 439,
+     "ec": 37
+    }
+   },
+   {
+    "name": "hours-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the hours component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 439,
+      "sc": 84,
+      "el": 444,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 444,
+     "sc": 17,
+     "el": 444,
+     "ec": 39
+    },
+    "posAll": {
+     "sl": 444,
+     "sc": 17,
+     "el": 444,
+     "ec": 39
+    }
+   },
+   {
+    "name": "minutes-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the minute component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 444,
+      "sc": 86,
+      "el": 449,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 449,
+     "sc": 17,
+     "el": 449,
+     "ec": 41
+    },
+    "posAll": {
+     "sl": 449,
+     "sc": 17,
+     "el": 449,
+     "ec": 41
+    }
+   },
+   {
+    "name": "seconds-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the seconds component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 449,
+      "sc": 88,
+      "el": 454,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 454,
+     "sc": 17,
+     "el": 454,
+     "ec": 41
+    },
+    "posAll": {
+     "sl": 454,
+     "sc": 17,
+     "el": 454,
+     "ec": 41
+    }
+   },
+   {
+    "name": "timezone-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Returns the timezone component of an xs:dateTime.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 454,
+      "sc": 88,
+      "el": 459,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 459,
+     "sc": 17,
+     "el": 459,
+     "ec": 42
+    },
+    "posAll": {
+     "sl": 459,
+     "sc": 17,
+     "el": 459,
+     "ec": 42
+    }
+   },
+   {
+    "name": "year-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "comments": {
+     "description": " Returns the year component of an xs:date.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 459,
+      "sc": 97,
+      "el": 464,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 464,
+     "sc": 17,
+     "el": 464,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 464,
+     "sc": 17,
+     "el": 464,
+     "ec": 34
+    }
+   },
+   {
+    "name": "month-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "comments": {
+     "description": " Returns the month component of an xs:date.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 464,
+      "sc": 77,
+      "el": 469,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 469,
+     "sc": 17,
+     "el": 469,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 469,
+     "sc": 17,
+     "el": 469,
+     "ec": 35
+    }
+   },
+   {
+    "name": "day-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "comments": {
+     "description": " Returns the day component of an xs:date.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 469,
+      "sc": 78,
+      "el": 474,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 474,
+     "sc": 17,
+     "el": 474,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 474,
+     "sc": 17,
+     "el": 474,
+     "ec": 33
+    }
+   },
+   {
+    "name": "timezone-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "comments": {
+     "description": " Returns the timezone component of an xs:date.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 474,
+      "sc": 76,
+      "el": 479,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 479,
+     "sc": 17,
+     "el": 479,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 479,
+     "sc": 17,
+     "el": 479,
+     "ec": 38
+    }
+   },
+   {
+    "name": "hours-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "comments": {
+     "description": " Returns the hours component of an xs:time.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 479,
+      "sc": 89,
+      "el": 484,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 484,
+     "sc": 17,
+     "el": 484,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 484,
+     "sc": 17,
+     "el": 484,
+     "ec": 35
+    }
+   },
+   {
+    "name": "minutes-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "comments": {
+     "description": " Returns the minutes component of an xs:time.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 484,
+      "sc": 78,
+      "el": 489,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 489,
+     "sc": 17,
+     "el": 489,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 489,
+     "sc": 17,
+     "el": 489,
+     "ec": 37
+    }
+   },
+   {
+    "name": "seconds-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "comments": {
+     "description": " Returns the seconds component of an xs:time.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 489,
+      "sc": 80,
+      "el": 494,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 494,
+     "sc": 17,
+     "el": 494,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 494,
+     "sc": 17,
+     "el": 494,
+     "ec": 37
+    }
+   },
+   {
+    "name": "timezone-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "comments": {
+     "description": " Returns the timezone component of an xs:time.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 494,
+      "sc": 80,
+      "el": 499,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 499,
+     "sc": 17,
+     "el": 499,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 499,
+     "sc": 17,
+     "el": 499,
+     "ec": 38
+    }
+   },
+   {
+    "name": "adjust-dateTime-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "comments": {
+     "description": " Adjusts an xs:dateTime value to a specific timezone, or to no timezone at all.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 499,
+      "sc": 89,
+      "el": 505,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 505,
+     "sc": 17,
+     "el": 505,
+     "ec": 47
+    },
+    "posAll": {
+     "sl": 505,
+     "sc": 17,
+     "el": 505,
+     "ec": 47
+    }
+   },
+   {
+    "name": "adjust-dateTime-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:dateTime?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "comments": {
+     "description": " Adjusts an xs:dateTime value to a specific timezone, or to no timezone at all.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 505,
+      "sc": 95,
+      "el": 511,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 511,
+     "sc": 17,
+     "el": 511,
+     "ec": 47
+    },
+    "posAll": {
+     "sl": 511,
+     "sc": 17,
+     "el": 511,
+     "ec": 47
+    }
+   },
+   {
+    "name": "adjust-date-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "comments": {
+     "description": " Adjusts an xs:date value to a specific timezone, or to no timezone at all; the result is the date in the target timezone that contains the starting instant of the supplied date.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 511,
+      "sc": 128,
+      "el": 518,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 518,
+     "sc": 17,
+     "el": 518,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 518,
+     "sc": 17,
+     "el": 518,
+     "ec": 43
+    }
+   },
+   {
+    "name": "adjust-date-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:date?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "comments": {
+     "description": " Adjusts an xs:date value to a specific timezone, or to no timezone at all; the result is the date in the target timezone that contains the starting instant of the supplied date.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 518,
+      "sc": 83,
+      "el": 525,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 525,
+     "sc": 17,
+     "el": 525,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 525,
+     "sc": 17,
+     "el": 525,
+     "ec": 43
+    }
+   },
+   {
+    "name": "adjust-time-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "comments": {
+     "description": " Adjusts an xs:time value to a specific timezone, or to no timezone at all.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 525,
+      "sc": 116,
+      "el": 531,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 531,
+     "sc": 17,
+     "el": 531,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 531,
+     "sc": 17,
+     "el": 531,
+     "ec": 43
+    }
+   },
+   {
+    "name": "adjust-time-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:time?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "comments": {
+     "description": " Adjusts an xs:time value to a specific timezone, or to no timezone at all.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 531,
+      "sc": 83,
+      "el": 537,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 537,
+     "sc": 17,
+     "el": 537,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 537,
+     "sc": 17,
+     "el": 537,
+     "ec": 43
+    }
+   },
+   {
+    "name": "format-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:dateTime?",
+     "$picture as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string containing an xs:dateTime value formatted for display.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 537,
+      "sc": 116,
+      "el": 542,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 542,
+     "sc": 17,
+     "el": 542,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 542,
+     "sc": 17,
+     "el": 542,
+     "ec": 35
+    }
+   },
+   {
+    "name": "format-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:dateTime?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a string containing an xs:dateTime value formatted for display.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 542,
+      "sc": 105,
+      "el": 547,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 547,
+     "sc": 17,
+     "el": 547,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 547,
+     "sc": 17,
+     "el": 547,
+     "ec": 35
+    }
+   },
+   {
+    "name": "format-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:date?",
+     "$picture as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string containing an xs:date value formatted for display.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 547,
+      "sc": 174,
+      "el": 552,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 552,
+     "sc": 17,
+     "el": 552,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 552,
+     "sc": 17,
+     "el": 552,
+     "ec": 31
+    }
+   },
+   {
+    "name": "format-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:date?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a string containing an xs:date value formatted for display.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 552,
+      "sc": 97,
+      "el": 557,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 557,
+     "sc": 17,
+     "el": 557,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 557,
+     "sc": 17,
+     "el": 557,
+     "ec": 31
+    }
+   },
+   {
+    "name": "format-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:time?",
+     "$picture as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a string containing an xs:time value formatted for display.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 557,
+      "sc": 166,
+      "el": 562,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 562,
+     "sc": 17,
+     "el": 562,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 562,
+     "sc": 17,
+     "el": 562,
+     "ec": 31
+    }
+   },
+   {
+    "name": "format-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:time?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a string containing an xs:time value formatted for display.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 562,
+      "sc": 97,
+      "el": 567,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 567,
+     "sc": 17,
+     "el": 567,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 567,
+     "sc": 17,
+     "el": 567,
+     "ec": 31
+    }
+   },
+   {
+    "name": "parse-ietf-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$value as xs:string?"
+    ],
+    "comments": {
+     "description": " Parses a string containing the date and time in IETF format, returning the corresponding xs:dateTime value.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 567,
+      "sc": 166,
+      "el": 573,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 573,
+     "sc": 17,
+     "el": 573,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 573,
+     "sc": 17,
+     "el": 573,
+     "ec": 35
+    }
+   },
+   {
+    "name": "resolve-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$qname as xs:string?",
+     "$element as element()"
+    ],
+    "comments": {
+     "description": " Returns an xs:QName value (that is, an expanded-QName) by taking an xs:string that has the lexical form of an xs:QName (a string in the form \"prefix:local-name\" or \"local-name\") and resolving it using the in-scope namespaces for a given element.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 573,
+      "sc": 83,
+      "el": 581,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 581,
+     "sc": 17,
+     "el": 581,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 581,
+     "sc": 17,
+     "el": 581,
+     "ec": 33
+    }
+   },
+   {
+    "name": "QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$paramURI as xs:string?",
+     "$paramQName as xs:string"
+    ],
+    "comments": {
+     "description": " Returns an xs:QName value formed using a supplied namespace URI and lexical QName.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 581,
+      "sc": 100,
+      "el": 586,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 586,
+     "sc": 17,
+     "el": 586,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 586,
+     "sc": 17,
+     "el": 586,
+     "ec": 25
+    }
+   },
+   {
+    "name": "prefix-from-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "comments": {
+     "description": " Returns the prefix component of the supplied QName.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 586,
+      "sc": 97,
+      "el": 591,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 591,
+     "sc": 17,
+     "el": 591,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 591,
+     "sc": 17,
+     "el": 591,
+     "ec": 37
+    }
+   },
+   {
+    "name": "local-name-from-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "comments": {
+     "description": " Returns the local part of the supplied QName.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 591,
+      "sc": 80,
+      "el": 596,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 596,
+     "sc": 17,
+     "el": 596,
+     "ec": 41
+    },
+    "posAll": {
+     "sl": 596,
+     "sc": 17,
+     "el": 596,
+     "ec": 41
+    }
+   },
+   {
+    "name": "namespace-uri-from-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "comments": {
+     "description": " Returns the namespace URI part of the supplied QName.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 596,
+      "sc": 84,
+      "el": 601,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 601,
+     "sc": 17,
+     "el": 601,
+     "ec": 44
+    },
+    "posAll": {
+     "sl": 601,
+     "sc": 17,
+     "el": 601,
+     "ec": 44
+    }
+   },
+   {
+    "name": "namespace-uri-for-prefix",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$prefix as xs:string?",
+     "$element as element()"
+    ],
+    "comments": {
+     "description": " Returns the namespace URI of one of the in-scope namespaces for $element, identified by its namespace prefix.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 601,
+      "sc": 87,
+      "el": 607,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 607,
+     "sc": 17,
+     "el": 607,
+     "ec": 44
+    },
+    "posAll": {
+     "sl": 607,
+     "sc": 17,
+     "el": 607,
+     "ec": 44
+    }
+   },
+   {
+    "name": "in-scope-prefixes",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$element as element()"
+    ],
+    "comments": {
+     "description": " Returns the prefixes of the in-scope namespaces for an element node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 607,
+      "sc": 113,
+      "el": 612,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 612,
+     "sc": 17,
+     "el": 612,
+     "ec": 37
+    },
+    "posAll": {
+     "sl": 612,
+     "sc": 17,
+     "el": 612,
+     "ec": 37
+    }
+   },
+   {
+    "name": "empty",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns true if the argument is the empty sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 612,
+      "sc": 84,
+      "el": 617,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 617,
+     "sc": 17,
+     "el": 617,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 617,
+     "sc": 17,
+     "el": 617,
+     "ec": 25
+    }
+   },
+   {
+    "name": "exists",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns true if the argument is a non-empty sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 617,
+      "sc": 66,
+      "el": 622,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 622,
+     "sc": 17,
+     "el": 622,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 622,
+     "sc": 17,
+     "el": 622,
+     "ec": 26
+    }
+   },
+   {
+    "name": "head",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns the first item in a sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 622,
+      "sc": 67,
+      "el": 627,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 627,
+     "sc": 17,
+     "el": 627,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 627,
+     "sc": 17,
+     "el": 627,
+     "ec": 24
+    }
+   },
+   {
+    "name": "tail",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns all but the first item in a sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 627,
+      "sc": 62,
+      "el": 632,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 632,
+     "sc": 17,
+     "el": 632,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 632,
+     "sc": 17,
+     "el": 632,
+     "ec": 24
+    }
+   },
+   {
+    "name": "insert-before",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$target as item()*",
+     "$position as xs:integer",
+     "$inserts as item()*"
+    ],
+    "comments": {
+     "description": " Returns a sequence constructed by inserting an item or a sequence of items at a given position within an existing sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 632,
+      "sc": 62,
+      "el": 638,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 638,
+     "sc": 17,
+     "el": 638,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 638,
+     "sc": 17,
+     "el": 638,
+     "ec": 33
+    }
+   },
+   {
+    "name": "remove",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$target as item()*",
+     "$position as xs:integer"
+    ],
+    "comments": {
+     "description": " Returns a new sequence containing all the items of $target except the item at position $position.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 638,
+      "sc": 118,
+      "el": 644,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 644,
+     "sc": 17,
+     "el": 644,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 644,
+     "sc": 17,
+     "el": 644,
+     "ec": 26
+    }
+   },
+   {
+    "name": "reverse",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Reverses the order of items in a sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 644,
+      "sc": 91,
+      "el": 649,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 649,
+     "sc": 17,
+     "el": 649,
+     "ec": 27
+    },
+    "posAll": {
+     "sl": 649,
+     "sc": 17,
+     "el": 649,
+     "ec": 27
+    }
+   },
+   {
+    "name": "subsequence",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$sourceSeq as item()*",
+     "$startingLoc as xs:double"
+    ],
+    "comments": {
+     "description": " Returns the contiguous sequence of items in the value of $sourceSeq beginning at the position indicated by the value of $startingLoc and continuing for the number of items indicated by the value of $length.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 649,
+      "sc": 65,
+      "el": 656,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 656,
+     "sc": 17,
+     "el": 656,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 656,
+     "sc": 17,
+     "el": 656,
+     "ec": 31
+    }
+   },
+   {
+    "name": "subsequence",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$sourceSeq as item()*",
+     "$startingLoc as xs:double",
+     "$length as xs:double"
+    ],
+    "comments": {
+     "description": " Returns the contiguous sequence of items in the value of $sourceSeq beginning at the position indicated by the value of $startingLoc and continuing for the number of items indicated by the value of $length.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 656,
+      "sc": 101,
+      "el": 663,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 663,
+     "sc": 17,
+     "el": 663,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 663,
+     "sc": 17,
+     "el": 663,
+     "ec": 31
+    }
+   },
+   {
+    "name": "unordered",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$sourceSeq as item()*"
+    ],
+    "comments": {
+     "description": " Returns the items of $sourceSeq in an implementation-dependent order.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 663,
+      "sc": 122,
+      "el": 668,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 668,
+     "sc": 17,
+     "el": 668,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 668,
+     "sc": 17,
+     "el": 668,
+     "ec": 29
+    }
+   },
+   {
+    "name": "distinct-values",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Returns the values that appear in a sequence, with duplicates eliminated.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 668,
+      "sc": 73,
+      "el": 673,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 673,
+     "sc": 17,
+     "el": 673,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 673,
+     "sc": 17,
+     "el": 673,
+     "ec": 35
+    }
+   },
+   {
+    "name": "distinct-values",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns the values that appear in a sequence, with duplicates eliminated.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 673,
+      "sc": 93,
+      "el": 678,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 678,
+     "sc": 17,
+     "el": 678,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 678,
+     "sc": 17,
+     "el": 678,
+     "ec": 35
+    }
+   },
+   {
+    "name": "index-of",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq as xs:anyAtomicType*",
+     "$search as xs:anyAtomicType"
+    ],
+    "comments": {
+     "description": " Returns a sequence of positive integers giving the positions within the sequence $seq of items that are equal to $search.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 678,
+      "sc": 117,
+      "el": 684,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 684,
+     "sc": 17,
+     "el": 684,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 684,
+     "sc": 17,
+     "el": 684,
+     "ec": 28
+    }
+   },
+   {
+    "name": "index-of",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq as xs:anyAtomicType*",
+     "$search as xs:anyAtomicType",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a sequence of positive integers giving the positions within the sequence $seq of items that are equal to $search.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 684,
+      "sc": 108,
+      "el": 690,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 690,
+     "sc": 17,
+     "el": 690,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 690,
+     "sc": 17,
+     "el": 690,
+     "ec": 28
+    }
+   },
+   {
+    "name": "deep-equal",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$parameter1 as item()*",
+     "$parameter2 as item()*"
+    ],
+    "comments": {
+     "description": " This function assesses whether two sequences are deep-equal to each other. To be deep-equal, they must contain items that are pairwise deep-equal; and for two items to be deep-equal, they must either be atomic values that compare equal, or nodes of the same kind, with the same name, whose children are deep-equal, or maps with matching entries, or arrays with matching members.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 690,
+      "sc": 132,
+      "el": 699,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 699,
+     "sc": 17,
+     "el": 699,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 699,
+     "sc": 17,
+     "el": 699,
+     "ec": 30
+    }
+   },
+   {
+    "name": "deep-equal",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$parameter1 as item()*",
+     "$parameter2 as item()*",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " This function assesses whether two sequences are deep-equal to each other. To be deep-equal, they must contain items that are pairwise deep-equal; and for two items to be deep-equal, they must either be atomic values that compare equal, or nodes of the same kind, with the same name, whose children are deep-equal, or maps with matching entries, or arrays with matching members.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 699,
+      "sc": 101,
+      "el": 708,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 708,
+     "sc": 17,
+     "el": 708,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 708,
+     "sc": 17,
+     "el": 708,
+     "ec": 30
+    }
+   },
+   {
+    "name": "zero-or-one",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns $arg if it contains zero or one items. Otherwise, raises an error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 708,
+      "sc": 125,
+      "el": 714,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 714,
+     "sc": 17,
+     "el": 714,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 714,
+     "sc": 17,
+     "el": 714,
+     "ec": 31
+    }
+   },
+   {
+    "name": "one-or-more",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns $arg if it contains one or more items. Otherwise, raises an error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 714,
+      "sc": 69,
+      "el": 720,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 720,
+     "sc": 17,
+     "el": 720,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 720,
+     "sc": 17,
+     "el": 720,
+     "ec": 31
+    }
+   },
+   {
+    "name": "exactly-one",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns $arg if it contains exactly one item. Otherwise, raises an error.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 720,
+      "sc": 69,
+      "el": 726,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 726,
+     "sc": 17,
+     "el": 726,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 726,
+     "sc": 17,
+     "el": 726,
+     "ec": 31
+    }
+   },
+   {
+    "name": "count",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " Returns the number of items in a sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 726,
+      "sc": 68,
+      "el": 731,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 731,
+     "sc": 17,
+     "el": 731,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 731,
+     "sc": 17,
+     "el": 731,
+     "ec": 25
+    }
+   },
+   {
+    "name": "avg",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Returns the average of the values in the input sequence $arg, that is, the sum of the values divided by the number of values.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 731,
+      "sc": 66,
+      "el": 737,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 737,
+     "sc": 17,
+     "el": 737,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 737,
+     "sc": 17,
+     "el": 737,
+     "ec": 23
+    }
+   },
+   {
+    "name": "max",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Returns a value that is equal to the highest value appearing in the input sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 737,
+      "sc": 81,
+      "el": 742,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 742,
+     "sc": 17,
+     "el": 742,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 742,
+     "sc": 17,
+     "el": 742,
+     "ec": 23
+    }
+   },
+   {
+    "name": "max",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a value that is equal to the highest value appearing in the input sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 742,
+      "sc": 81,
+      "el": 747,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 747,
+     "sc": 17,
+     "el": 747,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 747,
+     "sc": 17,
+     "el": 747,
+     "ec": 23
+    }
+   },
+   {
+    "name": "min",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Returns a value that is equal to the lowest value appearing in the input sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 747,
+      "sc": 105,
+      "el": 752,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 752,
+     "sc": 17,
+     "el": 752,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 752,
+     "sc": 17,
+     "el": 752,
+     "ec": 23
+    }
+   },
+   {
+    "name": "min",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "comments": {
+     "description": " Returns a value that is equal to the lowest value appearing in the input sequence.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 752,
+      "sc": 81,
+      "el": 757,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 757,
+     "sc": 17,
+     "el": 757,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 757,
+     "sc": 17,
+     "el": 757,
+     "ec": 23
+    }
+   },
+   {
+    "name": "sum",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Returns a value obtained by adding together the values in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 757,
+      "sc": 105,
+      "el": 762,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 762,
+     "sc": 17,
+     "el": 762,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 762,
+     "sc": 17,
+     "el": 762,
+     "ec": 23
+    }
+   },
+   {
+    "name": "sum",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$zero as xs:anyAtomicType?"
+    ],
+    "comments": {
+     "description": " Returns a value obtained by adding together the values in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 762,
+      "sc": 80,
+      "el": 767,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 767,
+     "sc": 17,
+     "el": 767,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 767,
+     "sc": 17,
+     "el": 767,
+     "ec": 23
+    }
+   },
+   {
+    "name": "id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "comments": {
+     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 767,
+      "sc": 108,
+      "el": 773,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 773,
+     "sc": 17,
+     "el": 773,
+     "ec": 22
+    },
+    "posAll": {
+     "sl": 773,
+     "sc": 17,
+     "el": 773,
+     "ec": 22
+    }
+   },
+   {
+    "name": "id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "comments": {
+     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 773,
+      "sc": 66,
+      "el": 779,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 779,
+     "sc": 17,
+     "el": 779,
+     "ec": 22
+    },
+    "posAll": {
+     "sl": 779,
+     "sc": 17,
+     "el": 779,
+     "ec": 22
+    }
+   },
+   {
+    "name": "element-with-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "comments": {
+     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 779,
+      "sc": 82,
+      "el": 785,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 785,
+     "sc": 17,
+     "el": 785,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 785,
+     "sc": 17,
+     "el": 785,
+     "ec": 35
+    }
+   },
+   {
+    "name": "element-with-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "comments": {
+     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 785,
+      "sc": 79,
+      "el": 791,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 791,
+     "sc": 17,
+     "el": 791,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 791,
+     "sc": 17,
+     "el": 791,
+     "ec": 35
+    }
+   },
+   {
+    "name": "idref",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "comments": {
+     "description": " Returns the sequence of element or attribute nodes with an IDREF value matching the value of one or more of the ID values supplied in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 791,
+      "sc": 95,
+      "el": 798,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 798,
+     "sc": 17,
+     "el": 798,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 798,
+     "sc": 17,
+     "el": 798,
+     "ec": 25
+    }
+   },
+   {
+    "name": "idref",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "comments": {
+     "description": " Returns the sequence of element or attribute nodes with an IDREF value matching the value of one or more of the ID values supplied in $arg.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 798,
+      "sc": 66,
+      "el": 805,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 805,
+     "sc": 17,
+     "el": 805,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 805,
+     "sc": 17,
+     "el": 805,
+     "ec": 25
+    }
+   },
+   {
+    "name": "generate-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " This function returns a string that uniquely identifies a given node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 805,
+      "sc": 82,
+      "el": 810,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 810,
+     "sc": 17,
+     "el": 810,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 810,
+     "sc": 17,
+     "el": 810,
+     "ec": 31
+    }
+   },
+   {
+    "name": "generate-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as node()?"
+    ],
+    "comments": {
+     "description": " This function returns a string that uniquely identifies a given node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 810,
+      "sc": 56,
+      "el": 815,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 815,
+     "sc": 17,
+     "el": 815,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 815,
+     "sc": 17,
+     "el": 815,
+     "ec": 31
+    }
+   },
+   {
+    "name": "doc",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "comments": {
+     "description": " Retrieves a document using a URI supplied as an xs:string, and returns the corresponding document node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 815,
+      "sc": 71,
+      "el": 821,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 821,
+     "sc": 17,
+     "el": 821,
+     "ec": 23
+    },
+    "posAll": {
+     "sl": 821,
+     "sc": 17,
+     "el": 821,
+     "ec": 23
+    }
+   },
+   {
+    "name": "doc-available",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "comments": {
+     "description": " The function returns true if and only if the function call fn:doc($uri) would return a document node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 821,
+      "sc": 73,
+      "el": 827,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 827,
+     "sc": 17,
+     "el": 827,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 827,
+     "sc": 17,
+     "el": 827,
+     "ec": 33
+    }
+   },
+   {
+    "name": "collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns a sequence of items identified by a collection URI; or a default collection if no URI is supplied.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 827,
+      "sc": 77,
+      "el": 833,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 833,
+     "sc": 17,
+     "el": 833,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 833,
+     "sc": 17,
+     "el": 833,
+     "ec": 30
+    }
+   },
+   {
+    "name": "collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a sequence of items identified by a collection URI; or a default collection if no URI is supplied.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 833,
+      "sc": 53,
+      "el": 839,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 839,
+     "sc": 17,
+     "el": 839,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 839,
+     "sc": 17,
+     "el": 839,
+     "ec": 30
+    }
+   },
+   {
+    "name": "uri-collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns a sequence of xs:anyURI values representing the URIs in a URI collection.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 839,
+      "sc": 71,
+      "el": 845,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 845,
+     "sc": 17,
+     "el": 845,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 845,
+     "sc": 17,
+     "el": 845,
+     "ec": 34
+    }
+   },
+   {
+    "name": "uri-collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " Returns a sequence of xs:anyURI values representing the URIs in a URI collection.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 845,
+      "sc": 60,
+      "el": 851,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 851,
+     "sc": 17,
+     "el": 851,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 851,
+     "sc": 17,
+     "el": 851,
+     "ec": 34
+    }
+   },
+   {
+    "name": "unparsed-text",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "comments": {
+     "description": " The fn:unparsed-text function reads an external resource (for example, a file) and returns a string representation of the resource.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 851,
+      "sc": 78,
+      "el": 857,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 857,
+     "sc": 17,
+     "el": 857,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 857,
+     "sc": 17,
+     "el": 857,
+     "ec": 33
+    }
+   },
+   {
+    "name": "unparsed-text",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "comments": {
+     "description": " The fn:unparsed-text function reads an external resource (for example, a file) and returns a string representation of the resource.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 857,
+      "sc": 78,
+      "el": 863,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 863,
+     "sc": 17,
+     "el": 863,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 863,
+     "sc": 17,
+     "el": 863,
+     "ec": 33
+    }
+   },
+   {
+    "name": "unparsed-text-lines",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "comments": {
+     "description": " The fn:unparsed-text-lines function reads an external resource (for example, a file) and returns its contents as a sequence of strings, one for each line of text in the string representation of the resource.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 863,
+      "sc": 101,
+      "el": 870,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 870,
+     "sc": 17,
+     "el": 870,
+     "ec": 39
+    },
+    "posAll": {
+     "sl": 870,
+     "sc": 17,
+     "el": 870,
+     "ec": 39
+    }
+   },
+   {
+    "name": "unparsed-text-lines",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "comments": {
+     "description": " The fn:unparsed-text-lines function reads an external resource (for example, a file) and returns its contents as a sequence of strings, one for each line of text in the string representation of the resource.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 870,
+      "sc": 84,
+      "el": 877,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 877,
+     "sc": 17,
+     "el": 877,
+     "ec": 39
+    },
+    "posAll": {
+     "sl": 877,
+     "sc": 17,
+     "el": 877,
+     "ec": 39
+    }
+   },
+   {
+    "name": "unparsed-text-available",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "comments": {
+     "description": " Because errors in evaluating the fn:unparsed-text function are non-recoverable, these two functions are provided to allow an application to determine whether a call with particular arguments would succeed.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 877,
+      "sc": 107,
+      "el": 884,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 884,
+     "sc": 17,
+     "el": 884,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 884,
+     "sc": 17,
+     "el": 884,
+     "ec": 43
+    }
+   },
+   {
+    "name": "unparsed-text-available",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "comments": {
+     "description": " Because errors in evaluating the fn:unparsed-text function are non-recoverable, these two functions are provided to allow an application to determine whether a call with particular arguments would succeed.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 884,
+      "sc": 88,
+      "el": 891,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 891,
+     "sc": 17,
+     "el": 891,
+     "ec": 43
+    },
+    "posAll": {
+     "sl": 891,
+     "sc": 17,
+     "el": 891,
+     "ec": 43
+    }
+   },
+   {
+    "name": "environment-variable",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$name as xs:string"
+    ],
+    "comments": {
+     "description": " Returns the value of a system environment variable, if it exists.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 891,
+      "sc": 111,
+      "el": 896,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 896,
+     "sc": 17,
+     "el": 896,
+     "ec": 40
+    },
+    "posAll": {
+     "sl": 896,
+     "sc": 17,
+     "el": 896,
+     "ec": 40
+    }
+   },
+   {
+    "name": "available-environment-variables",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [],
+    "comments": {
+     "description": " Returns a list of environment variable names that are suitable for passing to fn:environment-variable, as a (possibly empty) sequence of strings.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 896,
+      "sc": 84,
+      "el": 902,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 902,
+     "sc": 17,
+     "el": 902,
+     "ec": 51
+    },
+    "posAll": {
+     "sl": 902,
+     "sc": 17,
+     "el": 902,
+     "ec": 51
+    }
+   },
+   {
+    "name": "parse-xml",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " This function takes as input an XML document represented as a string, and returns the document node at the root of an XDM tree representing the parsed document.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 902,
+      "sc": 77,
+      "el": 908,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 908,
+     "sc": 17,
+     "el": 908,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 908,
+     "sc": 17,
+     "el": 908,
+     "ec": 29
+    }
+   },
+   {
+    "name": "parse-xml-fragment",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "comments": {
+     "description": " This function takes as input an XML external entity represented as a string, and returns the document node at the root of an XDM tree representing the parsed document fragment.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 908,
+      "sc": 89,
+      "el": 915,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 915,
+     "sc": 17,
+     "el": 915,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 915,
+     "sc": 17,
+     "el": 915,
+     "ec": 38
+    }
+   },
+   {
+    "name": "serialize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*"
+    ],
+    "comments": {
+     "description": " This function serializes the supplied input sequence $arg as described in , returning the serialized representation of the sequence as a string.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 915,
+      "sc": 88,
+      "el": 922,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 922,
+     "sc": 17,
+     "el": 922,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 922,
+     "sc": 17,
+     "el": 922,
+     "ec": 29
+    }
+   },
+   {
+    "name": "serialize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$arg as item()*",
+     "$params as item()?"
+    ],
+    "comments": {
+     "description": " This function serializes the supplied input sequence $arg as described in , returning the serialized representation of the sequence as a string.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 922,
+      "sc": 69,
+      "el": 929,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 929,
+     "sc": 17,
+     "el": 929,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 929,
+     "sc": 17,
+     "el": 929,
+     "ec": 29
+    }
+   },
+   {
+    "name": "function-lookup",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$name as xs:QName",
+     "$arity as xs:integer"
+    ],
+    "comments": {
+     "description": " Returns the function having a given name and arity, if there is one.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 929,
+      "sc": 88,
+      "el": 934,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 934,
+     "sc": 17,
+     "el": 934,
+     "ec": 35
+    },
+    "posAll": {
+     "sl": 934,
+     "sc": 17,
+     "el": 934,
+     "ec": 35
+    }
+   },
+   {
+    "name": "function-name",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$func as function(*)"
+    ],
+    "comments": {
+     "description": " Returns the name of the function identified by a function item.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 934,
+      "sc": 101,
+      "el": 939,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 939,
+     "sc": 17,
+     "el": 939,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 939,
+     "sc": 17,
+     "el": 939,
+     "ec": 33
+    }
+   },
+   {
+    "name": "function-arity",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$func as function(*)"
+    ],
+    "comments": {
+     "description": " Returns the arity of the function identified by a function item.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 939,
+      "sc": 78,
+      "el": 944,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 944,
+     "sc": 17,
+     "el": 944,
+     "ec": 34
+    },
+    "posAll": {
+     "sl": 944,
+     "sc": 17,
+     "el": 944,
+     "ec": 34
+    }
+   },
+   {
+    "name": "for-each",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq as item()*",
+     "$action as function(item()) as item()*"
+    ],
+    "comments": {
+     "description": " Applies the function item $action to every item from the sequence $seq in turn, returning the concatenation of the resulting sequences in order.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 944,
+      "sc": 80,
+      "el": 950,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 950,
+     "sc": 17,
+     "el": 950,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 950,
+     "sc": 17,
+     "el": 950,
+     "ec": 28
+    }
+   },
+   {
+    "name": "filter",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq as item()*",
+     "$f as function(item()) as xs:boolean"
+    ],
+    "comments": {
+     "description": " Returns those items from the sequence $seq for which the supplied function $f returns true.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 950,
+      "sc": 105,
+      "el": 956,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 956,
+     "sc": 17,
+     "el": 956,
+     "ec": 26
+    },
+    "posAll": {
+     "sl": 956,
+     "sc": 17,
+     "el": 956,
+     "ec": 26
+    }
+   },
+   {
+    "name": "fold-left",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq as item()*",
+     "$zero as item()*",
+     "$f as function(item()*, item()) as item()*"
+    ],
+    "comments": {
+     "description": " Processes the supplied sequence from left to right, applying the supplied function repeatedly to each item in turn, together with an accumulated result value.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 956,
+      "sc": 101,
+      "el": 962,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 962,
+     "sc": 17,
+     "el": 962,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 962,
+     "sc": 17,
+     "el": 962,
+     "ec": 29
+    }
+   },
+   {
+    "name": "fold-right",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq as item()*",
+     "$zero as item()*",
+     "$f as function(item(), item()*) as item()*"
+    ],
+    "comments": {
+     "description": " Processes the supplied sequence from right to left, applying the supplied function repeatedly to each item in turn, together with an accumulated result value.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 962,
+      "sc": 127,
+      "el": 968,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 968,
+     "sc": 17,
+     "el": 968,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 968,
+     "sc": 17,
+     "el": 968,
+     "ec": 30
+    }
+   },
+   {
+    "name": "for-each-pair",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$seq1 as item()*",
+     "$seq2 as item()*",
+     "$action as function(item(), item()) as item()*"
+    ],
+    "comments": {
+     "description": " Applies the function item $action to successive pairs of items taken one from $seq1 and one from $seq2, returning the concatenation of the resulting sequences in order.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 968,
+      "sc": 128,
+      "el": 975,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 975,
+     "sc": 17,
+     "el": 975,
+     "ec": 33
+    },
+    "posAll": {
+     "sl": 975,
+     "sc": 17,
+     "el": 975,
+     "ec": 33
+    }
+   },
+   {
+    "name": "sort",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as item()*"
+    ],
+    "comments": {
+     "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 975,
+      "sc": 136,
+      "el": 980,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 980,
+     "sc": 17,
+     "el": 980,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 980,
+     "sc": 17,
+     "el": 980,
+     "ec": 24
+    }
+   },
+   {
+    "name": "sort",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as item()*",
+     "$collation as xs:string?"
+    ],
+    "comments": {
+     "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 980,
+      "sc": 64,
+      "el": 985,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 985,
+     "sc": 17,
+     "el": 985,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 985,
+     "sc": 17,
+     "el": 985,
+     "ec": 24
+    }
+   },
+   {
+    "name": "sort",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as item()*",
+     "$collation as xs:string?",
+     "$key as function(item()) as xs:anyAtomicType*"
+    ],
+    "comments": {
+     "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 985,
+      "sc": 89,
+      "el": 990,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 990,
+     "sc": 17,
+     "el": 990,
+     "ec": 24
+    },
+    "posAll": {
+     "sl": 990,
+     "sc": 17,
+     "el": 990,
+     "ec": 24
+    }
+   },
+   {
+    "name": "apply",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$function as function(*)",
+     "$array as array(*)"
+    ],
+    "comments": {
+     "description": " Makes a dynamic call on a function with an argument list supplied in the form of an array.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 990,
+      "sc": 135,
+      "el": 995,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 995,
+     "sc": 17,
+     "el": 995,
+     "ec": 25
+    },
+    "posAll": {
+     "sl": 995,
+     "sc": 17,
+     "el": 995,
+     "ec": 25
+    }
+   },
+   {
+    "name": "load-xquery-module",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$module-uri as xs:string"
+    ],
+    "comments": {
+     "description": " Provides access to the public functions and global variables of a dynamically-loaded XQuery library module.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 995,
+      "sc": 91,
+      "el": 1000,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1000,
+     "sc": 17,
+     "el": 1000,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 1000,
+     "sc": 17,
+     "el": 1000,
+     "ec": 38
+    }
+   },
+   {
+    "name": "load-xquery-module",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$module-uri as xs:string",
+     "$options as map(*)"
+    ],
+    "comments": {
+     "description": " Provides access to the public functions and global variables of a dynamically-loaded XQuery library module.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1000,
+      "sc": 84,
+      "el": 1005,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1005,
+     "sc": 17,
+     "el": 1005,
+     "ec": 38
+    },
+    "posAll": {
+     "sl": 1005,
+     "sc": 17,
+     "el": 1005,
+     "ec": 38
+    }
+   },
+   {
+    "name": "transform",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$options as map(*)"
+    ],
+    "comments": {
+     "description": " Invokes a transformation using a dynamically-loaded XSLT stylesheet.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1005,
+      "sc": 103,
+      "el": 1010,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1010,
+     "sc": 17,
+     "el": 1010,
+     "ec": 29
+    },
+    "posAll": {
+     "sl": 1010,
+     "sc": 17,
+     "el": 1010,
+     "ec": 29
+    }
+   },
+   {
+    "name": "parse-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$json-text as xs:string?"
+    ],
+    "comments": {
+     "description": " Parses a string supplied in the form of a JSON text, returning the results typically in the form of a map or array.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1010,
+      "sc": 69,
+      "el": 1016,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1016,
+     "sc": 17,
+     "el": 1016,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 1016,
+     "sc": 17,
+     "el": 1016,
+     "ec": 30
+    }
+   },
+   {
+    "name": "parse-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$json-text as xs:string?",
+     "$options as map(*)"
+    ],
+    "comments": {
+     "description": " Parses a string supplied in the form of a JSON text, returning the results typically in the form of a map or array.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1016,
+      "sc": 77,
+      "el": 1022,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1022,
+     "sc": 17,
+     "el": 1022,
+     "ec": 30
+    },
+    "posAll": {
+     "sl": 1022,
+     "sc": 17,
+     "el": 1022,
+     "ec": 30
+    }
+   },
+   {
+    "name": "json-doc",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "comments": {
+     "description": " Reads an external resource containing JSON, and returns the result of parsing the resource as JSON.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1022,
+      "sc": 96,
+      "el": 1027,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1027,
+     "sc": 17,
+     "el": 1027,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 1027,
+     "sc": 17,
+     "el": 1027,
+     "ec": 28
+    }
+   },
+   {
+    "name": "json-doc",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$href as xs:string?",
+     "$options as map(*)"
+    ],
+    "comments": {
+     "description": " Reads an external resource containing JSON, and returns the result of parsing the resource as JSON.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1027,
+      "sc": 70,
+      "el": 1032,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1032,
+     "sc": 17,
+     "el": 1032,
+     "ec": 28
+    },
+    "posAll": {
+     "sl": 1032,
+     "sc": 17,
+     "el": 1032,
+     "ec": 28
+    }
+   },
+   {
+    "name": "json-to-xml",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$json-text as xs:string?"
+    ],
+    "comments": {
+     "description": " Parses a string supplied in the form of a JSON text, returning the results in the form of an XML document node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1032,
+      "sc": 89,
+      "el": 1038,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1038,
+     "sc": 17,
+     "el": 1038,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 1038,
+     "sc": 17,
+     "el": 1038,
+     "ec": 31
+    }
+   },
+   {
+    "name": "json-to-xml",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$json-text as xs:string?",
+     "$options as map(*)"
+    ],
+    "comments": {
+     "description": " Parses a string supplied in the form of a JSON text, returning the results in the form of an XML document node.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1038,
+      "sc": 87,
+      "el": 1044,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1044,
+     "sc": 17,
+     "el": 1044,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 1044,
+     "sc": 17,
+     "el": 1044,
+     "ec": 31
+    }
+   },
+   {
+    "name": "xml-to-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as node()?"
+    ],
+    "comments": {
+     "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1044,
+      "sc": 106,
+      "el": 1050,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1050,
+     "sc": 17,
+     "el": 1050,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 1050,
+     "sc": 17,
+     "el": 1050,
+     "ec": 31
+    }
+   },
+   {
+    "name": "xml-to-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "params": [
+     "$input as node()?",
+     "$options as map(*)"
+    ],
+    "comments": {
+     "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar.",
+     "params": {},
+     "errors": [],
+     "others": [],
+     "pos": {
+      "sl": 1050,
+      "sc": 74,
+      "el": 1056,
+      "ec": 0
+     }
+    },
+    "pos": {
+     "sl": 1056,
+     "sc": 17,
+     "el": 1056,
+     "ec": 31
+    },
+    "posAll": {
+     "sl": 1056,
+     "sc": 17,
+     "el": 1056,
+     "ec": 31
+    }
+   }
+  ]
+ }
+}

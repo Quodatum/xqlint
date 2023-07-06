@@ -1,5 +1,5 @@
 (:~ 
-Create xquery source modules from Wki pages
+Create xquery source modules from BaseX Wiki pages (pre version 10)
 @author Andy Bunce
 @version 0.1
 :)
