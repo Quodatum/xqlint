@@ -8,6 +8,6 @@ var src="cases/history.xqm";
 var linter = new XQLint(fs.readFileSync(src, 'utf-8'));
 // .hasSyntaxError()
 
-var xqdoc=linter.getXQDoc(false);
+var xqdoc=linter.getXQDoc(true);
 console.log(JSON.stringify(xqdoc,undefined," "));
 
