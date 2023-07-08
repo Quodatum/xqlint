@@ -40,7 +40,7 @@ function importMods(files) {
         if (syntaxError) {
             console.log("ERR: ", linter.getMarkers()[0].message);
         } else {
-            var xqdoc = linter.getXQDoc(true);
+            var xqdoc = linter.getXQDoc(false);
           
             result[xqdoc.moduleNamespace] = xqdoc;
             console.log(xqdoc.moduleNamespace);
