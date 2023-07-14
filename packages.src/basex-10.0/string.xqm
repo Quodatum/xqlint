@@ -39,7 +39,7 @@ declare function string:cologne-phonetic($string as xs:string) as xs:string exte
  : @return value of type xs:string
  : @error string:format The specified format is not valid.
  :)
-declare function string:format($format as xs:string, $items as item() ...) as xs:string external;
+declare function string:format($format as xs:string, $items as item()) as xs:string external;
 
 (:~ 
  : Returns a single carriage return character (<code>&amp;#13;</code>).

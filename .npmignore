@@ -2,6 +2,7 @@
 .settings/
 test/
 scripts/
+packages.src/
 docs/
 cases/
 specs/

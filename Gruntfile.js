@@ -120,7 +120,7 @@ module.exports = function (grunt) {
                 //src: ['test/variable_test.js']
                 //src: ['test/namespace_test.js'] //3 fail
                 //src: ['test/parser_test.js'] //26 fail
-                src: ['test/completion_test.js'] //26 fail
+                src: ['test/issue_test.js'] //26 fail
             },
         },
         browserify: {

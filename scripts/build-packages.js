@@ -1,5 +1,5 @@
 'use strict';
-// generate  packages json file for each processor from xqm files in dir
+// generate  package  json file for each processor from xqm files in dir
 var processors = {
     'basex-9.7': { 'src': 'packages.src/basex-9.7' },
     'basex-10.6': { 'src': 'packages.src/basex-10.0' },
@@ -30,6 +30,7 @@ var getFiles = function (p) {
     return files;
 };
 
+// return object with keys of known namespaces and values of the xqdoc
 function importMods(files) {
     var result = {};
     files.forEach(function (file) {
@@ -42,8 +43,8 @@ function importMods(files) {
         } else {
             var xqdoc = linter.getXQDoc(false);
           
-            result[xqdoc.moduleNamespace] = xqdoc;
-            console.log(xqdoc.moduleNamespace);
+            result[xqdoc.ns] = xqdoc;
+            console.log(xqdoc.ns);
            // console.log(xqdoc);
         }
     });

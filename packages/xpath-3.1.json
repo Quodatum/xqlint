@@ -1,6 +1,6 @@
 {
  "http://www.w3.org/2005/xpath-functions/math": {
-  "moduleNamespace": "http://www.w3.org/2005/xpath-functions/math",
+  "ns": "http://www.w3.org/2005/xpath-functions/math",
   "prefixes": [
    "math"
   ],
@@ -11,6 +11,7 @@
     "name": "pi",
     "uri": "http://www.w3.org/2005/xpath-functions/math",
     "params": [],
+    "return": "xs:double",
     "description": " Returns the <code>xs:double</code> value of the mathematical constant π whose lexical representation is 3.141592653589793."
    },
    {
@@ -19,6 +20,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the square root of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the <code>xs:double</code> value of the mathematical square root of <code>$arg</code>."
    },
    {
@@ -27,6 +29,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the sine of the <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the sine of <code>$arg</code>, treated as an angle in radians."
    },
    {
@@ -35,6 +38,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the cosine of <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the cosine of <code>$arg</code>, treated as an angle in radians."
    },
    {
@@ -43,6 +47,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the tangent of <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the tangent of <code>$arg</code>, treated as an angle in radians."
    },
    {
@@ -51,6 +56,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the arc sine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc sine of <code>$arg</code>, returned as an angle in radians in the range -π/2 to +π/2."
    },
    {
@@ -59,6 +65,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the arc cosine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc cosine of <code>$arg</code>, returned as an angle in radians in the range 0 to +π."
    },
    {
@@ -67,6 +74,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the arc tangent of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc tangent of <code>$arg</code>, returned as an angle in radians in the range -π/2 to +π/2."
    },
    {
@@ -76,6 +84,7 @@
      "$arg1 as xs:double?",
      "$arg2 as xs:double"
     ],
+    "return": "xs:double?",
     "description": " Returns the arc tangent of <code>$arg1</code> divided by <code>$arg2</code>, the result being in the range -π/2 to +π/2 radians.<br/>If <code>$arg1</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc tangent of <code>$arg1</code> divided by <code>$arg2</code>, returned as an angle in radians in the range -π to +π."
    },
    {
@@ -85,6 +94,7 @@
      "$arg1 as xs:double?",
      "$arg2 as xs:double"
     ],
+    "return": "xs:double?",
     "description": " Returns <code>$arg1</code> raised to the power of <code>$arg2</code>.<br/>If <code>$arg1</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the <code>$arg1</code> raised to the power of <code>$arg2</code>."
    },
    {
@@ -93,6 +103,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns <i>e</i> raised to the power of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the value of <i>e</i> raised to the power of <code>$arg</code>."
    },
    {
@@ -101,6 +112,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the natural logarithm of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the natural logarithm (base <i>e</i>) of <code>$arg</code>."
    },
    {
@@ -109,12 +121,14 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the base 10 logarithm of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the base 10 logarithm of <code>$arg</code>."
    },
    {
     "name": "e",
     "uri": "http://www.w3.org/2005/xpath-functions/math",
     "params": [],
+    "return": "xs:double",
     "description": " Returns the <code>xs:double</code> value of the mathematical constant <i>e</i> whose lexical representation is 2.718281828459045."
    },
    {
@@ -123,6 +137,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the hyperbolic sine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic sine of <code>$arg</code>."
    },
    {
@@ -131,6 +146,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the hyperbolic cosine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic cosine of <code>$arg</code>."
    },
    {
@@ -139,6 +155,7 @@
     "params": [
      "$arg as xs:double?"
     ],
+    "return": "xs:double?",
     "description": " Returns the hyperbolic tangent of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic tangent of <code>$arg</code>."
    },
    {
@@ -147,13 +164,14 @@
     "params": [
      "$string as xs:string?"
     ],
+    "return": "xs:hexBinary?",
     "description": " Calculates the CRC32 check sum of the given <code>$string</code>.<br/>If an empty sequence is supplied, the empty sequence is returned."
    }
   ],
   "description": " The math <a href=\"http://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"http://www.w3.org/TR/xpath-functions-30/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module."
  },
  "http://www.w3.org/2005/xpath-functions": {
-  "moduleNamespace": "http://www.w3.org/2005/xpath-functions",
+  "ns": "http://www.w3.org/2005/xpath-functions",
   "prefixes": [
    "fn"
   ],
@@ -199,6 +217,7 @@
     "params": [
      "$value as item()*"
     ],
+    "return": "item()*",
     "description": " Provides an execution trace intended to be used in debugging queries."
    },
    {
@@ -208,6 +227,7 @@
      "$value as item()*",
      "$label as xs:string"
     ],
+    "return": "item()*",
     "description": " Provides an execution trace intended to be used in debugging queries."
    },
    {
@@ -216,6 +236,7 @@
     "params": [
      "$arg as xs:numeric?"
     ],
+    "return": "xs:numeric?",
     "description": " Returns the absolute value of $arg."
    },
    {
@@ -224,6 +245,7 @@
     "params": [
      "$arg as xs:numeric?"
     ],
+    "return": "xs:numeric?",
     "description": " Rounds $arg upwards to a whole number."
    },
    {
@@ -232,6 +254,7 @@
     "params": [
      "$arg as xs:numeric?"
     ],
+    "return": "xs:numeric?",
     "description": " Rounds $arg downwards to a whole number."
    },
    {
@@ -240,6 +263,7 @@
     "params": [
      "$arg as xs:numeric?"
     ],
+    "return": "xs:numeric?",
     "description": " Rounds a value to a specified number of decimal places, rounding upwards if two such values are equally near."
    },
    {
@@ -249,6 +273,7 @@
      "$arg as xs:numeric?",
      "$precision as xs:integer"
     ],
+    "return": "xs:numeric?",
     "description": " Rounds a value to a specified number of decimal places, rounding upwards if two such values are equally near."
    },
    {
@@ -257,6 +282,7 @@
     "params": [
      "$arg as xs:numeric?"
     ],
+    "return": "xs:numeric?",
     "description": " Rounds a value to a specified number of decimal places, rounding to make the last digit even if two such values are equally near."
    },
    {
@@ -266,12 +292,14 @@
      "$arg as xs:numeric?",
      "$precision as xs:integer"
     ],
+    "return": "xs:numeric?",
     "description": " Rounds a value to a specified number of decimal places, rounding to make the last digit even if two such values are equally near."
    },
    {
     "name": "number",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:double",
     "description": " Returns the value indicated by $arg or, if $arg is not specified, the context item after atomization, converted to an xs:double."
    },
    {
@@ -280,6 +308,7 @@
     "params": [
      "$arg as xs:anyAtomicType?"
     ],
+    "return": "xs:double",
     "description": " Returns the value indicated by $arg or, if $arg is not specified, the context item after atomization, converted to an xs:double."
    },
    {
@@ -289,6 +318,7 @@
      "$value as xs:integer?",
      "$picture as xs:string"
     ],
+    "return": "xs:string",
     "description": " Formats an integer according to a given picture string, using the conventions of a given natural language if specified."
    },
    {
@@ -299,6 +329,7 @@
      "$picture as xs:string",
      "$lang as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Formats an integer according to a given picture string, using the conventions of a given natural language if specified."
    },
    {
@@ -308,6 +339,7 @@
      "$value as xs:numeric?",
      "$picture as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns a string containing a number formatted according to a given picture string, taking account of decimal formats specified in the static context."
    },
    {
@@ -318,12 +350,14 @@
      "$picture as xs:string",
      "$decimal-format-name as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Returns a string containing a number formatted according to a given picture string, taking account of decimal formats specified in the static context."
    },
    {
     "name": "random-number-generator",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "map(xs:string, item())",
     "description": " Returns a random number generator, which can be used to generate sequences of random numbers."
    },
    {
@@ -332,6 +366,7 @@
     "params": [
      "$seed as xs:anyAtomicType?"
     ],
+    "return": "map(xs:string, item())",
     "description": " Returns a random number generator, which can be used to generate sequences of random numbers."
    },
    {
@@ -340,6 +375,7 @@
     "params": [
      "$arg as xs:integer*"
     ],
+    "return": "xs:string",
     "description": " Returns an xs:string whose characters have supplied codepoints."
    },
    {
@@ -348,6 +384,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:integer*",
     "description": " Returns the sequence of codepoints that constitute an xs:string value."
    },
    {
@@ -357,6 +394,7 @@
      "$comparand1 as xs:string?",
      "$comparand2 as xs:string?"
     ],
+    "return": "xs:integer?",
     "description": " Returns -1, 0, or 1, depending on whether $comparand1 collates before, equal to, or after $comparand2 according to the rules of a selected collation."
    },
    {
@@ -367,6 +405,7 @@
      "$comparand2 as xs:string?",
      "$collation as xs:string"
     ],
+    "return": "xs:integer?",
     "description": " Returns -1, 0, or 1, depending on whether $comparand1 collates before, equal to, or after $comparand2 according to the rules of a selected collation."
    },
    {
@@ -376,6 +415,7 @@
      "$comparand1 as xs:string?",
      "$comparand2 as xs:string?"
     ],
+    "return": "xs:boolean?",
     "description": " Returns true if two strings are equal, considered codepoint-by-codepoint."
    },
    {
@@ -384,6 +424,7 @@
     "params": [
      "$key as xs:string"
     ],
+    "return": "xs:base64Binary",
     "description": " Given a string value and a collation, generates an internal value called a collation key, with the property that the matching and ordering of collation keys reflects the matching and ordering of strings under the specified collation."
    },
    {
@@ -393,6 +434,7 @@
      "$key as xs:string",
      "$collation as xs:string"
     ],
+    "return": "xs:base64Binary",
     "description": " Given a string value and a collation, generates an internal value called a collation key, with the property that the matching and ordering of collation keys reflects the matching and ordering of strings under the specified collation."
    },
    {
@@ -402,6 +444,7 @@
      "$input as xs:string*",
      "$token as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Determines whether or not any of the supplied strings, when tokenized at whitespace boundaries, contains the supplied token, under the rules of the supplied collation."
    },
    {
@@ -412,6 +455,7 @@
      "$token as xs:string",
      "$collation as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Determines whether or not any of the supplied strings, when tokenized at whitespace boundaries, contains the supplied token, under the rules of the supplied collation."
    },
    {
@@ -421,6 +465,7 @@
      "$arg1 as xs:anyAtomicType?",
      "$arg2 as xs:anyAtomicType?"
     ],
+    "return": "xs:string",
     "description": " Returns the concatenation of the string values of the arguments."
    },
    {
@@ -429,6 +474,7 @@
     "params": [
      "$arg1 as xs:anyAtomicType*"
     ],
+    "return": "xs:string",
     "description": " Returns a string created by concatenating the items in a sequence, with a defined separator between adjacent items."
    },
    {
@@ -438,6 +484,7 @@
      "$arg1 as xs:anyAtomicType*",
      "$arg2 as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns a string created by concatenating the items in a sequence, with a defined separator between adjacent items."
    },
    {
@@ -447,6 +494,7 @@
      "$sourceString as xs:string?",
      "$start as xs:double"
     ],
+    "return": "xs:string",
     "description": " Returns the portion of the value of $sourceString beginning at the position indicated by the value of $start and continuing for the number of characters indicated by the value of $length."
    },
    {
@@ -457,12 +505,14 @@
      "$start as xs:double",
      "$length as xs:double"
     ],
+    "return": "xs:string",
     "description": " Returns the portion of the value of $sourceString beginning at the position indicated by the value of $start and continuing for the number of characters indicated by the value of $length."
    },
    {
     "name": "string-length",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:integer",
     "description": " Returns the number of characters in a string."
    },
    {
@@ -471,12 +521,14 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:integer",
     "description": " Returns the number of characters in a string."
    },
    {
     "name": "normalize-space",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:string",
     "description": " Returns the value of $arg with leading and trailing whitespace removed, and sequences of internal whitespace reduced to a single space character."
    },
    {
@@ -485,6 +537,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Returns the value of $arg with leading and trailing whitespace removed, and sequences of internal whitespace reduced to a single space character."
    },
    {
@@ -493,6 +546,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Returns the value of $arg after applying Unicode normalization."
    },
    {
@@ -502,6 +556,7 @@
      "$arg as xs:string?",
      "$normalizationForm as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns the value of $arg after applying Unicode normalization."
    },
    {
@@ -510,6 +565,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Converts a string to upper case."
    },
    {
@@ -518,6 +574,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Converts a string to lower case."
    },
    {
@@ -528,6 +585,7 @@
      "$mapString as xs:string",
      "$transString as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns the value of $arg modified by replacing or removing individual characters."
    },
    {
@@ -537,6 +595,7 @@
      "$arg1 as xs:string?",
      "$arg2 as xs:string?"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the string $arg1 contains $arg2 as a substring, taking collations into account."
    },
    {
@@ -547,6 +606,7 @@
      "$arg2 as xs:string?",
      "$collation as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the string $arg1 contains $arg2 as a substring, taking collations into account."
    },
    {
@@ -556,6 +616,7 @@
      "$arg1 as xs:string?",
      "$arg2 as xs:string?"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the string $arg1 contains $arg2 as a leading substring, taking collations into account."
    },
    {
@@ -566,6 +627,7 @@
      "$arg2 as xs:string?",
      "$collation as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the string $arg1 contains $arg2 as a leading substring, taking collations into account."
    },
    {
@@ -575,6 +637,7 @@
      "$arg1 as xs:string?",
      "$arg2 as xs:string?"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the string $arg1 contains $arg2 as a trailing substring, taking collations into account."
    },
    {
@@ -585,6 +648,7 @@
      "$arg2 as xs:string?",
      "$collation as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the string $arg1 contains $arg2 as a trailing substring, taking collations into account."
    },
    {
@@ -594,6 +658,7 @@
      "$arg1 as xs:string?",
      "$arg2 as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Returns the part of $arg1 that precedes the first occurrence of $arg2, taking collations into account."
    },
    {
@@ -604,6 +669,7 @@
      "$arg2 as xs:string?",
      "$collation as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns the part of $arg1 that precedes the first occurrence of $arg2, taking collations into account."
    },
    {
@@ -613,6 +679,7 @@
      "$arg1 as xs:string?",
      "$arg2 as xs:string?"
     ],
+    "return": "xs:string",
     "description": " Returns the part of $arg1 that follows the first occurrence of $arg2, taking collations into account."
    },
    {
@@ -623,6 +690,7 @@
      "$arg2 as xs:string?",
      "$collation as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns the part of $arg1 that follows the first occurrence of $arg2, taking collations into account."
    },
    {
@@ -632,6 +700,7 @@
      "$input as xs:string?",
      "$pattern as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the supplied string matches a given regular expression."
    },
    {
@@ -642,6 +711,7 @@
      "$pattern as xs:string",
      "$flags as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the supplied string matches a given regular expression."
    },
    {
@@ -652,6 +722,7 @@
      "$pattern as xs:string",
      "$replacement as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns a string produced from the input string by replacing any substrings that match a given regular expression with a supplied replacement string."
    },
    {
@@ -663,6 +734,7 @@
      "$replacement as xs:string",
      "$flags as xs:string"
     ],
+    "return": "xs:string",
     "description": " Returns a string produced from the input string by replacing any substrings that match a given regular expression with a supplied replacement string."
    },
    {
@@ -671,6 +743,7 @@
     "params": [
      "$input as xs:string?"
     ],
+    "return": "xs:string*",
     "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression."
    },
    {
@@ -680,6 +753,7 @@
      "$input as xs:string?",
      "$pattern as xs:string"
     ],
+    "return": "xs:string*",
     "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression."
    },
    {
@@ -690,6 +764,7 @@
      "$pattern as xs:string",
      "$flags as xs:string"
     ],
+    "return": "xs:string*",
     "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression."
    },
    {
@@ -699,6 +774,7 @@
      "$input as xs:string?",
      "$pattern as xs:string"
     ],
+    "return": "element(fn:analyze-string-result)",
     "description": " Analyzes a string using a regular expression, returning an XML structure that identifies which parts of the input string matched or failed to match the regular expression, and in the case of matched substrings, which substrings matched each capturing group in the regular expression."
    },
    {
@@ -709,18 +785,21 @@
      "$pattern as xs:string",
      "$flags as xs:string"
     ],
+    "return": "element(fn:analyze-string-result)",
     "description": " Analyzes a string using a regular expression, returning an XML structure that identifies which parts of the input string matched or failed to match the regular expression, and in the case of matched substrings, which substrings matched each capturing group in the regular expression."
    },
    {
     "name": "true",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:boolean",
     "description": " Returns the xs:boolean value true."
    },
    {
     "name": "false",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:boolean",
     "description": " Returns the xs:boolean value false."
    },
    {
@@ -729,6 +808,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "xs:boolean",
     "description": " Computes the effective boolean value of the sequence $arg."
    },
    {
@@ -737,6 +817,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the effective boolean value of $arg is false, or false if it is true."
    },
    {
@@ -745,6 +826,7 @@
     "params": [
      "$arg as xs:duration?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the number of years in a duration."
    },
    {
@@ -753,6 +835,7 @@
     "params": [
      "$arg as xs:duration?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the number of months in a duration."
    },
    {
@@ -761,6 +844,7 @@
     "params": [
      "$arg as xs:duration?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the number of days in a duration."
    },
    {
@@ -769,6 +853,7 @@
     "params": [
      "$arg as xs:duration?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the number of hours in a duration."
    },
    {
@@ -777,6 +862,7 @@
     "params": [
      "$arg as xs:duration?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the number of minutes in a duration."
    },
    {
@@ -785,6 +871,7 @@
     "params": [
      "$arg as xs:duration?"
     ],
+    "return": "xs:decimal?",
     "description": " Returns the number of seconds in a duration."
    },
    {
@@ -794,6 +881,7 @@
      "$arg1 as xs:date?",
      "$arg2 as xs:time?"
     ],
+    "return": "xs:dateTime?",
     "description": " Returns an xs:dateTime value created by combining an xs:date and an xs:time."
    },
    {
@@ -802,6 +890,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the year component of an xs:dateTime."
    },
    {
@@ -810,6 +899,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the month component of an xs:dateTime."
    },
    {
@@ -818,6 +908,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the day component of an xs:dateTime."
    },
    {
@@ -826,6 +917,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the hours component of an xs:dateTime."
    },
    {
@@ -834,6 +926,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the minute component of an xs:dateTime."
    },
    {
@@ -842,6 +935,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:decimal?",
     "description": " Returns the seconds component of an xs:dateTime."
    },
    {
@@ -850,6 +944,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:dayTimeDuration?",
     "description": " Returns the timezone component of an xs:dateTime."
    },
    {
@@ -858,6 +953,7 @@
     "params": [
      "$arg as xs:date?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the year component of an xs:date."
    },
    {
@@ -866,6 +962,7 @@
     "params": [
      "$arg as xs:date?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the month component of an xs:date."
    },
    {
@@ -874,6 +971,7 @@
     "params": [
      "$arg as xs:date?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the day component of an xs:date."
    },
    {
@@ -882,6 +980,7 @@
     "params": [
      "$arg as xs:date?"
     ],
+    "return": "xs:dayTimeDuration?",
     "description": " Returns the timezone component of an xs:date."
    },
    {
@@ -890,6 +989,7 @@
     "params": [
      "$arg as xs:time?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the hours component of an xs:time."
    },
    {
@@ -898,6 +998,7 @@
     "params": [
      "$arg as xs:time?"
     ],
+    "return": "xs:integer?",
     "description": " Returns the minutes component of an xs:time."
    },
    {
@@ -906,6 +1007,7 @@
     "params": [
      "$arg as xs:time?"
     ],
+    "return": "xs:decimal?",
     "description": " Returns the seconds component of an xs:time."
    },
    {
@@ -914,6 +1016,7 @@
     "params": [
      "$arg as xs:time?"
     ],
+    "return": "xs:dayTimeDuration?",
     "description": " Returns the timezone component of an xs:time."
    },
    {
@@ -922,6 +1025,7 @@
     "params": [
      "$arg as xs:dateTime?"
     ],
+    "return": "xs:dateTime?",
     "description": " Adjusts an xs:dateTime value to a specific timezone, or to no timezone at all."
    },
    {
@@ -931,6 +1035,7 @@
      "$arg as xs:dateTime?",
      "$timezone as xs:dayTimeDuration?"
     ],
+    "return": "xs:dateTime?",
     "description": " Adjusts an xs:dateTime value to a specific timezone, or to no timezone at all."
    },
    {
@@ -939,6 +1044,7 @@
     "params": [
      "$arg as xs:date?"
     ],
+    "return": "xs:date?",
     "description": " Adjusts an xs:date value to a specific timezone, or to no timezone at all; the result is the date in the target timezone that contains the starting instant of the supplied date."
    },
    {
@@ -948,6 +1054,7 @@
      "$arg as xs:date?",
      "$timezone as xs:dayTimeDuration?"
     ],
+    "return": "xs:date?",
     "description": " Adjusts an xs:date value to a specific timezone, or to no timezone at all; the result is the date in the target timezone that contains the starting instant of the supplied date."
    },
    {
@@ -956,6 +1063,7 @@
     "params": [
      "$arg as xs:time?"
     ],
+    "return": "xs:time?",
     "description": " Adjusts an xs:time value to a specific timezone, or to no timezone at all."
    },
    {
@@ -965,6 +1073,7 @@
      "$arg as xs:time?",
      "$timezone as xs:dayTimeDuration?"
     ],
+    "return": "xs:time?",
     "description": " Adjusts an xs:time value to a specific timezone, or to no timezone at all."
    },
    {
@@ -974,6 +1083,7 @@
      "$value as xs:dateTime?",
      "$picture as xs:string"
     ],
+    "return": "xs:string?",
     "description": " Returns a string containing an xs:dateTime value formatted for display."
    },
    {
@@ -986,6 +1096,7 @@
      "$calendar as xs:string?",
      "$place as xs:string?"
     ],
+    "return": "xs:string?",
     "description": " Returns a string containing an xs:dateTime value formatted for display."
    },
    {
@@ -995,6 +1106,7 @@
      "$value as xs:date?",
      "$picture as xs:string"
     ],
+    "return": "xs:string?",
     "description": " Returns a string containing an xs:date value formatted for display."
    },
    {
@@ -1007,6 +1119,7 @@
      "$calendar as xs:string?",
      "$place as xs:string?"
     ],
+    "return": "xs:string?",
     "description": " Returns a string containing an xs:date value formatted for display."
    },
    {
@@ -1016,6 +1129,7 @@
      "$value as xs:time?",
      "$picture as xs:string"
     ],
+    "return": "xs:string?",
     "description": " Returns a string containing an xs:time value formatted for display."
    },
    {
@@ -1028,6 +1142,7 @@
      "$calendar as xs:string?",
      "$place as xs:string?"
     ],
+    "return": "xs:string?",
     "description": " Returns a string containing an xs:time value formatted for display."
    },
    {
@@ -1036,6 +1151,7 @@
     "params": [
      "$value as xs:string?"
     ],
+    "return": "xs:dateTime?",
     "description": " Parses a string containing the date and time in IETF format, returning the corresponding xs:dateTime value."
    },
    {
@@ -1045,6 +1161,7 @@
      "$qname as xs:string?",
      "$element as element()"
     ],
+    "return": "xs:QName?",
     "description": " Returns an xs:QName value (that is, an expanded-QName) by taking an xs:string that has the lexical form of an xs:QName (a string in the form \"prefix:local-name\" or \"local-name\") and resolving it using the in-scope namespaces for a given element."
    },
    {
@@ -1054,6 +1171,7 @@
      "$paramURI as xs:string?",
      "$paramQName as xs:string"
     ],
+    "return": "xs:QName",
     "description": " Returns an xs:QName value formed using a supplied namespace URI and lexical QName."
    },
    {
@@ -1062,6 +1180,7 @@
     "params": [
      "$arg as xs:QName?"
     ],
+    "return": "xs:NCName?",
     "description": " Returns the prefix component of the supplied QName."
    },
    {
@@ -1070,6 +1189,7 @@
     "params": [
      "$arg as xs:QName?"
     ],
+    "return": "xs:NCName?",
     "description": " Returns the local part of the supplied QName."
    },
    {
@@ -1078,6 +1198,7 @@
     "params": [
      "$arg as xs:QName?"
     ],
+    "return": "xs:anyURI?",
     "description": " Returns the namespace URI part of the supplied QName."
    },
    {
@@ -1087,6 +1208,7 @@
      "$prefix as xs:string?",
      "$element as element()"
     ],
+    "return": "xs:anyURI?",
     "description": " Returns the namespace URI of one of the in-scope namespaces for $element, identified by its namespace prefix."
    },
    {
@@ -1095,6 +1217,7 @@
     "params": [
      "$element as element()"
     ],
+    "return": "xs:string*",
     "description": " Returns the prefixes of the in-scope namespaces for an element node."
    },
    {
@@ -1103,6 +1226,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the argument is the empty sequence."
    },
    {
@@ -1111,6 +1235,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "xs:boolean",
     "description": " Returns true if the argument is a non-empty sequence."
    },
    {
@@ -1119,6 +1244,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "item()?",
     "description": " Returns the first item in a sequence."
    },
    {
@@ -1127,6 +1253,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "item()*",
     "description": " Returns all but the first item in a sequence."
    },
    {
@@ -1137,6 +1264,7 @@
      "$position as xs:integer",
      "$inserts as item()*"
     ],
+    "return": "item()*",
     "description": " Returns a sequence constructed by inserting an item or a sequence of items at a given position within an existing sequence."
    },
    {
@@ -1146,6 +1274,7 @@
      "$target as item()*",
      "$position as xs:integer"
     ],
+    "return": "item()*",
     "description": " Returns a new sequence containing all the items of $target except the item at position $position."
    },
    {
@@ -1154,6 +1283,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "item()*",
     "description": " Reverses the order of items in a sequence."
    },
    {
@@ -1163,6 +1293,7 @@
      "$sourceSeq as item()*",
      "$startingLoc as xs:double"
     ],
+    "return": "item()*",
     "description": " Returns the contiguous sequence of items in the value of $sourceSeq beginning at the position indicated by the value of $startingLoc and continuing for the number of items indicated by the value of $length."
    },
    {
@@ -1173,6 +1304,7 @@
      "$startingLoc as xs:double",
      "$length as xs:double"
     ],
+    "return": "item()*",
     "description": " Returns the contiguous sequence of items in the value of $sourceSeq beginning at the position indicated by the value of $startingLoc and continuing for the number of items indicated by the value of $length."
    },
    {
@@ -1181,6 +1313,7 @@
     "params": [
      "$sourceSeq as item()*"
     ],
+    "return": "item()*",
     "description": " Returns the items of $sourceSeq in an implementation-dependent order."
    },
    {
@@ -1189,6 +1322,7 @@
     "params": [
      "$arg as xs:anyAtomicType*"
     ],
+    "return": "xs:anyAtomicType*",
     "description": " Returns the values that appear in a sequence, with duplicates eliminated."
    },
    {
@@ -1198,6 +1332,7 @@
      "$arg as xs:anyAtomicType*",
      "$collation as xs:string"
     ],
+    "return": "xs:anyAtomicType*",
     "description": " Returns the values that appear in a sequence, with duplicates eliminated."
    },
    {
@@ -1207,6 +1342,7 @@
      "$seq as xs:anyAtomicType*",
      "$search as xs:anyAtomicType"
     ],
+    "return": "xs:integer*",
     "description": " Returns a sequence of positive integers giving the positions within the sequence $seq of items that are equal to $search."
    },
    {
@@ -1217,6 +1353,7 @@
      "$search as xs:anyAtomicType",
      "$collation as xs:string"
     ],
+    "return": "xs:integer*",
     "description": " Returns a sequence of positive integers giving the positions within the sequence $seq of items that are equal to $search."
    },
    {
@@ -1226,6 +1363,7 @@
      "$parameter1 as item()*",
      "$parameter2 as item()*"
     ],
+    "return": "xs:boolean",
     "description": " This function assesses whether two sequences are deep-equal to each other. To be deep-equal, they must contain items that are pairwise deep-equal; and for two items to be deep-equal, they must either be atomic values that compare equal, or nodes of the same kind, with the same name, whose children are deep-equal, or maps with matching entries, or arrays with matching members."
    },
    {
@@ -1236,6 +1374,7 @@
      "$parameter2 as item()*",
      "$collation as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " This function assesses whether two sequences are deep-equal to each other. To be deep-equal, they must contain items that are pairwise deep-equal; and for two items to be deep-equal, they must either be atomic values that compare equal, or nodes of the same kind, with the same name, whose children are deep-equal, or maps with matching entries, or arrays with matching members."
    },
    {
@@ -1244,6 +1383,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "item()?",
     "description": " Returns $arg if it contains zero or one items. Otherwise, raises an error."
    },
    {
@@ -1252,6 +1392,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "item()+",
     "description": " Returns $arg if it contains one or more items. Otherwise, raises an error."
    },
    {
@@ -1260,6 +1401,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "item()",
     "description": " Returns $arg if it contains exactly one item. Otherwise, raises an error."
    },
    {
@@ -1268,6 +1410,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "xs:integer",
     "description": " Returns the number of items in a sequence."
    },
    {
@@ -1276,6 +1419,7 @@
     "params": [
      "$arg as xs:anyAtomicType*"
     ],
+    "return": "xs:anyAtomicType?",
     "description": " Returns the average of the values in the input sequence $arg, that is, the sum of the values divided by the number of values."
    },
    {
@@ -1284,6 +1428,7 @@
     "params": [
      "$arg as xs:anyAtomicType*"
     ],
+    "return": "xs:anyAtomicType?",
     "description": " Returns a value that is equal to the highest value appearing in the input sequence."
    },
    {
@@ -1293,6 +1438,7 @@
      "$arg as xs:anyAtomicType*",
      "$collation as xs:string"
     ],
+    "return": "xs:anyAtomicType?",
     "description": " Returns a value that is equal to the highest value appearing in the input sequence."
    },
    {
@@ -1301,6 +1447,7 @@
     "params": [
      "$arg as xs:anyAtomicType*"
     ],
+    "return": "xs:anyAtomicType?",
     "description": " Returns a value that is equal to the lowest value appearing in the input sequence."
    },
    {
@@ -1310,6 +1457,7 @@
      "$arg as xs:anyAtomicType*",
      "$collation as xs:string"
     ],
+    "return": "xs:anyAtomicType?",
     "description": " Returns a value that is equal to the lowest value appearing in the input sequence."
    },
    {
@@ -1318,6 +1466,7 @@
     "params": [
      "$arg as xs:anyAtomicType*"
     ],
+    "return": "xs:anyAtomicType",
     "description": " Returns a value obtained by adding together the values in $arg."
    },
    {
@@ -1327,6 +1476,7 @@
      "$arg as xs:anyAtomicType*",
      "$zero as xs:anyAtomicType?"
     ],
+    "return": "xs:anyAtomicType?",
     "description": " Returns a value obtained by adding together the values in $arg."
    },
    {
@@ -1335,6 +1485,7 @@
     "params": [
      "$arg as xs:string*"
     ],
+    "return": "element()*",
     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
    },
    {
@@ -1344,6 +1495,7 @@
      "$arg as xs:string*",
      "$node as node()"
     ],
+    "return": "element()*",
     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
    },
    {
@@ -1352,6 +1504,7 @@
     "params": [
      "$arg as xs:string*"
     ],
+    "return": "element()*",
     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
    },
    {
@@ -1361,6 +1514,7 @@
      "$arg as xs:string*",
      "$node as node()"
     ],
+    "return": "element()*",
     "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
    },
    {
@@ -1369,6 +1523,7 @@
     "params": [
      "$arg as xs:string*"
     ],
+    "return": "node()*",
     "description": " Returns the sequence of element or attribute nodes with an IDREF value matching the value of one or more of the ID values supplied in $arg."
    },
    {
@@ -1378,12 +1533,14 @@
      "$arg as xs:string*",
      "$node as node()"
     ],
+    "return": "node()*",
     "description": " Returns the sequence of element or attribute nodes with an IDREF value matching the value of one or more of the ID values supplied in $arg."
    },
    {
     "name": "generate-id",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:string",
     "description": " This function returns a string that uniquely identifies a given node."
    },
    {
@@ -1392,6 +1549,7 @@
     "params": [
      "$arg as node()?"
     ],
+    "return": "xs:string",
     "description": " This function returns a string that uniquely identifies a given node."
    },
    {
@@ -1400,6 +1558,7 @@
     "params": [
      "$uri as xs:string?"
     ],
+    "return": "document-node()?",
     "description": " Retrieves a document using a URI supplied as an xs:string, and returns the corresponding document node."
    },
    {
@@ -1408,12 +1567,14 @@
     "params": [
      "$uri as xs:string?"
     ],
+    "return": "xs:boolean",
     "description": " The function returns true if and only if the function call fn:doc($uri) would return a document node."
    },
    {
     "name": "collection",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "item()*",
     "description": " Returns a sequence of items identified by a collection URI; or a default collection if no URI is supplied."
    },
    {
@@ -1422,12 +1583,14 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "item()*",
     "description": " Returns a sequence of items identified by a collection URI; or a default collection if no URI is supplied."
    },
    {
     "name": "uri-collection",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:anyURI*",
     "description": " Returns a sequence of xs:anyURI values representing the URIs in a URI collection."
    },
    {
@@ -1436,6 +1599,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "xs:anyURI*",
     "description": " Returns a sequence of xs:anyURI values representing the URIs in a URI collection."
    },
    {
@@ -1444,6 +1608,7 @@
     "params": [
      "$href as xs:string?"
     ],
+    "return": "xs:string?",
     "description": " The fn:unparsed-text function reads an external resource (for example, a file) and returns a string representation of the resource."
    },
    {
@@ -1453,6 +1618,7 @@
      "$href as xs:string?",
      "$encoding as xs:string"
     ],
+    "return": "xs:string?",
     "description": " The fn:unparsed-text function reads an external resource (for example, a file) and returns a string representation of the resource."
    },
    {
@@ -1461,6 +1627,7 @@
     "params": [
      "$href as xs:string?"
     ],
+    "return": "xs:string*",
     "description": " The fn:unparsed-text-lines function reads an external resource (for example, a file) and returns its contents as a sequence of strings, one for each line of text in the string representation of the resource."
    },
    {
@@ -1470,6 +1637,7 @@
      "$href as xs:string?",
      "$encoding as xs:string"
     ],
+    "return": "xs:string*",
     "description": " The fn:unparsed-text-lines function reads an external resource (for example, a file) and returns its contents as a sequence of strings, one for each line of text in the string representation of the resource."
    },
    {
@@ -1478,6 +1646,7 @@
     "params": [
      "$href as xs:string?"
     ],
+    "return": "xs:boolean",
     "description": " Because errors in evaluating the fn:unparsed-text function are non-recoverable, these two functions are provided to allow an application to determine whether a call with particular arguments would succeed."
    },
    {
@@ -1487,6 +1656,7 @@
      "$href as xs:string?",
      "$encoding as xs:string"
     ],
+    "return": "xs:boolean",
     "description": " Because errors in evaluating the fn:unparsed-text function are non-recoverable, these two functions are provided to allow an application to determine whether a call with particular arguments would succeed."
    },
    {
@@ -1495,12 +1665,14 @@
     "params": [
      "$name as xs:string"
     ],
+    "return": "xs:string?",
     "description": " Returns the value of a system environment variable, if it exists."
    },
    {
     "name": "available-environment-variables",
     "uri": "http://www.w3.org/2005/xpath-functions",
     "params": [],
+    "return": "xs:string*",
     "description": " Returns a list of environment variable names that are suitable for passing to fn:environment-variable, as a (possibly empty) sequence of strings."
    },
    {
@@ -1509,6 +1681,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "document-node(element(*))?",
     "description": " This function takes as input an XML document represented as a string, and returns the document node at the root of an XDM tree representing the parsed document."
    },
    {
@@ -1517,6 +1690,7 @@
     "params": [
      "$arg as xs:string?"
     ],
+    "return": "document-node()?",
     "description": " This function takes as input an XML external entity represented as a string, and returns the document node at the root of an XDM tree representing the parsed document fragment."
    },
    {
@@ -1525,6 +1699,7 @@
     "params": [
      "$arg as item()*"
     ],
+    "return": "xs:string",
     "description": " This function serializes the supplied input sequence $arg as described in , returning the serialized representation of the sequence as a string."
    },
    {
@@ -1534,6 +1709,7 @@
      "$arg as item()*",
      "$params as item()?"
     ],
+    "return": "xs:string",
     "description": " This function serializes the supplied input sequence $arg as described in , returning the serialized representation of the sequence as a string."
    },
    {
@@ -1543,6 +1719,7 @@
      "$name as xs:QName",
      "$arity as xs:integer"
     ],
+    "return": "function(*)?",
     "description": " Returns the function having a given name and arity, if there is one."
    },
    {
@@ -1551,6 +1728,7 @@
     "params": [
      "$func as function(*)"
     ],
+    "return": "xs:QName?",
     "description": " Returns the name of the function identified by a function item."
    },
    {
@@ -1559,6 +1737,7 @@
     "params": [
      "$func as function(*)"
     ],
+    "return": "xs:integer",
     "description": " Returns the arity of the function identified by a function item."
    },
    {
@@ -1568,6 +1747,7 @@
      "$seq as item()*",
      "$action as function(item()) as item()*"
     ],
+    "return": "item()*",
     "description": " Applies the function item $action to every item from the sequence $seq in turn, returning the concatenation of the resulting sequences in order."
    },
    {
@@ -1577,6 +1757,7 @@
      "$seq as item()*",
      "$f as function(item()) as xs:boolean"
     ],
+    "return": "item()*",
     "description": " Returns those items from the sequence $seq for which the supplied function $f returns true."
    },
    {
@@ -1587,6 +1768,7 @@
      "$zero as item()*",
      "$f as function(item()*, item()) as item()*"
     ],
+    "return": "item()*",
     "description": " Processes the supplied sequence from left to right, applying the supplied function repeatedly to each item in turn, together with an accumulated result value."
    },
    {
@@ -1597,6 +1779,7 @@
      "$zero as item()*",
      "$f as function(item(), item()*) as item()*"
     ],
+    "return": "item()*",
     "description": " Processes the supplied sequence from right to left, applying the supplied function repeatedly to each item in turn, together with an accumulated result value."
    },
    {
@@ -1607,6 +1790,7 @@
      "$seq2 as item()*",
      "$action as function(item(), item()) as item()*"
     ],
+    "return": "item()*",
     "description": " Applies the function item $action to successive pairs of items taken one from $seq1 and one from $seq2, returning the concatenation of the resulting sequences in order."
    },
    {
@@ -1615,6 +1799,7 @@
     "params": [
      "$input as item()*"
     ],
+    "return": "item()*",
     "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function."
    },
    {
@@ -1624,6 +1809,7 @@
      "$input as item()*",
      "$collation as xs:string?"
     ],
+    "return": "item()*",
     "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function."
    },
    {
@@ -1634,6 +1820,7 @@
      "$collation as xs:string?",
      "$key as function(item()) as xs:anyAtomicType*"
     ],
+    "return": "item()*",
     "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function."
    },
    {
@@ -1643,6 +1830,7 @@
      "$function as function(*)",
      "$array as array(*)"
     ],
+    "return": "item()*",
     "description": " Makes a dynamic call on a function with an argument list supplied in the form of an array."
    },
    {
@@ -1651,6 +1839,7 @@
     "params": [
      "$module-uri as xs:string"
     ],
+    "return": "map(*)",
     "description": " Provides access to the public functions and global variables of a dynamically-loaded XQuery library module."
    },
    {
@@ -1660,6 +1849,7 @@
      "$module-uri as xs:string",
      "$options as map(*)"
     ],
+    "return": "map(*)",
     "description": " Provides access to the public functions and global variables of a dynamically-loaded XQuery library module."
    },
    {
@@ -1668,6 +1858,7 @@
     "params": [
      "$options as map(*)"
     ],
+    "return": "map(*)",
     "description": " Invokes a transformation using a dynamically-loaded XSLT stylesheet."
    },
    {
@@ -1676,6 +1867,7 @@
     "params": [
      "$json-text as xs:string?"
     ],
+    "return": "item()?",
     "description": " Parses a string supplied in the form of a JSON text, returning the results typically in the form of a map or array."
    },
    {
@@ -1685,6 +1877,7 @@
      "$json-text as xs:string?",
      "$options as map(*)"
     ],
+    "return": "item()?",
     "description": " Parses a string supplied in the form of a JSON text, returning the results typically in the form of a map or array."
    },
    {
@@ -1693,6 +1886,7 @@
     "params": [
      "$href as xs:string?"
     ],
+    "return": "item()?",
     "description": " Reads an external resource containing JSON, and returns the result of parsing the resource as JSON."
    },
    {
@@ -1702,6 +1896,7 @@
      "$href as xs:string?",
      "$options as map(*)"
     ],
+    "return": "item()?",
     "description": " Reads an external resource containing JSON, and returns the result of parsing the resource as JSON."
    },
    {
@@ -1710,6 +1905,7 @@
     "params": [
      "$json-text as xs:string?"
     ],
+    "return": "document-node()?",
     "description": " Parses a string supplied in the form of a JSON text, returning the results in the form of an XML document node."
    },
    {
@@ -1719,6 +1915,7 @@
      "$json-text as xs:string?",
      "$options as map(*)"
     ],
+    "return": "document-node()?",
     "description": " Parses a string supplied in the form of a JSON text, returning the results in the form of an XML document node."
    },
    {
@@ -1727,6 +1924,7 @@
     "params": [
      "$input as node()?"
     ],
+    "return": "xs:string?",
     "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar."
    },
    {
@@ -1736,6 +1934,7 @@
      "$input as node()?",
      "$options as map(*)"
     ],
+    "return": "xs:string?",
     "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar."
    }
   ]

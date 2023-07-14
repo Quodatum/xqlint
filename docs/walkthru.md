@@ -40,6 +40,9 @@ if node.name is function it is called
 visit node children unless function returns true
 
 # set processor
+The `processor` option can be set to known value from the keys of `processors.json`
+This causes the `StaticContext` to be intialized with the packages listed for that key.
+
 ```
 XQLint: require('./compiler/static_context').StaticContext(undefined,undefined,opts.processor)
 ```

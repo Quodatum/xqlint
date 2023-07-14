@@ -5,6 +5,7 @@ var assert = require('assert');
 var path = require('path');
 var fs = require('fs');
 const CodeFormatter = require('../lib/formatter/formatter').CodeFormatter;
+var StaticContext = require('../lib/compiler/static_context').StaticContext;
 
 var XQLint = require('../lib/xqlint').XQLint;
 vows.describe('Test reported issues').addBatch({
@@ -19,10 +20,24 @@ vows.describe('Test reported issues').addBatch({
         assert.equal(markers.length, 0);
     },
     'import #28': function () {
-        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'),
+        const src=path.resolve('test/queries/rbtree.xq/map.xq');
+        var sctx = new StaticContext();
+        sctx.setModuleResolver(function(uri,ats){//uri, hints
+            const target=path.resolve(ats[0].uri,src);
+            console.log("Resolver: :",src, "->",target);
+            const linter = new XQLint(fs.readFileSync(target, 'utf-8'),
             {
                 processor: 'basex',
                 styleCheck: false
+            });
+            const xqdoc=linter.getXQDoc(true);
+            return xqdoc;
+        });
+        var linter = new XQLint(fs.readFileSync(src, 'utf-8'),
+            {
+                processor: 'basex',
+                styleCheck: false,
+                staticContext: sctx
             });
         var markers = linter.getErrors();
         console.log(markers);
