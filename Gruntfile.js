@@ -97,7 +97,7 @@ module.exports = function (grunt) {
         vows: {
             all: {
                 options: {
-                    verbose: true,
+                    verbose: false,
                     colors: true,
                     coverage: 'json'
                 },

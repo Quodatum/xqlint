@@ -1,0 +1,44 @@
+{
+    "http://basex.org": {
+        "description": "BaseX Annotations, Pragmas, …",
+        "prefixes": [
+            "basex"
+        ],
+        "type": "declare"
+    },
+    "http://basex.org/modules/input": {
+        "description": "RESTXQ: Input Options ",
+        "prefixes": [
+            "input"
+        ],
+        "type": "declare"
+    },
+    "http://basex.org/modules/input": {
+        "description": "RESTXQ: Input Options ",
+        "prefixes": [
+            "input"
+        ],
+        "type": "declare"
+    },
+    "http://expath.org/ns/pkg": {
+        "description": "EXPath Packages ",
+        "prefixes": [
+            "pkg"
+        ],
+        "type": "declare"
+    },
+    "http://www.w3.org/2005/xqt-errors": {
+        "description": "XQuery Errors ",
+        "prefixes": [
+            "err"
+        ],
+        "type": "declare"
+    },
+    "http://www.w3.org/2010/xslt-xquery-serialization": {
+        "description": "Serialization ",
+        "prefixes": [
+            "output"
+        ],
+        "type": "declare"
+    }
+}

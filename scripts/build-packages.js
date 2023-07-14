@@ -41,9 +41,9 @@ function importMods(files) {
         if (syntaxError) {
             console.log("ERR: ", linter.getMarkers()[0].message);
         } else {
-            var xqdoc = linter.getXQDoc(false);
-          
-            result[xqdoc.ns] = xqdoc;
+            const xqdoc = linter.getXQDoc(false);
+            const extras={"type":"module","override": true};
+            result[xqdoc.ns] ={...xqdoc,...extras};
             console.log(xqdoc.ns);
            // console.log(xqdoc);
         }

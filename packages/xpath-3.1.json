@@ -168,7 +168,9 @@
     "description": " Calculates the CRC32 check sum of the given <code>$string</code>.<br/>If an empty sequence is supplied, the empty sequence is returned."
    }
   ],
-  "description": " The math <a href=\"http://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"http://www.w3.org/TR/xpath-functions-30/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module."
+  "description": " The math <a href=\"http://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"http://www.w3.org/TR/xpath-functions-30/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module.",
+  "type": "module",
+  "override": true
  },
  "http://www.w3.org/2005/xpath-functions": {
   "ns": "http://www.w3.org/2005/xpath-functions",
@@ -1937,6 +1939,8 @@
     "return": "xs:string?",
     "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar."
    }
-  ]
+  ],
+  "type": "module",
+  "override": true
  }
 }

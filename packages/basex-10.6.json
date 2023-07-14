@@ -69,7 +69,9 @@
     "description": " Returns an element sequence with all currently opened database sessions, including the username, address (IP:port) and an optionally opened database.<br/>The output of this function and the <code> <a href=\"https://docs.basex.org/wiki/Commands#SHOW_SESSIONS\">SHOW SESSIONS</a> </code> command is similar."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for performing admin-centric operations such as managing database users and log data."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for performing admin-centric operations such as managing database users and log data.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/archive": {
   "ns": "http://basex.org/modules/archive",
@@ -263,7 +265,9 @@
     "description": " This convenience function creates a new archive from the specified <code>$entries</code> and <code>$contents</code> and writes it disk.<br/> See <code> <a href=\"https://docs.basex.org/wiki/Archive_Module#archive:create\">archive:create</a> </code> for more details."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to handle archives (including ePub, Open Office, JAR, and many other formats). New ZIP and GZIP archives can be created, existing archives can be updated, and the archive entries can be listed and extracted. The <code> <a href=\"https://docs.basex.org/wiki/Archive_Module#archive:extract-binary\">archive:extract-binary</a> </code> function includes an example for writing the contents of an archive to disk."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to handle archives (including ePub, Open Office, JAR, and many other formats). New ZIP and GZIP archives can be created, existing archives can be updated, and the archive entries can be listed and extracted. The <code> <a href=\"https://docs.basex.org/wiki/Archive_Module#archive:extract-binary\">archive:extract-binary</a> </code> function includes an example for writing the contents of an archive to disk.",
+  "type": "module",
+  "override": true
  },
  "http://www.w3.org/2005/xpath-functions/array": {
   "ns": "http://www.w3.org/2005/xpath-functions/array",
@@ -484,7 +488,9 @@
     "description": " Returns a new array with sorted <code>$array</code> members, using an optional <code>$collation</code>. If a <code>$key</code> function is supplied, it will be applied on all array members. The items of the resulting values will be sorted using the semantics of the <code>lt</code> expression."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for manipulating arrays, which has been introduced with <a href=\"https://docs.basex.org/wiki/XQuery_3.1#Arrays\">XQuery 3.1</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for manipulating arrays, which has been introduced with <a href=\"https://docs.basex.org/wiki/XQuery_3.1#Arrays\">XQuery 3.1</a>.",
+  "type": "module",
+  "override": true
  },
  "http://expath.org/ns/binary": {
   "ns": "http://expath.org/ns/binary",
@@ -882,7 +888,9 @@
     "description": " Shifts bits in binary data.<br/>If <code>$by</code> is zero, the result is identical to <code>$in</code>. If <code>$by</code> is positive then bits are shifted to the left. Otherwise, bits are shifted to the right. If the absolute value of <code>$by</code> is greater than the bit-length of <code>$in</code> then an all-zeros result is returned. The result always has the same size as <code>$in</code>. The shifting is logical: zeros are placed into discarded bits. If the value of <code>$in</code> is the empty sequence, the function returns an empty sequence."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to process binary data, including extracting subparts, searching, basic binary operations and conversion between binary and structured forms."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to process binary data, including extracting subparts, searching, basic binary operations and conversion between binary and structured forms.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/client": {
   "ns": "http://basex.org/modules/client",
@@ -954,7 +962,9 @@
     "description": " This function closes a client session. <code>$id</code> specifies the session id.<br/>Opened connections will automatically be closed after the XQuery expression has been evaluated, but it is recommendable to explicitly close them with this function if you open many connections."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to access BaseX server instances from XQuery. With this module, you can execute database commands and evaluate XQuery expressions."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to access BaseX server instances from XQuery. With this module, you can execute database commands and evaluate XQuery expressions.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/convert": {
   "ns": "http://basex.org/modules/convert",
@@ -1163,7 +1173,9 @@
     "description": " Decodes the specified <code>$key</code> (with the optional <code>$lax</code> conversion method) to the original string representation.<br/>Keys supplied to this function are usually element names from documents that have been created with the <a href=\"https://docs.basex.org/wiki/JSON_Module\">JSON Module</a> or <a href=\"https://docs.basex.org/wiki/CSV_Module\">CSV Module</a>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to convert data between different formats."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to convert data between different formats.",
+  "type": "module",
+  "override": true
  },
  "http://expath.org/ns/crypto": {
   "ns": "http://expath.org/ns/crypto",
@@ -1275,7 +1287,9 @@
     "description": " Checks if the given node contains a <code>Signature</code> element and whether the signature is valid. In this case <code>true</code> is returned. If the signature is invalid the function returns <code>false</code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to perform cryptographic operations in XQuery. The cryptographic module is based on an early draft of the <a href=\"http://expath.org/spec/crypto/20110810\">EXPath Cryptographic Module</a> and provides the following functionality: creation of message authentication codes (HMAC), encryption and decryption, and creation and validation of XML Digital Signatures."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to perform cryptographic operations in XQuery. The cryptographic module is based on an early draft of the <a href=\"http://expath.org/spec/crypto/20110810\">EXPath Cryptographic Module</a> and provides the following functionality: creation of message authentication codes (HMAC), encryption and decryption, and creation and validation of XML Digital Signatures.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/csv": {
   "ns": "http://basex.org/modules/csv",
@@ -1343,7 +1357,9 @@
     "description": " Serializes the specified <code>$input</code> as CSV, using the specified <code>$options</code>, and returns the result as string. <p>Values can also be serialized as CSV with the standard <a href=\"https://docs.basex.org/wiki/Serialization\">Serialization</a> feature of XQuery: </p> <ul> <li>The parameter <code>method</code> needs to be set to <code>csv</code>, and</li> <li>the options presented in this article need to be assigned to the <code>csv</code> parameter.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains a single function to parse CSV input. <a href=\"https://en.wikipedia.org/wiki/Comma-separated_values\">CSV</a> (comma-separated values) is a popular representation for tabular data, exported e. g. from Excel."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains a single function to parse CSV input. <a href=\"https://en.wikipedia.org/wiki/Comma-separated_values\">CSV</a> (comma-separated values) is a popular representation for tabular data, exported e. g. from Excel.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/db": {
   "ns": "http://basex.org/modules/db",
@@ -1964,7 +1980,9 @@
     "description": " Retrieves the content type of a resource in the database <code>$db</code> and the path <code>$path</code>.<br/>The file extension is used to recognize the content-type of a resource stored in the database. Content-type <code>application/xml</code> will be returned for any XML document stored in the database, regardless of its file name extension."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for processing databases from within XQuery. Existing databases can be opened and listed, its contents can be directly accessed, documents can be added to and removed, etc."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for processing databases from within XQuery. Existing databases can be opened and listed, its contents can be directly accessed, documents can be added to and removed, etc.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/fetch": {
   "ns": "http://basex.org/modules/fetch",
@@ -2061,7 +2079,9 @@
     "description": " Returns the content-type (also called mime-type) of the resource specified by <code>$uri</code>: <ul> <li>If a remote resource is addressed, the request header will be evaluated.</li> <li>If the addressed resource is locally stored, the content-type will be guessed based on the file extension.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides simple functions to fetch the content of resources identified by URIs. Resources can be stored locally or remotely and e.g. use the <code>file://</code> or <code>http://</code> scheme. If more control over HTTP requests is required, the <a href=\"https://docs.basex.org/wiki/HTTP_Client_Module\">HTTP Client Module</a> can be used. With the <a href=\"https://docs.basex.org/wiki/HTML_Module\">HTML Module</a>, retrieved HTML documents can be converted to XML."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides simple functions to fetch the content of resources identified by URIs. Resources can be stored locally or remotely and e.g. use the <code>file://</code> or <code>http://</code> scheme. If more control over HTTP requests is required, the <a href=\"https://docs.basex.org/wiki/HTTP_Client_Module\">HTTP Client Module</a> can be used. With the <a href=\"https://docs.basex.org/wiki/HTML_Module\">HTML Module</a>, retrieved HTML documents can be converted to XML.",
+  "type": "module",
+  "override": true
  },
  "http://expath.org/ns/file": {
   "ns": "http://expath.org/ns/file",
@@ -2633,7 +2653,9 @@
     "description": " Returns the parent directory of the static base URI.<br/>If the static base URI is undefined or does not point to a local resource, it returns the empty sequence. Otherwise, it returns the same result as <code>file:parent(static-base-uri())</code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions related to file system operations, such as listing, reading, or writing files."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions related to file system operations, such as listing, reading, or writing files.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/ft": {
   "ns": "http://basex.org/modules/ft",
@@ -2831,7 +2853,9 @@
     "description": " Extracts and returns relevant parts of full-text results. It puts a marker element around the resulting <code>$nodes</code> of a full-text index request and chops irrelevant sections of the result.<br/>The default element name of the marker element is <code>mark</code>. An alternative element name can be chosen via the optional <code>$name</code> argument.<br/>The default length of the returned text is <code>150</code> characters. An alternative length can be specified via the optional <code>$length</code> argument. Note that the effective text length may differ from the specified text due to formatting and readibility issues.<br/>For more details on this function, please have a look at <code> <a href=\"https://docs.basex.org/wiki/Full-Text_Module#ft:mark\">ft:mark</a> </code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> extends the <a href=\"https://docs.basex.org/wiki/Full-Text\">Full-Text</a> features of BaseX: The index can be directly accessed, full-text results can be marked with additional elements, or the relevant parts can be extracted. Moreover, the score value, which is generated by the <code>contains text</code> expression, can be explicitly requested from items."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> extends the <a href=\"https://docs.basex.org/wiki/Full-Text\">Full-Text</a> features of BaseX: The index can be directly accessed, full-text results can be marked with additional elements, or the relevant parts can be extracted. Moreover, the score value, which is generated by the <code>contains text</code> expression, can be explicitly requested from items.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/hash": {
   "ns": "http://basex.org/modules/hash",
@@ -2879,7 +2903,9 @@
     "description": " Computes the hash of the given <code>$value</code>, using the specified <code>$algorithm</code>. The specified values may be of type <code>xs:string</code>, <code>xs:base64Binary</code>, or <code>xs:hexBinary</code>.<br/>The following three algorithms are supported: <code>MD5</code>, <code>SHA-1</code>, and <code>SHA-256</code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions that perform different hash operations."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions that perform different hash operations.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/hof": {
   "ns": "http://basex.org/modules/hof",
@@ -2983,7 +3009,9 @@
     "description": " Returns its first argument unchanged and ignores the second. This function isn’t useful on its own, but can be used as argument to other higher-order functions, e.g. when a function combining two values is expected and one only wants to retain the left one."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> adds some useful higher-order functions, additional to the <a href=\"https://docs.basex.org/wiki/Higher-Order_Functions\">Higher-Order Functions</a> provided by the official specification."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> adds some useful higher-order functions, additional to the <a href=\"https://docs.basex.org/wiki/Higher-Order_Functions\">Higher-Order Functions</a> provided by the official specification.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/html": {
   "ns": "http://basex.org/modules/html",
@@ -3039,7 +3067,9 @@
     "description": " Returns the name of the applied HTML parser (currently: <code>TagSoup</code>). If an <i>empty string</i> is returned, TagSoup was not found in the classpath, and the input will be treated as well-formed XML.<br/>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions for converting HTML to XML. Conversion will only take place if TagSoup is included in the classpath (see <a href=\"https://docs.basex.org/wiki/Parsers#HTML_Parser\">HTML Parsing</a> for more details)."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions for converting HTML to XML. Conversion will only take place if TagSoup is included in the classpath (see <a href=\"https://docs.basex.org/wiki/Parsers#HTML_Parser\">HTML Parsing</a> for more details).",
+  "type": "module",
+  "override": true
  },
  "http://expath.org/ns/http-client": {
   "ns": "http://expath.org/ns/http-client",
@@ -3080,7 +3110,9 @@
     "description": " Sends an HTTP request and interprets the corresponding response: <ul> <li> <code>$request</code> contains the parameters of the HTTP request such as HTTP method and headers.</li> <li>In addition to this it can also contain the URI to which the request will be sent and the body of the HTTP method.</li> <li>If the URI is not given with the parameter <code>$href</code>, its value in <code>$request</code> is used instead.</li> <li>The request body can also be supplied via the <code>$bodies</code> parameter.</li> <li>Certificate verification can be globally disabled via the <code> <a href=\"https://docs.basex.org/wiki/Options#IGNORECERT\">IGNORECERT</a> </code> option.</li> </ul> <p>Notes: </p> <ul> <li>Both basic and digest authentication is supported.</li> <li>While the contents of the request can be supplied as child of the <code>http:body</code> element, it is faster and safer to pass them on via the third argument.</li> <li>For further information, please check out the <a href=\"http://expath.org/spec/http-client\">EXPath</a> specification.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains a single function to send HTTP requests and handle HTTP responses. The function <code>send-request</code> is based on the <a href=\"http://expath.org/spec/http-client\">EXPath HTTP Client Module</a>. It gives full control over the available request and response parameters. For simple GET requests, the <a href=\"https://docs.basex.org/wiki/Fetch_Module\">Fetch Module</a> may be sufficient."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains a single function to send HTTP requests and handle HTTP responses. The function <code>send-request</code> is based on the <a href=\"http://expath.org/spec/http-client\">EXPath HTTP Client Module</a>. It gives full control over the available request and response parameters. For simple GET requests, the <a href=\"https://docs.basex.org/wiki/Fetch_Module\">Fetch Module</a> may be sufficient.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/index": {
   "ns": "http://basex.org/modules/index",
@@ -3197,7 +3229,9 @@
     "description": " Returns all attribute names stored in the <a href=\"https://docs.basex.org/wiki/Indexes#Name_Index\">Name Index</a> of the database <code>$db</code>, along with their number of occurrences."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions for displaying information stored in the database index structures."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions for displaying information stored in the database index structures.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/inspect": {
   "ns": "http://basex.org/modules/inspect",
@@ -3296,7 +3330,9 @@
     "description": " Retrieves the resource located at the specified <code>$uri</code>, parses it as XQuery module, and generates an xqDoc element. A relative URI will be resolved against the static base URI of the query.<br/> <a href=\"http://xqdoc.org/\">xqDoc</a> provides a simple vendor-neutral solution for generating documentation from XQuery modules. The documentation conventions have been inspired by the JavaDoc standard. Documentation comments begin with <code>(:~</code> and end with <code>:)</code>, and tags start with <code>@</code>. xqDoc comments can be specified for main and library modules and variable and function declarations.<br/> <p>We have slightly extended the xqDoc conventions to do justice to more recent versions of XQuery (Schema: <a href=\"https://files.basex.org/etc/xqdoc-1.1.30052013.xsd\">xqdoc-1.1.30052013.xsd</a>):<br/> </p> <ul> <li>an <code>&lt;xqdoc:annotations/&gt;</code> node is added to each variable or function that uses annotations. The xqdoc:annotation child nodes may have additional <code>xqdoc:literal</code> elements with <code>type</code> attributes (xs:string, xs:integer, xs:decimal, xs:double) and values.</li> <li>a single <code>&lt;xqdoc:namespaces/&gt;</code> node is added to the root element, which summarizes all prefixes and namespace URIs used or declared in the module.</li> <li>name and type elements are added to variables.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for extracting internal information about modules and functions and generating documentation."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for extracting internal information about modules and functions and generating documentation.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/job": {
   "ns": "http://basex.org/modules/job",
@@ -3439,7 +3475,9 @@
     "description": " Returns a list of all jobs that have been persistently registered as <a href=\"https://docs.basex.org/wiki/Job_Module#Services\">Services</a>."
    }
   ],
-  "description": " <font color=\"orangered\">Updated with Version 10:</font> Renamed from <i>Jobs Module</i> to <i>Job Module</i>. The namespace URI has been updated as well."
+  "description": " <font color=\"orangered\">Updated with Version 10:</font> Renamed from <i>Jobs Module</i> to <i>Job Module</i>. The namespace URI has been updated as well.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/json": {
   "ns": "http://basex.org/modules/json",
@@ -3507,7 +3545,9 @@
     "description": " Serializes the specified <code>$input</code> as JSON, using the specified <code>$options</code>, and returns the result as string: <ul> <li>The input is expected to conform to the results that are created by <code> <a href=\"https://docs.basex.org/wiki/JSON_Module#json:parse\">json:parse</a> </code>.</li> <li>Non-conforming items will be serialized as specified in the <a href=\"https://docs.basex.org/wiki/XQuery_3.1#JSON_Serialization\">json output method</a> of the official recommendation.</li> </ul> <p>Values can also be serialized as JSON with the standard <a href=\"https://docs.basex.org/wiki/Serialization\">Serialization</a> feature of XQuery: </p> <ul> <li>The parameter <code>method</code> needs to be set to <code>json</code>, and</li> <li>the options presented in this article need to be assigned to the <code>json</code> parameter.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to parse and serialize JSON data <a href=\"https://www.json.org/\">JSON (JavaScript Object Notation)</a> is a popular data exchange format for applications written in JavaScript. As there are notable differences between JSON and XML, or XQuery data types, no mapping exists that guarantees a lossless, bidirectional conversion between JSON and XML. For this reason, we offer various mappings, all of which are suited to different use cases."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to parse and serialize JSON data <a href=\"https://www.json.org/\">JSON (JavaScript Object Notation)</a> is a popular data exchange format for applications written in JavaScript. As there are notable differences between JSON and XML, or XQuery data types, no mapping exists that guarantees a lossless, bidirectional conversion between JSON and XML. For this reason, we offer various mappings, all of which are suited to different use cases.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/lazy": {
   "ns": "http://basex.org/modules/lazy",
@@ -3555,7 +3595,9 @@
     "description": " Checks whether the contents of the specified <code>$item</code> are cached. The function will always return <code>true</code> for non-lazy items."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for handling <i>lazy</i> items."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for handling <i>lazy</i> items.",
+  "type": "module",
+  "override": true
  },
  "http://www.w3.org/2005/xpath-functions/map": {
   "ns": "http://www.w3.org/2005/xpath-functions/map",
@@ -3674,7 +3716,9 @@
     "description": " Returns a the number of entries in the supplied map. The function takes the supplied <code>$map</code> and returns the number of entries that are present in the map."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for manipulating maps. <a href=\"https://docs.basex.org/wiki/XQuery_3.1#Maps\">Maps</a> have been introduced with <a href=\"https://docs.basex.org/wiki/XQuery_3.1\">XQuery 3.1</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for manipulating maps. <a href=\"https://docs.basex.org/wiki/XQuery_3.1#Maps\">Maps</a> have been introduced with <a href=\"https://docs.basex.org/wiki/XQuery_3.1\">XQuery 3.1</a>.",
+  "type": "module",
+  "override": true
  },
  "http://www.w3.org/2005/xpath-functions/math": {
   "ns": "http://www.w3.org/2005/xpath-functions/math",
@@ -3845,7 +3889,9 @@
     "description": " Calculates the CRC32 check sum of the given <code>$string</code>.<br/>If an empty sequence is supplied, the empty sequence is returned."
    }
   ],
-  "description": " The math <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"https://www.w3.org/TR/xpath-functions-31/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module."
+  "description": " The math <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"https://www.w3.org/TR/xpath-functions-31/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/proc": {
   "ns": "http://basex.org/modules/proc",
@@ -3962,7 +4008,9 @@
     "description": " Returns the names of all Java system properties and context parameters of the <code>web.xml</code> file (see <a href=\"https://docs.basex.org/wiki/Web_Application#Configuration\">Web Applications</a>). For environment variables of the operating system, please use <a href=\"https://www.w3.org/TR/xpath-functions-30/#func-available-environment-variables\">fn:available-environment-variables</a>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions for executing system commands from XQuery."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions for executing system commands from XQuery.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/random": {
   "ns": "http://basex.org/modules/random",
@@ -4053,7 +4101,9 @@
     "description": " Creates a random universally unique identifier (UUID), represented as 128-bit value."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for computing random values. All functions except for <code> <a href=\"https://docs.basex.org/wiki/Random_Module#random:seeded-double\">random:seeded-double</a> </code> and <code> <a href=\"https://docs.basex.org/wiki/Random_Module#random:seeded-integer\">random:seeded-integer</a> </code> are non-deterministic, i. e., they return different values for each call."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for computing random values. All functions except for <code> <a href=\"https://docs.basex.org/wiki/Random_Module#random:seeded-double\">random:seeded-double</a> </code> and <code> <a href=\"https://docs.basex.org/wiki/Random_Module#random:seeded-integer\">random:seeded-integer</a> </code> are non-deterministic, i. e., they return different values for each call.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/repo": {
   "ns": "http://basex.org/modules/repo",
@@ -4089,7 +4139,9 @@
     "description": " Lists the names and versions of all currently installed packages.<br/>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for installing, listing and deleting modules contained in the <a href=\"https://docs.basex.org/wiki/Repository\">Repository</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for installing, listing and deleting modules contained in the <a href=\"https://docs.basex.org/wiki/Repository\">Repository</a>.",
+  "type": "module",
+  "override": true
  },
  "http://exquery.org/ns/request": {
   "ns": "http://exquery.org/ns/request",
@@ -4298,7 +4350,9 @@
     "description": " Binds the specified <code>$value</code> to the request attribute with the specified <code>$name</code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for retrieving information on an HTTP request that has triggered the query. It is mostly useful when building <a href=\"https://docs.basex.org/wiki/Web_Application\">Web Applications</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for retrieving information on an HTTP request that has triggered the query. It is mostly useful when building <a href=\"https://docs.basex.org/wiki/Web_Application\">Web Applications</a>.",
+  "type": "module",
+  "override": true
  },
  "http://exquery.org/ns/restxq": {
   "ns": "http://exquery.org/ns/restxq",
@@ -4346,7 +4400,9 @@
     "description": " Initializes the RESTXQ module cache: <ul> <li>By default, the cache will be discarded, and all modules will be parsed and cached again.</li> <li>If <code>$update</code> is enabled, the background caching behavior is simulated (see <code> <a href=\"https://docs.basex.org/wiki/Options#PARSERESTXQ\">PARSERESTXQ</a> </code>): Only updated modules will be parsed.</li> <li>This function should be called if new RESTXQ code is deployed at runtime.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains helper functions for the <a href=\"https://docs.basex.org/wiki/RESTXQ\">RESTXQ</a> API, some of which are defined in the <a href=\"http://exquery.github.io/exquery/exquery-restxq-specification/restxq-1.0-specification.html\">RESTXQ Draft</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains helper functions for the <a href=\"https://docs.basex.org/wiki/RESTXQ\">RESTXQ</a> API, some of which are defined in the <a href=\"http://exquery.github.io/exquery/exquery-restxq-specification/restxq-1.0-specification.html\">RESTXQ Draft</a>.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/session": {
   "ns": "http://basex.org/modules/session",
@@ -4430,7 +4486,9 @@
     "description": " Unregisters a session and all data associated with it."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for accessing and modifying server-side session information. This module is mainly useful in the context of <a href=\"https://docs.basex.org/wiki/Web_Application\">Web Applications</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for accessing and modifying server-side session information. This module is mainly useful in the context of <a href=\"https://docs.basex.org/wiki/Web_Application\">Web Applications</a>.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/sessions": {
   "ns": "http://basex.org/modules/sessions",
@@ -4526,7 +4584,9 @@
     "description": " Unregisters the session specified by <code>$id</code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> can only be called from users with <i>Admin</i> permissions. It contains functions for accessing and modifying all registered server-side sessions. This module is mainly useful in the context of <a href=\"https://docs.basex.org/wiki/Web_Application\">Web Applications</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> can only be called from users with <i>Admin</i> permissions. It contains functions for accessing and modifying all registered server-side sessions. This module is mainly useful in the context of <a href=\"https://docs.basex.org/wiki/Web_Application\">Web Applications</a>.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/sql": {
   "ns": "http://basex.org/modules/sql",
@@ -4657,7 +4717,9 @@
     "description": " This function closes a database connection with the specified <code>$id</code>.<br/>Opened connections will automatically be closed after the XQuery expression has been evaluated, but in order to save memory, it is always recommendable to close connections that are not used anymore."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to access relational databases from XQuery using SQL. With this module, you can execute query, update and prepared statements, and the result sets are returned as sequences of XML elements representing tuples. Each element has children representing the columns returned by the SQL statement."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to access relational databases from XQuery using SQL. With this module, you can execute query, update and prepared statements, and the result sets are returned as sequences of XML elements representing tuples. Each element has children representing the columns returned by the SQL statement.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/store": {
   "ns": "http://basex.org/modules/store",
@@ -4768,7 +4830,9 @@
     "description": " Deletes a custom store from disk."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions to organize values in a persistent main-memory key-value store."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides functions to organize values in a persistent main-memory key-value store.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/string": {
   "ns": "http://basex.org/modules/string",
@@ -4838,7 +4902,9 @@
     "description": " Returns a single tabulator character (<code>&amp;#9;</code>)."
    }
   ],
-  "description": " <font color=\"orangered\">Updated with Version 10:</font> Renamed from <i>Strings Module</i> to <i>String Module</i>. The namespace URI has been updated as well."
+  "description": " <font color=\"orangered\">Updated with Version 10:</font> Renamed from <i>Strings Module</i> to <i>String Module</i>. The namespace URI has been updated as well.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/unit": {
   "ns": "http://basex.org/modules/unit",
@@ -4905,7 +4971,9 @@
     "description": " Raises a unit error. The default failure message can be overridden with the <code>$info</code> argument."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains annotations and functions for performing XQUnit tests."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains annotations and functions for performing XQUnit tests.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/update": {
   "ns": "http://basex.org/modules/update",
@@ -4981,7 +5049,9 @@
     "description": " Returns the items that have been cached by <code> <a href=\"https://docs.basex.org/wiki/Update_Module#update:output\">update:output</a> </code>. The output cache can optionally be <code>$reset</code>. The function can be used to check which items will eventually be returned as result of an updating function.<br/>This function is <i>non-deterministic</i>: It will return different results before and after items have been cached. It is e. g. useful when writing <a href=\"https://docs.basex.org/wiki/Unit_Module\">unit tests</a>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides additional functions for performing updates and returning results in <a href=\"https://docs.basex.org/wiki/XQuery_Update\">updating expressions</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides additional functions for performing updates and returning results in <a href=\"https://docs.basex.org/wiki/XQuery_Update\">updating expressions</a>.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/user": {
   "ns": "http://basex.org/modules/user",
@@ -5182,7 +5252,9 @@
     "description": " Assigns the specified <code>$info</code> element to the user management or, if <code>$name</code> is supplied, to a specific user. This function can be used to manage application-specific data (groups, enhanced user info, etc.)."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for creating and administering database users. The <a href=\"https://docs.basex.org/wiki/User_Management\">User Management</a> article gives more information on database users and permissions."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for creating and administering database users. The <a href=\"https://docs.basex.org/wiki/User_Management\">User Management</a> article gives more information on database users and permissions.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/util": {
   "ns": "http://basex.org/modules/util",
@@ -5416,7 +5488,9 @@
     "description": " Returns all characters of a <code>$string</code> as a sequence. Equivalent to: <div class=\"mw-highlight mw-content-ltr\" dir=\"ltr\"> <pre> <span/> <span class=\"k\">for</span> <span class=\"nv\">$</span> <span class=\"n\">cp</span> <span class=\"ow\">in</span> <span class=\"nf\">string-to-codepoints</span> <span class=\"p\">(</span> <span class=\"nv\">$</span> <span class=\"n\">string</span> <span class=\"p\">)</span> <span class=\"k\">return</span> <span class=\"nf\">codepoints-to-string</span> <span class=\"p\">(</span> <span class=\"nv\">$</span> <span class=\"n\">cp</span> <span class=\"p\">)</span> </pre> </div>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains various utility and helper functions."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains various utility and helper functions.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/validate": {
   "ns": "http://basex.org/modules/validate",
@@ -5651,7 +5725,9 @@
     "description": " Validates the XML <code>$input</code> document against a <code>$schema</code>, using the XML or <code>$compact</code> notation, and returns warnings, errors and fatal errors as XML."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to perform validations against DTDs, XML Schema and RelaxNG. The documentation further describes how to use Schematron validation with BaseX."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions to perform validations against DTDs, XML Schema and RelaxNG. The documentation further describes how to use Schematron validation with BaseX.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/web": {
   "ns": "http://basex.org/modules/web",
@@ -5806,7 +5882,9 @@
     "description": " Raises an error with the QName <code>rest:error</code>, the specified <code>$message</code> and the specified <code>$status</code> as error value.<br/>Calls to this function are equivalent to <code>fn:error(xs:QName('rest:error'), $message, $status)</code>. <p>See <a href=\"https://docs.basex.org/wiki/RESTXQ#Raise_Errors\">RESTXQ: Raise Errors</a> to learn how the function is helpful in web applications. </p>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides convenience functions for building web applications with <a href=\"https://docs.basex.org/wiki/RESTXQ\">RESTXQ</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> provides convenience functions for building web applications with <a href=\"https://docs.basex.org/wiki/RESTXQ\">RESTXQ</a>.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/ws": {
   "ns": "http://basex.org/modules/ws",
@@ -5949,7 +6027,9 @@
     "description": " Deletes an attribute with the specified <code>$name</code> from the WebSocket with the specified <code>$id</code>."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for accessing specific WebSocket functions. This module is mainly useful in the context of <a href=\"https://docs.basex.org/wiki/WebSockets\">WebSockets</a>."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for accessing specific WebSocket functions. This module is mainly useful in the context of <a href=\"https://docs.basex.org/wiki/WebSockets\">WebSockets</a>.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/xquery": {
   "ns": "http://basex.org/modules/xquery",
@@ -6048,7 +6128,9 @@
     "description": " This function executes the supplied (non-updating) functions in parallel."
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for parsing and evaluating XQuery strings at runtime, and to run code in parallel."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions for parsing and evaluating XQuery strings at runtime, and to run code in parallel.",
+  "type": "module",
+  "override": true
  },
  "http://basex.org/modules/xslt": {
   "ns": "http://basex.org/modules/xslt",
@@ -6172,6 +6254,8 @@
     "description": " Transforms the document specified by <code>$input</code>, using the XSLT template specified by <code>$stylesheet</code>, and returns a map with the following keys: <ul> <li> <code>result</code>: The transformation result: One or more document nodes, or (if the result cannot be converted to XML) an item of type <code>xs:untypedAtomic</code>.</li> <li> <code>messages</code>: Informational output generated by <code>xsl:message</code> elements: A sequence of arrays. The arrays consist of XML elements, or (for those messages that cannot be converted to XML) items of type <code>xs:untypedAtomic</code>.</li> </ul> <p>The semantics of <code>$params</code> and <code>$options</code> is the same as for <code> <a href=\"https://docs.basex.org/wiki/XSLT_Module#xslt:transform\">xslt:transform</a> </code>.<br/>For the moment, messages can only be returned with recent versions of Saxon. </p> <ul> <li> <code>error</code> (optional): An error string, which would be raised as an error by the other functions of this module.</li> </ul>"
    }
   ],
-  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions and variables to perform XSL transformations."
+  "description": " This <a href=\"https://docs.basex.org/wiki/Module_Library\">XQuery Module</a> contains functions and variables to perform XSL transformations.",
+  "type": "module",
+  "override": true
  }
 }

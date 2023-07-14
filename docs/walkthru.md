@@ -40,14 +40,17 @@ if node.name is function it is called
 visit node children unless function returns true
 
 # set processor
-The `processor` option can be set to known value from the keys of `processors.json`
+The `processor` option can be set to known value from the keys of the file `processors.json`
 This causes the `StaticContext` to be intialized with the packages listed for that key.
 
 ```
 XQLint: require('./compiler/static_context').StaticContext(undefined,undefined,opts.processor)
 ```
 `namespaces` initial set to standard Xquery 3.1 namespaces.
-Inside
+
+
+
+Old Inside
 ```
  namespaces = { ...namespaces, ...N.Basex, ...N.Expath }
  const library = require('./module-library.json');

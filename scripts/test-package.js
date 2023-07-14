@@ -1,24 +1,11 @@
-// test processor logic
+// test processor logic "basex-9.7" "basex-10.6" "none"
+const processor="basex-10.6";
 console.time('doSomething')
-const TreeOps = require('../lib/tree_ops').TreeOps;
-const xq = require("../packages/xpath-3.1.json");
-const bx = require("../packages/basex-9.7.json");
-const ns = Object.keys(bx);
-const namespaces = {};
-function add(obj) {
-    for (const [key, value] of Object.entries(obj)) {
-        if(namespaces.hasOwnProperty(key) ) console.log("existing: "+key)
-        namespaces[key] = {
-            prefixes: value.prefixes,
-            type: 'module',
-            override: true,
-            xqdoc: value
-        }
-    }
-};
+const processors = require('../lib/compiler/processors');
 
-add(xq);
-add(bx);
+const namespaces = processors.namespaces(processor);
+console.log("Keys: ",Object.keys(namespaces));
 
-console.log("Keys: ",Object.keys(ns).length);
+console.log("Processors: ",processors.names());
+
 console.timeEnd('doSomething')
