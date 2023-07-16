@@ -1,19 +1,21 @@
 {
-   "basex-10.6": {
+   "basex-10": {
       "modules": [
          "packages/basex-static-namespaces.json",
          "packages/xpath-3.1.json",
          "packages/basex-10.6.json"
       ]
    },
-   "basex-9.7": {
+   "basex-9": {
       "modules": [
          "packages/basex-static-namespaces.json",
-         "packages/xpath-3.1.json",
+         "packages/xpath-3.1json",
          "packages/basex-9.7.json"
       ]
    },
-   "none": {
-      "modules": []
+   "": {
+      "modules": [
+         "packages/xpath-3.1.json"
+      ]
    }
 }

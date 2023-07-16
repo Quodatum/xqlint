@@ -168,7 +168,8 @@ vows.describe('Test Namespace declarations').addBatch({
     'test module function names (3)': function () {
         var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/rbtree2.xq', 'utf-8'), { styleCheck: false });
         var errors = linter.getErrors();
-        assert.equal(errors.length, 0, 'no errors');
+        var error = errors[1];
+        assert.equal(error.message.indexOf('[XQST0048]'), 0, 'Is Error [XQST0048]');
     },
     'test module default function ns #24': function () {
         var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'), { styleCheck: false });

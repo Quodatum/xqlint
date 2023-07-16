@@ -108,7 +108,7 @@ module.exports = function (grunt) {
             },
             one: {
                 options: {
-                    verbose: true,
+                    verbose: false,
                     colors: false,
                     coverage: 'json'
                 },
@@ -117,10 +117,10 @@ module.exports = function (grunt) {
                 // This option is grunt's "full" file format.
                 //src: ['test/stylecheck_test.js']
                 //src: ['test/function_test.js']
-                //src: ['test/variable_test.js']
+                src: ['test/variable_test.js']
                 //src: ['test/namespace_test.js'] //3 fail
                 //src: ['test/parser_test.js'] //26 fail
-                src: ['test/issue_test.js'] //26 fail
+                //src: ['test/issue_test.js'] //26 fail
             },
         },
         browserify: {

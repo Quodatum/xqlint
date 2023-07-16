@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var XQLint = require('../../lib/xqlint').XQLint;
 
-var src="cases/history.xqm";
+var src="test/queries/rbtree.xq/map.xq";
 //src="cases\history.xqm";
 var linter = new XQLint(fs.readFileSync(src, 'utf-8'));
 // .hasSyntaxError()

@@ -30,5 +30,5 @@ export class  LintRange{
 1. xqdoc.parse_comment returns object with description property with xqdoc comment with any ":"
 
 # bugs
-
+many
 

@@ -132,7 +132,7 @@ vows.describe('Test Code Completion').addBatch({
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 9, 'Number of proposals' + proposals.length);
     },
-    // tests below not usefull
+    // tests below not useful
     'test functions (1)': function(){
         var source = 'import module namespace ns="http://expath.org/ns/http-client"; ns:';
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));

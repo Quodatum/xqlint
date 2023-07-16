@@ -23,11 +23,11 @@ vows.describe('Test reported issues').addBatch({
         const src=path.resolve('test/queries/rbtree.xq/map.xq');
         var sctx = new StaticContext();
         sctx.setModuleResolver(function(uri,ats){//uri, hints
-            const target=path.resolve(ats[0].uri,src);
+            const target=path.resolve(src,"..",ats[0].uri);
             console.log("Resolver: :",src, "->",target);
             const linter = new XQLint(fs.readFileSync(target, 'utf-8'),
             {
-                processor: 'basex',
+                processor: 'basex-10',
                 styleCheck: false
             });
             const xqdoc=linter.getXQDoc(true);
@@ -35,7 +35,7 @@ vows.describe('Test reported issues').addBatch({
         });
         var linter = new XQLint(fs.readFileSync(src, 'utf-8'),
             {
-                processor: 'basex',
+                processor: 'basex-10',
                 styleCheck: false,
                 staticContext: sctx
             });

@@ -41,7 +41,7 @@ vows.describe('Test Variable declarations').addBatch({
     'XPST0081 (6)': function(){
         var linter = new XQLint('declare function local:foo($ex:foo as xs:integer) as xs:integer {  $ex:foo }; local:foo(1)');
         var markers = linter.getErrors();
-        //console.log('test6',markers);
+        console.log('test6',markers);
         assert.equal(markers.length, 2, 'Number of markers '+ markers.length);
         var error = markers[0];
         assert.equal(error.type, 'error', 'Type of marker');
@@ -51,7 +51,7 @@ vows.describe('Test Variable declarations').addBatch({
     'XPST0081 (7)': function(){
         var linter = new XQLint('declare namespace ex = "http://example.com"; declare function local:foo($ex:foo as xs:integer) as xs:integer {  $ex:foo }; local:foo(1)');
         var markers = linter.getErrors();
-        //console.log('test7',markers);
+        console.log('test7',markers);
         assert.equal(markers.length, 0, 'Number of markers');
     },
     
