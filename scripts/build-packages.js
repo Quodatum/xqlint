@@ -35,7 +35,7 @@ function importMods(files) {
     var result = {};
     files.forEach(function (file) {
         console.log("processing..", file);
-        const lintOpts={ styleCheck: false, fileName: file, processor: "none" }
+        const lintOpts={ styleCheck: false, fileName: file, processor: "" }
         var linter = new XQLint(fs.readFileSync(file, 'utf-8'), lintOpts);
         var syntaxError = linter.hasSyntaxError();
         if (syntaxError) {

@@ -30,7 +30,7 @@ files = files.concat(getFiles('test/queries/update'));
 files.forEach(function(file){
     batch[file] = function(){
         //@todo processor: ?
-        var linter = new XQLint(fs.readFileSync(file, 'utf-8'), { styleCheck: false, fileName: file, processor: 'basex' });
+        var linter = new XQLint(fs.readFileSync(file, 'utf-8'), { styleCheck: false, fileName: file, processor: 'basex-9' });
         var syntaxError = linter.hasSyntaxError();
         if(syntaxError) {
             assert.equal(syntaxError, false, linter.getMarkers()[0].message);

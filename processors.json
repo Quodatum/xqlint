@@ -9,13 +9,11 @@
    "basex-9": {
       "modules": [
          "packages/basex-static-namespaces.json",
-         "packages/xpath-3.1json",
+         "packages/xpath-3.1.json",
          "packages/basex-9.7.json"
       ]
    },
    "": {
-      "modules": [
-         "packages/xpath-3.1.json"
-      ]
+      "modules": [  ]
    }
 }

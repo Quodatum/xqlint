@@ -7,12 +7,10 @@
 
 (: insert-start :)
 import module namespace
-lmns="http://www.w3.org/TestModules/lmns" at
-"libraryModule1.xqlib";
+lmns="http://www.w3.org/TestModules/lmns" at "libraryModule1.xqlib";
 
 import module namespace
-lmns="http://www.w3.org/TestModules/lmns" at
-"libraryModule2.xqlib";
+lmns="http://www.w3.org/TestModules/lmns" at "libraryModule2.xqlib";
 (: insert-end :)
 
 <result>{lmns:text()}</result>

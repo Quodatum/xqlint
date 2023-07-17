@@ -12,3 +12,4 @@ specs/
 .vscode
 *.tgz
 Gruntfile.js
+.jshint*

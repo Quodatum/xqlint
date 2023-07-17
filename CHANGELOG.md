@@ -1,4 +1,4 @@
-## [0.2.4] 2023-07-03
+## [0.2.4] 2023-07-17
 * [fix] wiki scraping for basex v10
 * [add] `processors.json` 
 * [add] getProcessors() on XQLint. 

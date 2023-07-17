@@ -27,7 +27,7 @@ vows.describe('Test reported issues').addBatch({
             console.log("Resolver: :",src, "->",target);
             const linter = new XQLint(fs.readFileSync(target, 'utf-8'),
             {
-                processor: 'basex-10',
+                processor: 'basex-9',
                 styleCheck: false
             });
             const xqdoc=linter.getXQDoc(true);
@@ -35,7 +35,7 @@ vows.describe('Test reported issues').addBatch({
         });
         var linter = new XQLint(fs.readFileSync(src, 'utf-8'),
             {
-                processor: 'basex-10',
+                processor: 'basex-9',
                 styleCheck: false,
                 staticContext: sctx
             });
