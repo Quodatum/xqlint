@@ -75,7 +75,7 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (1)': function(){
         var p1 = 'import module namespace ns="';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
+        var sctx = new StaticContext(undefined,undefined,'28msec');
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
         var linter = new XQLint(p1+p2 , { staticContext: sctx });
@@ -88,7 +88,7 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (2)': function(){
         var p1 = 'import module namespace ns="http://28msec.com/modules';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
+        var sctx = new StaticContext(undefined,undefined, '28msec');
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
         var linter = new XQLint(p1+p2 , { staticContext: sctx });
@@ -100,7 +100,7 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (3)': function(){
         var p1 = 'import module namespace ns="http://www.28msec.com/modules';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
+        var sctx = new StaticContext(undefined,undefined,'28msec');
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
         var linter = new XQLint(p1 + p2 , { staticContext: sctx });
@@ -113,9 +113,9 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (4)': function(){
         var p1 = 'import module namespace ns="http://basex.org/modules';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: 'basex-9'});
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        sctx.availableModuleNamespaces = Object.keys(index);
+        var sctx = new StaticContext(undefined,undefined, 'basex-9');
+        //var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
+        //sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(p1 + p2 , { staticContext: sctx });
         var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
