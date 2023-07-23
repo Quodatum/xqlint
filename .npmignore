@@ -2,6 +2,7 @@
 .settings/
 test/
 scripts/
+packages.src/
 docs/
 cases/
 specs/
@@ -11,3 +12,4 @@ specs/
 .vscode
 *.tgz
 Gruntfile.js
+.jshint*

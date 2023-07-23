@@ -39,13 +39,30 @@ visit(node) will
 if node.name is function it is called 
 visit node children unless function returns true
 
-# set platform
+# set processor
+The `processor` option sets the XQuery engine to target.
+It can be set to a known value from the keys of the file `processors.json`
+
+This results in the `StaticContext` to be intialized with the packages listed for that key.
+
+```
 XQLint: require('./compiler/static_context').StaticContext(undefined,undefined,opts.processor)
+```
+`namespaces` initial set to standard Xquery 3.1 namespaces.
+
+
+
+Old Inside
+```
  namespaces = { ...namespaces, ...N.Basex, ...N.Expath }
  const library = require('./module-library.json');
+ switch (processor) {
+     case "basex
+ }
  if ('basex' === processor) {
             s.setModules(library);
         }
+```
 # response to import module
 
 ...

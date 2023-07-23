@@ -10,9 +10,9 @@
 
 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis. It provides the following features:
-* Lint: errors and warnings based on static code analysis
+* Lint: errors and warnings based on static code analysis.
 * Format:  standardised indentation of source.
-* AST:   Abstract syntax tree as XML
+* AST:   Abstract syntax tree as XML.
 * xqdoc: json object with information similar to the xqdoc XML format
 * Completion: suggestions for line completion given a source and location. 
 * Highlight console source listing using https://www.npmjs.com/package/colors
@@ -24,7 +24,7 @@ XQLint parses XQuery  files and returns errors and warnings based on static code
 This project is in an Alpha state - errors and changes expected.
 
 This project began as a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint).
-but many features have been added and some removed.
+but many features have been added and some, such as JSONiq support, removed.
 
  `quodatum/xqlint` has been used as a drop-in replacement for `wcandillon/xqlint` in the following projects:
 
@@ -154,7 +154,7 @@ grunt vows:test
 
 ## Generate parsers
 
-`grunt parsers`
+`npm run-script rex parsers`
 
 Command generates:
 

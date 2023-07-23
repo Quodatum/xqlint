@@ -168,12 +168,12 @@ vows.describe('Test Module URI Resolver').addBatch({
     },
 
     'test 12': function(){
-        var sctx = new StaticContext();
+        var sctx = new StaticContext(undefined,undefined,"basex-9");
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        sctx.setModulesFromXQDoc(index);
+       // sctx.setModulesFromXQDoc(index);
         var linter = new XQLint(fs.readFileSync('test/queries/merry.xq', 'utf-8'), { fileName: 'merry.xq',  staticContext: sctx });
         var markers = linter.getMarkers();
-        console.log("TEST12",markers);
+        //console.log("TEST12",markers);
         // currently "chars#1": undeclared function'
         assert.equal(markers.length, 0, 'Number of markers');
     },

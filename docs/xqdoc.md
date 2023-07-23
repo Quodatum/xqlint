@@ -43,7 +43,11 @@ this.visit(ast);
 ## xqdoc.getXQDoc
 ```
 ```
-
+## position information
+`addfunction` in static_context adds. it is the qname pos
+VSCode usage
+*  range: full range of object
+*  selectionRange: to be exposed
 ## Notes
 Need way to get pos and posBody seperate from this call.
 

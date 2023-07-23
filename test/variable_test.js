@@ -51,7 +51,7 @@ vows.describe('Test Variable declarations').addBatch({
     'XPST0081 (7)': function(){
         var linter = new XQLint('declare namespace ex = "http://example.com"; declare function local:foo($ex:foo as xs:integer) as xs:integer {  $ex:foo }; local:foo(1)');
         var markers = linter.getErrors();
-        //console.log('test7',markers);
+        console.log('test7',markers);
         assert.equal(markers.length, 0, 'Number of markers');
     },
     

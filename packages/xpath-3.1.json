@@ -1,0 +1,2149 @@
+{
+ "http://www.w3.org/2005/xpath-functions/math": {
+  "ns": "http://www.w3.org/2005/xpath-functions/math",
+  "prefixes": [
+   "math"
+  ],
+  "namespaces": [],
+  "variables": {},
+  "functions": {
+   "http://www.w3.org/2005/xpath-functions/math#pi#0": {
+    "name": "pi",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#pi#0",
+    "params": [],
+    "type": "xs:double",
+    "description": " Returns the <code>xs:double</code> value of the mathematical constant π whose lexical representation is 3.141592653589793."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#sqrt#1": {
+    "name": "sqrt",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#sqrt#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the square root of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the <code>xs:double</code> value of the mathematical square root of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#sin#1": {
+    "name": "sin",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#sin#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the sine of the <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the sine of <code>$arg</code>, treated as an angle in radians."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#cos#1": {
+    "name": "cos",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#cos#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the cosine of <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the cosine of <code>$arg</code>, treated as an angle in radians."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#tan#1": {
+    "name": "tan",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#tan#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the tangent of <code>$arg</code>, expressed in radians.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the tangent of <code>$arg</code>, treated as an angle in radians."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#asin#1": {
+    "name": "asin",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#asin#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the arc sine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc sine of <code>$arg</code>, returned as an angle in radians in the range -π/2 to +π/2."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#acos#1": {
+    "name": "acos",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#acos#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the arc cosine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc cosine of <code>$arg</code>, returned as an angle in radians in the range 0 to +π."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#atan#1": {
+    "name": "atan",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#atan#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the arc tangent of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc tangent of <code>$arg</code>, returned as an angle in radians in the range -π/2 to +π/2."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#atan2#2": {
+    "name": "atan2",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#atan2#2",
+    "params": [
+     "$arg1 as xs:double?",
+     "$arg2 as xs:double"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the arc tangent of <code>$arg1</code> divided by <code>$arg2</code>, the result being in the range -π/2 to +π/2 radians.<br/>If <code>$arg1</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the arc tangent of <code>$arg1</code> divided by <code>$arg2</code>, returned as an angle in radians in the range -π to +π."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#pow#2": {
+    "name": "pow",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#pow#2",
+    "params": [
+     "$arg1 as xs:double?",
+     "$arg2 as xs:double"
+    ],
+    "type": "xs:double?",
+    "description": " Returns <code>$arg1</code> raised to the power of <code>$arg2</code>.<br/>If <code>$arg1</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the <code>$arg1</code> raised to the power of <code>$arg2</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#exp#1": {
+    "name": "exp",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#exp#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns <i>e</i> raised to the power of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the value of <i>e</i> raised to the power of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#log#1": {
+    "name": "log",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#log#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the natural logarithm of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the natural logarithm (base <i>e</i>) of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#log10#1": {
+    "name": "log10",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#log10#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the base 10 logarithm of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the base 10 logarithm of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#e#0": {
+    "name": "e",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#e#0",
+    "params": [],
+    "type": "xs:double",
+    "description": " Returns the <code>xs:double</code> value of the mathematical constant <i>e</i> whose lexical representation is 2.718281828459045."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#sinh#1": {
+    "name": "sinh",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#sinh#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the hyperbolic sine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic sine of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#cosh#1": {
+    "name": "cosh",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#cosh#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the hyperbolic cosine of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic cosine of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#tanh#1": {
+    "name": "tanh",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#tanh#1",
+    "params": [
+     "$arg as xs:double?"
+    ],
+    "type": "xs:double?",
+    "description": " Returns the hyperbolic tangent of <code>$arg</code>.<br/>If <code>$arg</code> is the empty sequence, the empty sequence is returned.<br/>Otherwise the result is the hyperbolic tangent of <code>$arg</code>."
+   },
+   "http://www.w3.org/2005/xpath-functions/math#crc32#1": {
+    "name": "crc32",
+    "uri": "http://www.w3.org/2005/xpath-functions/math",
+    "key": "http://www.w3.org/2005/xpath-functions/math#crc32#1",
+    "params": [
+     "$string as xs:string?"
+    ],
+    "type": "xs:hexBinary?",
+    "description": " Calculates the CRC32 check sum of the given <code>$string</code>.<br/>If an empty sequence is supplied, the empty sequence is returned."
+   }
+  },
+  "description": " The math <a href=\"http://docs.basex.org/wiki/Module_Library\">XQuery Module</a> defines functions to perform mathematical operations, such as <code>pi</code>, <code>asin</code> and <code>acos</code>. Most functions are specified in the <a href=\"http://www.w3.org/TR/xpath-functions-30/\">Functions and Operators Specification</a> of the upcoming XQuery 3.0 Recommendation, and some additional ones have been added in this module.",
+  "type": "module",
+  "override": true
+ },
+ "http://www.w3.org/2005/xpath-functions": {
+  "ns": "http://www.w3.org/2005/xpath-functions",
+  "prefixes": [
+   "fn"
+  ],
+  "namespaces": [],
+  "variables": {},
+  "functions": {
+   "http://www.w3.org/2005/xpath-functions#error#0": {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#error#0",
+    "params": [],
+    "description": " Calling the fn:error function raises an application-defined error."
+   },
+   "http://www.w3.org/2005/xpath-functions#error#1": {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#error#1",
+    "params": [
+     "$code as xs:QName?"
+    ],
+    "description": " Calling the fn:error function raises an application-defined error."
+   },
+   "http://www.w3.org/2005/xpath-functions#error#2": {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#error#2",
+    "params": [
+     "$code as xs:QName?",
+     "$description as xs:string"
+    ],
+    "description": " Calling the fn:error function raises an application-defined error."
+   },
+   "http://www.w3.org/2005/xpath-functions#error#3": {
+    "name": "error",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#error#3",
+    "params": [
+     "$code as xs:QName?",
+     "$description as xs:string",
+     "$error-object as item()*"
+    ],
+    "description": " Calling the fn:error function raises an application-defined error."
+   },
+   "http://www.w3.org/2005/xpath-functions#trace#1": {
+    "name": "trace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#trace#1",
+    "params": [
+     "$value as item()*"
+    ],
+    "type": "item()*",
+    "description": " Provides an execution trace intended to be used in debugging queries."
+   },
+   "http://www.w3.org/2005/xpath-functions#trace#2": {
+    "name": "trace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#trace#2",
+    "params": [
+     "$value as item()*",
+     "$label as xs:string"
+    ],
+    "type": "item()*",
+    "description": " Provides an execution trace intended to be used in debugging queries."
+   },
+   "http://www.w3.org/2005/xpath-functions#abs#1": {
+    "name": "abs",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#abs#1",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "type": "xs:numeric?",
+    "description": " Returns the absolute value of $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#ceiling#1": {
+    "name": "ceiling",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#ceiling#1",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "type": "xs:numeric?",
+    "description": " Rounds $arg upwards to a whole number."
+   },
+   "http://www.w3.org/2005/xpath-functions#floor#1": {
+    "name": "floor",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#floor#1",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "type": "xs:numeric?",
+    "description": " Rounds $arg downwards to a whole number."
+   },
+   "http://www.w3.org/2005/xpath-functions#round#1": {
+    "name": "round",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#round#1",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "type": "xs:numeric?",
+    "description": " Rounds a value to a specified number of decimal places, rounding upwards if two such values are equally near."
+   },
+   "http://www.w3.org/2005/xpath-functions#round#2": {
+    "name": "round",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#round#2",
+    "params": [
+     "$arg as xs:numeric?",
+     "$precision as xs:integer"
+    ],
+    "type": "xs:numeric?",
+    "description": " Rounds a value to a specified number of decimal places, rounding upwards if two such values are equally near."
+   },
+   "http://www.w3.org/2005/xpath-functions#round-half-to-even#1": {
+    "name": "round-half-to-even",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#round-half-to-even#1",
+    "params": [
+     "$arg as xs:numeric?"
+    ],
+    "type": "xs:numeric?",
+    "description": " Rounds a value to a specified number of decimal places, rounding to make the last digit even if two such values are equally near."
+   },
+   "http://www.w3.org/2005/xpath-functions#round-half-to-even#2": {
+    "name": "round-half-to-even",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#round-half-to-even#2",
+    "params": [
+     "$arg as xs:numeric?",
+     "$precision as xs:integer"
+    ],
+    "type": "xs:numeric?",
+    "description": " Rounds a value to a specified number of decimal places, rounding to make the last digit even if two such values are equally near."
+   },
+   "http://www.w3.org/2005/xpath-functions#number#0": {
+    "name": "number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#number#0",
+    "params": [],
+    "type": "xs:double",
+    "description": " Returns the value indicated by $arg or, if $arg is not specified, the context item after atomization, converted to an xs:double."
+   },
+   "http://www.w3.org/2005/xpath-functions#number#1": {
+    "name": "number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#number#1",
+    "params": [
+     "$arg as xs:anyAtomicType?"
+    ],
+    "type": "xs:double",
+    "description": " Returns the value indicated by $arg or, if $arg is not specified, the context item after atomization, converted to an xs:double."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-integer#2": {
+    "name": "format-integer",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-integer#2",
+    "params": [
+     "$value as xs:integer?",
+     "$picture as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Formats an integer according to a given picture string, using the conventions of a given natural language if specified."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-integer#3": {
+    "name": "format-integer",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-integer#3",
+    "params": [
+     "$value as xs:integer?",
+     "$picture as xs:string",
+     "$lang as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Formats an integer according to a given picture string, using the conventions of a given natural language if specified."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-number#2": {
+    "name": "format-number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-number#2",
+    "params": [
+     "$value as xs:numeric?",
+     "$picture as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns a string containing a number formatted according to a given picture string, taking account of decimal formats specified in the static context."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-number#3": {
+    "name": "format-number",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-number#3",
+    "params": [
+     "$value as xs:numeric?",
+     "$picture as xs:string",
+     "$decimal-format-name as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Returns a string containing a number formatted according to a given picture string, taking account of decimal formats specified in the static context."
+   },
+   "http://www.w3.org/2005/xpath-functions#random-number-generator#0": {
+    "name": "random-number-generator",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#random-number-generator#0",
+    "params": [],
+    "type": "map(xs:string, item())",
+    "description": " Returns a random number generator, which can be used to generate sequences of random numbers."
+   },
+   "http://www.w3.org/2005/xpath-functions#random-number-generator#1": {
+    "name": "random-number-generator",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#random-number-generator#1",
+    "params": [
+     "$seed as xs:anyAtomicType?"
+    ],
+    "type": "map(xs:string, item())",
+    "description": " Returns a random number generator, which can be used to generate sequences of random numbers."
+   },
+   "http://www.w3.org/2005/xpath-functions#codepoints-to-string#1": {
+    "name": "codepoints-to-string",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#codepoints-to-string#1",
+    "params": [
+     "$arg as xs:integer*"
+    ],
+    "type": "xs:string",
+    "description": " Returns an xs:string whose characters have supplied codepoints."
+   },
+   "http://www.w3.org/2005/xpath-functions#string-to-codepoints#1": {
+    "name": "string-to-codepoints",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#string-to-codepoints#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:integer*",
+    "description": " Returns the sequence of codepoints that constitute an xs:string value."
+   },
+   "http://www.w3.org/2005/xpath-functions#compare#2": {
+    "name": "compare",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#compare#2",
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns -1, 0, or 1, depending on whether $comparand1 collates before, equal to, or after $comparand2 according to the rules of a selected collation."
+   },
+   "http://www.w3.org/2005/xpath-functions#compare#3": {
+    "name": "compare",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#compare#3",
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns -1, 0, or 1, depending on whether $comparand1 collates before, equal to, or after $comparand2 according to the rules of a selected collation."
+   },
+   "http://www.w3.org/2005/xpath-functions#codepoint-equal#2": {
+    "name": "codepoint-equal",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#codepoint-equal#2",
+    "params": [
+     "$comparand1 as xs:string?",
+     "$comparand2 as xs:string?"
+    ],
+    "type": "xs:boolean?",
+    "description": " Returns true if two strings are equal, considered codepoint-by-codepoint."
+   },
+   "http://www.w3.org/2005/xpath-functions#collation-key#1": {
+    "name": "collation-key",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#collation-key#1",
+    "params": [
+     "$key as xs:string"
+    ],
+    "type": "xs:base64Binary",
+    "description": " Given a string value and a collation, generates an internal value called a collation key, with the property that the matching and ordering of collation keys reflects the matching and ordering of strings under the specified collation."
+   },
+   "http://www.w3.org/2005/xpath-functions#collation-key#2": {
+    "name": "collation-key",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#collation-key#2",
+    "params": [
+     "$key as xs:string",
+     "$collation as xs:string"
+    ],
+    "type": "xs:base64Binary",
+    "description": " Given a string value and a collation, generates an internal value called a collation key, with the property that the matching and ordering of collation keys reflects the matching and ordering of strings under the specified collation."
+   },
+   "http://www.w3.org/2005/xpath-functions#contains-token#2": {
+    "name": "contains-token",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#contains-token#2",
+    "params": [
+     "$input as xs:string*",
+     "$token as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Determines whether or not any of the supplied strings, when tokenized at whitespace boundaries, contains the supplied token, under the rules of the supplied collation."
+   },
+   "http://www.w3.org/2005/xpath-functions#contains-token#3": {
+    "name": "contains-token",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#contains-token#3",
+    "params": [
+     "$input as xs:string*",
+     "$token as xs:string",
+     "$collation as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Determines whether or not any of the supplied strings, when tokenized at whitespace boundaries, contains the supplied token, under the rules of the supplied collation."
+   },
+   "http://www.w3.org/2005/xpath-functions#concat#2": {
+    "name": "concat",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#concat#2",
+    "params": [
+     "$arg1 as xs:anyAtomicType?",
+     "$arg2 as xs:anyAtomicType?"
+    ],
+    "type": "xs:string",
+    "description": " Returns the concatenation of the string values of the arguments."
+   },
+   "http://www.w3.org/2005/xpath-functions#string-join#1": {
+    "name": "string-join",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#string-join#1",
+    "params": [
+     "$arg1 as xs:anyAtomicType*"
+    ],
+    "type": "xs:string",
+    "description": " Returns a string created by concatenating the items in a sequence, with a defined separator between adjacent items."
+   },
+   "http://www.w3.org/2005/xpath-functions#string-join#2": {
+    "name": "string-join",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#string-join#2",
+    "params": [
+     "$arg1 as xs:anyAtomicType*",
+     "$arg2 as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns a string created by concatenating the items in a sequence, with a defined separator between adjacent items."
+   },
+   "http://www.w3.org/2005/xpath-functions#substring#2": {
+    "name": "substring",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#substring#2",
+    "params": [
+     "$sourceString as xs:string?",
+     "$start as xs:double"
+    ],
+    "type": "xs:string",
+    "description": " Returns the portion of the value of $sourceString beginning at the position indicated by the value of $start and continuing for the number of characters indicated by the value of $length."
+   },
+   "http://www.w3.org/2005/xpath-functions#substring#3": {
+    "name": "substring",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#substring#3",
+    "params": [
+     "$sourceString as xs:string?",
+     "$start as xs:double",
+     "$length as xs:double"
+    ],
+    "type": "xs:string",
+    "description": " Returns the portion of the value of $sourceString beginning at the position indicated by the value of $start and continuing for the number of characters indicated by the value of $length."
+   },
+   "http://www.w3.org/2005/xpath-functions#string-length#0": {
+    "name": "string-length",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#string-length#0",
+    "params": [],
+    "type": "xs:integer",
+    "description": " Returns the number of characters in a string."
+   },
+   "http://www.w3.org/2005/xpath-functions#string-length#1": {
+    "name": "string-length",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#string-length#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:integer",
+    "description": " Returns the number of characters in a string."
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-space#0": {
+    "name": "normalize-space",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#normalize-space#0",
+    "params": [],
+    "type": "xs:string",
+    "description": " Returns the value of $arg with leading and trailing whitespace removed, and sequences of internal whitespace reduced to a single space character."
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-space#1": {
+    "name": "normalize-space",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#normalize-space#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Returns the value of $arg with leading and trailing whitespace removed, and sequences of internal whitespace reduced to a single space character."
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-unicode#1": {
+    "name": "normalize-unicode",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#normalize-unicode#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Returns the value of $arg after applying Unicode normalization."
+   },
+   "http://www.w3.org/2005/xpath-functions#normalize-unicode#2": {
+    "name": "normalize-unicode",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#normalize-unicode#2",
+    "params": [
+     "$arg as xs:string?",
+     "$normalizationForm as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns the value of $arg after applying Unicode normalization."
+   },
+   "http://www.w3.org/2005/xpath-functions#upper-case#1": {
+    "name": "upper-case",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#upper-case#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Converts a string to upper case."
+   },
+   "http://www.w3.org/2005/xpath-functions#lower-case#1": {
+    "name": "lower-case",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#lower-case#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Converts a string to lower case."
+   },
+   "http://www.w3.org/2005/xpath-functions#translate#3": {
+    "name": "translate",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#translate#3",
+    "params": [
+     "$arg as xs:string?",
+     "$mapString as xs:string",
+     "$transString as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns the value of $arg modified by replacing or removing individual characters."
+   },
+   "http://www.w3.org/2005/xpath-functions#contains#2": {
+    "name": "contains",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#contains#2",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the string $arg1 contains $arg2 as a substring, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#contains#3": {
+    "name": "contains",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#contains#3",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the string $arg1 contains $arg2 as a substring, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#starts-with#2": {
+    "name": "starts-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#starts-with#2",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the string $arg1 contains $arg2 as a leading substring, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#starts-with#3": {
+    "name": "starts-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#starts-with#3",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the string $arg1 contains $arg2 as a leading substring, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#ends-with#2": {
+    "name": "ends-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#ends-with#2",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the string $arg1 contains $arg2 as a trailing substring, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#ends-with#3": {
+    "name": "ends-with",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#ends-with#3",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the string $arg1 contains $arg2 as a trailing substring, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-before#2": {
+    "name": "substring-before",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#substring-before#2",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Returns the part of $arg1 that precedes the first occurrence of $arg2, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-before#3": {
+    "name": "substring-before",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#substring-before#3",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns the part of $arg1 that precedes the first occurrence of $arg2, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-after#2": {
+    "name": "substring-after",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#substring-after#2",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?"
+    ],
+    "type": "xs:string",
+    "description": " Returns the part of $arg1 that follows the first occurrence of $arg2, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#substring-after#3": {
+    "name": "substring-after",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#substring-after#3",
+    "params": [
+     "$arg1 as xs:string?",
+     "$arg2 as xs:string?",
+     "$collation as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns the part of $arg1 that follows the first occurrence of $arg2, taking collations into account."
+   },
+   "http://www.w3.org/2005/xpath-functions#matches#2": {
+    "name": "matches",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#matches#2",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the supplied string matches a given regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#matches#3": {
+    "name": "matches",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#matches#3",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the supplied string matches a given regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#replace#3": {
+    "name": "replace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#replace#3",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$replacement as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns a string produced from the input string by replacing any substrings that match a given regular expression with a supplied replacement string."
+   },
+   "http://www.w3.org/2005/xpath-functions#replace#4": {
+    "name": "replace",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#replace#4",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$replacement as xs:string",
+     "$flags as xs:string"
+    ],
+    "type": "xs:string",
+    "description": " Returns a string produced from the input string by replacing any substrings that match a given regular expression with a supplied replacement string."
+   },
+   "http://www.w3.org/2005/xpath-functions#tokenize#1": {
+    "name": "tokenize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#tokenize#1",
+    "params": [
+     "$input as xs:string?"
+    ],
+    "type": "xs:string*",
+    "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#tokenize#2": {
+    "name": "tokenize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#tokenize#2",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "type": "xs:string*",
+    "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#tokenize#3": {
+    "name": "tokenize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#tokenize#3",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "type": "xs:string*",
+    "description": " Returns a sequence of strings constructed by splitting the input wherever a separator is found; the separator is any substring that matches a given regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#analyze-string#2": {
+    "name": "analyze-string",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#analyze-string#2",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string"
+    ],
+    "type": "element(fn:analyze-string-result)",
+    "description": " Analyzes a string using a regular expression, returning an XML structure that identifies which parts of the input string matched or failed to match the regular expression, and in the case of matched substrings, which substrings matched each capturing group in the regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#analyze-string#3": {
+    "name": "analyze-string",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#analyze-string#3",
+    "params": [
+     "$input as xs:string?",
+     "$pattern as xs:string",
+     "$flags as xs:string"
+    ],
+    "type": "element(fn:analyze-string-result)",
+    "description": " Analyzes a string using a regular expression, returning an XML structure that identifies which parts of the input string matched or failed to match the regular expression, and in the case of matched substrings, which substrings matched each capturing group in the regular expression."
+   },
+   "http://www.w3.org/2005/xpath-functions#true#0": {
+    "name": "true",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#true#0",
+    "params": [],
+    "type": "xs:boolean",
+    "description": " Returns the xs:boolean value true."
+   },
+   "http://www.w3.org/2005/xpath-functions#false#0": {
+    "name": "false",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#false#0",
+    "params": [],
+    "type": "xs:boolean",
+    "description": " Returns the xs:boolean value false."
+   },
+   "http://www.w3.org/2005/xpath-functions#boolean#1": {
+    "name": "boolean",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#boolean#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "xs:boolean",
+    "description": " Computes the effective boolean value of the sequence $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#not#1": {
+    "name": "not",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#not#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the effective boolean value of $arg is false, or false if it is true."
+   },
+   "http://www.w3.org/2005/xpath-functions#years-from-duration#1": {
+    "name": "years-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#years-from-duration#1",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the number of years in a duration."
+   },
+   "http://www.w3.org/2005/xpath-functions#months-from-duration#1": {
+    "name": "months-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#months-from-duration#1",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the number of months in a duration."
+   },
+   "http://www.w3.org/2005/xpath-functions#days-from-duration#1": {
+    "name": "days-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#days-from-duration#1",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the number of days in a duration."
+   },
+   "http://www.w3.org/2005/xpath-functions#hours-from-duration#1": {
+    "name": "hours-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#hours-from-duration#1",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the number of hours in a duration."
+   },
+   "http://www.w3.org/2005/xpath-functions#minutes-from-duration#1": {
+    "name": "minutes-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#minutes-from-duration#1",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the number of minutes in a duration."
+   },
+   "http://www.w3.org/2005/xpath-functions#seconds-from-duration#1": {
+    "name": "seconds-from-duration",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#seconds-from-duration#1",
+    "params": [
+     "$arg as xs:duration?"
+    ],
+    "type": "xs:decimal?",
+    "description": " Returns the number of seconds in a duration."
+   },
+   "http://www.w3.org/2005/xpath-functions#dateTime#2": {
+    "name": "dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#dateTime#2",
+    "params": [
+     "$arg1 as xs:date?",
+     "$arg2 as xs:time?"
+    ],
+    "type": "xs:dateTime?",
+    "description": " Returns an xs:dateTime value created by combining an xs:date and an xs:time."
+   },
+   "http://www.w3.org/2005/xpath-functions#year-from-dateTime#1": {
+    "name": "year-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#year-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the year component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#month-from-dateTime#1": {
+    "name": "month-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#month-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the month component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#day-from-dateTime#1": {
+    "name": "day-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#day-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the day component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#hours-from-dateTime#1": {
+    "name": "hours-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#hours-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the hours component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#minutes-from-dateTime#1": {
+    "name": "minutes-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#minutes-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the minute component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#seconds-from-dateTime#1": {
+    "name": "seconds-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#seconds-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:decimal?",
+    "description": " Returns the seconds component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#timezone-from-dateTime#1": {
+    "name": "timezone-from-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#timezone-from-dateTime#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:dayTimeDuration?",
+    "description": " Returns the timezone component of an xs:dateTime."
+   },
+   "http://www.w3.org/2005/xpath-functions#year-from-date#1": {
+    "name": "year-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#year-from-date#1",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the year component of an xs:date."
+   },
+   "http://www.w3.org/2005/xpath-functions#month-from-date#1": {
+    "name": "month-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#month-from-date#1",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the month component of an xs:date."
+   },
+   "http://www.w3.org/2005/xpath-functions#day-from-date#1": {
+    "name": "day-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#day-from-date#1",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the day component of an xs:date."
+   },
+   "http://www.w3.org/2005/xpath-functions#timezone-from-date#1": {
+    "name": "timezone-from-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#timezone-from-date#1",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "type": "xs:dayTimeDuration?",
+    "description": " Returns the timezone component of an xs:date."
+   },
+   "http://www.w3.org/2005/xpath-functions#hours-from-time#1": {
+    "name": "hours-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#hours-from-time#1",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the hours component of an xs:time."
+   },
+   "http://www.w3.org/2005/xpath-functions#minutes-from-time#1": {
+    "name": "minutes-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#minutes-from-time#1",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "type": "xs:integer?",
+    "description": " Returns the minutes component of an xs:time."
+   },
+   "http://www.w3.org/2005/xpath-functions#seconds-from-time#1": {
+    "name": "seconds-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#seconds-from-time#1",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "type": "xs:decimal?",
+    "description": " Returns the seconds component of an xs:time."
+   },
+   "http://www.w3.org/2005/xpath-functions#timezone-from-time#1": {
+    "name": "timezone-from-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#timezone-from-time#1",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "type": "xs:dayTimeDuration?",
+    "description": " Returns the timezone component of an xs:time."
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-dateTime-to-timezone#1": {
+    "name": "adjust-dateTime-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#adjust-dateTime-to-timezone#1",
+    "params": [
+     "$arg as xs:dateTime?"
+    ],
+    "type": "xs:dateTime?",
+    "description": " Adjusts an xs:dateTime value to a specific timezone, or to no timezone at all."
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-dateTime-to-timezone#2": {
+    "name": "adjust-dateTime-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#adjust-dateTime-to-timezone#2",
+    "params": [
+     "$arg as xs:dateTime?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "type": "xs:dateTime?",
+    "description": " Adjusts an xs:dateTime value to a specific timezone, or to no timezone at all."
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-date-to-timezone#1": {
+    "name": "adjust-date-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#adjust-date-to-timezone#1",
+    "params": [
+     "$arg as xs:date?"
+    ],
+    "type": "xs:date?",
+    "description": " Adjusts an xs:date value to a specific timezone, or to no timezone at all; the result is the date in the target timezone that contains the starting instant of the supplied date."
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-date-to-timezone#2": {
+    "name": "adjust-date-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#adjust-date-to-timezone#2",
+    "params": [
+     "$arg as xs:date?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "type": "xs:date?",
+    "description": " Adjusts an xs:date value to a specific timezone, or to no timezone at all; the result is the date in the target timezone that contains the starting instant of the supplied date."
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-time-to-timezone#1": {
+    "name": "adjust-time-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#adjust-time-to-timezone#1",
+    "params": [
+     "$arg as xs:time?"
+    ],
+    "type": "xs:time?",
+    "description": " Adjusts an xs:time value to a specific timezone, or to no timezone at all."
+   },
+   "http://www.w3.org/2005/xpath-functions#adjust-time-to-timezone#2": {
+    "name": "adjust-time-to-timezone",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#adjust-time-to-timezone#2",
+    "params": [
+     "$arg as xs:time?",
+     "$timezone as xs:dayTimeDuration?"
+    ],
+    "type": "xs:time?",
+    "description": " Adjusts an xs:time value to a specific timezone, or to no timezone at all."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-dateTime#2": {
+    "name": "format-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-dateTime#2",
+    "params": [
+     "$value as xs:dateTime?",
+     "$picture as xs:string"
+    ],
+    "type": "xs:string?",
+    "description": " Returns a string containing an xs:dateTime value formatted for display."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-dateTime#5": {
+    "name": "format-dateTime",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-dateTime#5",
+    "params": [
+     "$value as xs:dateTime?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "type": "xs:string?",
+    "description": " Returns a string containing an xs:dateTime value formatted for display."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-date#2": {
+    "name": "format-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-date#2",
+    "params": [
+     "$value as xs:date?",
+     "$picture as xs:string"
+    ],
+    "type": "xs:string?",
+    "description": " Returns a string containing an xs:date value formatted for display."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-date#5": {
+    "name": "format-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-date#5",
+    "params": [
+     "$value as xs:date?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "type": "xs:string?",
+    "description": " Returns a string containing an xs:date value formatted for display."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-time#2": {
+    "name": "format-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-time#2",
+    "params": [
+     "$value as xs:time?",
+     "$picture as xs:string"
+    ],
+    "type": "xs:string?",
+    "description": " Returns a string containing an xs:time value formatted for display."
+   },
+   "http://www.w3.org/2005/xpath-functions#format-time#5": {
+    "name": "format-time",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#format-time#5",
+    "params": [
+     "$value as xs:time?",
+     "$picture as xs:string",
+     "$language as xs:string?",
+     "$calendar as xs:string?",
+     "$place as xs:string?"
+    ],
+    "type": "xs:string?",
+    "description": " Returns a string containing an xs:time value formatted for display."
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-ietf-date#1": {
+    "name": "parse-ietf-date",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#parse-ietf-date#1",
+    "params": [
+     "$value as xs:string?"
+    ],
+    "type": "xs:dateTime?",
+    "description": " Parses a string containing the date and time in IETF format, returning the corresponding xs:dateTime value."
+   },
+   "http://www.w3.org/2005/xpath-functions#resolve-QName#2": {
+    "name": "resolve-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#resolve-QName#2",
+    "params": [
+     "$qname as xs:string?",
+     "$element as element()"
+    ],
+    "type": "xs:QName?",
+    "description": " Returns an xs:QName value (that is, an expanded-QName) by taking an xs:string that has the lexical form of an xs:QName (a string in the form \"prefix:local-name\" or \"local-name\") and resolving it using the in-scope namespaces for a given element."
+   },
+   "http://www.w3.org/2005/xpath-functions#QName#2": {
+    "name": "QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#QName#2",
+    "params": [
+     "$paramURI as xs:string?",
+     "$paramQName as xs:string"
+    ],
+    "type": "xs:QName",
+    "description": " Returns an xs:QName value formed using a supplied namespace URI and lexical QName."
+   },
+   "http://www.w3.org/2005/xpath-functions#prefix-from-QName#1": {
+    "name": "prefix-from-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#prefix-from-QName#1",
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "type": "xs:NCName?",
+    "description": " Returns the prefix component of the supplied QName."
+   },
+   "http://www.w3.org/2005/xpath-functions#local-name-from-QName#1": {
+    "name": "local-name-from-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#local-name-from-QName#1",
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "type": "xs:NCName?",
+    "description": " Returns the local part of the supplied QName."
+   },
+   "http://www.w3.org/2005/xpath-functions#namespace-uri-from-QName#1": {
+    "name": "namespace-uri-from-QName",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#namespace-uri-from-QName#1",
+    "params": [
+     "$arg as xs:QName?"
+    ],
+    "type": "xs:anyURI?",
+    "description": " Returns the namespace URI part of the supplied QName."
+   },
+   "http://www.w3.org/2005/xpath-functions#namespace-uri-for-prefix#2": {
+    "name": "namespace-uri-for-prefix",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#namespace-uri-for-prefix#2",
+    "params": [
+     "$prefix as xs:string?",
+     "$element as element()"
+    ],
+    "type": "xs:anyURI?",
+    "description": " Returns the namespace URI of one of the in-scope namespaces for $element, identified by its namespace prefix."
+   },
+   "http://www.w3.org/2005/xpath-functions#in-scope-prefixes#1": {
+    "name": "in-scope-prefixes",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#in-scope-prefixes#1",
+    "params": [
+     "$element as element()"
+    ],
+    "type": "xs:string*",
+    "description": " Returns the prefixes of the in-scope namespaces for an element node."
+   },
+   "http://www.w3.org/2005/xpath-functions#empty#1": {
+    "name": "empty",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#empty#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the argument is the empty sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#exists#1": {
+    "name": "exists",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#exists#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "xs:boolean",
+    "description": " Returns true if the argument is a non-empty sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#head#1": {
+    "name": "head",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#head#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "item()?",
+    "description": " Returns the first item in a sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#tail#1": {
+    "name": "tail",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#tail#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "item()*",
+    "description": " Returns all but the first item in a sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#insert-before#3": {
+    "name": "insert-before",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#insert-before#3",
+    "params": [
+     "$target as item()*",
+     "$position as xs:integer",
+     "$inserts as item()*"
+    ],
+    "type": "item()*",
+    "description": " Returns a sequence constructed by inserting an item or a sequence of items at a given position within an existing sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#remove#2": {
+    "name": "remove",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#remove#2",
+    "params": [
+     "$target as item()*",
+     "$position as xs:integer"
+    ],
+    "type": "item()*",
+    "description": " Returns a new sequence containing all the items of $target except the item at position $position."
+   },
+   "http://www.w3.org/2005/xpath-functions#reverse#1": {
+    "name": "reverse",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#reverse#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "item()*",
+    "description": " Reverses the order of items in a sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#subsequence#2": {
+    "name": "subsequence",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#subsequence#2",
+    "params": [
+     "$sourceSeq as item()*",
+     "$startingLoc as xs:double"
+    ],
+    "type": "item()*",
+    "description": " Returns the contiguous sequence of items in the value of $sourceSeq beginning at the position indicated by the value of $startingLoc and continuing for the number of items indicated by the value of $length."
+   },
+   "http://www.w3.org/2005/xpath-functions#subsequence#3": {
+    "name": "subsequence",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#subsequence#3",
+    "params": [
+     "$sourceSeq as item()*",
+     "$startingLoc as xs:double",
+     "$length as xs:double"
+    ],
+    "type": "item()*",
+    "description": " Returns the contiguous sequence of items in the value of $sourceSeq beginning at the position indicated by the value of $startingLoc and continuing for the number of items indicated by the value of $length."
+   },
+   "http://www.w3.org/2005/xpath-functions#unordered#1": {
+    "name": "unordered",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unordered#1",
+    "params": [
+     "$sourceSeq as item()*"
+    ],
+    "type": "item()*",
+    "description": " Returns the items of $sourceSeq in an implementation-dependent order."
+   },
+   "http://www.w3.org/2005/xpath-functions#distinct-values#1": {
+    "name": "distinct-values",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#distinct-values#1",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "type": "xs:anyAtomicType*",
+    "description": " Returns the values that appear in a sequence, with duplicates eliminated."
+   },
+   "http://www.w3.org/2005/xpath-functions#distinct-values#2": {
+    "name": "distinct-values",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#distinct-values#2",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "type": "xs:anyAtomicType*",
+    "description": " Returns the values that appear in a sequence, with duplicates eliminated."
+   },
+   "http://www.w3.org/2005/xpath-functions#index-of#2": {
+    "name": "index-of",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#index-of#2",
+    "params": [
+     "$seq as xs:anyAtomicType*",
+     "$search as xs:anyAtomicType"
+    ],
+    "type": "xs:integer*",
+    "description": " Returns a sequence of positive integers giving the positions within the sequence $seq of items that are equal to $search."
+   },
+   "http://www.w3.org/2005/xpath-functions#index-of#3": {
+    "name": "index-of",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#index-of#3",
+    "params": [
+     "$seq as xs:anyAtomicType*",
+     "$search as xs:anyAtomicType",
+     "$collation as xs:string"
+    ],
+    "type": "xs:integer*",
+    "description": " Returns a sequence of positive integers giving the positions within the sequence $seq of items that are equal to $search."
+   },
+   "http://www.w3.org/2005/xpath-functions#deep-equal#2": {
+    "name": "deep-equal",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#deep-equal#2",
+    "params": [
+     "$parameter1 as item()*",
+     "$parameter2 as item()*"
+    ],
+    "type": "xs:boolean",
+    "description": " This function assesses whether two sequences are deep-equal to each other. To be deep-equal, they must contain items that are pairwise deep-equal; and for two items to be deep-equal, they must either be atomic values that compare equal, or nodes of the same kind, with the same name, whose children are deep-equal, or maps with matching entries, or arrays with matching members."
+   },
+   "http://www.w3.org/2005/xpath-functions#deep-equal#3": {
+    "name": "deep-equal",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#deep-equal#3",
+    "params": [
+     "$parameter1 as item()*",
+     "$parameter2 as item()*",
+     "$collation as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " This function assesses whether two sequences are deep-equal to each other. To be deep-equal, they must contain items that are pairwise deep-equal; and for two items to be deep-equal, they must either be atomic values that compare equal, or nodes of the same kind, with the same name, whose children are deep-equal, or maps with matching entries, or arrays with matching members."
+   },
+   "http://www.w3.org/2005/xpath-functions#zero-or-one#1": {
+    "name": "zero-or-one",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#zero-or-one#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "item()?",
+    "description": " Returns $arg if it contains zero or one items. Otherwise, raises an error."
+   },
+   "http://www.w3.org/2005/xpath-functions#one-or-more#1": {
+    "name": "one-or-more",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#one-or-more#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "item()+",
+    "description": " Returns $arg if it contains one or more items. Otherwise, raises an error."
+   },
+   "http://www.w3.org/2005/xpath-functions#exactly-one#1": {
+    "name": "exactly-one",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#exactly-one#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "item()",
+    "description": " Returns $arg if it contains exactly one item. Otherwise, raises an error."
+   },
+   "http://www.w3.org/2005/xpath-functions#count#1": {
+    "name": "count",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#count#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "xs:integer",
+    "description": " Returns the number of items in a sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#avg#1": {
+    "name": "avg",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#avg#1",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "type": "xs:anyAtomicType?",
+    "description": " Returns the average of the values in the input sequence $arg, that is, the sum of the values divided by the number of values."
+   },
+   "http://www.w3.org/2005/xpath-functions#max#1": {
+    "name": "max",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#max#1",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "type": "xs:anyAtomicType?",
+    "description": " Returns a value that is equal to the highest value appearing in the input sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#max#2": {
+    "name": "max",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#max#2",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "type": "xs:anyAtomicType?",
+    "description": " Returns a value that is equal to the highest value appearing in the input sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#min#1": {
+    "name": "min",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#min#1",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "type": "xs:anyAtomicType?",
+    "description": " Returns a value that is equal to the lowest value appearing in the input sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#min#2": {
+    "name": "min",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#min#2",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$collation as xs:string"
+    ],
+    "type": "xs:anyAtomicType?",
+    "description": " Returns a value that is equal to the lowest value appearing in the input sequence."
+   },
+   "http://www.w3.org/2005/xpath-functions#sum#1": {
+    "name": "sum",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#sum#1",
+    "params": [
+     "$arg as xs:anyAtomicType*"
+    ],
+    "type": "xs:anyAtomicType",
+    "description": " Returns a value obtained by adding together the values in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#sum#2": {
+    "name": "sum",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#sum#2",
+    "params": [
+     "$arg as xs:anyAtomicType*",
+     "$zero as xs:anyAtomicType?"
+    ],
+    "type": "xs:anyAtomicType?",
+    "description": " Returns a value obtained by adding together the values in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#id#1": {
+    "name": "id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#id#1",
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "type": "element()*",
+    "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#id#2": {
+    "name": "id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#id#2",
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "type": "element()*",
+    "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#element-with-id#1": {
+    "name": "element-with-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#element-with-id#1",
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "type": "element()*",
+    "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#element-with-id#2": {
+    "name": "element-with-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#element-with-id#2",
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "type": "element()*",
+    "description": " Returns the sequence of element nodes that have an ID value matching the value of one or more of the IDREF values supplied in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#idref#1": {
+    "name": "idref",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#idref#1",
+    "params": [
+     "$arg as xs:string*"
+    ],
+    "type": "node()*",
+    "description": " Returns the sequence of element or attribute nodes with an IDREF value matching the value of one or more of the ID values supplied in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#idref#2": {
+    "name": "idref",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#idref#2",
+    "params": [
+     "$arg as xs:string*",
+     "$node as node()"
+    ],
+    "type": "node()*",
+    "description": " Returns the sequence of element or attribute nodes with an IDREF value matching the value of one or more of the ID values supplied in $arg."
+   },
+   "http://www.w3.org/2005/xpath-functions#generate-id#0": {
+    "name": "generate-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#generate-id#0",
+    "params": [],
+    "type": "xs:string",
+    "description": " This function returns a string that uniquely identifies a given node."
+   },
+   "http://www.w3.org/2005/xpath-functions#generate-id#1": {
+    "name": "generate-id",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#generate-id#1",
+    "params": [
+     "$arg as node()?"
+    ],
+    "type": "xs:string",
+    "description": " This function returns a string that uniquely identifies a given node."
+   },
+   "http://www.w3.org/2005/xpath-functions#doc#1": {
+    "name": "doc",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#doc#1",
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "type": "document-node()?",
+    "description": " Retrieves a document using a URI supplied as an xs:string, and returns the corresponding document node."
+   },
+   "http://www.w3.org/2005/xpath-functions#doc-available#1": {
+    "name": "doc-available",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#doc-available#1",
+    "params": [
+     "$uri as xs:string?"
+    ],
+    "type": "xs:boolean",
+    "description": " The function returns true if and only if the function call fn:doc($uri) would return a document node."
+   },
+   "http://www.w3.org/2005/xpath-functions#collection#0": {
+    "name": "collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#collection#0",
+    "params": [],
+    "type": "item()*",
+    "description": " Returns a sequence of items identified by a collection URI; or a default collection if no URI is supplied."
+   },
+   "http://www.w3.org/2005/xpath-functions#collection#1": {
+    "name": "collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#collection#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "item()*",
+    "description": " Returns a sequence of items identified by a collection URI; or a default collection if no URI is supplied."
+   },
+   "http://www.w3.org/2005/xpath-functions#uri-collection#0": {
+    "name": "uri-collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#uri-collection#0",
+    "params": [],
+    "type": "xs:anyURI*",
+    "description": " Returns a sequence of xs:anyURI values representing the URIs in a URI collection."
+   },
+   "http://www.w3.org/2005/xpath-functions#uri-collection#1": {
+    "name": "uri-collection",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#uri-collection#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "xs:anyURI*",
+    "description": " Returns a sequence of xs:anyURI values representing the URIs in a URI collection."
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text#1": {
+    "name": "unparsed-text",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unparsed-text#1",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "type": "xs:string?",
+    "description": " The fn:unparsed-text function reads an external resource (for example, a file) and returns a string representation of the resource."
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text#2": {
+    "name": "unparsed-text",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unparsed-text#2",
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "type": "xs:string?",
+    "description": " The fn:unparsed-text function reads an external resource (for example, a file) and returns a string representation of the resource."
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-lines#1": {
+    "name": "unparsed-text-lines",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unparsed-text-lines#1",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "type": "xs:string*",
+    "description": " The fn:unparsed-text-lines function reads an external resource (for example, a file) and returns its contents as a sequence of strings, one for each line of text in the string representation of the resource."
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-lines#2": {
+    "name": "unparsed-text-lines",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unparsed-text-lines#2",
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "type": "xs:string*",
+    "description": " The fn:unparsed-text-lines function reads an external resource (for example, a file) and returns its contents as a sequence of strings, one for each line of text in the string representation of the resource."
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-available#1": {
+    "name": "unparsed-text-available",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unparsed-text-available#1",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "type": "xs:boolean",
+    "description": " Because errors in evaluating the fn:unparsed-text function are non-recoverable, these two functions are provided to allow an application to determine whether a call with particular arguments would succeed."
+   },
+   "http://www.w3.org/2005/xpath-functions#unparsed-text-available#2": {
+    "name": "unparsed-text-available",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#unparsed-text-available#2",
+    "params": [
+     "$href as xs:string?",
+     "$encoding as xs:string"
+    ],
+    "type": "xs:boolean",
+    "description": " Because errors in evaluating the fn:unparsed-text function are non-recoverable, these two functions are provided to allow an application to determine whether a call with particular arguments would succeed."
+   },
+   "http://www.w3.org/2005/xpath-functions#environment-variable#1": {
+    "name": "environment-variable",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#environment-variable#1",
+    "params": [
+     "$name as xs:string"
+    ],
+    "type": "xs:string?",
+    "description": " Returns the value of a system environment variable, if it exists."
+   },
+   "http://www.w3.org/2005/xpath-functions#available-environment-variables#0": {
+    "name": "available-environment-variables",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#available-environment-variables#0",
+    "params": [],
+    "type": "xs:string*",
+    "description": " Returns a list of environment variable names that are suitable for passing to fn:environment-variable, as a (possibly empty) sequence of strings."
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-xml#1": {
+    "name": "parse-xml",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#parse-xml#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "document-node(element(*))?",
+    "description": " This function takes as input an XML document represented as a string, and returns the document node at the root of an XDM tree representing the parsed document."
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-xml-fragment#1": {
+    "name": "parse-xml-fragment",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#parse-xml-fragment#1",
+    "params": [
+     "$arg as xs:string?"
+    ],
+    "type": "document-node()?",
+    "description": " This function takes as input an XML external entity represented as a string, and returns the document node at the root of an XDM tree representing the parsed document fragment."
+   },
+   "http://www.w3.org/2005/xpath-functions#serialize#1": {
+    "name": "serialize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#serialize#1",
+    "params": [
+     "$arg as item()*"
+    ],
+    "type": "xs:string",
+    "description": " This function serializes the supplied input sequence $arg as described in , returning the serialized representation of the sequence as a string."
+   },
+   "http://www.w3.org/2005/xpath-functions#serialize#2": {
+    "name": "serialize",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#serialize#2",
+    "params": [
+     "$arg as item()*",
+     "$params as item()?"
+    ],
+    "type": "xs:string",
+    "description": " This function serializes the supplied input sequence $arg as described in , returning the serialized representation of the sequence as a string."
+   },
+   "http://www.w3.org/2005/xpath-functions#function-lookup#2": {
+    "name": "function-lookup",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#function-lookup#2",
+    "params": [
+     "$name as xs:QName",
+     "$arity as xs:integer"
+    ],
+    "type": "function(*)?",
+    "description": " Returns the function having a given name and arity, if there is one."
+   },
+   "http://www.w3.org/2005/xpath-functions#function-name#1": {
+    "name": "function-name",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#function-name#1",
+    "params": [
+     "$func as function(*)"
+    ],
+    "type": "xs:QName?",
+    "description": " Returns the name of the function identified by a function item."
+   },
+   "http://www.w3.org/2005/xpath-functions#function-arity#1": {
+    "name": "function-arity",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#function-arity#1",
+    "params": [
+     "$func as function(*)"
+    ],
+    "type": "xs:integer",
+    "description": " Returns the arity of the function identified by a function item."
+   },
+   "http://www.w3.org/2005/xpath-functions#for-each#2": {
+    "name": "for-each",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#for-each#2",
+    "params": [
+     "$seq as item()*",
+     "$action as function(item()) as item()*"
+    ],
+    "type": "item()*",
+    "description": " Applies the function item $action to every item from the sequence $seq in turn, returning the concatenation of the resulting sequences in order."
+   },
+   "http://www.w3.org/2005/xpath-functions#filter#2": {
+    "name": "filter",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#filter#2",
+    "params": [
+     "$seq as item()*",
+     "$f as function(item()) as xs:boolean"
+    ],
+    "type": "item()*",
+    "description": " Returns those items from the sequence $seq for which the supplied function $f returns true."
+   },
+   "http://www.w3.org/2005/xpath-functions#fold-left#3": {
+    "name": "fold-left",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#fold-left#3",
+    "params": [
+     "$seq as item()*",
+     "$zero as item()*",
+     "$f as function(item()*, item()) as item()*"
+    ],
+    "type": "item()*",
+    "description": " Processes the supplied sequence from left to right, applying the supplied function repeatedly to each item in turn, together with an accumulated result value."
+   },
+   "http://www.w3.org/2005/xpath-functions#fold-right#3": {
+    "name": "fold-right",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#fold-right#3",
+    "params": [
+     "$seq as item()*",
+     "$zero as item()*",
+     "$f as function(item(), item()*) as item()*"
+    ],
+    "type": "item()*",
+    "description": " Processes the supplied sequence from right to left, applying the supplied function repeatedly to each item in turn, together with an accumulated result value."
+   },
+   "http://www.w3.org/2005/xpath-functions#for-each-pair#3": {
+    "name": "for-each-pair",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#for-each-pair#3",
+    "params": [
+     "$seq1 as item()*",
+     "$seq2 as item()*",
+     "$action as function(item(), item()) as item()*"
+    ],
+    "type": "item()*",
+    "description": " Applies the function item $action to successive pairs of items taken one from $seq1 and one from $seq2, returning the concatenation of the resulting sequences in order."
+   },
+   "http://www.w3.org/2005/xpath-functions#sort#1": {
+    "name": "sort",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#sort#1",
+    "params": [
+     "$input as item()*"
+    ],
+    "type": "item()*",
+    "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function."
+   },
+   "http://www.w3.org/2005/xpath-functions#sort#2": {
+    "name": "sort",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#sort#2",
+    "params": [
+     "$input as item()*",
+     "$collation as xs:string?"
+    ],
+    "type": "item()*",
+    "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function."
+   },
+   "http://www.w3.org/2005/xpath-functions#sort#3": {
+    "name": "sort",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#sort#3",
+    "params": [
+     "$input as item()*",
+     "$collation as xs:string?",
+     "$key as function(item()) as xs:anyAtomicType*"
+    ],
+    "type": "item()*",
+    "description": " Sorts a supplied sequence, based on the value of a sort key supplied as a function."
+   },
+   "http://www.w3.org/2005/xpath-functions#apply#2": {
+    "name": "apply",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#apply#2",
+    "params": [
+     "$function as function(*)",
+     "$array as array(*)"
+    ],
+    "type": "item()*",
+    "description": " Makes a dynamic call on a function with an argument list supplied in the form of an array."
+   },
+   "http://www.w3.org/2005/xpath-functions#load-xquery-module#1": {
+    "name": "load-xquery-module",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#load-xquery-module#1",
+    "params": [
+     "$module-uri as xs:string"
+    ],
+    "type": "map(*)",
+    "description": " Provides access to the public functions and global variables of a dynamically-loaded XQuery library module."
+   },
+   "http://www.w3.org/2005/xpath-functions#load-xquery-module#2": {
+    "name": "load-xquery-module",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#load-xquery-module#2",
+    "params": [
+     "$module-uri as xs:string",
+     "$options as map(*)"
+    ],
+    "type": "map(*)",
+    "description": " Provides access to the public functions and global variables of a dynamically-loaded XQuery library module."
+   },
+   "http://www.w3.org/2005/xpath-functions#transform#1": {
+    "name": "transform",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#transform#1",
+    "params": [
+     "$options as map(*)"
+    ],
+    "type": "map(*)",
+    "description": " Invokes a transformation using a dynamically-loaded XSLT stylesheet."
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-json#1": {
+    "name": "parse-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#parse-json#1",
+    "params": [
+     "$json-text as xs:string?"
+    ],
+    "type": "item()?",
+    "description": " Parses a string supplied in the form of a JSON text, returning the results typically in the form of a map or array."
+   },
+   "http://www.w3.org/2005/xpath-functions#parse-json#2": {
+    "name": "parse-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#parse-json#2",
+    "params": [
+     "$json-text as xs:string?",
+     "$options as map(*)"
+    ],
+    "type": "item()?",
+    "description": " Parses a string supplied in the form of a JSON text, returning the results typically in the form of a map or array."
+   },
+   "http://www.w3.org/2005/xpath-functions#json-doc#1": {
+    "name": "json-doc",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#json-doc#1",
+    "params": [
+     "$href as xs:string?"
+    ],
+    "type": "item()?",
+    "description": " Reads an external resource containing JSON, and returns the result of parsing the resource as JSON."
+   },
+   "http://www.w3.org/2005/xpath-functions#json-doc#2": {
+    "name": "json-doc",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#json-doc#2",
+    "params": [
+     "$href as xs:string?",
+     "$options as map(*)"
+    ],
+    "type": "item()?",
+    "description": " Reads an external resource containing JSON, and returns the result of parsing the resource as JSON."
+   },
+   "http://www.w3.org/2005/xpath-functions#json-to-xml#1": {
+    "name": "json-to-xml",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#json-to-xml#1",
+    "params": [
+     "$json-text as xs:string?"
+    ],
+    "type": "document-node()?",
+    "description": " Parses a string supplied in the form of a JSON text, returning the results in the form of an XML document node."
+   },
+   "http://www.w3.org/2005/xpath-functions#json-to-xml#2": {
+    "name": "json-to-xml",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#json-to-xml#2",
+    "params": [
+     "$json-text as xs:string?",
+     "$options as map(*)"
+    ],
+    "type": "document-node()?",
+    "description": " Parses a string supplied in the form of a JSON text, returning the results in the form of an XML document node."
+   },
+   "http://www.w3.org/2005/xpath-functions#xml-to-json#1": {
+    "name": "xml-to-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#xml-to-json#1",
+    "params": [
+     "$input as node()?"
+    ],
+    "type": "xs:string?",
+    "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar."
+   },
+   "http://www.w3.org/2005/xpath-functions#xml-to-json#2": {
+    "name": "xml-to-json",
+    "uri": "http://www.w3.org/2005/xpath-functions",
+    "key": "http://www.w3.org/2005/xpath-functions#xml-to-json#2",
+    "params": [
+     "$input as node()?",
+     "$options as map(*)"
+    ],
+    "type": "xs:string?",
+    "description": " Converts an XML tree, whose format corresponds to the XML representation of JSON defined in this specification, into a string conforming to the JSON grammar."
+   }
+  },
+  "type": "module",
+  "override": true
+ }
+}

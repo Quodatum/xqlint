@@ -6,9 +6,7 @@
 (:*******************************************************:)
 
 (: insert-start :)
-import module namespace
-lmns="" at
-"libraryModule1.xqlib";
+import module namespace lmns="" at "libraryModule1.xqlib";
 (: insert-end :)
 
 <result>{lmns:text()}</result>

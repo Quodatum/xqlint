@@ -66,7 +66,7 @@ vows.describe('Test Code Completion').addBatch({
     //  all known basex prefixes
     'test expr (3)': function(){
         var source = '';
-        var linter = new XQLint(source, { processor: 'basex' });
+        var linter = new XQLint(source, { processor: 'basex-10' });
         var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length>20, true, 'Number of proposals');
@@ -75,7 +75,7 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (1)': function(){
         var p1 = 'import module namespace ns="';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
+        var sctx = new StaticContext(undefined,undefined,'28msec');
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
         var linter = new XQLint(p1+p2 , { staticContext: sctx });
@@ -88,7 +88,7 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (2)': function(){
         var p1 = 'import module namespace ns="http://28msec.com/modules';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
+        var sctx = new StaticContext(undefined,undefined, '28msec');
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
         var linter = new XQLint(p1+p2 , { staticContext: sctx });
@@ -100,7 +100,7 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (3)': function(){
         var p1 = 'import module namespace ns="http://www.28msec.com/modules';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: '28msec'});
+        var sctx = new StaticContext(undefined,undefined,'28msec');
         sctx.availableModuleNamespaces.push('http://www.28msec.com/modules/http-reponse');
         sctx.availableModuleNamespaces.push('http://zorba.io/modules/reflection');
         var linter = new XQLint(p1 + p2 , { staticContext: sctx });
@@ -113,9 +113,9 @@ vows.describe('Test Code Completion').addBatch({
     'test namespaces (4)': function(){
         var p1 = 'import module namespace ns="http://basex.org/modules';
         var p2 = '";';
-        var sctx = new StaticContext(undefined,undefined,{ processor: 'basex'});
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        sctx.availableModuleNamespaces = Object.keys(index);
+        var sctx = new StaticContext(undefined,undefined, 'basex-9');
+        //var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
+        //sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(p1 + p2 , { staticContext: sctx });
         var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
@@ -124,7 +124,7 @@ vows.describe('Test Code Completion').addBatch({
     // fetch module exists and has 9 functions??? 
     'test prefixes (1)': function(){
         var source = 'import module namespace ns="http://basex.org/modules/fetch";ns:';
-        var sctx = new StaticContext(undefined, undefined, 'basex');
+        var sctx = new StaticContext(undefined, undefined, 'basex-10');
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         //sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
@@ -132,7 +132,7 @@ vows.describe('Test Code Completion').addBatch({
         var proposals = linter.getCompletions(pos);
         assert.equal(proposals.length, 9, 'Number of proposals' + proposals.length);
     },
-    // tests below not usefull
+    // tests below not useful
     'test functions (1)': function(){
         var source = 'import module namespace ns="http://expath.org/ns/http-client"; ns:';
         var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));

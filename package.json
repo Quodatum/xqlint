@@ -2,7 +2,7 @@
   "author": "Andy Bunce <bunce.andy@gmail.com> (https://github.com/apb2006)",
   "name": "@quodatum/xqlint",
   "description": "XQuery Quality Checker",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "keywords": [
     "xquery",
     "dev",
@@ -23,9 +23,8 @@
   },
   "dependencies": {
     "colors": "1.4.0",
-    "commander": "~10.0.1",
-    "final-fs": "~1.6.0",
-    "q": "~1.5.1"
+    "commander": "~11.0.0",
+    "final-fs": "~1.6.1"
   },
   "devDependencies": {
     "axios": "1.4.0",
@@ -40,7 +39,7 @@
     "vows": "^0.8.3"
   },
   "engines": {
-    "node": ">14.0.0"
+    "node": ">16.0.0"
   },
   "contributors": [
     "Andy Bunce <bunce.andy@gmail.com>",
@@ -48,7 +47,8 @@
   ],
   "scripts": {
     "test": "grunt",
-    "wiki-scrape": "basex scripts/wiki-scrape.xq"
+    "wiki-scrape": "basex scripts/wiki-scrape.xq",
+    "rex": "node scripts/rex.js"
   },
   "directories": {
     "lib": "lib",

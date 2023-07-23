@@ -1,3 +1,12 @@
+## [0.2.4] 2023-07-17
+* [fix] wiki scraping for basex v10
+* [add] `processors.json` 
+* [add] getProcessors() on XQLint. 
+* [mod] parser generator task now a npm script, replacing grunt task.
+* [mod] replace dev use of "q" library with native promise. 
+* [mod] fix some eslint reports
+* [mod] Node version min now 16
+* [mod] upgrade dependancies
 ## [0.2.3] 2023-05-15
 * [mod] update npm dependancies
 * [fix] handling of default function namespace #24 

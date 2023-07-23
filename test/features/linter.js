@@ -2,8 +2,11 @@
 var fs = require('fs');
 
 var XQLint = require('../../lib/xqlint').XQLint;
-var baseUri="C:/Users/andy/git/quodatum/xqlint/";
-
-var linter = new XQLint(fs.readFileSync(baseUri+'test/xqlint_queries/namespaces/1.xq', 'utf-8'), { styleCheck: false });
-var markers = linter.getMarkers();
+var file = "test/queries/rbtree.xq/map.xq";
+const opts = {
+    processor: 'basex-9'
+    , styleCheck: false
+};
+var linter = new XQLint(fs.readFileSync( file, 'utf-8'),opts);
+var markers = linter.getErrors();
 console.log(markers);
