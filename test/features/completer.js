@@ -1,5 +1,7 @@
 // info about static context at a point in the source
+"use strict";
 var fs = require('fs');
+var assert = require('assert');
 var StaticContext = require('../../lib/compiler/static_context').StaticContext;
 var XQLint = require('../../lib/xqlint').XQLint;
 var source = 'import module namespace ns="http://expath.org/ns/http-client"; ns:';

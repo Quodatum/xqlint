@@ -1,4 +1,4 @@
-
+"use strict";
 var vows = require('vows');
 var assert = require('assert');
 var path = require('path');
@@ -37,8 +37,8 @@ vows.describe('Test reported issues').addBatch({
         const ast = linter.getAST();
         const formatter = new CodeFormatter(ast);
         const formatted = formatter.format().trim();
-        var linter = new XQLint(formatted, { styleCheck: false });
-        var markers = linter.getErrors();
+        var linter2 = new XQLint(formatted, { styleCheck: false });
+        var markers = linter2.getErrors();
         console.log(markers);
         assert.equal(markers.length, 0);
     },
