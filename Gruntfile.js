@@ -29,12 +29,12 @@ module.exports = function (grunt) {
             return new Promise(function (resolve, reject) {
                 var p = axios.post('https://www.bottlecaps.de/rex/', form, { headers });
                 p.then(function (response) {
-                    fs.writeFileSync(parser.destination, response.data)
+                    fs.writeFileSync(parser.destination, response.data);
                     resolve("saved: " + parser.destination);
                 })
                     .catch(function (error) {
                         reject(error);
-                    })
+                    });
             });
         }
 
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         Promise.all(promises).then(function (r){
             console.log("dONE",r);
            });
-        console.log("SS")
+        console.log("SS");
     });
 
     grunt.registerMultiTask('index', 'Generate index xqdoc', function () {
@@ -96,10 +96,12 @@ module.exports = function (grunt) {
         },
         vows: {
             all: {
+                //
                 options: {
-                    verbose: false,
+                    verbose: true,
                     colors: true,
-                    coverage: 'json'
+                    coverage: 'json',
+                    reporter: 'dot-matrix',
                 },
                 // String or array of strings
                 // determining which files to include.
@@ -108,7 +110,7 @@ module.exports = function (grunt) {
             },
             one: {
                 options: {
-                    verbose: false,
+                    verbose: true,
                     colors: false,
                     coverage: 'json'
                 },
