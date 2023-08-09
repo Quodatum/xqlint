@@ -1,3 +1,6 @@
+## [0.2.6] 2023-08-12
+* [mod] rewrite event subscriptions
+
 ## [0.2.4] 2023-07-17
 * [fix] wiki scraping for basex v10
 * [add] `processors.json` 
