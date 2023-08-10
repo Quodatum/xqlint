@@ -1,6 +1,7 @@
 ## [0.2.6] 2023-08-12
-* [mod] rewrite event subscriptions
-
+* [mod] use xq-catalogs for module library handling
+* [fix] xq outline 
+* [add] type definitions
 ## [0.2.4] 2023-07-17
 * [fix] wiki scraping for basex v10
 * [add] `processors.json` 

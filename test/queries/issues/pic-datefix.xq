@@ -2,6 +2,7 @@
 report or move files that belong elsewhere based on file name for given year
  :)
 declare variable $year:="2023";
+(:~ search down from here :)
 declare variable $base:="P:\pictures\Pictures\" || $year || "\";
 declare variable $folders:=file:list($base)[matches(.,"\d{4}-\d{2}-\d{2}\\")]! substring(.,1,10);
 
