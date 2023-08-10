@@ -1,4 +1,4 @@
-## [0.2.6] 2023-08-12
+## [0.3.0] 2023-08-10
 * [mod] use xq-catalogs for module library handling
 * [fix] xq outline 
 * [add] type definitions
