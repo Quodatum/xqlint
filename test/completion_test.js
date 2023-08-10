@@ -135,26 +135,8 @@ vows.describe('Test Code Completion').addBatch({
     // tests below not useful
     'test functions (1)': function(){
         var source = 'import module namespace ns="http://expath.org/ns/http-client"; ns:';
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        var sctx = new StaticContext();
-        sctx.setModuleResolver(function(uri){//uri, hints
-            var mod = index[uri];
-            var variables = {};
-            var functions = {};
-            mod.functions.forEach(function(fn){
-                functions[uri + '#' + fn.name + '#' + fn.arity] = {
-                    params: []
-                };
-                fn.parameters.forEach(function(param){
-                    functions[uri + '#' + fn.name + '#' + fn.arity].params.push('$' + param.name);
-                });
-            });
-            return {
-                variables: variables,
-                functions: functions
-            };
-        });
-        sctx.availableModuleNamespaces = Object.keys(index);
+         var sctx = new StaticContext(undefined, undefined, "basex-9");
+       
         var linter = new XQLint(source, { staticContext: sctx });
         var pos = { line: 0, character: source.length };
         var proposals = linter.getCompletions(pos);
