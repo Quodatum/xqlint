@@ -37,6 +37,7 @@ declare module '@quodatum/xqlint' {
       description: string;
       variables: [VarDecl];
       functions: [FunDecl];
+      queryBody?: LintRange;
     }
     export interface VarDecl {
       name: string;
