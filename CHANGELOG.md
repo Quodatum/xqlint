@@ -1,3 +1,5 @@
+## [0.3.3] 2023-08-12
+* [fix] passing cmdline args e.g `xqlint lint -pbasex-9 .` or `xqlint lint . -processor basex-10`
 ## [0.3.2] 2023-08-12
 * [fix] defaultfunction namespace issue #38
 ## [0.3.0] 2023-08-10
