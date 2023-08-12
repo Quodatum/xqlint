@@ -1,5 +1,5 @@
 ## [0.3.2] 2023-08-12
-
+* [fix] defaultfunction namespace issue #38
 ## [0.3.0] 2023-08-10
 * [mod] use xq-catalogs for module library handling
 * [fix] xq outline 
