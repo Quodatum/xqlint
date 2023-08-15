@@ -26,11 +26,12 @@ This project is in an Alpha state - errors and changes expected.
 This project began as a fork of the marvelous [wcandillon/xqlint](https://github.com/wcandillon/xqlint).
 but many features have been added and some, such as JSONiq support, removed.
 
- `quodatum/xqlint` has been used as a drop-in replacement for `wcandillon/xqlint` in the following projects:
+ Earlier versions `quodatum/xqlint` have been used as a drop-in replacement for `wcandillon/xqlint` in the following projects:
 
 * the [Ace editor](https://github.com/ajaxorg/ace) 
 * [XML tools](https://github.com/DotJoshJohnson/vscode-xml) DotJoshJohnson's VS code extension 
 
+Due to changes in the range object this is no longer as simple.
 # Installation
 
 XQlint is published on [npm](https://www.npmjs.com/package/@quodatum/xqlint)
@@ -41,17 +42,25 @@ $ npm install @quodatum/xqlint -g
 ```
 # Command line usage
 ## Lint
+Analyse code for potential errors. In file or directory
+### Examples
+ ```
+ xqlint lint -pbasex-9 .
+ xqlint lint . --processor basex-10
+ ```
+ ### Options
+ * `--processor name` or `-pname` processor libraries to load
+* `--style-check no` or `-s` yes/no. reports on trailing whitespace, tab use
 
-`style-check` reports trailing whitespace, tab use
 ```bash
 $ xqlint lint <path> [-s, --style-check <yes, no>]
 ```
 
 windows..
 ```
-node bin\xqlint --no-color lint C:\Users\andy\git\bloomsbury\XML-CMS\data_server\eBloomsbury\  >report.txt
+xqlint --no-color lint C:\Users\andy\git\proj\XML-CMS\data_server\eapp\  >report.txt
 
-node bin\xqlint lint --style-check yes cases\history.xqm 
+xqlint lint --style-check yes cases\history.xqm 
 ```
 
 ## Format

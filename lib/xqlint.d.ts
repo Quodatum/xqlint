@@ -14,6 +14,7 @@ declare module '@quodatum/xqlint' {
       public getProcessor():string;
       public getProcessors():[string];
       public getLibrary():[object];
+      public resolver1(uri:string,ats:[string]);
     }
     // 
     export class Marker {
@@ -61,7 +62,7 @@ declare module '@quodatum/xqlint' {
       others: string[];
     }
     export function XQueryLexer(): any;
-    export function createStaticContext(processor: string): any;
+    export function createStaticContext(processor: string,fileName?: string): any;
     export function CodeFormatter(ast: object): any;
     export function CodeFormatter(ast: object, newLinesEnabled: boolean, DEBUG: any): any;
   

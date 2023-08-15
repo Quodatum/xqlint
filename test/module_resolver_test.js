@@ -10,14 +10,13 @@ var StaticContext = require('../lib/compiler/static_context').StaticContext;
 vows.describe('Test Module URI Resolver').addBatch({
 
     'test 1': function(){
-        var sctx = new StaticContext();
-        var linter = new XQLint('import module namespace foo = "http://www.example.com"; $foo:bar',{ staticContext: sctx });
+        var linter = new XQLint('import module namespace foo = "http://www.example.com"; $foo:bar',{  processor: 'basex-9'  });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 1, 'Number of markers');
     },
     'test 1a': function(){
-        var sctx = new StaticContext();
-        var linter = new XQLint('import module namespace admin = "http://basex.org/modules/admin"; admin:sessions()',{ staticContext: sctx });
+
+        var linter = new XQLint('import module namespace admin = "http://basex.org/modules/admin"; admin:sessions()',{ processor: 'basex-9' });
         var markers = linter.getMarkers();
         assert.equal(markers.length, 0, 'Number of markers');
     },
