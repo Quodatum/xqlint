@@ -1,9 +1,14 @@
+## [0.3.3] 2023-08-26
+* [fix] passing cmdline args e.g `xqlint lint -pbasex-9 .` or `xqlint lint . --processor basex-10`
+* [mod] no warning for unused fun/var if starts with _ #42
+* [fix] ArrowExpr unused name reporting #41
+* [mod] update xq-catalogs to 0.0.6
 ## [0.3.2] 2023-08-12
 * [fix] defaultfunction namespace issue #38
 ## [0.3.0] 2023-08-10
 * [mod] use xq-catalogs for module library handling
 * [fix] xq outline 
-* [add] type definitions
+* [add] typescript definitions supplied in package `lib/xqlint.d.ts`
 ## [0.2.4] 2023-07-17
 * [fix] wiki scraping for basex v10
 * [add] `processors.json` 

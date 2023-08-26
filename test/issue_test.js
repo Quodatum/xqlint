@@ -11,22 +11,10 @@ vows.describe('Test reported issues').addBatch({
  
     'import #28': function () {
         const src=path.resolve('test/queries/rbtree.xq/map.xq');
-        var sctx = new StaticContext(undefined,undefined,'basex-9');
-        sctx.setModuleResolver(function(uri,ats){//uri, hints
-            const target=path.resolve(src,"..",ats[0].uri);
-            console.log("Resolver: :",src, "->",target);
-            const linter = new XQLint(fs.readFileSync(target, 'utf-8'),
-            {
-             
-                styleCheck: false
-            });
-            const xqdoc=linter.getXQDoc(true);
-            return xqdoc;
-        });
         var linter = new XQLint(fs.readFileSync(src, 'utf-8'),
             {
-                styleCheck: false,
-                staticContext: sctx
+                fileName: src,
+                processor: 'basex-9'
             });
         var markers = linter.getErrors();
         console.log(markers);
@@ -42,4 +30,16 @@ vows.describe('Test reported issues').addBatch({
         console.log(markers);
         assert.equal(markers.length, 0);
     },
+    'used #41':function () {
+      var src= 'declare function local:foo($a1){ $a1 }; (1,2)=>local:foo()';
+      var linter=new XQLint(src);
+      var markers=linter.getMarkers();
+      assert.equal(markers.length,2); //untyped
+    },
+    'unused #42': function(){
+        var src= 'declare function local:foo($_a){ 42 }; local:foo(36)';
+        var linter=new XQLint(src);
+        var markers=linter.getMarkers();
+        assert.equal(markers.length,2); //untyped
+    }
 }).export(module);

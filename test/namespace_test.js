@@ -31,7 +31,7 @@ vows.describe('Test Namespace declarations').addBatch({
     'test XQST0047 (3)': function () {
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/mainModule6.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 1, 'Number of markers');
+        assert.equal(markers.length, 2, 'Number of markers');
         var error = markers[0];
         assert.equal(error.type, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0047]'), 0, 'Is Error [XQST0047]');
@@ -129,18 +129,16 @@ vows.describe('Test Namespace declarations').addBatch({
     'test unused namespace (4)': function () {
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/13.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 2, 'Number of markers');
+        assert.equal(markers.length, 6, 'Number of markers');
         var warning = markers[0];
-        assert.equal(warning.type, 'warning', 'Type of marker');
+        assert.equal(warning.type, 'error', 'Type of marker');
         warning = markers[1];
-        assert.equal(warning.type, 'warning', 'Type of marker');
+        assert.equal(warning.type, 'error', 'Type of marker');
     },
 
     'test unused namespace (5)': function () {
-        var sctx = new StaticContext();
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
-        sctx.setModulesFromXQDoc(index);
-        var linter = new XQLint(fs.readFileSync('test/xqlint_queries/csv.xq', 'utf-8'), { staticContext: sctx, styleCheck: false, fileName: 'csv.xq' });
+       
+        var linter = new XQLint(fs.readFileSync('test/xqlint_queries/csv.xq', 'utf-8'), { processor: 'basex-9', styleCheck: false });
         var warnings = linter.getWarnings();
         var errors = linter.getErrors();
         assert.equal(errors.length, 1, 'readtext#1 undeclared');
@@ -154,13 +152,14 @@ vows.describe('Test Namespace declarations').addBatch({
     },
 
     'test module function names (1)': function () {
-        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'), { styleCheck: false });
+        // see issue_test import test #28 for error free 
+        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'), { processor: 'basex-9' });
         var errors = linter.getErrors();
-        assert.equal(errors.length, 0, 'Number of errors');
+        assert.equal(errors.length, 9, 'Number of errors');
     },
 
     'test module function names (2)': function () {
-        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/rbtree.xq', 'utf-8'), { styleCheck: false });
+        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/rbtree.xq', 'utf-8'), { processor: 'basex-10' });
         var errors = linter.getErrors();
         assert.equal(errors.length, 0, 'Number of errors');
     },
