@@ -1,7 +1,7 @@
-## [0.3.3] 2023-08-14
+## [0.3.3] 2023-08-26
 * [fix] passing cmdline args e.g `xqlint lint -pbasex-9 .` or `xqlint lint . --processor basex-10`
-* [mod] no warning for unused fun/var if starts with _
-* [fix] ArrowExpr unused name reporting
+* [mod] no warning for unused fun/var if starts with _ #42
+* [fix] ArrowExpr unused name reporting #41
 * [mod] update xq-catalogs to 0.0.6
 ## [0.3.2] 2023-08-12
 * [fix] defaultfunction namespace issue #38
