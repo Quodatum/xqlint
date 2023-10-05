@@ -1,3 +1,11 @@
+## [0.4.1] 2023-10-05
+* [fix] parse error position reporting
+## [0.4.0] 2023-10-05
+* [fix] parse error position reporting
+* [mod] upgrade xq-catalog to 0.1.1
+* [add] Types list, for future completion use
+* [mod] printAST XML defaults to no indent
+* [add] Expand and corrrect typescript definitions
 ## [0.3.3] 2023-08-26
 * [fix] passing cmdline args e.g `xqlint lint -pbasex-9 .` or `xqlint lint . --processor basex-10`
 * [mod] no warning for unused fun/var if starts with _ #42
