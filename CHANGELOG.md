@@ -1,3 +1,5 @@
+## [0.4.1] 2023-10-05
+* [fix] parse error position reporting
 ## [0.4.0] 2023-10-05
 * [fix] parse error position reporting
 * [mod] upgrade xq-catalog to 0.1.1
