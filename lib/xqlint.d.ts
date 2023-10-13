@@ -48,9 +48,11 @@ declare module '@quodatum/xqlint' {
     level: string; //same as type??
     message: string; // '[code] ...'
   }
+
+  // 
   export class DocLink {
-    range: LintRange;
-    uri: string; // uri after at    
+    namespace: string; // 
+    at: string;  
   }
   export class LintRange {
     sl: number;
