@@ -125,7 +125,6 @@ vows.describe('Test Code Completion').addBatch({
     'test prefixes (1)': function(){
         var source = 'import module namespace ns="http://basex.org/modules/fetch";ns:';
         var sctx = new StaticContext(undefined, undefined, 'basex-10');
-        var index = JSON.parse(fs.readFileSync('test/index.json', 'utf-8'));
         //sctx.availableModuleNamespaces = Object.keys(index);
         var linter = new XQLint(source, { staticContext: sctx });
         var pos = { line: 0, character: source.length };

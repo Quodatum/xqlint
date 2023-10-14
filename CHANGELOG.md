@@ -1,5 +1,5 @@
 ## [0.4.2] 2023-10-14
-* type completions
+* type completions 
 ## [0.4.1] 2023-10-05
 * [fix] parse error position reporting
 ## [0.4.0] 2023-10-05
