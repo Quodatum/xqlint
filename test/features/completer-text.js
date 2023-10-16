@@ -1,5 +1,5 @@
 // info about static context at a point in the source
-var txt = 'let $a as e';
+var txt = 'declare function local:f() as ';
 
 var XQLint = require('../../lib/xqlint').XQLint;
 var linter = new XQLint(txt);
