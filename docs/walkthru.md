@@ -64,5 +64,17 @@ Old Inside
         }
 ```
 # response to import module
-
+calls 
+```
+ importModule: function (uri, prefix, pos, ats)
+  if (this.moduleResolver) {
+    try {
+        var mod = this.moduleResolver(uri, ats);
+        if (mod.variables) {
+            TreeOps.concat(this.variables, keyed(mod.variables));
+        }
+        if (mod.functions) {
+            TreeOps.concat(this.functions, keyed(mod.functions));
+        }
+```
 ...

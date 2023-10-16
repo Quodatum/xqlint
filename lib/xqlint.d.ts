@@ -3,7 +3,8 @@ declare module '@quodatum/xqlint' {
   import { Position } from "vscode";
   export class XQLint {
     constructor(source: string, opts?: XQLintOptions);
-    public getCompletions(pos: Position): object[];
+
+    public getCompletions(pos: Position): XQLintCompletion[];
     public getXQDoc(withPos?: boolean): XQDoc;
     public getAST(pos?: Position): Ast;
     public printAST(indent?: string): string; // XML string
@@ -21,15 +22,24 @@ declare module '@quodatum/xqlint' {
     public hasSyntaxError(): boolean;
     public resolver1(uri: string, ats: string[]): object[];
   }
-  export function profiles(): any;
+  export function profiles(): Profile[];
   export function XQueryLexer(): any;
   export function createStaticContext(processor: string, fileName?: string): any;
   export function CodeFormatter(ast: object): any;
   export function CodeFormatter(ast: object, newLinesEnabled: boolean, DEBUG: any): any;
+  
   export class XQLintOptions {
     processor: string;
     fileName?: string; // full path
     styleCheck?: boolean;
+  }
+  export class XQLintCompletion {
+    name :string;
+    value :string;
+    meta :string; //eg type
+    priority? :number;
+    identifierRegex? :string; // nameCharRegExp,
+    snippet? :string // snippets[name]
   }
   // 
   export class Marker {
@@ -38,9 +48,11 @@ declare module '@quodatum/xqlint' {
     level: string; //same as type??
     message: string; // '[code] ...'
   }
+
+  // 
   export class DocLink {
-    range: LintRange;
-    uri: string; // uri after at    
+    namespace: string; // 
+    at: string;  
   }
   export class LintRange {
     sl: number;
@@ -85,5 +97,10 @@ declare module '@quodatum/xqlint' {
     params: object;
     errors: string[];
     others: string[];
+  }
+  export interface Profile {
+    id :string;
+    description :string;
+    modules :string[];
   }
 } 

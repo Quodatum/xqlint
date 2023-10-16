@@ -41,5 +41,11 @@ vows.describe('Test reported issues').addBatch({
         var linter=new XQLint(src);
         var markers=linter.getMarkers();
         assert.equal(markers.length,2); //untyped
+    },
+    'undeclared #51': function(){
+        var src= '" A " => normalize-space() => tokenize("[\s,]+")';
+        var linter=new XQLint(src,{"processor":"basex-10"});
+        var markers=linter.getMarkers();
+        assert.equal(markers.length,0,"normalize-space arity=1, not 2"); //untyped
     }
 }).export(module);
