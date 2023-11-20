@@ -81,7 +81,7 @@ vows.describe('Test Code Completion').addBatch({
         var linter = new XQLint(p1+p2 , { staticContext: sctx });
         var pos = { line: 0, character: p1.length };
         var proposals = linter.getCompletions(pos);
-        assert.equal(proposals.length, 6, 'Number of proposals, 4 are w3');
+        assert.equal(proposals.length, 7, 'Number of proposals, 5 are w3');
         assert.equal(proposals[0].name, 'http://www.28msec.com/modules/http-reponse', 'module list');
     },
     

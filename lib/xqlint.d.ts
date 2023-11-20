@@ -14,6 +14,7 @@ declare module '@quodatum/xqlint' {
     public getErrors(): Marker[];
     public getWarnings(): Marker[];
 
+    public getNamespaces() :Namespaces;
     public getDocLinks(): DocLink[];
 
     public getProcessor(): string;
@@ -50,10 +51,7 @@ declare module '@quodatum/xqlint' {
   }
 
   // 
-  export class DocLink {
-    namespace: string; // 
-    at: string;  
-  }
+  
   export class LintRange {
     sl: number;
     sc: number;
@@ -76,7 +74,9 @@ declare module '@quodatum/xqlint' {
     value?: string;
     [propName: string]: any;
   }
-
+  export interface  Sctx {
+    
+  }
   export interface VarDecl {
     name: string;
     type: string;
@@ -102,5 +102,25 @@ declare module '@quodatum/xqlint' {
     id :string;
     description :string;
     modules :string[];
+  }
+  export type Namespaces ={
+    [uri: string]: Namespace; 
+  }
+  export interface Namespace {
+    type :string; //declare or module
+    prefixes :string[] // 
+    override? :boolean;
+    pos : LintRange;
+    ats? : AtLocation[];
+    uri? :string; //set by getnamespace from prefix
+  }
+  export interface AtLocation {
+    url :string; // path to import, maybe relative eg 'page.xqm'
+    pos : LintRange; // range of uri string
+    baseUri? :string; // base URI of source
+  }
+  export interface DocLink {
+    path :string; // full path to import 
+    pos : LintRange; // range of uri string
   }
 } 
