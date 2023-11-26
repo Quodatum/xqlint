@@ -188,8 +188,8 @@ SequenceTypeUnion
 
 IfExpr   ::= 'if' '(' Expr ')' 'then' ExprSingle 'else' ExprSingle
 BasexIfExpr   ::= 'if' '(' Expr ')' 'then' ExprSingle
-/* BasexIfTenary   ::= ExprSingle '??' ExprSingle '!!' ExprSingle */
-/* BasexElvis ::= ExprSingle '?:' ExprSingle  */
+/* BasexIfTernary   ::= ExprSingle '??' ExprSingle '!!' ExprSingle */
+
 
 TryCatchExpr
          ::= TryClause CatchClause+
@@ -774,8 +774,7 @@ ExprSingle
            | TypeswitchExpr
            | IfExpr
            | BasexIfExpr
-/*           | BasexIfTenary */
-/*          | BasexElvis     */
+/*           | BasexIfTernary */
            | TryCatchExpr
            | InsertExpr
            | DeleteExpr

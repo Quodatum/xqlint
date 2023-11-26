@@ -1,5 +1,8 @@
-## [0.4.5] 2023-11-20
-* add otherwise ?:
+# [0.5.0] 2023-11-26
+* change Marker definition (code,level)
+* more xquery extensions 
+## [0.4.6] 2023-11-20
+* add support for otherwise / ?: #58
 ## [0.4.4] 2023-10-16
 * add missing types
 ## [0.4.3] 2023-10-14
