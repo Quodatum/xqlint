@@ -45,8 +45,8 @@ declare module '@quodatum/xqlint' {
   // 
   export class Marker {
     pos: LintRange;
-    type: string; // error,warning
-    level: string; //same as type??
+    code: string; // error code 
+    level: string; //error,warning,info
     message: string; // '[code] ...'
   }
 

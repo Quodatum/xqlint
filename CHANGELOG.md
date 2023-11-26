@@ -1,3 +1,5 @@
+# [0.5.1] 2023-11-26
+* fix typedefs 
 # [0.5.0] 2023-11-26
 * change Marker definition (code,level)
 * more xquery extensions 
