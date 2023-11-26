@@ -1,8 +1,13 @@
 // generate xqdoc
 var fs = require('fs');
+var path = require('path');
 
 var XQLint = require('../../lib/xqlint').XQLint;
+const src = path.resolve('test/queries/rbtree.xq/map.xq');
+var linter = new XQLint(fs.readFileSync(src, 'utf-8'),
+  { fileName: src });
 
-var linter = new XQLint(fs.readFileSync('cases/override.xq', 'utf-8'), { styleCheck: false });
-var links = linter.getDocLinks();
-console.log(links);
+
+var doclinks =linter.getDocLinks();
+
+console.log(doclinks);

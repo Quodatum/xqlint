@@ -12,7 +12,7 @@ vows.describe('Test Variable declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XPST0081]'), 0, 'Is Error [XPST0081]');
     },
     
@@ -44,7 +44,7 @@ vows.describe('Test Variable declarations').addBatch({
         //console.log('test6',markers);
         assert.equal(markers.length, 2, 'Number of markers '+ markers.length);
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XPST0081]'), 0, 'No namespace declared for ex:foo');
     },
     
@@ -60,7 +60,7 @@ vows.describe('Test Variable declarations').addBatch({
         var markers = linter.getErrors();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XPST0008]'), 0, 'Is Error [XPST0008]');
     },
 
@@ -88,7 +88,7 @@ vows.describe('Test Variable declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XPST0008]'), 0, 'Is Error [XPST0008]');
     },
 
@@ -131,15 +131,15 @@ vows.describe('Test Variable declarations').addBatch({
         var linter = new XQLint('let $foo := 1 return 1');
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
-        assert.equal(markers[0].type, 'warning', 'Type of marker');
+        assert.equal(markers[0].level, 'warning', 'Type of marker');
     },
     
     'unused variable (2)': function(){
         var linter = new XQLint('let $foo := 2\nlet $foo := 1\nlet $bar := $foo\nreturn $foo');
         var markers = linter.getMarkers();
         assert.equal(markers.length, 2, 'Number of markers');
-        assert.equal(markers[0].type, 'warning', 'Type of marker');
-        assert.equal(markers[1].type, 'warning', 'Type of marker');
+        assert.equal(markers[0].level, 'warning', 'Type of marker');
+        assert.equal(markers[1].level, 'warning', 'Type of marker');
     },
 
     'unused variable (3)': function(){

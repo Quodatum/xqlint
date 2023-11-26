@@ -20,5 +20,19 @@ vows.describe('StringConstructor').addBatch({
         var markers = linter.getErrors();
         //console.log(markers);
         assert.equal(markers.length, 0, 'Number of markers:'+markers.length);
-    }
+    },
+    'otherwise (1)': function () {
+        var src = `"abc" otherwise 42`;
+        var linter = new XQLint(src);
+        var markers = linter.getErrors();
+        //console.log(markers);
+        assert.equal(markers.length, 0, 'Number of markers:'+markers.length);
+    },
+    'otherwise (2)': function () {
+        var src = `"abc" ?: 42`;
+        var linter = new XQLint(src);
+        var markers = linter.getErrors();
+        //console.log(markers);
+        assert.equal(markers.length, 0, 'Number of markers:'+markers.length);
+    },
 }).export(module);

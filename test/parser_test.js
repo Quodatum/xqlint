@@ -42,4 +42,18 @@ files.forEach(function(file){
         }
     };
 });
+var files = getFiles('test/queries/broken.xq');
+files.forEach(function(file){
+    batch[file] = function(){
+        const src=fs.readFileSync(file, 'utf-8');
+        //console.log(file);
+        var linter = new XQLint(src, { styleCheck: false, fileName: file, processor: 'basex-10' });
+        var syntaxError = linter.hasSyntaxError();
+        assert.equal(syntaxError, true, "is broken");
+        var errors = linter.getErrors();
+        //console.log(errors)
+        assert.equal(errors.length === 2, true, 'Check for static errors');
+        }
+    }
+);
 vows.describe('Test Parser').addBatch(batch).export(module);

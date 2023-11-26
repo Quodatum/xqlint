@@ -64,6 +64,8 @@ Old Inside
         }
 ```
 # response to import module
+XQLint exports function `resolver1(uri, ats) {//uri, hints` 
+
 calls 
 ```
  importModule: function (uri, prefix, pos, ats)

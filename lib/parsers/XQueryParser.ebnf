@@ -5,7 +5,7 @@ var XQueryParser = exports.XQueryParser = function XQueryParser(string, parsingE
 ?>
 
 /* XQuery 3.1 with fulltext and update version for BaseX 
-@ date 2022-09-20
+@ date 2023-11-20
 */
 XQuery   ::= Module EOF
 Module   ::= VersionDecl? ( LibraryModule | MainModule )
@@ -188,8 +188,8 @@ SequenceTypeUnion
 
 IfExpr   ::= 'if' '(' Expr ')' 'then' ExprSingle 'else' ExprSingle
 BasexIfExpr   ::= 'if' '(' Expr ')' 'then' ExprSingle
-/* BasexIfTenary   ::= ExprSingle '??' ExprSingle '!!' ExprSingle */
-/* BasexElvis ::= ExprSingle '?:' ExprSingle  */
+/* BasexIfTernary   ::= ExprSingle '??' ExprSingle '!!' ExprSingle */
+
 
 TryCatchExpr
          ::= TryClause CatchClause+
@@ -214,7 +214,9 @@ RangeExpr
 AdditiveExpr
          ::= MultiplicativeExpr ( ( '+' | '-' ) MultiplicativeExpr )*
 MultiplicativeExpr
-         ::= UnionExpr ( ( '*' | 'div' | 'idiv' | 'mod' ) UnionExpr )*
+         ::= OtherwiseExpr ( ( '*' | 'div' | 'idiv' | 'mod' ) OtherwiseExpr )*
+OtherwiseExpr 	   
+         ::= UnionExpr ( ('otherwise' | '?:' ) UnionExpr )*        
 UnionExpr
          ::= IntersectExceptExpr ( ( 'union' | '|' ) IntersectExceptExpr )*
 IntersectExceptExpr
@@ -710,7 +712,7 @@ FTWildCardOption
 FTExtensionOption
          ::= 'option' EQName StringLiteral
 FTIgnoreOption
-         ::= 'without' 'content' UnionExpr
+         ::= 'without' 'content' OtherwiseExpr
 
 Comment  ::= '(:' ( CommentContents | Comment )* ':)'
           /* ws: explicit */
@@ -772,8 +774,7 @@ ExprSingle
            | TypeswitchExpr
            | IfExpr
            | BasexIfExpr
-/*           | BasexIfTenary */
-/*          | BasexElvis     */
+/*           | BasexIfTernary */
            | TryCatchExpr
            | InsertExpr
            | DeleteExpr

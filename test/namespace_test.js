@@ -13,18 +13,18 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 2, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0047]'), 0, 'Is Error [XQST0047]');
         assert.deepEqual(error.pos, { sl: 1, sc: 30, el: 1, ec: 50 }, 'Marker Position');
         var warning = markers[1];
-        assert.equal(warning.type, 'warning', 'Type of marker');
+        assert.equal(warning.level, 'warning', 'Type of marker');
     },
 
     'test XQST0047 (2)': function () {
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/2.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0047]'), 0, 'Is Error [XQST0047]');
     },
 
@@ -33,7 +33,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 2, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0047]'), 0, 'Is Error [XQST0047]');
     },
 
@@ -41,8 +41,8 @@ vows.describe('Test Namespace declarations').addBatch({
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/5.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
-        assert.equal(markers[0].type, 'warning', 'Type of marker');
-        // assert.equal(markers[1].type, 'warning', 'Type of marker');
+        assert.equal(markers[0].level, 'warning', 'Type of marker');
+        // assert.equal(markers[1].level, 'warning', 'Type of marker');
     },
 
     'test XQST0049 (4)': function () {
@@ -50,7 +50,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getErrors();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0049]'), 0, 'Is Error [XQST0049]');
     },
 
@@ -59,7 +59,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 2, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0033]'), 0, 'Is Error [XQST0033]');
     },
 
@@ -68,7 +68,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0033]'), 0, 'Is Error [XQST0033]');
     },
 
@@ -77,7 +77,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0033]'), 0, 'Is Error [XQST0033]');
     },
 
@@ -86,10 +86,10 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         //assert.equal(markers.length, 2, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0088]'), 0, 'Is Error [XQST0088]');
         //error = markers[1];
-        //assert.equal(error.type, 'error', 'Type of marker');
+        //assert.equal(error.level, 'error', 'Type of marker');
     },
 
     'test XQST0088  (2)': function () {
@@ -97,7 +97,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0088]'), 0, 'Is Error [XQST0088]');
     },
 
@@ -107,7 +107,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0048]'), 0, 'Is Error [XQST0048]');
     },
 
@@ -116,7 +116,7 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 1, 'Number of markers');
         var error = markers[0];
-        assert.equal(error.type, 'error', 'Type of marker');
+        assert.equal(error.level, 'error', 'Type of marker');
         //assert.equal(error.message.indexOf('[XQST0088]'), 0, 'Is Error [XQST0088]');
     },
 
@@ -131,9 +131,9 @@ vows.describe('Test Namespace declarations').addBatch({
         var markers = linter.getMarkers();
         assert.equal(markers.length, 6, 'Number of markers');
         var warning = markers[0];
-        assert.equal(warning.type, 'error', 'Type of marker');
+        assert.equal(warning.level, 'error', 'Type of marker');
         warning = markers[1];
-        assert.equal(warning.type, 'error', 'Type of marker');
+        assert.equal(warning.level, 'error', 'Type of marker');
     },
 
     'test unused namespace (5)': function () {
