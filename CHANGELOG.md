@@ -1,3 +1,9 @@
+# [0.6.1] 2024-01-13
+* Java function call handling
+* xq-catalogs 0.1.2 (%perm)
+# [0.6.0] 2023-12-05
+* add namespace to DocLink
+* suppress XQLT0001 when no content
 # [0.5.1] 2023-11-26
 * fix typedefs 
 # [0.5.0] 2023-11-26

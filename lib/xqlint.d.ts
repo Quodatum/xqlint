@@ -14,7 +14,7 @@ declare module '@quodatum/xqlint' {
     public getErrors(): Marker[];
     public getWarnings(): Marker[];
 
-    public getNamespaces() :Namespaces;
+    public getNamespaces(): Namespaces;
     public getDocLinks(): DocLink[];
 
     public getProcessor(): string;
@@ -28,19 +28,19 @@ declare module '@quodatum/xqlint' {
   export function createStaticContext(processor: string, fileName?: string): any;
   export function CodeFormatter(ast: object): any;
   export function CodeFormatter(ast: object, newLinesEnabled: boolean, DEBUG: any): any;
-  
+
   export class XQLintOptions {
     processor: string;
     fileName?: string; // full path
     styleCheck?: boolean;
   }
   export class XQLintCompletion {
-    name :string;
-    value :string;
-    meta :string; //eg type
-    priority? :number;
-    identifierRegex? :string; // nameCharRegExp,
-    snippet? :string // snippets[name]
+    name: string;
+    value: string;
+    meta: string; //eg type
+    priority?: number;
+    identifierRegex?: string; // nameCharRegExp,
+    snippet?: string // snippets[name]
   }
   // 
   export class Marker {
@@ -51,7 +51,7 @@ declare module '@quodatum/xqlint' {
   }
 
   // 
-  
+
   export class LintRange {
     sl: number;
     sc: number;
@@ -60,12 +60,15 @@ declare module '@quodatum/xqlint' {
   }
 
   export class XQDoc {
-    moduleNamespace: string;
+    ns: string;
+    prefixes: string[];
     description: string;
     variables: VarDecl[];
     functions: FunDecl[];
     queryBody?: LintRange;
   }
+
+  // abstract syntax tree
   export interface Ast {
     name: string;
     children: Ast[];
@@ -74,9 +77,20 @@ declare module '@quodatum/xqlint' {
     value?: string;
     [propName: string]: any;
   }
-  export interface  Sctx {
-    
+
+  // static context
+  export interface Sctx {
+    resolveQName: (value: string, pos: Position) => QName;
+    getVariable: (qname: QName) => any;
+    getFunction: (qname: QName, arity: number) => any;
+    [propName: string]: any;
   }
+  export interface QName {
+    uri: string;
+    prefix: string;
+    name: string;
+  }
+
   export interface VarDecl {
     name: string;
     type: string;
@@ -99,28 +113,29 @@ declare module '@quodatum/xqlint' {
     others: string[];
   }
   export interface Profile {
-    id :string;
-    description :string;
-    modules :string[];
+    id: string;
+    description: string;
+    modules: string[];
   }
-  export type Namespaces ={
-    [uri: string]: Namespace; 
+  export type Namespaces = {
+    [uri: string]: Namespace;
   }
   export interface Namespace {
-    type :string; //declare or module
-    prefixes :string[] // 
-    override? :boolean;
-    pos : LintRange;
-    ats? : AtLocation[];
-    uri? :string; //set by getnamespace from prefix
+    type: string; //declare or module
+    prefixes: string[] // 
+    override?: boolean;
+    pos: LintRange;
+    ats?: AtLocation[];
+    uri?: string; //set by getnamespace from prefix
   }
   export interface AtLocation {
-    url :string; // path to import, maybe relative eg 'page.xqm'
-    pos : LintRange; // range of uri string
-    baseUri? :string; // base URI of source
+    url: string; // path to import, maybe relative eg 'page.xqm'
+    pos: LintRange; // range of uri string
+    baseUri?: string; // base URI of source
   }
   export interface DocLink {
-    path :string; // full path to import 
-    pos : LintRange; // range of uri string
+    ns: string;   // namespace
+    path: string; // full path to import 
+    pos: LintRange; // range of uri string
   }
 } 

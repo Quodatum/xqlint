@@ -11,12 +11,19 @@ vows.describe('Test Namespace declarations').addBatch({
     'test XQST0047 (1)': function () {
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/1.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 2, 'Number of markers');
+        assert.equal(markers.length,3 , 'Number of markers');
+
         var error = markers[0];
+        assert.equal(error.level, 'error', 'Type of marker');
+        assert.equal(error.message.indexOf('[XQST0059]'), 0, 'Is Error [XQST0059]');
+        assert.deepEqual(error.pos, { sl: 0, sc: 29, el: 0, ec: 49 }, 'Marker Position');
+
+        var error = markers[1];
         assert.equal(error.level, 'error', 'Type of marker');
         assert.equal(error.message.indexOf('[XQST0047]'), 0, 'Is Error [XQST0047]');
         assert.deepEqual(error.pos, { sl: 1, sc: 30, el: 1, ec: 50 }, 'Marker Position');
-        var warning = markers[1];
+        
+        var warning = markers[2];
         assert.equal(warning.level, 'warning', 'Type of marker');
     },
 
@@ -129,11 +136,9 @@ vows.describe('Test Namespace declarations').addBatch({
     'test unused namespace (4)': function () {
         var linter = new XQLint(fs.readFileSync('test/xqlint_queries/namespaces/13.xq', 'utf-8'), { styleCheck: false });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 6, 'Number of markers');
-        var warning = markers[0];
-        assert.equal(warning.level, 'error', 'Type of marker');
-        warning = markers[1];
-        assert.equal(warning.level, 'error', 'Type of marker');
+        assert.equal(markers.length, 10, 'Number of markers');
+        assert.equal( markers[0].level, 'error', 'Type of marker');
+        assert.equal( markers[1].level, 'error', 'Type of marker');
     },
 
     'test unused namespace (5)': function () {
@@ -155,7 +160,7 @@ vows.describe('Test Namespace declarations').addBatch({
         // see issue_test import test #28 for error free 
         var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'), { processor: 'basex-9' });
         var errors = linter.getErrors();
-        assert.equal(errors.length, 9, 'Number of errors');
+        assert.equal(errors.length, 10, 'Number of errors');
     },
 
     'test module function names (2)': function () {

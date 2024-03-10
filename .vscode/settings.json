@@ -18,5 +18,6 @@
         "titleBar.inactiveBackground": "#00cc9999",
         "titleBar.inactiveForeground": "#15202b99"
     },
-    "peacock.remoteColor": "#00CC99"
+    "peacock.remoteColor": "#00CC99",
+    "basexTools.xquery.profile": "basex-10"
 }

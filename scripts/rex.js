@@ -1,7 +1,10 @@
 /* generate parsers from EBNF files using REx
 */
+const REX_SERVER='https://www.bottlecaps.de/rex/';
+
 const opts = ['parsers', 'lexers'];
 const args = process.argv.slice(2);
+
 var type = args[0];
 type = (typeof type !== 'undefined') ? type : opts[0];
 if (opts.indexOf(type) < 0) {
@@ -61,7 +64,7 @@ function rex(parser) {
         'Content-Length': form.getLengthSync()
     };
     return new Promise(function (resolve, reject) {
-        var p = axios.post('https://www.bottlecaps.de/rex/', form, { headers });
+        var p = axios.post(REX_SERVER, form, { headers });
         p.then(function (response) {
             fs.writeFileSync(parser.destination, response.data)
             resolve("saved: " + parser.destination);
