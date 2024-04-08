@@ -8,6 +8,7 @@
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/quodatum/xqlint/release.yml)
 [![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@quodatum/xqlint)](https://www.npmjs.com/package/@quodatum/xqlint)
 
+[npm @quodatum/xqlint](https://www.npmjs.com/package/@quodatum/xqlint)
 
 XQLint parses XQuery  files and returns errors and warnings based on static code analysis. It provides the following features:
 * Lint: errors and warnings based on static code analysis.

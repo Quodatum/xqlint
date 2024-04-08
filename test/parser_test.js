@@ -53,7 +53,7 @@ files.forEach(function(file){
         var errors = linter.getErrors();
         //console.log(errors)
         assert.equal(errors.length === 2, true, 'Check for static errors');
-        }
+        };
     }
 );
 vows.describe('Test Parser').addBatch(batch).export(module);
