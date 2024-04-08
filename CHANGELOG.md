@@ -1,3 +1,5 @@
+# [0.6.2] 2024-03-31
+* inherit processor when importing modules
 # [0.6.1] 2024-01-13
 * Java function call handling
 * xq-catalogs 0.1.2 (%perm)
