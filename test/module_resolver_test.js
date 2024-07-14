@@ -3,6 +3,7 @@
 var vows = require('vows');
 var assert = require('assert');
 var fs = require('fs');
+const { markAsUntransferable } = require('worker_threads');
 
 var XQLint = require('../lib/xqlint').XQLint;
 var StaticContext = require('../lib/compiler/static_context').StaticContext;
@@ -32,7 +33,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; $foo:bar', { staticContext: sctx });
         var markers = linter.getMarkers();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 0, 'Expected 0 markers, found '+markers.length);
     },
 
     'test 3': function(){
@@ -47,7 +48,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; foo:bar()', { staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 1, 'Number of markers');
+        assert.equal(markers.length, 1, 'Expected 1 markers, found '+markers.length);
         assert.equal(markers[0].message.indexOf('undeclared function') !== -1, true, 'Number of markers');
     },
 
@@ -69,7 +70,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; foo:bar()', { staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 0, 'expected 0 markers, found '+markers.length);
     },
     
     'test 4 (bis)': function(){
@@ -90,7 +91,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; declare default function namespace "http://www.example.com"; bar()', { staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 0, 'expected 0 markers, found '+markers.length);
     },
 
     'test 5': function(){
@@ -108,7 +109,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; foo:bar()', { staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 1, 'Number of markers');
+        assert.equal(markers.length, 1, 'expected 1 markers, found '+markers.length);
     },
     
     'test 6': function(){
@@ -125,7 +126,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; foo:bar(1)', { staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 0, 'Expected 0 markers, found '+markers.length);
     },
     
     'test 7': function(){
@@ -142,7 +143,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         });
         var linter = new XQLint('import module namespace foo = "http://www.example.com"; foo:bar(1, 2)', { staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 0, 'expected 0 markers, found '+markers.length);
     },
     
     
@@ -231,7 +232,7 @@ vows.describe('Test Module URI Resolver').addBatch({
         sctx.setModules(index);
         var linter = new XQLint(source, { fileName: 'test/queries/merry.xq',  staticContext: sctx });
         var markers = linter.getErrors();
-        assert.equal(markers.length, 0, 'Number of markers');
+        assert.equal(markers.length, 0, 'Expected 0 markers, found '+markers.length);
     },
 
     'test XQST0059': function(){

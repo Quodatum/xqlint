@@ -3,8 +3,7 @@ const { XQLint } = require('./lib/xqlint');
 
 module.exports = function (grunt) {
     'use strict';
-
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
     grunt.registerMultiTask('rex', 'Generate Parsers', function () {

@@ -36,7 +36,7 @@
     "grunt-browserify": "6.0.0",
     "grunt-contrib-jshint": "3.2.0",
     "grunt-vows": "~0.4.1",
-    "matchdep": "~2.0.0",
+    "load-grunt-tasks": "5.1.0",
     "time-grunt": "^2.0.0",
     "vows": "^0.8.3"
   },
