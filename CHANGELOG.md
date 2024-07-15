@@ -1,3 +1,6 @@
+# [0.6.3] 2024-07-14
+* improve xqdoc performance
+* dependancy change: matchdep -> load-grunt-tasks
 # [0.6.2] 2024-03-31
 * inherit processor when importing modules
 # [0.6.1] 2024-01-13

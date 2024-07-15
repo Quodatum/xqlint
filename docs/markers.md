@@ -11,6 +11,7 @@
 see https://docs.basex.org/wiki/XQuery_Errors
 messages..
 ### W01
+
 `StaticWarning('W01', 'Avoid this type of import. Use import module namespace instead', pos);`
 ### W02
 `StaticWarning('W02', '"' + uri + '" already bound to the "' + namespace.prefixes.join(', ') + '" prefix', pos);`
