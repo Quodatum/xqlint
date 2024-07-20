@@ -1,5 +1,5 @@
-# [0.6.3] 2024-07-14
-* add symbols
+# [0.6.3] 2024-07-20
+* add getSymbols
 * fix repeated treewalk
 * dependancy change: matchdep -> load-grunt-tasks
 # [0.6.2] 2024-03-31
