@@ -1,7 +1,9 @@
-# [0.6.3] 2024-07-20
+# [0.6.3] 2025-02-19
+* add profiles cmd
 * add getSymbols
 * fix repeated treewalk
 * dependancy change: matchdep -> load-grunt-tasks
+* update axios to 1.7.5 (fetch not working)
 # [0.6.2] 2024-03-31
 * inherit processor when importing modules
 # [0.6.1] 2024-01-13
