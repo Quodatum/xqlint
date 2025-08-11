@@ -1,3 +1,5 @@
+# [0.6.4] 2025-08-11
+* update to xq-catalogs 0.2.1
 # [0.6.3] 2025-02-19
 * add profiles cmd
 * add getSymbols
