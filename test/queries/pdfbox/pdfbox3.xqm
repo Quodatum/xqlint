@@ -65,7 +65,7 @@ as map(*)*{
   }
 };
 
-(: return bookmark info for children of $outlineItem as seq of maps :)
+(:~ return bookmark info for children of $outlineItem as seq of maps :)
 declare function pdfbox:outline($doc as item(),$outlineItem as item()?)
 as item()
 {

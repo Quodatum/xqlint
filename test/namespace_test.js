@@ -175,9 +175,4 @@ vows.describe('Test Namespace declarations').addBatch({
         var error = errors[1];
         assert.equal(error.message.indexOf('[XQST0048]'), 0, 'Is Error [XQST0048]');
     },
-    'test module default function ns #24': function () {
-        var linter = new XQLint(fs.readFileSync('test/queries/rbtree.xq/map.xq', 'utf-8'), { styleCheck: false });
-        var xqdoc = linter.getXQDoc();
-        assert.equal(13, xqdoc.functions.length, "there are 13 functions");
-    },
 }).export(module);

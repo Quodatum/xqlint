@@ -57,6 +57,7 @@ as item()*
   return $actions!.($src,$dest)
 };
 
+(:~ print, remove head for print and move :)
 let $moved:=(local:print#2,local:move#2)=>head()=>local:do()
 return if(exists($moved))
        then $moved

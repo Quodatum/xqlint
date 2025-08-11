@@ -2,7 +2,7 @@
   "author": "Andy Bunce <bunce.andy@gmail.com> (https://github.com/apb2006)",
   "name": "@quodatum/xqlint",
   "description": "XQuery Quality Checker",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "keywords": [
     "xquery",
     "xml",
@@ -29,19 +29,19 @@
     "final-fs": "~1.6.1"
   },
   "devDependencies": {
-    "axios": "^1.5.1",
+    "axios": "^1.7.5",
     "browserify": "^17.0.0",
     "form-data": "^4.0.0",
     "grunt": "^1.5.3",
     "grunt-browserify": "6.0.0",
     "grunt-contrib-jshint": "3.2.0",
     "grunt-vows": "~0.4.1",
-    "matchdep": "~2.0.0",
+    "load-grunt-tasks": "5.1.0",
     "time-grunt": "^2.0.0",
     "vows": "^0.8.3"
   },
   "engines": {
-    "node": ">16.0.0"
+    "node": ">18.0.0"
   },
   "contributors": [
     "Andy Bunce <bunce.andy@gmail.com>",

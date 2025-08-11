@@ -17,7 +17,7 @@ vows.describe('Test reported issues').addBatch({
                 processor: 'basex-9'
             });
         var markers = linter.getErrors();
-        console.log(markers);
+        //console.log(markers);
         assert.equal(markers.length, 0);
     },
     'format #27': function () {
@@ -27,7 +27,7 @@ vows.describe('Test reported issues').addBatch({
         const formatted = formatter.format().trim();
         var linter2 = new XQLint(formatted, { styleCheck: false });
         var markers = linter2.getErrors();
-        console.log(markers);
+        //console.log(markers);
         assert.equal(markers.length, 0);
     },
     'used #41':function () {

@@ -1,0 +1,80 @@
+{
+  "type": "array",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "key",
+      "type",
+      "range",
+      "selectionRange",
+      "bcom",
+      "xcom"
+    ],
+    "properties": {
+      "key": {
+        "type": "string",
+        "minLength": 1
+      },
+      "type": {
+        "type": "string",
+        "minLength": 1
+      },
+      "range": {
+        "type": "object",
+        "properties": {
+          "sl": {
+            "type": "number"
+          },
+          "sc": {
+            "type": "number"
+          },
+          "el": {
+            "type": "number"
+          },
+          "ec": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "sl",
+          "sc",
+          "el",
+          "ec"
+        ]
+      },
+      "selectionRange": {
+        "type": "object",
+        "properties": {
+          "sl": {
+            "type": "number"
+          },
+          "sc": {
+            "type": "number"
+          },
+          "el": {
+            "type": "number"
+          },
+          "ec": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "sl",
+          "sc",
+          "el",
+          "ec"
+        ]
+      },
+      "bcom": {
+        "type": "boolean"
+      },
+      "xcom": {
+        "type": "boolean"
+      }
+    }
+  }
+}

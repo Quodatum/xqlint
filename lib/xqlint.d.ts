@@ -6,6 +6,7 @@ declare module '@quodatum/xqlint' {
 
     public getCompletions(pos: Position): XQLintCompletion[];
     public getXQDoc(withPos?: boolean): XQDoc;
+    public getSymbols(): Symbol[];
     public getAST(pos?: Position): Ast;
     public printAST(indent?: string): string; // XML string
     public getSctx(pos?: Position): any;
@@ -58,7 +59,12 @@ declare module '@quodatum/xqlint' {
     el: number;
     ec: number;
   }
-
+  export class Symbol {
+    key: string;
+    type: string;
+    range: LintRange;
+    selectionRange: LintRange;
+  }
   export class XQDoc {
     ns: string;
     prefixes: string[];
